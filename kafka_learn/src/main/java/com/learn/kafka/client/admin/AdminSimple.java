@@ -18,18 +18,20 @@ import java.util.concurrent.ExecutionException;
 public class AdminSimple {
 
     public final static String TOPIC_NAME = "client_hello_topic";
+    public final static String LOCAL_KAFKA_ADDRESS = "127.0.0.1:9092";
+    public final static String LINUX_KAFKA_ADDRESS = "192.168.0.110:9092";
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 //        AdminClient adminClient = AdminSimple.adminClient();
 //        log.info("get admin client:{}",adminClient);
 //        createTopic();
 //        deleteTopics();
-//        getTopicList();
+        getTopicList();
 //        getTopicDescribeInfo();
 //        modifyTopicConfigInfo();
 //        getTopicConfigInfo();
         incrPartitioins();
-        getTopicDescribeInfo();
+//        getTopicDescribeInfo();
     }
 
 
@@ -40,7 +42,7 @@ public class AdminSimple {
      */
     public static AdminClient adminClient(){
         Properties properties = new Properties();
-        properties.setProperty(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,"192.168.0.110:9092");
+        properties.setProperty(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,LOCAL_KAFKA_ADDRESS);
 
         AdminClient adminClient = AdminClient.create(properties);
         return adminClient;
@@ -79,7 +81,7 @@ public class AdminSimple {
     public static void deleteTopics() throws ExecutionException, InterruptedException {
         AdminClient adminClient = adminClient();
         DeleteTopicsResult deleteTopicsResult = adminClient.deleteTopics(Arrays.asList(TOPIC_NAME));
-//        deleteTopicsResult.all().get();
+        deleteTopicsResult.all().get();
     }
 
     /**
