@@ -6,8 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="kafka_application_case" />
-        <module name="kafka_learn" />
         <module name="redisson-springboot-learn-api" />
         <module name="redisson-springboot-learn-common" />
         <module name="redisson-springboot-learn-module" />

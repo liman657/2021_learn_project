@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>redisson-springboot-learn</artifactId>
+        <groupId>com.coderman.learn</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.coderman.learn</groupId>
+    <artifactId>redisson-springboot-learn-module</artifactId>
+
+
+    <properties>
+        <mybatis-spring-boot.version>1.1.1</mybatis-spring-boot.version>
+        <mybatis-pagehelper.version>4.1.2</mybatis-pagehelper.version>
+        <jackson-json.version>2.9.0</jackson-json.version>
+    </properties>
+
+    <dependencies>
+        <!--api模块的依赖-->
+        <dependency>
+            <groupId>com.coderman.learn</groupId>
+            <artifactId>redisson-springboot-learn-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--spring-mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis-spring-boot.version}</version>
+        </dependency>
+
+        <!--json-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-json.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

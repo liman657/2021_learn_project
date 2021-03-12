@@ -5,9 +5,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/kafka_learn/pom.xml" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/pom.xml" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-api/pom.xml" />
       </list>
     </option>
   </component>

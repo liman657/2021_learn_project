@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.learn.redisson.module.mapper.ProblemMapper" >
+  <resultMap id="BaseResultMap" type="com.learn.redisson.module.entity.Problem" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="choice_a" property="choiceA" jdbcType="VARCHAR" />
+    <result column="choice_b" property="choiceB" jdbcType="VARCHAR" />
+    <result column="is_active" property="isActive" jdbcType="TINYINT" />
+    <result column="order_by" property="orderBy" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, title, choice_a, choice_b, is_active, order_by
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from problem
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from problem
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.learn.redisson.module.entity.Problem" >
+    insert into problem (id, title, choice_a, 
+      choice_b, is_active, order_by
+      )
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{choiceA,jdbcType=VARCHAR}, 
+      #{choiceB,jdbcType=VARCHAR}, #{isActive,jdbcType=TINYINT}, #{orderBy,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" keyProperty="id" useGeneratedKeys="true" parameterType="com.learn.redisson.module.entity.Problem" >
+    insert into problem
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="choiceA != null" >
+        choice_a,
+      </if>
+      <if test="choiceB != null" >
+        choice_b,
+      </if>
+      <if test="isActive != null" >
+        is_active,
+      </if>
+      <if test="orderBy != null" >
+        order_by,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceA != null" >
+        #{choiceA,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceB != null" >
+        #{choiceB,jdbcType=VARCHAR},
+      </if>
+      <if test="isActive != null" >
+        #{isActive,jdbcType=TINYINT},
+      </if>
+      <if test="orderBy != null" >
+        #{orderBy,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learn.redisson.module.entity.Problem" >
+    update problem
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceA != null" >
+        choice_a = #{choiceA,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceB != null" >
+        choice_b = #{choiceB,jdbcType=VARCHAR},
+      </if>
+      <if test="isActive != null" >
+        is_active = #{isActive,jdbcType=TINYINT},
+      </if>
+      <if test="orderBy != null" >
+        order_by = #{orderBy,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.learn.redisson.module.entity.Problem" >
+    update problem
+    set title = #{title,jdbcType=VARCHAR},
+      choice_a = #{choiceA,jdbcType=VARCHAR},
+      choice_b = #{choiceB,jdbcType=VARCHAR},
+      is_active = #{isActive,jdbcType=TINYINT},
+      order_by = #{orderBy,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <update id="unactiveProblem">
+    update problem
+      set is_active = 0
+    where is_active=1 AND id = #{id}
+  </update>
+
+
+  <select id="selectAll" resultType="com.learn.redisson.module.entity.Problem">
+    SELECT
+        <include refid="Base_Column_List"/>
+    FROM
+        problem
+    WHERE
+        is_active = 1
+  </select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

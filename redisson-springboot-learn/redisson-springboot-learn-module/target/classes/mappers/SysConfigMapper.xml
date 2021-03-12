@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.learn.redisson.module.mapper.SysConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.learn.redisson.module.entity.SysConfig" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="value" property="value" jdbcType="VARCHAR" />
+    <result column="order_by" property="orderBy" jdbcType="INTEGER" />
+    <result column="is_active" property="isActive" jdbcType="TINYINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, type, name, code, value, order_by, is_active, create_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_config
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_config
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.learn.redisson.module.entity.SysConfig" >
+    insert into sys_config (id, type, name, 
+      code, value, order_by, 
+      is_active, create_time)
+    values (#{id,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{code,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, #{orderBy,jdbcType=INTEGER}, 
+      #{isActive,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyProperty="id" useGeneratedKeys="true" parameterType="com.learn.redisson.module.entity.SysConfig" >
+    insert into sys_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="value != null" >
+        value,
+      </if>
+      <if test="orderBy != null" >
+        order_by,
+      </if>
+      <if test="isActive != null" >
+        is_active,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null" >
+        #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="orderBy != null" >
+        #{orderBy,jdbcType=INTEGER},
+      </if>
+      <if test="isActive != null" >
+        #{isActive,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learn.redisson.module.entity.SysConfig" >
+    update sys_config
+    <set >
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null" >
+        value = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="orderBy != null" >
+        order_by = #{orderBy,jdbcType=INTEGER},
+      </if>
+      <if test="isActive != null" >
+        is_active = #{isActive,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.learn.redisson.module.entity.SysConfig" >
+    update sys_config
+    set type = #{type,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      value = #{value,jdbcType=VARCHAR},
+      order_by = #{orderBy,jdbcType=INTEGER},
+      is_active = #{isActive,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectByType" resultType="com.learn.redisson.module.entity.SysConfig">
+    SELECT
+        <include refid="Base_Column_List"/>
+    FROM
+        sys_config
+    WHERE
+        is_active = 1
+    AND type = #{type}
+    ORDER BY
+        order_by ASC
+  </select>
+
+  <delete id="deleteConfig">
+    update sys_config
+    set
+      is_active = 0
+    where is_active = 1 AND id = #{id}
+  </delete>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
