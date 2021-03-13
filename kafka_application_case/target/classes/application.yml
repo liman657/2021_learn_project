@@ -6,3 +6,10 @@ wxtemplate:
   template-result-file-path: "F:/2021_learn_project/kafka_application_case/src/main/resources/template/templateResult.json"
 server:
   port: 9099
+
+
+wxtemplate:
+  kafka:
+    bootstrap_servers: "127.0.0.1:9092"
+    acks_config: "all"
+#    partitioner_class:

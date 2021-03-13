@@ -1,1 +1,7 @@
-com\coderman\learn\ApiApplication.class
+com\learn\redisson\api\ApiApplication.class
+com\learn\redisson\api\response\StatusCode.class
+com\learn\redisson\api\service\IRemoteProductService.class
+com\learn\redisson\api\dto\ProductInfo.class
+com\learn\redisson\api\service\RemoteResponse.class
+com\learn\redisson\api\response\BaseResponse.class
+com\learn\redisson\api\service\RemoteStatus.class
