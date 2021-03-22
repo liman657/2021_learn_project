@@ -22,12 +22,12 @@ public class ConsumerSample {
     public final static String LOCAL_KAFKA_ADDRESS = "127.0.0.1:9092";
 
     public static void main(String[] args) {
-//        helloworld();
+        helloworld();
 //        commitedOffset();
 //        commitOffsetInPartition();
 //        commitOffsetPartitionUpdate();
 //        controlOffsetPosition();
-        consumerLimitStream();
+//        consumerLimitStream();
     }
 
 
@@ -39,7 +39,7 @@ public class ConsumerSample {
         props.setProperty("bootstrap.servers", LOCAL_KAFKA_ADDRESS);//地址
         props.setProperty("group.id", "test");//设置consumer的组
         props.setProperty("enable.auto.commit", "true");
-        props.setProperty("auto.commit.interval.ms", "1000");//拉取时间间隔
+        props.setProperty("auto.commit.interval.ms", "1000");//自动提交间隔时间
         //key value的序列化
         props.setProperty("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
@@ -48,7 +48,7 @@ public class ConsumerSample {
         // 消费订阅哪一个Topic或者几个Topic
         consumer.subscribe(Arrays.asList(TOPIC_NAME));
         while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(10000));
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(10000));//kafka实质是以pull的方式去kafka拉取消息消费
             for (ConsumerRecord<String, String> record : records)
                 System.out.printf("patition = %d , offset = %d, key = %s, value = %s%n",
                         record.partition(),record.offset(), record.key(), record.value());
@@ -63,7 +63,7 @@ public class ConsumerSample {
         props.setProperty("bootstrap.servers", LOCAL_KAFKA_ADDRESS);
         props.setProperty("group.id", "test");
         props.setProperty("enable.auto.commit", "false");
-        props.setProperty("auto.commit.interval.ms", "1000");
+//        props.setProperty("auto.commit.interval.ms", "1000");
         props.setProperty("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 
@@ -102,9 +102,11 @@ public class ConsumerSample {
         //消费订阅一个topic或者多个topic
         consumer.subscribe(Arrays.asList(TOPIC_NAME));
         while(true){
+            //取出这个topic下的数据
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(10000));
             // 针对每个partition单独处理
             for(TopicPartition topicPartition:records.partitions()){
+                //records这个方法可以传递Topic,也可以传递partition
                 List<ConsumerRecord<String, String>> partitionRecord = records.records(topicPartition);
                 for(ConsumerRecord<String,String> record:partitionRecord){
                     System.out.printf("patition = %d , offset = %d, key = %s, value = %s%n",
@@ -125,7 +127,7 @@ public class ConsumerSample {
     }
 
     /**
-     * 只定于某个一topic下的某一个partition的消息
+     * 只拉取某一topic下的某一个partition的消息
      * 手动订阅某个或某些分区，并手动提交
      */
     public static void commitOffsetPartitionUpdate(){

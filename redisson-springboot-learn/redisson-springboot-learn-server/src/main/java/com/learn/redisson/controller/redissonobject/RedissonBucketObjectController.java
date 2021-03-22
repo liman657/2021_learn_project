@@ -4,17 +4,12 @@ import com.learn.redisson.api.response.BaseResponse;
 import com.learn.redisson.api.response.StatusCode;
 import com.learn.redisson.module.entity.User;
 import com.learn.redisson.module.mapper.UserMapper;
-import com.learn.redisson.server.IRedissonObjService;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RBucket;
-import org.redisson.api.RKeys;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * autor:liman
@@ -25,7 +20,7 @@ import java.util.Set;
 @Slf4j
 @RequestMapping("/distobj")
 @RestController
-public class RedissonObjectController {
+public class RedissonBucketObjectController {
 
     private static final String BUCKET_USER_INFO_KEY = "Redisson:Bucket:User:";
 

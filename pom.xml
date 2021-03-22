@@ -11,6 +11,7 @@
     <modules>
         <!--<module>kafka_learn</module>-->
         <module>kafka_application_case</module>
+        <module>for-hibernate-jar</module>
     </modules>
 
     <!--<dependencyManagement>-->
