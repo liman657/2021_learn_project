@@ -12,4 +12,17 @@ public interface IRedissonBloomObjService {
 
     public Integer addItem(Item item);
 
+    /**
+     * 批量插入数据到数据库
+     * @throws Exception
+     */
+    public void genDataByThread() throws Exception;
+
+    /**
+     * 判断是否存在于大数据集合中
+     * @param itemCode
+     * @return
+     */
+    public boolean isInBigData(final String itemCode);
+
 }

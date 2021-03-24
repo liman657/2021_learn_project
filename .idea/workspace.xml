@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka_learn/src/main/java/com/learn/kafka/client/consumer/ConsumerSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka_learn/src/main/java/com/learn/kafka/client/consumer/ConsumerSample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka_learn/target/classes/com/learn/kafka/client/consumer/ConsumerSample.class" beforeDir="false" afterPath="$PROJECT_DIR$/kafka_learn/target/classes/com/learn/kafka/client/consumer/ConsumerSample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonObjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBucketObjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonTopicObjService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonObjServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonTopicObjServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/target/classes/com/learn/redisson/controller/redissonobject/RedissonObjectController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/target/classes/com/learn/redisson/server/IRedissonObjService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/target/classes/com/learn/redisson/server/impl/RedissonObjServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/RedisKeyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/RedisKeyConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBloomObjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBloomObjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonBloomObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonBloomObjService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonBloomObjServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonBloomObjServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,29 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RedissonBloomObjectController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBloomObjectController.java">
+      <file leaf-file-name="RedissonRateLimitObjectController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonRateLimitObjectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="40" column="58" lean-forward="true" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/entity/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedissonBloomObjServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonBloomObjServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="528">
+              <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,43 +42,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisKeyConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/RedisKeyConstant.java">
+      <file leaf-file-name="IRateLimiterService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRateLimiterService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="54" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="216">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IRedissonBloomObjService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonBloomObjService.java">
+      <file leaf-file-name="RateLimiterServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RateLimiterServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="556">
+              <caret line="39" column="13" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="39" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValidatorUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/util/ValidatorUtil.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="TopicConsumerService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/TopicConsumerService.java">
+      <file leaf-file-name="OkHttpService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/OkHttpService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="264">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedissonTopicObjectController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonTopicObjectController.java">
+      <file leaf-file-name="RedissonConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/config/RedissonConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="38" column="69" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="69" />
+            <state relative-caret-position="220">
+              <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="53" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OkHttpConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/config/OkHttpConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="71" column="48" lean-forward="true" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#1406#1407#0" expanded="true" />
+                <element signature="e#1472#1473#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,8 +105,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -134,6 +125,7 @@
       <find>org.redisson</find>
       <find>hibernate-ehcache</find>
       <find>bucket</find>
+      <find>线程数据插入完成</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -161,14 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/kafka_application_case/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-api/pom.xml" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/pom.xml" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/ItemMapper.java" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/MailInfoMapper.java" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/NoticeMapper.java" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/ProblemMapper.java" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/SysConfigMapper.java" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-api/src/main/java/com/learn/redisson/api/service/RemoteStatus.java" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/ProductKillMapper.java" />
@@ -208,10 +192,18 @@
         <option value="$PROJECT_DIR$/kafka_learn/src/main/java/com/learn/kafka/client/consumer/ConsumerSample.java" />
         <option value="$PROJECT_DIR$/for-hibernate-jar/for-hibernate-jar-server/pom.xml" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/util/ValidatorUtil.java" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/RedisKeyConstant.java" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonBloomObjServiceImpl.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IDataService.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/DataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/thread/InsertBigDataThread.java" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonBloomObjService.java" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBloomObjectController.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonBloomObjServiceImpl.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/OkHttpService.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/RedisKeyConstant.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRateLimiterService.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonRateLimitObjectController.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RateLimiterServiceImpl.java" />
+        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/config/OkHttpConfig.java" />
       </list>
     </option>
   </component>
@@ -287,10 +279,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-85" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="1920" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -311,12 +303,111 @@
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="for-hibernate-jar" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
               <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson-springboot-learn-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="redisson" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
@@ -405,7 +496,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="redisson" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
@@ -418,8 +509,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="redisson" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="redissonobject" type="462c0819:PsiDirectoryNode" />
+              <item name="thread" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
@@ -428,25 +518,7 @@
               <item name="redisson-springboot-learn-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="redisson" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="redisson-springboot-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="redisson-springboot-learn-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="redisson" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -477,11 +549,11 @@
       <recent name="com.learn.redisson.controller.redissonobject" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\2021_learn_project\redisson-springboot-learn\redisson-springboot-learn-server\src\main\java\com\learn\redisson\common" />
       <recent name="F:\2021_learn_project\redisson-springboot-learn\redisson-springboot-learn-server\src\main\java\com\learn\redisson\util" />
       <recent name="F:\2021_learn_project\redisson-springboot-learn\redisson-springboot-learn-server\src\main\resources" />
       <recent name="F:\2021_learn_project\redisson-springboot-learn\redisson-springboot-learn-module\src\main\resources" />
       <recent name="F:\2021_learn_project\redisson-springboot-learn\redisson-springboot-learn-api\src\main\java\com\learn\redisson\api" />
-      <recent name="F:\2021_learn_project\redisson-springboot-learn\redisson-springboot-learn-module\src\main\java\com\learn\redisson\module\entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -657,15 +729,15 @@
       <workItem from="1615793475003" duration="19053000" />
       <workItem from="1616202445806" duration="13046000" />
       <workItem from="1616333632566" duration="2473000" />
-      <workItem from="1616382297997" duration="6347000" />
+      <workItem from="1616382297997" duration="17751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115368000" />
+    <option name="totallyTimeSpent" value="126772000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -680,13 +752,13 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.44325483" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4295302" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -736,94 +808,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/resources/banner.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/ItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/resources/mappers/ItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/MailInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/resources/mappers/MailInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="147" column="74" selection-start-line="147" selection-start-column="74" selection-end-line="147" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/NoticeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/resources/mappers/NoticeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1693">
-          <caret line="74" column="78" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/resources/mappers/SysConfigMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2989">
-          <caret line="128" column="69" selection-start-line="128" selection-start-column="69" selection-end-line="128" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/resources/mappers/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/resources/mappers/ProductKillMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/resources/mappers/ProblemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2653">
-          <caret line="114" column="66" selection-start-line="114" selection-start-column="66" selection-end-line="114" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-260">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/resources/spring/spring-jdbc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="53" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="53" />
+          <folding>
+            <element signature="e#658#682#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -831,27 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" selection-start-line="15" selection-end-line="106" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="171" column="33" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/config/RedissonConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="53" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -866,20 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-api/src/main/java/com/learn/redisson/api/response/StatusCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-api/src/main/java/com/learn/redisson/api/response/BaseResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -954,21 +910,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/RedissonServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/ITopicConsumerService.java" />
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBucketObjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonTopicObjService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1038,13 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonTopicObjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="38" column="69" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/TopicConsumerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -1055,27 +990,6 @@
     <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/util/ValidatorUtil.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/RedisKeyConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonBloomObjService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBloomObjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="40" column="58" lean-forward="true" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/entity/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1083,10 +997,195 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-api/src/main/java/com/learn/redisson/api/response/StatusCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-api/src/main/java/com/learn/redisson/api/response/BaseResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-api/src/main/java/com/learn/redisson/api/service/IRemoteProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1903">
+          <caret line="91" column="28" lean-forward="true" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/RedissonServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding>
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBucketObjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="70" column="43" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-module/src/main/java/com/learn/redisson/module/mapper/ItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonBloomObjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="78" column="64" lean-forward="true" selection-start-line="78" selection-start-column="64" selection-end-line="78" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRedissonBloomObjService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonBloomObjServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="334">
+          <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/DataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="46" column="53" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="46" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/thread/InsertBigDataThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/RedisKeyConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonTopicObjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/OkHttpService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/config/RedissonConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="53" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/config/OkHttpConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="71" column="48" lean-forward="true" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonRateLimitObjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/IRateLimiterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RateLimiterServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="39" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

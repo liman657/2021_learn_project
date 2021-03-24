@@ -37,7 +37,7 @@ public class RedissonBloomObjectController {
      * @param item
      * @return
      */
-    @RequestMapping(value = "/bloom/prodIsExist",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/bloom/simpleDemo",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
     public BaseResponse addItem(@RequestBody @Validated Item item, BindingResult bindingResult) {
         log.info("bloom过滤器实例，开始");
         String res=ValidatorUtil.checkResult(bindingResult);
@@ -51,6 +51,36 @@ public class RedissonBloomObjectController {
             response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
         }
         return response;
+    }
 
+    /**
+     * 构造百万数据，利用多线程，插入大量的数据
+     */
+    @RequestMapping(value = "/bloom/batchData",method = RequestMethod.GET)
+    public BaseResponse triggleDataInsert(){
+        BaseResponse response = new BaseResponse(StatusCode.Success);
+        log.info("生成大量商品数据，开始");
+        try{
+            redissonBloomObjService.genDataByThread();
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    /**
+     * 构造百万数据，利用多线程，插入大量的数据
+     */
+    @RequestMapping(value = "/bloom/isInBigData",method = RequestMethod.GET)
+    public BaseResponse isExistInBig(@RequestParam String itemCode){
+        BaseResponse response = new BaseResponse(StatusCode.Success);
+        log.info("开始判断是否存在于大数据集合中");
+        try{
+            boolean inBigData = redissonBloomObjService.isInBigData(itemCode);
+            response.setData(inBigData);
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
     }
 }

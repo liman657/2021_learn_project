@@ -15,4 +15,5 @@ public class RedisKeyConstant {
 
     public static final String REDISSON_BLOOM_ITEM_KEY = "Redisson:Bloom:Item:Key";
 
+    public static final String REDISSON_RATE_LIMITER_KEY = "Redisson:Rate:Limiter:Key";
 }
