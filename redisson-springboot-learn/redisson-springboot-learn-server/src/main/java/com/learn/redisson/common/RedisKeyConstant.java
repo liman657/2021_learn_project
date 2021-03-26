@@ -15,5 +15,9 @@ public class RedisKeyConstant {
 
     public static final String REDISSON_BLOOM_ITEM_KEY = "Redisson:Bloom:Item:Key";
 
+    /**rate limiter的key*/
     public static final String REDISSON_RATE_LIMITER_KEY = "Redisson:Rate:Limiter:Key";
+
+    /** 普通map的key */
+    public static final String REDISSON_ORDINAL_MAP_KEY = "Redisson:Ordinal:Map:Key";
 }
