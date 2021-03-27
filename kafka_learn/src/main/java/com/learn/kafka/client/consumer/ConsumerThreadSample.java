@@ -35,17 +35,20 @@ public class ConsumerThreadSample {
      * @throws InterruptedException
      */
     public static void main(String[] args) throws InterruptedException {
-        KafkaConsumerRunner kafkaConsumerRunner = new KafkaConsumerRunner();
-        Thread threadOne = new Thread(kafkaConsumerRunner);
-        threadOne.start();
-        Thread.sleep(15000);
+        for(int i=0;i<5;i++) {
+            KafkaConsumerRunner kafkaConsumerRunner = new KafkaConsumerRunner();
+            Thread threadOne = new Thread(kafkaConsumerRunner,"SelfThread-"+i);
+            threadOne.start();
+            Thread.sleep(1000);
 
-        kafkaConsumerRunner.shutdown();
+            kafkaConsumerRunner.shutdown();
+        }
 
     }
 
-
-
+    /**
+     * consumer的线程
+     */
     public static class KafkaConsumerRunner implements Runnable{
 
         private final AtomicBoolean closed = new AtomicBoolean(false);
@@ -75,11 +78,12 @@ public class ConsumerThreadSample {
                 while(!closed.get()){
                     //处理消息
                     ConsumerRecords<String,String> consumerRecord = consumer.poll(Duration.ofMillis(10000));
+                    String threadName = Thread.currentThread().getName();
                     for(TopicPartition topicPartition:consumerRecord.partitions()){
                         List<ConsumerRecord<String, String>> partitionRecord = consumerRecord.records(topicPartition);
                         //处理每一个分区的数据
                         for(ConsumerRecord<String,String> record:partitionRecord){
-                            System.out.printf("patition = %d , offset = %d, key = %s, value = %s%n",
+                            System.out.printf("threadName = %s，patition = %d , offset = %d, key = %s, value = %s%n",threadName,
                                     record.partition(),record.offset(), record.key(), record.value());
                         }
                         // 返回去告诉kafka新的offset

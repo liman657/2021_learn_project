@@ -141,7 +141,7 @@ public class ProducerSample {
         Producer<String,String> producer = new KafkaProducer<>(properties);
 
         // 消息对象 - ProducerRecoder
-        for(int i=0;i<100;i++){
+        for(int i=0;i<1000;i++){
             ProducerRecord<String,String> record =
                     new ProducerRecord<>(TOPIC_NAME,"key-"+i,"value-"+i);
 
