@@ -20,4 +20,7 @@ public class RedisKeyConstant {
 
     /** 普通map的key */
     public static final String REDISSON_ORDINAL_MAP_KEY = "Redisson:Ordinal:Map:Key";
+
+    /** localCacheMap的key */
+    public static final String  REDISSON_LOCAL_CACHE_MAP_KEY = "Redisson:Local:Cache:Map:Key";
 }
