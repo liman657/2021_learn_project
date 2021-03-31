@@ -1,12 +1,14 @@
 package com.learn.redisson.module.entity;
 
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.validator.constraints.NotBlank;
 
 import java.io.Serializable;
 import java.util.Date;
 
 @Data
+@ToString
 public class MailInfo implements Serializable{
     private Integer id;
 
