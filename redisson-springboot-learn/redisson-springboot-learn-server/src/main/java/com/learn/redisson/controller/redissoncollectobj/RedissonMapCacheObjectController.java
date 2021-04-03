@@ -47,35 +47,35 @@ public class RedissonMapCacheObjectController {
 
     @RequestMapping(value = "/mapCache/emailsend", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public BaseResponse createEmail(@RequestBody @Validated MailInfo mailInfo, BindingResult result) {
-        String checkRes=ValidatorUtil.checkResult(result);
-        if (StringUtils.isNotBlank(checkRes)){
-            return new BaseResponse(StatusCode.InvalidParams.getCode(),checkRes);
+        String checkRes = ValidatorUtil.checkResult(result);
+        if (StringUtils.isNotBlank(checkRes)) {
+            return new BaseResponse(StatusCode.InvalidParams.getCode(), checkRes);
         }
-        if (mailInfo.getIsDelay().intValue()==1 && StringUtils.isBlank(mailInfo.getSendDateTime())){
+        if (mailInfo.getIsDelay().intValue() == 1 && StringUtils.isBlank(mailInfo.getSendDateTime())) {
             return new BaseResponse(StatusCode.MailInfoSendDateTimeInvalidated);
         }
-        BaseResponse response=new BaseResponse(StatusCode.Success);
+        BaseResponse response = new BaseResponse(StatusCode.Success);
         try {
             mapCacheService.createMail(mailInfo);
 
-        }catch (Exception e){
-            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        } catch (Exception e) {
+            response = new BaseResponse(StatusCode.Fail.getCode(), e.getMessage());
         }
         return response;
     }
 
     //TODO:取消待发送邮件的定时发送
-    @RequestMapping(value = "/mapCache/emailinvalid",method = RequestMethod.POST)
-    public BaseResponse invalidateEmail(@RequestParam Integer id){
-        if (id==null || id<=0){
+    @RequestMapping(value = "/mapCache/emailinvalid", method = RequestMethod.POST)
+    public BaseResponse invalidateEmail(@RequestParam Integer id) {
+        if (id == null || id <= 0) {
             return new BaseResponse(StatusCode.InvalidParams);
         }
-        BaseResponse response=new BaseResponse(StatusCode.Success);
+        BaseResponse response = new BaseResponse(StatusCode.Success);
         try {
             mapCacheService.invalidateEmail(id);
 
-        }catch (Exception e){
-            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        } catch (Exception e) {
+            response = new BaseResponse(StatusCode.Fail.getCode(), e.getMessage());
         }
         return response;
     }

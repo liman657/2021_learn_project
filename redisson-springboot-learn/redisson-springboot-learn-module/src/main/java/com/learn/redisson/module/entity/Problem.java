@@ -6,7 +6,7 @@ import org.hibernate.validator.constraints.NotBlank;
 import java.io.Serializable;
 
 @Data
-public class Problem implements Serializable{
+public class Problem implements Serializable {
     private Integer id;
 
     @NotBlank(message = "标题不能为空！")

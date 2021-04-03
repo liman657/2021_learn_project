@@ -37,50 +37,50 @@ public class RedissonMultiMapObjectController {
 
     @RequestMapping(value = "/multiMap/add", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public BaseResponse createEmail(@RequestBody @Validated SysConfig sysConfig, BindingResult result) {
-        String checkRes=ValidatorUtil.checkResult(result);
-        if(StringUtils.isNotBlank(checkRes)){
+        String checkRes = ValidatorUtil.checkResult(result);
+        if (StringUtils.isNotBlank(checkRes)) {
             return new BaseResponse(StatusCode.InvalidParams);
         }
-        BaseResponse response=new BaseResponse(StatusCode.Success);
-        try{
-            log.info("开始出入数据字典配置数据:{}",sysConfig);
+        BaseResponse response = new BaseResponse(StatusCode.Success);
+        try {
+            log.info("开始出入数据字典配置数据:{}", sysConfig);
             multiMapService.insertConfigData(sysConfig);
-        }catch (Exception e){
-            log.warn("插入数据字典数据出现异常，异常信息为:{}",e);
+        } catch (Exception e) {
+            log.warn("插入数据字典数据出现异常，异常信息为:{}", e);
         }
         return response;
     }
 
-    @RequestMapping(value = "multiMap/get",method = RequestMethod.GET)
-    public BaseResponse getConfig(@RequestParam String typeCode){
-        if (StringUtils.isBlank(typeCode)){
+    @RequestMapping(value = "multiMap/get", method = RequestMethod.GET)
+    public BaseResponse getConfig(@RequestParam String typeCode) {
+        if (StringUtils.isBlank(typeCode)) {
             return new BaseResponse(StatusCode.InvalidParams);
         }
-        BaseResponse response=new BaseResponse(StatusCode.Success);
-        try{
-            log.info("查询配置信息参数为:{}",typeCode);
+        BaseResponse response = new BaseResponse(StatusCode.Success);
+        try {
+            log.info("查询配置信息参数为:{}", typeCode);
             Collection<SysConfig> data = multiMapService.getConfigTypeList(typeCode);
             response.setData(data);
-        }catch (Exception e){
-            log.warn("查询配置信息出现异常，异常信息为:{}",e);
+        } catch (Exception e) {
+            log.warn("查询配置信息出现异常，异常信息为:{}", e);
         }
         return response;
     }
 
     //TODO:删除选项列表
-    @RequestMapping(value = "multiMap/delete",method = RequestMethod.GET)
-    public BaseResponse deleteConfig(@RequestParam Integer id){
-        if (id==null || id<=0){
+    @RequestMapping(value = "multiMap/delete", method = RequestMethod.GET)
+    public BaseResponse deleteConfig(@RequestParam Integer id) {
+        if (id == null || id <= 0) {
             return new BaseResponse(StatusCode.InvalidParams);
         }
-        BaseResponse response=new BaseResponse(StatusCode.Success);
+        BaseResponse response = new BaseResponse(StatusCode.Success);
         try {
-            log.info("删除配置信息的参数为:{}",id);
+            log.info("删除配置信息的参数为:{}", id);
             response.setData(multiMapService.deleteConfig(id));
 
-        }catch (Exception e){
-            log.warn("删除配置信息出现异常，异常信息为:{}",e);
-            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        } catch (Exception e) {
+            log.warn("删除配置信息出现异常，异常信息为:{}", e);
+            response = new BaseResponse(StatusCode.Fail.getCode(), e.getMessage());
         }
         return response;
     }

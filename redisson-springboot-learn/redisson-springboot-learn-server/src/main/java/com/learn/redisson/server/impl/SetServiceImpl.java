@@ -42,9 +42,10 @@ public class SetServiceImpl implements ISetObjService {
 
     /**
      * 获取所有试题的顺序
+     *
      * @return
      */
-    public Set<Problem> getProblems(){
+    public Set<Problem> getProblems() {
 //        this.cacheAllProblem();
         RSet<Problem> problemsRedisData = redissonClient.getSet(RedisKeyConstant.REDISSON_SET_REDIS_KEY);
         return problemsRedisData.readAll();
@@ -52,20 +53,23 @@ public class SetServiceImpl implements ISetObjService {
 
     /**
      * 获取所有试题的顺序，随机
+     *
      * @return
      */
-    public List<Object> getProblemsRandom(){
+    public List<Object> getProblemsRandom() {
 //        this.cacheAllProblem();
         RSet<Problem> problemsRedisData = redissonClient.getSet(RedisKeyConstant.REDISSON_SET_REDIS_KEY);
         List<Object> problemRedisList = Arrays.asList(problemsRedisData.readAll().toArray());
         Collections.shuffle(problemRedisList);
         return problemRedisList;
     }
+
     /**
      * 随机获取一个试题
+     *
      * @return
      */
-    public Problem randomProblem(){
+    public Problem randomProblem() {
 //        this.cacheAllProblem();
         RSet<Problem> problemsRedisData = redissonClient.getSet(RedisKeyConstant.REDISSON_SET_REDIS_KEY);
         return problemsRedisData.random();
@@ -73,13 +77,14 @@ public class SetServiceImpl implements ISetObjService {
 
     /**
      * 删除一个题目
+     *
      * @return
      */
-    public int deleteProblem(final Integer id){
+    public int deleteProblem(final Integer id) {
         Problem problem = problemMapper.selectByPrimaryKey(id);
-        if(null!=problem){
-            int res=problemMapper.unactiveProblem(id);
-            if (res>0){
+        if (null != problem) {
+            int res = problemMapper.unactiveProblem(id);
+            if (res > 0) {
                 this.cacheAllProblem();
 
                 return 1;
