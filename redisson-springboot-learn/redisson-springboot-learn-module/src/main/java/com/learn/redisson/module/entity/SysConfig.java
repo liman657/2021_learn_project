@@ -2,6 +2,7 @@ package com.learn.redisson.module.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.validator.constraints.NotBlank;
 
 import java.io.Serializable;
@@ -9,6 +10,7 @@ import java.util.Date;
 
 @Data
 @EqualsAndHashCode
+@ToString
 public class SysConfig implements Serializable{
     private Integer id;
 
