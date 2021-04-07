@@ -36,4 +36,7 @@ public class RedisKeyConstant {
 
     /** Set集合的key */
     public static final String REDISSON_SET_REDIS_KEY = "Redisson:Problem:Set:Cache:Key";
+
+    /** Queue集合的key */
+    public static final String REDISSON_QUEUE_REDIS_KEY = "Redisson:Notice:Queue:Cache:Key";
 }

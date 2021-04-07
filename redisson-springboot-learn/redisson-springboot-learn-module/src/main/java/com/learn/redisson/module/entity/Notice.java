@@ -1,11 +1,13 @@
 package com.learn.redisson.module.entity;
 
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.validator.constraints.NotBlank;
 
 import java.io.Serializable;
 
 @Data
+@ToString
 public class Notice implements Serializable{
     private Integer id;
 
