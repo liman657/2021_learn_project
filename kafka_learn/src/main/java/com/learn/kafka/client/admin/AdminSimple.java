@@ -30,7 +30,7 @@ public class AdminSimple {
 //        getTopicDescribeInfo();
 //        modifyTopicConfigInfo();
 //        getTopicConfigInfo();
-        incrPartitioins();
+//        incrPartitioins();
 //        getTopicDescribeInfo();
     }
 
@@ -42,7 +42,7 @@ public class AdminSimple {
      */
     public static AdminClient adminClient(){
         Properties properties = new Properties();
-        properties.setProperty(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,LOCAL_KAFKA_ADDRESS);
+        properties.setProperty(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,LINUX_KAFKA_ADDRESS);
 
         AdminClient adminClient = AdminClient.create(properties);
         return adminClient;

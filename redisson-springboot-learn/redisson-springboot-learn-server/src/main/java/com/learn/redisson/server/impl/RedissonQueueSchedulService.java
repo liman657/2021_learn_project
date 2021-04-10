@@ -38,5 +38,4 @@ public class RedissonQueueSchedulService {
             log.error("处理队里中的消息出现异常，异常信息为:{}",e);
         }
     }
-
 }
