@@ -41,7 +41,7 @@ public class RedissonBloomObjServiceImpl implements IRedissonBloomObjService {
     public Integer addItem(Item item) {
         Integer id = -1;
         //通过bloom过滤器，判断待添加的商品是否存在
-        RBloomFilter<Object> bloomFilter = redissonClient.getBloomFilter(RedisKeyConstant.REDISSON_BLOOM_ITEM_KEY);
+        RBloomFilter<String> bloomFilter = redissonClient.getBloomFilter(RedisKeyConstant.REDISSON_BLOOM_ITEM_KEY);
         bloomFilter.tryInit(10000000L, 0.03);
         if (bloomFilter.contains(item.getCode())) {
             throw new RuntimeException("该商品编号已经存在");

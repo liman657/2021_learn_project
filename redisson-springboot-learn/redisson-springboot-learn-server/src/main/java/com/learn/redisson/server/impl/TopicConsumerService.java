@@ -42,9 +42,9 @@ public class TopicConsumerService implements ApplicationRunner,Ordered {
         try{
             log.info("-----监听主题topic,并处理其中的数据-----");
             RTopic<String> mailTopic = redissonClient.getTopic(RedisKeyConstant.REDISSON_TOPIC_EMAIL_KEY);
-//            mailTopic.addListener((charSequence,s)->{
-//               log.info("从topic中读取的信息为:{}",s);
-//            });
+            mailTopic.addListener((charSequence,s)->{
+               log.info("从topic中读取的信息为:{}",s);
+            });
         }catch (Exception e){
             log.error("-----监听主题，处理数据出现异常-----");
         }
