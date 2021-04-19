@@ -16,6 +16,7 @@
         <module name="redisson-springboot-learn-common" />
         <module name="redisson-springboot-learn-module" />
         <module name="redisson-springboot-learn-server" />
+        <module name="self_spring_demo" />
       </profile>
     </annotationProcessing>
   </component>
