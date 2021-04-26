@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="【spring源码简单学习】3-7">
+    <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/SimpleDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/SimpleDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/ReflectTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/ReflectTarget.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,37 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DellKeyBoard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/entity/DellKeyBoard.java">
+      <file leaf-file-name="ConstructorCollector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/ConstructorCollector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-              <folding>
-                <element signature="e#256#257#0" expanded="true" />
-                <element signature="e#282#283#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HpKeyBoard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/entity/HpKeyBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-              <folding>
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="e#280#281#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PcFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/abstactf/PcFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="10" selection-start-line="10" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="-4">
+              <caret line="37" column="74" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,48 +41,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DellPcFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/abstactf/DellPcFactory.java">
+      <file leaf-file-name="ReflectTarget.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/ReflectTarget.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="13" selection-start-line="13" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="672">
+              <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#995#996#0" expanded="true" />
+                <element signature="e#1043#1044#0" expanded="true" />
+                <element signature="e#1326#1327#0" expanded="true" />
+                <element signature="e#1397#1398#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1481#1482#0" expanded="true" />
+                <element signature="e#1499#1500#0" expanded="true" />
+                <element signature="e#1554#1555#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PcFactoryDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/abstactf/PcFactoryDemo.java">
+      <file leaf-file-name="FieldCollector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/FieldCollector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/SimpleDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1132">
-              <caret line="55" column="38" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericClassDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/GenericClassDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="348">
+              <caret line="33" column="103" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="103" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,29 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericIFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/GenericIFactory.java">
+      <file leaf-file-name="MethodCollector.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/MethodCollector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericIFactoryImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/GenericIFactoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="19" selection-start-line="9" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RobotFactory.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/RobotFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="212">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,10 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/RedissonQueueSchedulService.java" />
-        <option value="$PROJECT_DIR$/kafka_learn/src/main/java/com/learn/kafka/client/admin/AdminSimple.java" />
-        <option value="$PROJECT_DIR$/kafka_learn/src/main/java/com/learn/kafka/client/stream/SampleStream.java" />
-        <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/remote/RemoteProduceServiceImpl.java" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/remote/RemoteProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/common/RemoteServiceInit.java" />
         <option value="$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/server/impl/TopicConsumerService.java" />
@@ -263,6 +202,10 @@
         <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/abstactf/PcFactory.java" />
         <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/abstactf/DellPcFactory.java" />
         <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/abstactf/PcFactoryDemo.java" />
+        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/ConstructorCollector.java" />
+        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/FieldCollector.java" />
+        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/ReflectTarget.java" />
+        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/MethodCollector.java" />
       </list>
     </option>
   </component>
@@ -339,8 +282,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="1932" />
-    <option name="height" value="1056" />
+    <option name="y" value="-8" />
+    <option name="width" value="969" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -424,44 +368,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="superadmin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -475,131 +381,7 @@
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="generic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pattern" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="abstactf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pattern" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="simple" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsourcedemo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="reflect" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -622,7 +404,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.36666667" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="GrepConsole" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -650,25 +432,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PcFactoryDemo">
-    <configuration name="FactoryMethodDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.springsourcedemo.demo.pattern.factory.method.FactoryMethodDemo" />
+  <component name="RunManager" selected="Application.MethodCollector">
+    <configuration name="ConstructorCollector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.springsourcedemo.demo.reflect.ConstructorCollector" />
       <module name="self_spring_demo" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.springsourcedemo.demo.pattern.factory.method.*" />
+          <option name="PATTERN" value="com.learn.springsourcedemo.demo.reflect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="MouseFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.springsourcedemo.demo.pattern.factory.simple.MouseFactory" />
+    <configuration name="FieldCollector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.springsourcedemo.demo.reflect.FieldCollector" />
       <module name="self_spring_demo" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.springsourcedemo.demo.pattern.factory.simple.*" />
+          <option name="PATTERN" value="com.learn.springsourcedemo.demo.reflect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="MethodCollector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.springsourcedemo.demo.reflect.MethodCollector" />
+      <module name="self_spring_demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.springsourcedemo.demo.reflect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -684,24 +477,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="RobotFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.springsourcedemo.demo.generic.RobotFactory" />
+    <configuration name="ReflectTarget" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.springsourcedemo.demo.reflect.ReflectTarget" />
       <module name="self_spring_demo" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.springsourcedemo.demo.generic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="SimpleDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.springsourcedemo.demo.generic.SimpleDemo" />
-      <module name="self_spring_demo" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.springsourcedemo.demo.generic.*" />
+          <option name="PATTERN" value="com.learn.springsourcedemo.demo.reflect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -802,19 +584,19 @@
       <item itemvalue="Maven.self_spring_demo[tomcat:run]" />
       <item itemvalue="Spring Boot.KafkaClientApplication" />
       <item itemvalue="Spring Boot.RedissonServerApplication" />
-      <item itemvalue="Application.SimpleDemo" />
-      <item itemvalue="Application.RobotFactory" />
-      <item itemvalue="Application.MouseFactory" />
-      <item itemvalue="Application.FactoryMethodDemo" />
       <item itemvalue="Application.PcFactoryDemo" />
+      <item itemvalue="Application.ReflectTarget" />
+      <item itemvalue="Application.ConstructorCollector" />
+      <item itemvalue="Application.FieldCollector" />
+      <item itemvalue="Application.MethodCollector" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MethodCollector" />
+        <item itemvalue="Application.FieldCollector" />
+        <item itemvalue="Application.ConstructorCollector" />
+        <item itemvalue="Application.ReflectTarget" />
         <item itemvalue="Application.PcFactoryDemo" />
-        <item itemvalue="Application.FactoryMethodDemo" />
-        <item itemvalue="Application.MouseFactory" />
-        <item itemvalue="Application.SimpleDemo" />
-        <item itemvalue="Application.RobotFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -857,7 +639,9 @@
       <workItem from="1618707095743" duration="2450000" />
       <workItem from="1618724480334" duration="4506000" />
       <workItem from="1618794500724" duration="25567000" />
-      <workItem from="1619240369885" duration="2954000" />
+      <workItem from="1619240369885" duration="6988000" />
+      <workItem from="1619315029017" duration="181000" />
+      <workItem from="1619315267408" duration="7620000" />
     </task>
     <task id="LOCAL-00001" summary="【redisson分布式集合对象】普通map学习实例">
       <created>1616769179905</created>
@@ -936,14 +720,28 @@
       <option name="project" value="LOCAL" />
       <updated>1618838830038</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="【spring源码简单学习】泛型+工厂模式完成（4-3完成）">
+      <created>1619244682555</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1619244682555</updated>
+    </task>
+    <task id="LOCAL-00013" summary="【spring源码简单学习】反射基础实例+操作获取构造函数">
+      <created>1619276429991</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1619276429991</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237032000" />
+    <option name="totallyTimeSpent" value="248867000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="0" width="969" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -954,13 +752,14 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32997763" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.37136465" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.36434978" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21321961" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.54345435" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Tail" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -976,24 +775,24 @@
     <layout-to-restore>
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32997763" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5100671" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22814499" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32997763" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info id="Designer" order="3" />
       <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1016,7 +815,9 @@
     <MESSAGE value="【kafka简单实例学习】kafka-stream的word-count" />
     <MESSAGE value="【spring源码简单实例开始】self_spring_demo创建成功" />
     <MESSAGE value="【spring源码简单学习】3-5泛型学习完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="【spring源码简单学习】3-5泛型学习完成" />
+    <MESSAGE value="【spring源码简单学习】泛型+工厂模式完成（4-3完成）" />
+    <MESSAGE value="【spring源码简单学习】反射基础实例+操作获取构造函数" />
+    <option name="LAST_COMMIT_MESSAGE" value="【spring源码简单学习】反射基础实例+操作获取构造函数" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1032,44 +833,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kafka_application_case/src/main/java/com/learn/kafka/application/config/WXTemplateProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/controller/redissonobject/RedissonRateLimitObjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/src/main/java/com/learn/redisson/config/RedissonConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="189" column="29" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/webapp/WEB-INF/jsp/hello.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1083,13 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1118,9 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1149,9 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1166,9 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1190,11 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1209,9 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1219,9 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,9 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,9 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,9 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,10 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1277,10 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1288,9 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="17" column="19" selection-start-line="11" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1336,7 +1052,7 @@
               <point x="-30.666666666666657" y="15.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-375.0" y="-85.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-375.0" y="-85.0" />
           <SelectedNodes>
             <node>com.learn.springsourcedemo.demo.pattern.factory.simple.MouseFactory</node>
           </SelectedNodes>
@@ -1357,9 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1367,9 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,10 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1388,11 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1414,10 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1425,16 +1122,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#280#281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/abstactf/PcFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
+        <state relative-caret-position="216">
           <caret line="10" selection-start-line="10" selection-end-line="24" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1444,14 +1137,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/factory/abstactf/DellPcFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
+        <state relative-caret-position="216">
           <caret line="13" selection-start-line="13" selection-end-line="25" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1460,23 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/SimpleDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1132">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/GenericClassDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1499,8 +1171,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/RobotFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        <state relative-caret-position="552">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/GenericClassDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/generic/SimpleDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1472">
+          <caret line="186" column="41" lean-forward="true" selection-start-line="186" selection-start-column="41" selection-end-line="186" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redisson-springboot-learn/redisson-springboot-learn-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="175" column="28" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/ConstructorCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="37" column="74" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/ReflectTarget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+          <folding>
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#1499#1500#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/FieldCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="33" column="103" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/reflect/MethodCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1513,10 +1269,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>self_spring_demo:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1536,7 +1294,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.alibaba:fastjson:1.2.56</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1560,7 +1318,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>redisson-springboot-learn-server</last-edited>
+          <last-edited>self_spring_demo</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1585,7 +1343,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: cglib:cglib:3.1</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>

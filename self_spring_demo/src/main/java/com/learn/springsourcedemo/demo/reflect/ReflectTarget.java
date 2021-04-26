@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ReflectTarget {
 
+    /********************构造函数*********************/
+
     /**
      * 默认的带参数的构造函数
      * @param str
@@ -18,7 +20,7 @@ public class ReflectTarget {
         log.info("this is default constructor method,parameter:{}",str);
     }
 
-    ReflectTarget(){
+    public ReflectTarget(){
         log.info("default no parameter constructor method");
     }
 
@@ -55,6 +57,36 @@ public class ReflectTarget {
         log.info("私有的构造函数，参数为:{}",index);
     }
 
+    /********************字段*********************/
+    public String name;
+    protected int index;
+    char type;
+    private String targetInfo;
+
+    //***************成员方法***************//
+    public void show1(String s){
+        System.out.println("调用了公有的，String参数的show1(): s = " + s);
+    }
+    protected void show2(){
+        System.out.println("调用了受保护的，无参的show2()");
+    }
+    void show3(){
+        System.out.println("调用了默认的，无参的show3()");
+    }
+    private String show4(int index){
+        System.out.println("调用了私有的，并且有返回值的，int参数的show4(): index = " + index);
+        return "show4result";
+    }
+
+    @Override
+    public String toString() {
+        return "ReflectTarget{" +
+                "name='" + name + '\'' +
+                ", index=" + index +
+                ", type=" + type +
+                ", targetInfo='" + targetInfo + '\'' +
+                '}';
+    }
 
     public static void main(String[] args) throws ClassNotFoundException {
         //第一种方式：object.getClass();
@@ -68,8 +100,6 @@ public class ReflectTarget {
         log.info("第二种方式获取的类信息为:{}",reflectTargetClassMethod02.getName());
         log.info("第三种方式获取的类信息为:{}",reflectTargetClassMethod03.getName());
         log.info("三种方式取到的Class对象是否是同一个：{}",true);
-
-
     }
 
 }
