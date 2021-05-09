@@ -4,15 +4,6 @@
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-businessdemo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/code/DemoImageCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/code/DemoImageCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/test/SiteTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/test/java/test/SiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/test/java/test/SiteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/test/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/test/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/test/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/test/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/test/resources/META-INF/test-persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/test/resources/arquillian.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,20 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SiteTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/test/java/test/SiteTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="43" column="28" lean-forward="true" selection-end-line="258" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+            <state relative-caret-position="506">
+              <caret line="157" column="19" lean-forward="true" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -182,7 +164,6 @@
         <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/demo/pattern/singleton/EnumStarvingSingleton.java" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/dto/User.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/security/DemoAuthorizeConifgProvider.java" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/security/DemoConnectionSignUp.java" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/security/DemoUserDetailsService.java" />
@@ -190,6 +171,7 @@
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/code/DemoImageCodeGenerator.java" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/test/java/test/SiteTest.java" />
+        <option value="$PROJECT_DIR$/spring-security-businessdemo/pom.xml" />
       </list>
     </option>
   </component>
@@ -318,23 +300,6 @@
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
               <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -629,7 +594,7 @@
       <workItem from="1619315267408" duration="11583000" />
       <workItem from="1619607773076" duration="3504000" />
       <workItem from="1619697293733" duration="4876000" />
-      <workItem from="1620387228624" duration="15191000" />
+      <workItem from="1620387228624" duration="15348000" />
     </task>
     <task id="LOCAL-00001" summary="【redisson分布式集合对象】普通map学习实例">
       <created>1616769179905</created>
@@ -757,7 +722,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620568925578</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="【spring-security业务实例初版】spring-security业务实例初版">
+      <created>1620569683684</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1620569683684</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -784,7 +756,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276401000" />
+    <option name="totallyTimeSpent" value="276558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1249,17 +1221,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/pom.xml">
+    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/test/java/test/SiteTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        <state relative-caret-position="456">
+          <caret line="61" column="33" selection-end-line="258" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/test/java/test/SiteTest.java">
+    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="43" column="28" lean-forward="true" selection-end-line="258" />
+        <state relative-caret-position="506">
+          <caret line="157" column="19" lean-forward="true" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
         </state>
       </provider>
     </entry>
