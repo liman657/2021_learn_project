@@ -77,7 +77,7 @@ public class ClassUtil {
             //根据class文件的绝对值路径，获取并生成class对象，并放入classSet中
             private void add2ClassSet(String absoluteFilePath) {
                 //1.从class文件的绝对值路径里提取出包含了package的类名
-                //如/Users/baidu/imooc/springframework/sampleframework/target/classes/com/learn/entity/dto/MainPageInfoDTO.class
+                //如/Users/baidu/learn/springframework/sampleframework/target/classes/com/learn/entity/dto/MainPageInfoDTO.class
                 //需要弄成com.learn.entity.dto.MainPageInfoDTO
                 absoluteFilePath = absoluteFilePath.replace(File.separator, ".");
                 String className = absoluteFilePath.substring(absoluteFilePath.indexOf(packageName));
