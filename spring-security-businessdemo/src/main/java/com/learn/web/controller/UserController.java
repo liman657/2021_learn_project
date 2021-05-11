@@ -15,7 +15,7 @@ import org.apache.commons.lang.builder.ToStringStyle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.security.core.Authentication;
+//import org.springframework.security.core.Authentication;
 //import org.springframework.social.connect.web.ProviderSignInUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -65,20 +65,20 @@ public class UserController {
 //		appSingUpUtils.doPostSignUp(new ServletWebRequest(request), userId);
 	}
 	
-	@GetMapping("/me")
-	public Object getCurrentUser(Authentication user, HttpServletRequest request) throws ExpiredJwtException, UnsupportedJwtException, MalformedJwtException, SignatureException, IllegalArgumentException, UnsupportedEncodingException {
-		
-//		String token = StringUtils.substringAfter(request.getHeader("Authorization"), "bearer ");
-//		
-//		Claims claims = Jwts.parser().setSigningKey(securityProperties.getOauth2().getJwtSigningKey().getBytes("UTF-8"))
-//					.parseClaimsJws(token).getBody();
-//		
-//		String company = (String) claims.get("company");
-//		
-//		System.out.println(company);
-		
-		return user;
-	}
+//	@GetMapping("/me")
+//	public Object getCurrentUser(Authentication user, HttpServletRequest request) throws ExpiredJwtException, UnsupportedJwtException, MalformedJwtException, SignatureException, IllegalArgumentException, UnsupportedEncodingException {
+//
+////		String token = StringUtils.substringAfter(request.getHeader("Authorization"), "bearer ");
+////
+////		Claims claims = Jwts.parser().setSigningKey(securityProperties.getOauth2().getJwtSigningKey().getBytes("UTF-8"))
+////					.parseClaimsJws(token).getBody();
+////
+////		String company = (String) claims.get("company");
+////
+////		System.out.println(company);
+//
+//		return user;
+//	}
 
 	@PostMapping
 	@ApiOperation(value = "创建用户")

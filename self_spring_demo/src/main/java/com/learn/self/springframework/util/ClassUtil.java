@@ -1,9 +1,11 @@
-package com.learn.self.springframework.core.util;
+package com.learn.self.springframework.util;
 
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
@@ -92,6 +94,24 @@ public class ClassUtil {
             for(File f:files){
                 extractClassFile(emptyClassSet,f,packageName);//递归调用
             }
+        }
+    }
+
+    /**
+     * 类的实例化
+     * @param clazz
+     * @param accessible
+     * @param <T>
+     * @return
+     */
+    public static<T> T newInstance(Class<?> clazz,boolean accessible){
+        try {
+            Constructor<?> constructor = clazz.getDeclaredConstructor();
+            constructor.setAccessible(accessible);
+            return (T) constructor.newInstance();
+        } catch (Exception e) {
+            log.error("new instance error : {}",e);
+            throw new RuntimeException(e);
         }
     }
 

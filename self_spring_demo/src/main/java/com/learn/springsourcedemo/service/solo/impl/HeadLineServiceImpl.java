@@ -1,5 +1,6 @@
 package com.learn.springsourcedemo.service.solo.impl;
 
+import com.learn.self.springframework.core.annotation.Service;
 import com.learn.springsourcedemo.entity.bo.HeadLine;
 import com.learn.springsourcedemo.entity.dto.Result;
 import com.learn.springsourcedemo.service.solo.IHeadLineService;
@@ -13,6 +14,7 @@ import java.util.List;
  * comment:
  */
 @Slf4j
+@Service
 public class HeadLineServiceImpl implements IHeadLineService {
     @Override
     public Result<Boolean> addHeadLine(HeadLine headLine) {

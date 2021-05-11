@@ -1,6 +1,7 @@
 package com.learn.springsourcedemo.service.combine.impl;
 
 
+import com.learn.self.springframework.core.annotation.Service;
 import com.learn.springsourcedemo.entity.bo.HeadLine;
 import com.learn.springsourcedemo.entity.bo.ShopCategory;
 import com.learn.springsourcedemo.entity.dto.MainPageInfoDTO;
@@ -13,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 @Slf4j
+@Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
     private IHeadLineService headLineService;
     private IShopCategoryService shopCategoryService;

@@ -1,5 +1,6 @@
 package com.learn.springsourcedemo.controller.superadmin;
 
+import com.learn.self.springframework.core.annotation.Controller;
 import com.learn.springsourcedemo.entity.bo.HeadLine;
 import com.learn.springsourcedemo.entity.dto.Result;
 import com.learn.springsourcedemo.service.solo.IHeadLineService;
@@ -13,6 +14,7 @@ import java.util.List;
  * createtime:2021/4/23
  * comment:对头条信息进行操作的controller
  */
+@Controller
 public class HeadLineOperationController {
     private IHeadLineService headLineService;
     public Result<Boolean> addHeadLine(HttpServletRequest req, HttpServletResponse resp){

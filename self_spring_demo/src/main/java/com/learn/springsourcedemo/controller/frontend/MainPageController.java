@@ -1,5 +1,6 @@
 package com.learn.springsourcedemo.controller.frontend;
 
+import com.learn.self.springframework.core.annotation.Controller;
 import com.learn.springsourcedemo.entity.bo.HeadLine;
 import com.learn.springsourcedemo.entity.dto.MainPageInfoDTO;
 import com.learn.springsourcedemo.entity.dto.Result;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * createtime:2021/4/23
  * comment:用来处理首页的请求
  */
+@Controller
 public class MainPageController {
 
     private HeadLineShopCategoryCombineService headLineShopCategoryCombineService;
