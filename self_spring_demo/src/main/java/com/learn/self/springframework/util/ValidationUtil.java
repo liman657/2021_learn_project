@@ -10,12 +10,32 @@ import java.util.Collection;
 public class ValidationUtil {
 
     /**
+     * String是否为null或""
+     *
+     * @param obj String
+     * @return 是否为空
+     */
+    public static boolean isEmpty(String obj) {
+        return (obj == null || "".equals(obj));
+    }
+
+    /**
      * 集合的判空
      * @param collection
      * @return
      */
     public static boolean isEmpty(Collection<?> collection){
         return collection == null || collection.isEmpty();
+    }
+
+    /**
+     * Array是否为null或者size为0
+     *
+     * @param obj Array
+     * @return 是否为空
+     */
+    public static boolean isEmpty(Object[] obj) {
+        return obj == null || obj.length == 0;
     }
 
 }

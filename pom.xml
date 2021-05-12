@@ -13,7 +13,7 @@
         <module>kafka_application_case</module>
         <module>for-hibernate-jar</module>
         <module>self_spring_demo</module>
-        <module>spring-security-businessdemo</module>
+        <!--<module>spring-security-businessdemo</module>-->
     </modules>
 
 </project>
