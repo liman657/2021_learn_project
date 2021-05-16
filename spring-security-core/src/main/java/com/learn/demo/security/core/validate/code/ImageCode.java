@@ -1,5 +1,7 @@
 package com.learn.demo.security.core.validate.code;
 
+import com.learn.demo.security.core.validate.ValidateCode;
+
 import java.awt.image.BufferedImage;
 import java.time.LocalDateTime;
 
@@ -8,23 +10,21 @@ import java.time.LocalDateTime;
  * createtime:2021/5/16
  * comment:
  */
-public class ImageCode {
+public class ImageCode extends ValidateCode {
 
     private BufferedImage bufferedImage;
     private String verifyCode;
     private LocalDateTime expireTime;
 
     public ImageCode(BufferedImage bufferedImage, String verifyCode, int expireTime) {
+        super(verifyCode,expireTime);
         this.bufferedImage = bufferedImage;
-        this.verifyCode = verifyCode;
-        this.expireTime = LocalDateTime.now().plusSeconds(expireTime);
     }
 
 
     public ImageCode(BufferedImage bufferedImage, String verifyCode, LocalDateTime expireTime) {
+        super(verifyCode,expireTime);
         this.bufferedImage = bufferedImage;
-        this.verifyCode = verifyCode;
-        this.expireTime = expireTime;
     }
 
 

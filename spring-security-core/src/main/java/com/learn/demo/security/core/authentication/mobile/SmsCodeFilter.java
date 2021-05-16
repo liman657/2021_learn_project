@@ -1,8 +1,10 @@
-package com.learn.demo.security.core.validate;
+package com.learn.demo.security.core.authentication.mobile;
 
 import com.learn.demo.security.core.authenticationhandler.LearnAuthenticationFailureHandler;
 import com.learn.demo.security.core.properties.SecurityProperties;
+import com.learn.demo.security.core.validate.ValidateCodeException;
 import com.learn.demo.security.core.validate.code.ImageCode;
+import com.learn.demo.security.core.validate.smscode.SmsCode;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
@@ -24,10 +26,10 @@ import java.util.Set;
 /**
  * autor:liman
  * createtime:2021/5/16
- * comment: 自定义的验证码过滤器
+ * comment: 自定义的短信验证码过滤器
  * 实现InitializingBean接口，用于自定义需要验证码的url，为了在其他参数都组装完成之后，初始化我们的urls
  */
-public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
+public class SmsCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
     private String SESSION_VERIFY_CODE_KEY = "SESSION_VERIFY_CODE_V_0.1";
 
@@ -47,13 +49,13 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     public void afterPropertiesSet() throws ServletException {
         super.afterPropertiesSet();
 
-        String configUrl = securityProperties.getCode().getImage().getUrl();
+        String configUrl = securityProperties.getCode().getSms().getUrl();
         String[] toVerifyCodeUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(configUrl, ",");
         if(null== toVerifyCodeUrls) return;
         for(String str:toVerifyCodeUrls){
             urls.add(str);
         }
-        urls.add("/security/authentication/form");//登录的请求也需要做验证码的认证
+        urls.add("/security/authentication/mobile");//登录的请求也需要做验证码的认证
     }
 
     @Override
@@ -91,10 +93,10 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     private void validateCode(ServletWebRequest servletWebRequest) throws ValidateCodeException, ServletRequestBindingException {
 
         //从session中获取验证码
-        ImageCode codeInSession = (ImageCode) sessionStrategy.getAttribute(servletWebRequest, SESSION_VERIFY_CODE_KEY);
+        SmsCode codeInSession = (SmsCode) sessionStrategy.getAttribute(servletWebRequest, SESSION_VERIFY_CODE_KEY);
 
         //从请求中获取验证码
-        String codeInRequest = ServletRequestUtils.getStringParameter(servletWebRequest.getRequest(), "imageCode");
+        String codeInRequest = ServletRequestUtils.getStringParameter(servletWebRequest.getRequest(), "smsCode");
 
 
 

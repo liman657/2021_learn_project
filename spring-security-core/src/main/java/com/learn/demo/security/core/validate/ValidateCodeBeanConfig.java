@@ -1,6 +1,8 @@
 package com.learn.demo.security.core.validate;
 
 import com.learn.demo.security.core.properties.SecurityProperties;
+import com.learn.demo.security.core.validate.smscode.DefaultSmsSender;
+import com.learn.demo.security.core.validate.smscode.SmsSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -23,6 +25,15 @@ public class ValidateCodeBeanConfig {
         ImageCodeGenerator imageCodeGenerator = new ImageCodeGenerator();
         imageCodeGenerator.setSecurityProperties(securityProperties);
         return imageCodeGenerator;
+    }
+
+
+    @Bean
+    @ConditionalOnMissingBean(SmsSender.class)//利用spring的条件注入，如果容器中已经存在imageCodeGenerator，则不再使用这里的bean
+    public SmsSender smsSender(){
+        SmsSender defaultSmsSender = new DefaultSmsSender();
+//        imageCodeGenerator.setSecurityProperties(securityProperties);
+        return defaultSmsSender;
     }
 
 }

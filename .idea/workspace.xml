@@ -2,33 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/authenticationhandler/LearnAuthenticationFailureHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/authenticationhandler/LearnAuthenticationSuccessHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/config/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/config/BrowserSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/properties/BrowserProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/properties/BrowserProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/properties/ImageCodeProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/properties/ImageCodeProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeBeanConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeProcessorHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/image/ImageCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/image/ImageCodeGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/image/ImageCodeProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/impl/AbstractValidateCodeProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/sms/DefaultSmsCodeSender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/sms/SmsCodeGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/sms/SmsCodeProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/sms/SmsCodeSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeBeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeBeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ImageCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ImageCode.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,136 +54,129 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ValidateCodeControllerUpdate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeControllerUpdate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="698">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeAuthenticationToken.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationToken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="23" selection-start-line="23" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1900#1901#0" expanded="true" />
+                <element signature="e#1927#1928#0" expanded="true" />
+                <element signature="e#1963#1964#0" expanded="true" />
+                <element signature="e#2000#2001#0" expanded="true" />
+                <element signature="e#2399#2400#0" expanded="true" />
+                <element signature="e#2439#2440#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeAuthenticationFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="664">
+              <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1734#1735#0" expanded="true" />
+                <element signature="e#1794#1795#0" expanded="true" />
+                <element signature="e#3307#3308#0" expanded="true" />
+                <element signature="e#3347#3348#0" expanded="true" />
+                <element signature="e#3395#3396#0" expanded="true" />
+                <element signature="e#3433#3434#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeAuthenticationProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="516">
+              <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1499#1500#0" expanded="true" />
+                <element signature="e#1540#1541#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="972">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeAuthenticationSecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/demo/web/config/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BrowserSecurityConfig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/config/BrowserSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+            <state relative-caret-position="420">
+              <caret line="57" column="70" lean-forward="true" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1643#1644#0" expanded="true" />
+                <element signature="e#1693#1694#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/properties/SecurityConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCodeGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DemoApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/demo/DemoApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidateCodeFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="demo-signIn.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signIn.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="28" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyUserDetailService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/selfauth/MyUserDetailService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrowserProperties.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/properties/BrowserProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="99" column="7" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="99" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrowserProperties.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/properties/BrowserProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="99" column="5" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="99" selection-end-column="5" />
-              <folding>
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#887#888#0" expanded="true" />
-                <element signature="e#935#936#0" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
-                <element signature="e#1022#1023#0" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1163#1164#0" expanded="true" />
-                <element signature="e#1201#1202#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
-                <element signature="e#1292#1293#0" expanded="true" />
-                <element signature="e#1341#1342#0" expanded="true" />
-                <element signature="e#1374#1375#0" expanded="true" />
-                <element signature="e#1397#1398#0" expanded="true" />
-                <element signature="e#1444#1445#0" expanded="true" />
-                <element signature="e#1477#1478#0" expanded="true" />
-                <element signature="e#1519#1520#0" expanded="true" />
-                <element signature="e#1540#1541#0" expanded="true" />
-                <element signature="e#1594#1595#0" expanded="true" />
-                <element signature="e#1623#1624#0" expanded="true" />
-                <element signature="e#1657#1658#0" expanded="true" />
-                <element signature="e#1681#1682#0" expanded="true" />
-                <element signature="e#1730#1731#0" expanded="true" />
-                <element signature="e#1765#1766#0" expanded="true" />
-                <element signature="e#1805#1806#0" expanded="true" />
-                <element signature="e#1835#1836#0" expanded="true" />
-                <element signature="e#1896#1897#0" expanded="true" />
-                <element signature="e#1943#1944#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageCodeGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2892#2893#0" expanded="true" />
-                <element signature="e#2933#2934#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServletWebRequest.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/context/request/ServletWebRequest.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -284,23 +258,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/self/springframework/inject/annotation/Autowired.java" />
-        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/self/springframework/util/ClassUtil.java" />
-        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/self/springframework/util/ValidationUtil.java" />
-        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/controller/superadmin/ShopCategoryOperationController.java" />
-        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/controller/superadmin/HeadLineOperationController.java" />
-        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/springsourcedemo/controller/frontend/MainPageController.java" />
-        <option value="$PROJECT_DIR$/self_spring_demo/src/test/java/com/learn/self/springframework/inject/DependencyInjectorTest.java" />
-        <option value="$PROJECT_DIR$/self_spring_demo/src/main/java/com/learn/self/springframework/inject/DependencyInjector.java" />
-        <option value="$PROJECT_DIR$/spring-secrity-learn-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/security/browser/BrowserSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security-browser/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/security/browser/selfauth/MyUserDetailService.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/security/core/support/SimpleResponse.java" />
-        <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/security/browser/config/BrowserSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/security/core/properties/WeixinProperties.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/security/core/properties/SecurityConstants.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/security/core/config/SecurityProperties.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/security/core/properties/BrowserProperties.java" />
@@ -323,17 +280,34 @@
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/image/ImageCode.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authenticationhandler/LearnAuthenticationSuccessHandler.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidationException.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ImageCode.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/properties/ImageCodeProperties.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeGenerator.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeController.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeBeanConfig.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/properties/BrowserProperties.java" />
         <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/properties/BrowserProperties.java" />
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signIn.html" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCode.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCode.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ImageCode.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsSender.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/DefaultSmsSender.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeBeanConfig.java" />
+        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signIn.html" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeController.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeProcessor.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeFilter.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCodeProcessor.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ImageCodeProcessor.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/AbstractValidateCodeProcessor.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeControllerUpdate.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationToke.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/smsCodeAuthenticationToke.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationToken.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeFilter.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java" />
         <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/config/BrowserSecurityConfig.java" />
       </list>
     </option>
@@ -514,34 +488,6 @@
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="properties" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="selfauth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
               <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -594,6 +540,31 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
@@ -705,7 +676,36 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="security" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="properties" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="validate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -739,9 +739,11 @@
       <recent name="com.learn.self.springframework.core" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.learn.demo.security.core.authentication.mobile" />
+      <recent name="com.learn.demo.security.core.validate.code" />
+      <recent name="com.learn.demo.security.core.validate.smscode" />
       <recent name="com.learn.redisson.controller.redissoncollectobj" />
       <recent name="com.learn.redisson.server" />
-      <recent name="com.learn.redisson.controller.redissonobject" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\2021_learn_project\spring-security-core\src\main\java\com\learn\demo\security\core" />
@@ -1033,7 +1035,7 @@
       <workItem from="1620632479136" duration="22961000" />
       <workItem from="1620871212636" duration="20079000" />
       <workItem from="1620955239578" duration="6999000" />
-      <workItem from="1621086220587" duration="15340000" />
+      <workItem from="1621086220587" duration="23881000" />
     </task>
     <task id="LOCAL-00001" summary="【redisson分布式集合对象】普通map学习实例">
       <created>1616769179905</created>
@@ -1189,7 +1191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621128628283</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="【spring-security表单登录完成4-9】记住我的功能完成">
+      <created>1621163388778</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1621163388778</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1225,7 +1234,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343146000" />
+    <option name="totallyTimeSpent" value="351687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1243,7 +1252,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.18443497" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.18763326" />
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info id="Web" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Tail" order="8" />
@@ -1251,7 +1260,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295964" />
       <window_info anchor="right" id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.42264575" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42264575" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1311,7 +1320,8 @@
     <MESSAGE value="【spring-security业务实例初版】spring-security业务实例初版" />
     <MESSAGE value="【spring源码实例5-8完成】bean容器的CRUD完成" />
     <MESSAGE value="【spring源码6-1完成】解释了一下BeanDefinition" />
-    <option name="LAST_COMMIT_MESSAGE" value="【spring源码6-1完成】解释了一下BeanDefinition" />
+    <MESSAGE value="【spring-security表单登录完成4-9】记住我的功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="【spring-security表单登录完成4-9】记住我的功能完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1323,17 +1333,51 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeFilter.java</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeControllerUpdate.java</url>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/AbstractValidateCodeProcessor.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCodeGenerator.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>validateCodeGenerators.get(type+&quot;CodeGenerator&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>validateCodeGenerators.get(type+&quot;CodeProcessor&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>urls</expression-string>
         <language-id>JAVA</language-id>
@@ -1352,154 +1396,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/authenticationhandler/LearnAuthenticationSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="55" column="70" lean-forward="true" selection-start-line="55" selection-start-column="70" selection-end-line="55" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/image/ImageCodeProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/sms/SmsCodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/sms/DefaultSmsCodeSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/image/ImageCodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/sms/SmsCodeProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/sms/SmsCodeSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeBeanConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1301#1302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1311">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeProcessorHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-87">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.6.RELEASE/spring-data-commons-1.13.6.RELEASE.jar!/org/springframework/data/domain/Pageable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/demo/dto/UserQueryCondition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/demo/web/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/image/ImageCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/properties/SecurityConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ValidateCodeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -1541,13 +1437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/demo/web/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/controller/BrowserSecurityController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1565,16 +1454,6 @@
           <folding>
             <element signature="e#274#275#0" expanded="true" />
             <element signature="e#303#304#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/config/SecurityCoreConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1602,18 +1481,6 @@
             <element signature="e#821#822#0" expanded="true" />
             <element signature="e#874#875#0" expanded="true" />
             <element signature="e#897#898#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ImageCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1653,36 +1520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="40" column="87" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeBeanConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/bind/ServletRequestUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -1694,18 +1531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2892#2893#0" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1753,27 +1578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/properties/BrowserProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="99" column="7" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="99" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/demo/DemoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signIn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1784,22 +1592,293 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeFilter.java">
+    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/properties/BrowserProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="626">
+          <caret line="99" column="7" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="99" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/config/BrowserSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/DefaultSmsSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        <state relative-caret-position="240">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+          <folding>
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeBeanConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-web/1.1.4.RELEASE/spring-social-web-1.1.4.RELEASE.jar!/org/springframework/social/connect/web/SessionStrategy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/config/SecurityCoreConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="101" column="54" lean-forward="true" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ImageCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCodeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-348">
+          <caret line="29" column="17" lean-forward="true" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/AbstractValidateCodeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/ImageCodeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ImageCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/smsCodeAuthenticationToke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/validate/ValidateCodeControllerUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="23" selection-start-line="23" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+            <element signature="e#1927#1928#0" expanded="true" />
+            <element signature="e#1963#1964#0" expanded="true" />
+            <element signature="e#2000#2001#0" expanded="true" />
+            <element signature="e#2399#2400#0" expanded="true" />
+            <element signature="e#2439#2440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/properties/SecurityConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1734#1735#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#3347#3348#0" expanded="true" />
+            <element signature="e#3395#3396#0" expanded="true" />
+            <element signature="e#3433#3434#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1499#1500#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/demo/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/demo/web/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/demo/security/browser/config/BrowserSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="57" column="70" lean-forward="true" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
           </folding>
         </state>
       </provider>
