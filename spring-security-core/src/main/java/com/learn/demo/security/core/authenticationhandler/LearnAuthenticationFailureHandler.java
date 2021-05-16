@@ -1,7 +1,6 @@
-package com.learn.demo.security.browser.authenticationhandler;
+package com.learn.demo.security.core.authenticationhandler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.learn.demo.security.core.properties.LoginResponseType;
 import com.learn.demo.security.core.properties.SecurityProperties;
 import com.learn.demo.security.core.support.SimpleResponse;
 import org.slf4j.Logger;
