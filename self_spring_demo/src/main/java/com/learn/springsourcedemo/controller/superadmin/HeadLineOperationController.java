@@ -1,9 +1,11 @@
 package com.learn.springsourcedemo.controller.superadmin;
 
 import com.learn.self.springframework.core.annotation.Controller;
+import com.learn.self.springframework.inject.annotation.Autowired;
 import com.learn.springsourcedemo.entity.bo.HeadLine;
 import com.learn.springsourcedemo.entity.dto.Result;
 import com.learn.springsourcedemo.service.solo.IHeadLineService;
+import lombok.Getter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +17,9 @@ import java.util.List;
  * comment:对头条信息进行操作的controller
  */
 @Controller
+@Getter
 public class HeadLineOperationController {
+    @Autowired
     private IHeadLineService headLineService;
     public Result<Boolean> addHeadLine(HttpServletRequest req, HttpServletResponse resp){
         //TODO:参数校验以及请求参数转化

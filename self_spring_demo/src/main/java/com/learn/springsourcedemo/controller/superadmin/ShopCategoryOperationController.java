@@ -1,17 +1,22 @@
 package com.learn.springsourcedemo.controller.superadmin;
 
 import com.learn.self.springframework.core.annotation.Controller;
+import com.learn.self.springframework.inject.annotation.Autowired;
 import com.learn.springsourcedemo.entity.bo.ShopCategory;
 import com.learn.springsourcedemo.entity.dto.Result;
 import com.learn.springsourcedemo.service.solo.IShopCategoryService;
+import lombok.Getter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
+@Getter
 public class ShopCategoryOperationController {
+    @Autowired
     private IShopCategoryService shopCategoryService;
+
     public Result<Boolean> addShopCategory(HttpServletRequest req, HttpServletResponse resp){
         //TODO:参数校验以及请求参数转化
         return shopCategoryService.addShopCategory(new ShopCategory());

@@ -71,7 +71,7 @@ public class DependencyInjector {
     }
 
     /**
-     * 根据Class在beanContainer里获取其实例或者实现类
+     * 根据 Class 在 beanContainer 里获取其实例或者实现类
      * @param fieldClass
      * @param autowiredValue
      * @return

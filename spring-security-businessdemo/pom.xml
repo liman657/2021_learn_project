@@ -16,113 +16,25 @@
     <artifactId>spring-security-businessdemo</artifactId>
 
 
-
     <dependencies>
+        <dependency>
+            <groupId>com.coderman.learn</groupId>
+            <artifactId>spring-security-browser</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.coderman.learn</groupId>
             <artifactId>spring-security-core</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.learn.security</groupId>-->
-            <!--<artifactId>learn-security-browser</artifactId>-->
-            <!--<version>${learn.security.version}</version>-->
-        <!--</dependency>-->
-
-        <!--
-        <dependency>
-            <groupId>com.learn.security</groupId>
-            <artifactId>learn-security-authorize</artifactId>
-            <version>${learn.security.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.learn.security</groupId>
-            <artifactId>learn-security-app</artifactId>
-            <version>${learn.security.version}</version>
-        </dependency>
-         -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-web</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.session</groupId>-->
-            <!--<artifactId>spring-session</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-oauth2</artifactId>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
-            <!--&lt;!&ndash;<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
-            <!--&lt;!&ndash;<artifactId>spring-boot-starter-data-redis</artifactId>&ndash;&gt;-->
-        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-security</artifactId>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
-            <!--&lt;!&ndash;<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
-            <!--&lt;!&ndash;<artifactId>spring-boot-configuration-processor</artifactId>&ndash;&gt;-->
-        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>mysql</groupId>-->
-            <!--<artifactId>mysql-connector-java</artifactId>-->
-            <!--<version>8.0.15</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.social</groupId>-->
-            <!--<artifactId>spring-social-config</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.social</groupId>-->
-            <!--<artifactId>spring-social-core</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.social</groupId>-->
-            <!--<artifactId>spring-social-security</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.social</groupId>-->
-            <!--<artifactId>spring-social-web</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>commons-lang</groupId>-->
-            <!--<artifactId>commons-lang</artifactId>-->
-            <!--<version>2.6</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>commons-collections</groupId>-->
-            <!--<artifactId>commons-collections</artifactId>-->
-            <!--<version>3.2.2</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>commons-beanutils</groupId>-->
-            <!--<artifactId>commons-beanutils</artifactId>-->
-            <!--<version>1.9.2</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>commons-io</groupId>-->
-            <!--<artifactId>commons-io</artifactId>-->
-            <!--<version>2.6</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -139,14 +51,14 @@
             <version>2.27.0</version>
         </dependency>
         <dependency>
-        <groupId>io.jsonwebtoken</groupId>
-        <artifactId>jjwt</artifactId>
-        <version>0.7.0</version>
-    </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.projectlombok</groupId>-->
-            <!--<artifactId>lombok</artifactId>-->
-        <!--</dependency>-->
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>javax.validation</groupId>
