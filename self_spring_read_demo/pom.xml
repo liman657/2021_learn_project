@@ -11,8 +11,8 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.2.2.RELEASE</version>
-            <scope>compile</scope>
+            <version>5.2.4.RELEASE</version>
+            <!--<scope>compile</scope>-->
         </dependency>
     </dependencies>
 
