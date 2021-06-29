@@ -2,11 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!--<parent>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
-        <!--<version>2.4.4</version>-->
-    <!--</parent>-->
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.coderman.learn</groupId>
     <artifactId>spring-secrity-learn-parent</artifactId>
@@ -22,10 +17,13 @@
         <lombok.version>1.16.10</lombok.version>
         <javax-validation.version>2.0.1.Final</javax-validation.version>
         <spring.boot.version>2.4.4</spring.boot.version>
+
+        <self.app.version>1.0.0-SNAPSHOT</self.app.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!--spring io 将具体的版本依赖交给spring IO 去管理-->
             <dependency>
                 <groupId>io.spring.platform</groupId>
                 <artifactId>platform-bom</artifactId>
@@ -33,6 +31,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!--以spring cloud相关组件为基础-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -45,6 +45,7 @@
 
     <build>
         <plugins>
+            <!--指定编译的插件版本-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -62,5 +63,6 @@
         <module>../spring-security-browser</module>
         <module>../spring-security-core</module>
         <module>../spring-security-businessdemo</module>
+        <module>../spring-security-app</module>
     </modules>
 </project>

@@ -18,6 +18,9 @@
         <module name="redisson-springboot-learn-server" />
         <module name="self_spring_demo" />
         <module name="self_spring_read_demo" />
+        <module name="spring-security-app" />
+        <module name="spring-security-browser" />
+        <module name="spring-security-businessdemo" />
         <module name="spring-security-core" />
         <module name="spring-security-demo" />
       </profile>
