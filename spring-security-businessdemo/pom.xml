@@ -28,6 +28,7 @@
             <artifactId>spring-security-core</artifactId>
             <version>${self.app.version}</version>
         </dependency>
+        <!--引入-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
