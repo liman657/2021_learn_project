@@ -2,7 +2,7 @@ package com.learn.springsecurity.demo.controller;
 
 import com.learn.springsecurity.demo.dto.FileInfo;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.IOUtils;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
