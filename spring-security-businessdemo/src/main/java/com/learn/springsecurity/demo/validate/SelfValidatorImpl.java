@@ -24,6 +24,7 @@ public class SelfValidatorImpl implements ConstraintValidator<SelfValidator, Obj
     @Override
     public boolean isValid(Object value, ConstraintValidatorContext context) {
 //        helloService.greeting("tom");
+        //TODO:这里处理校验逻辑，如果校验通过，则返回true，否则返回false
         System.out.println(value);
         return false;
     }

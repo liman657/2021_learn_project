@@ -30,6 +30,7 @@ public class FileController {
         log.info("{}",file.getSize());
         File localFile = new File(folder,new Date().getTime()+".txt");
 
+        //这
         file.transferTo(localFile);
         return new FileInfo(localFile.getAbsolutePath());
 

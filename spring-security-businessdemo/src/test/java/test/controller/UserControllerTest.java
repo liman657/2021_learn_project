@@ -115,6 +115,10 @@ public class UserControllerTest {
                 .andExpect(status().isOk());
     }
 
+    /**
+     * 文件上传测试
+     * @throws Exception
+     */
     @Test
     public void whenUploadSuccess() throws Exception {
         String result = mockMvc.perform(fileUpload("/file")
