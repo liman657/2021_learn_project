@@ -2,6 +2,7 @@ package com.learn.springsecurity.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -14,6 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @RestController
 @EnableSwagger2
+@ComponentScan(basePackages = {"com.learn.springsecurity.browser","com.learn.springsecurity.demo"})
 public class SpringSecurityDemoApplication {
 
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class SpringSecurityDemoApplication {
 
     @GetMapping("/hello")
     public String hello(){
-        return "hello spring security";
+        return "hello spring springsecurity";
     }
 
 }

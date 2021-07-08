@@ -145,7 +145,7 @@
 //        guardHttp(accountButton).click();
 //        guardHttp(logoutButton).click();
 //
-//        // attempt to bypass security to change password
+//        // attempt to bypass springsecurity to change password
 //        browser.get(deploymentUrl.toExternalForm() + "views/accounts/user/changepassword.xhtml");
 //        assertTrue(loginSubmitButton.isDisplayed());
 //        // first login with j_security login form

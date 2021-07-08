@@ -19,7 +19,7 @@ import java.util.Date;
 @Slf4j
 public class TimeAspect {
 
-    @Around("execution(* com.learn.springsecurity.demo.controller.UserController.*(..))")
+//    @Around("execution(* com.learn.springsecurity.demo.controller.UserController.*(..))")
     public Object handleControllerMethod(ProceedingJoinPoint point) throws Throwable {
         Long startTime = new Date().getTime();
         Object[] args = point.getArgs();
@@ -30,7 +30,7 @@ public class TimeAspect {
         Long endTime = new Date().getTime();
         log.info("【aop】目标接口调用耗时:{}",endTime-startTime);
         log.info("【aop】切面结束");
-        return null;
+        return object;
     }
 
 }

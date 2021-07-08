@@ -21,7 +21,7 @@ import java.util.Date;
 @Slf4j
 public class FileController {
 
-    private String folder = "F:\\2021_learn_project\\spring-security-businessdemo\\src\\main\\java\\com\\learn\\springsecurity\\demo\\controller";
+    private String folder = "F:\\2021_learn_project\\spring-springsecurity-businessdemo\\src\\main\\java\\com\\learn\\springsecurity\\demo\\controller";
 
     @PostMapping
     public FileInfo upload(MultipartFile file) throws IOException {

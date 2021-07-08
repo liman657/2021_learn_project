@@ -29,8 +29,8 @@
 
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-taglibs &ndash;&gt;-->
         <!--<dependency>-->
-            <!--<groupId>org.springframework.security</groupId>-->
-            <!--<artifactId>spring-security-taglibs</artifactId>-->
+            <!--<groupId>org.springframework.springsecurity</groupId>-->
+            <!--<artifactId>spring-springsecurity-taglibs</artifactId>-->
             <!--<version>5.0.5.RELEASE</version>-->
         <!--</dependency>-->
 
