@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面（安全组件提供）</title>
+</head>
+<h3>安全模块提供的登录页</h3>
+<body>
+<form action="authentication/form" method="post">
+    <table>
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>图形验证码:</td>
+            <td>
+                <input type="text" name="imgCode">
+                <img src="verifycode/img">
+            </td>
+        </tr>
+        <!--<tr>-->
+            <!--<td colspan='2'><input name="remember-me" type="checkbox" value="true" />记住我</td>-->
+        <!--</tr>-->
+        <tr>
+            <td colspan="2"><button type="submit">登录</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

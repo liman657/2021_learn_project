@@ -15,7 +15,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @RestController
 @EnableSwagger2
-@ComponentScan(basePackages = {"com.learn.springsecurity.browser","com.learn.springsecurity.demo"})
+@ComponentScan(basePackages = {"com.learn.springsecurity.browser","com.learn.springsecurity.demo"
+,"com.learn.springsecurity.core"})
 public class SpringSecurityDemoApplication {
 
     public static void main(String[] args) {
