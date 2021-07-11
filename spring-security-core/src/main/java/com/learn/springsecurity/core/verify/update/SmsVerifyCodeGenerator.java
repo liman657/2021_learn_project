@@ -32,11 +32,4 @@ public class SmsVerifyCodeGenerator implements IVerifyCodeGenerator{
         return new BaseVerifyCode(verifyCode,defaultSmsExpireSecond);
     }
 
-//    public SecurityProperties getSecurityProperties() {
-//        return securityProperties;
-//    }
-//
-//    public void setSecurityProperties(SecurityProperties securityProperties) {
-//        this.securityProperties = securityProperties;
-//    }
 }

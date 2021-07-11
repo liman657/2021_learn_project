@@ -4,7 +4,6 @@ import com.learn.springsecurity.core.properties.SecurityProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
@@ -18,7 +17,6 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.bind.ValidationException;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -26,10 +24,10 @@ import java.util.Set;
 /**
  * autor:liman
  * createtime:2021/7/10
- * comment:校验验证码的过滤器
+ * comment:短信验证码的校验过滤器
  */
 @Slf4j
-public class ValidateVerifyCodeFilter extends OncePerRequestFilter implements InitializingBean {
+public class SmsVerifyCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
     //认证失败的异常处理
     private AuthenticationFailureHandler authenticationFailureHandler;
@@ -50,13 +48,13 @@ public class ValidateVerifyCodeFilter extends OncePerRequestFilter implements In
     @Override
     public void afterPropertiesSet() throws ServletException {
         super.afterPropertiesSet();
-        String configUrls = securityProperties.getVerifyCode().getImage().getUrls();
+        String configUrls = securityProperties.getVerifyCode().getSms().getUrls();
         String[] configTargetUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(configUrls,",");
         for(String url:configTargetUrls){
             toVerifyUrls.add(url);
         }
-        toVerifyUrls.add("/security/authentication/form");//登录的url是一定要校验图形验证码的
-        log.info("需要校验图形验证码的url为:{}",toVerifyUrls);
+        toVerifyUrls.add("/security/authentication/mobile");//登录的url是一定要校验图形验证码的
+        log.info("需要校验短信验证码的url为:{}",toVerifyUrls);
     }
 
     @Override
@@ -64,7 +62,7 @@ public class ValidateVerifyCodeFilter extends OncePerRequestFilter implements In
         String requestUrl = request.getRequestURI();
         String requestMethod = request.getMethod();
 
-        //匹配请求url是否在需要校验的url集合中，如果在，则表明需要校验图形验证码
+        //匹配请求url是否在需要校验的url集合中，如果在，则表明需要校验短信验证码
         boolean isNeedVerify = false;
         for(String url:toVerifyUrls){
             if(antPathMatcher.match(url,requestUrl)){
@@ -77,7 +75,7 @@ public class ValidateVerifyCodeFilter extends OncePerRequestFilter implements In
                 validateVerifyCode(new ServletWebRequest(request));
             }catch (VerifyCodeException e){
                 authenticationFailureHandler.onAuthenticationFailure(request,response,e);
-                log.error("校验验证码异常");
+                log.error("【短信】校验验证码异常");
                 return;
             }
         }
@@ -89,12 +87,18 @@ public class ValidateVerifyCodeFilter extends OncePerRequestFilter implements In
     //真正校验验证码的方法
     private void validateVerifyCode(ServletWebRequest request) throws VerifyCodeException{
         //从会话中获取验证码
-        ImageVerifyCode codeInSession = (ImageVerifyCode) sessionStrategy.getAttribute(request,VerifyCodeController.SESSION_VERIFY_IMG_CODE);
+        String mobile = null;
+        try {
+            mobile = ServletRequestUtils.getStringParameter(request.getRequest(), "mobile");
+        } catch (ServletRequestBindingException e) {
+            log.error("【短信】验证码校验，获取手机号异常");
+        }
+        BaseVerifyCode codeInSession = (BaseVerifyCode) sessionStrategy.getAttribute(request,VerifyCodeController.SESSION_VERIFY_SMS_CODE+mobile);
         String codeInRequest;
         try {
             //从请求中获取图形验证码
             codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(),
-                    "imgCode");
+                    "smsCode");
         } catch (ServletRequestBindingException e) {
             throw new VerifyCodeException("获取验证码的值失败");
         }
@@ -117,7 +121,7 @@ public class ValidateVerifyCodeFilter extends OncePerRequestFilter implements In
             throw new VerifyCodeException("验证码不正确");
         }
 
-        sessionStrategy.removeAttribute(request, VerifyCodeController.SESSION_VERIFY_IMG_CODE);
+        sessionStrategy.removeAttribute(request, VerifyCodeController.SESSION_VERIFY_SMS_CODE+mobile);
     }
 
     public SecurityProperties getSecurityProperties() {
