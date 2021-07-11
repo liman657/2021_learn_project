@@ -20,12 +20,33 @@
             <td>图形验证码:</td>
             <td>
                 <input type="text" name="imgCode">
-                <img src="verifycode/img">
+                <img src="verifycode/image">
             </td>
         </tr>
         <!--<tr>-->
             <!--<td colspan='2'><input name="remember-me" type="checkbox" value="true" />记住我</td>-->
         <!--</tr>-->
+        <tr>
+            <td colspan="2"><button type="submit">登录</button></td>
+        </tr>
+    </table>
+</form>
+
+<h3>短信验证码登录</h3>
+<form action="authentication/mobile" method="post">
+    <table>
+        <tr>
+            <td>手机号:</td>
+            <td><input type="text" name="mobile" value="15528212893"></td>
+        </tr>
+        <tr>
+            <td>短信验证码:</td>
+            <td>
+                <input type="text" name="smsCode">
+                <!--<img src="/springsecurity/code/sms">-->
+                <a href="verifycode/sms?mobile=15528212893">发送验证码</a>
+            </td>
+        </tr>
         <tr>
             <td colspan="2"><button type="submit">登录</button></td>
         </tr>

@@ -44,6 +44,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
         ValidateVerifyCodeFilter validateVerifyCodeFilter = new ValidateVerifyCodeFilter();
         validateVerifyCodeFilter.setAuthenticationFailureHandler(selfAuthenticationFailureHandler);
+        validateVerifyCodeFilter.setSecurityProperties(securityProperties);
+        validateVerifyCodeFilter.afterPropertiesSet();
 
         http.addFilterBefore(validateVerifyCodeFilter,UsernamePasswordAuthenticationFilter.class)
                 .formLogin()//采用表单登录
@@ -54,7 +56,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()//并且要认证请求
                 .antMatchers("/authentication/require",securityProperties.getBrowser().getLoginPage(),
-                        "/verifycode/img").permitAll()//登录页的请求不需要认证
+                        "/verifycode/*").permitAll()//登录页的请求不需要认证
                 .anyRequest()//对任意的请求
                 .authenticated()//都需要做认证
                 .and().csrf().disable();//关闭csrf
