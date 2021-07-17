@@ -14,6 +14,8 @@ public class SecurityProperties {
 
     private VerifyCodeProperties verifyCode = new VerifyCodeProperties();
 
+    private SocialLoginProperties social = new SocialLoginProperties();
+
     public BrowersProperties getBrowser() {
         return browser;
     }
@@ -28,5 +30,13 @@ public class SecurityProperties {
 
     public void setVerifyCode(VerifyCodeProperties verifyCode) {
         this.verifyCode = verifyCode;
+    }
+
+    public SocialLoginProperties getSocial() {
+        return social;
+    }
+
+    public void setSocial(SocialLoginProperties social) {
+        this.social = social;
     }
 }

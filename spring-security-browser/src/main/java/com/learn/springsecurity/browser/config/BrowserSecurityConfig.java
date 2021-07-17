@@ -14,6 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 /**
  * autor:liman
@@ -33,6 +34,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private SmsVerifyCodeAuthenticationSecurityConfig smsVerifyCodeAuthenticationSecurityConfig;
+
+    @Autowired
+    private SpringSocialConfigurer selfSocialSecurityConfig;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -71,6 +75,10 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()//对任意的请求
                 .authenticated()//都需要做认证
                 .and().csrf().disable()//关闭csrf
-                .apply(smsVerifyCodeAuthenticationSecurityConfig);//导入短信验证码登录的安全配置
+                .apply(smsVerifyCodeAuthenticationSecurityConfig)//导入短信验证码登录的安全配置
+                .and()
+                .apply(selfSocialSecurityConfig);//引入社交登录的配置
+
+
     }
 }
