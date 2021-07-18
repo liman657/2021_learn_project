@@ -31,6 +31,7 @@ public class SocialConfig extends SocialConfigurerAdapter {
     private SecurityProperties securityProperties;
     @Autowired
     private ConnectionFactoryLocator connectionFactoryLocator;
+
     @Autowired(required = false)
     private ConnectionSignUp connectionSignUp;
 

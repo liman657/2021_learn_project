@@ -11,12 +11,22 @@ public class SocialLoginProperties {
 
     private QQSocialLoginProperties qq = new QQSocialLoginProperties();
 
+    private WeixinSocialLoginProperties weixin = new WeixinSocialLoginProperties();
+
     public QQSocialLoginProperties getQq() {
         return qq;
     }
 
     public void setQq(QQSocialLoginProperties qq) {
         this.qq = qq;
+    }
+
+    public WeixinSocialLoginProperties getWeixin() {
+        return weixin;
+    }
+
+    public void setWeixin(WeixinSocialLoginProperties weixin) {
+        this.weixin = weixin;
     }
 
     public String getProcessFilterUrl() {

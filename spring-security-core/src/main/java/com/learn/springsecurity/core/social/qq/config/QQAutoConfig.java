@@ -1,4 +1,4 @@
-package com.learn.springsecurity.core.config.social;
+package com.learn.springsecurity.core.social.qq.config;
 
 import com.learn.springsecurity.core.properties.QQSocialLoginProperties;
 import com.learn.springsecurity.core.properties.SecurityProperties;

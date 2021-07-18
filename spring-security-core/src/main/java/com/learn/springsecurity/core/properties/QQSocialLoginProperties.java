@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.social.SocialProperties;
 /**
  * autor:liman
  * createtime:2021/7/14
- * comment:社交登录的相关配置
+ * comment:QQ社交登录的相关配置
  */
 public class QQSocialLoginProperties extends SocialProperties {
 

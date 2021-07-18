@@ -3,6 +3,7 @@ package com.learn.springsecurity.core.verify;
 import lombok.Data;
 
 import java.awt.image.BufferedImage;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
  * comment: 图形验证码
  */
 @Data
-public class BaseVerifyCode {
+public class BaseVerifyCode implements Serializable {
 
     private String verifyCode;
 

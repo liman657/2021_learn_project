@@ -3,6 +3,7 @@ package com.learn.springsecurity.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -17,6 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @ComponentScan(basePackages = {"com.learn.springsecurity.browser","com.learn.springsecurity.demo"
 ,"com.learn.springsecurity.core"})
+@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 60*10,redisNamespace = "self#security#session")
 public class SpringSecurityDemoApplication {
 
     public static void main(String[] args) {

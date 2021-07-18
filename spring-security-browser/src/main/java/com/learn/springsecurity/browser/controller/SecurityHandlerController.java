@@ -83,4 +83,13 @@ public class SecurityHandlerController {
         return result;
     }
 
+    @GetMapping("/authentication/sessiontimeout")
+    @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
+    public BaseResponse invalidSession(){
+        String message = "session 失效";
+        BaseResponse baseResponse = new BaseResponse(StatusCode.Fail);
+        baseResponse.setData(message);
+        return baseResponse;
+    }
+
 }

@@ -58,7 +58,8 @@ public class VerifyCodeController {
     public void createImgCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
         ServletWebRequest servletWebRequest = new ServletWebRequest(request);
         ImageVerifyCode imageVerifyCode = (ImageVerifyCode) imageVerifyCodeGenerator.generateVerifyCode(servletWebRequest);
-        sessionStrategy.setAttribute(servletWebRequest, SESSION_VERIFY_IMG_CODE, imageVerifyCode);
+        BaseVerifyCode baseImgVerifyCode = new BaseVerifyCode(imageVerifyCode.getVerifyCode(),imageVerifyCode.getExpireTime());
+        sessionStrategy.setAttribute(servletWebRequest, SESSION_VERIFY_IMG_CODE, baseImgVerifyCode);
         ImageIO.write(imageVerifyCode.getImage(), "JPEG", response.getOutputStream());
     }
 
