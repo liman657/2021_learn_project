@@ -22,7 +22,7 @@ public class QQLoginImpl extends AbstractOAuth2ApiBinding implements QQLoginInte
 
     //获取用户OPENID的url
     private static final String URL_GET_OPENID = "https://graph.qq.com/oauth2.0/me?access_token=%s";
-    //获取用户信息的url
+    //根据openId获取用户信息的url
     private static final String URL_GET_USERINFO = "https://graph.qq.com/user/get_user_info?oauth_consumer_key=%s&openid=%s";
 
     private String appId;

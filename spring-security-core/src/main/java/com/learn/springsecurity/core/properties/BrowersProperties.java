@@ -7,11 +7,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * createtime:2021/7/9
  * comment:
  */
-@ConfigurationProperties()
+//@ConfigurationProperties()
 public class BrowersProperties {
 
     //自定义登录页面
     private String loginPage = "/self-login.html";
+
+    private String siguUpPage = "/self-register.html";
 
     //登录类型
     private LoginType loginType = LoginType.JSON;
@@ -30,5 +32,13 @@ public class BrowersProperties {
 
     public void setLoginType(LoginType loginType) {
         this.loginType = loginType;
+    }
+
+    public String getSiguUpPage() {
+        return siguUpPage;
+    }
+
+    public void setSiguUpPage(String siguUpPage) {
+        this.siguUpPage = siguUpPage;
     }
 }

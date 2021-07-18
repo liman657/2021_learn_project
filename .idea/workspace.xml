@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/QQAutoConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SelfSpringSocialConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SocialConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/QQSocialLoginProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/SocialLoginProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQUserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQOAuth2Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/api/SocialUserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/security/SelfConnectionSignUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/sample/MyUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/sample/MyUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/controller/SecurityHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/controller/SecurityHandlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/SecurityProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/SecurityProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SocialConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SocialConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/BrowersProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/BrowersProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,83 +65,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OAuth2AuthenticationService.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/provider/OAuth2AuthenticationService.java">
+      <file leaf-file-name="SocialConfig.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SocialConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="96">
+              <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SocialAuthenticationFilter.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java">
+      <file leaf-file-name="SocialAuthenticationProvider.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+            <state relative-caret-position="340">
+              <caret line="77" column="73" lean-forward="true" selection-start-line="77" selection-start-column="73" selection-end-line="77" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleUrlAuthenticationFailureHandler.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/SimpleUrlAuthenticationFailureHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="115" column="9" lean-forward="true" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QQOAuth2Template.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQOAuth2Template.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QQServiceProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="42" column="34" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QQLoginImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="42" column="51" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OAuth2Operations.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE-sources.jar!/org/springframework/social/oauth2/OAuth2Operations.java">
+      <file leaf-file-name="UsersConnectionRepository.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE-sources.jar!/org/springframework/social/connect/UsersConnectionRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="302">
-              <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OAuth2Template.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE-sources.jar!/org/springframework/social/oauth2/OAuth2Template.java">
+      <file leaf-file-name="JdbcUsersConnectionRepository.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE-sources.jar!/org/springframework/social/connect/jdbc/JdbcUsersConnectionRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="208" column="27" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="27" />
+            <state relative-caret-position="160">
+              <caret line="82" column="41" lean-forward="true" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelfConnectionSignUp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/security/SelfConnectionSignUp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="9" selection-start-line="9" selection-end-line="31" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProviderSignInUtils.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-web/1.1.4.RELEASE/spring-social-web-1.1.4.RELEASE-sources.jar!/org/springframework/social/connect/web/ProviderSignInUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="33" column="81" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-652">
+              <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowserSecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="653">
+              <caret line="66" column="62" lean-forward="true" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityHandlerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/controller/SecurityHandlerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="76" column="15" lean-forward="true" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocialUserInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/api/SocialUserInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,7 +181,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>debug.boot.redisson.model</find>
       <find>topicPartitionOne</find>
       <find>redisson</find>
       <find>org.redisson</find>
@@ -200,6 +210,7 @@
       <find>BrowserSecurityConfig</find>
       <find>需要校验图形验证码的</find>
       <find>您所访问的页面不存在</find>
+      <find>sign</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -231,13 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/update/ImageVerifyCodeGenerator.java" />
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/verifycode/ImageVerifyCodeGenerator.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/ImageVerifyCode.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/SmsVerifyCode.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/update/IVerifyCodeGenerator.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/smssender/SmsCoderSender.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/smssender/DefaultSmsSender.java" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signIn.html" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/SmsVerifyCodeProperties.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/BaseVerifyCodeProperties.java" />
@@ -273,15 +277,22 @@
         <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/sample/MyUserDetailService.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/SocialLoginProperties.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SelfSpringSocialConfig.java" />
-        <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SocialConfig.java" />
         <option value="$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-login.html" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/QQAutoConfig.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/QQSocialLoginProperties.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQOAuth2Template.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginImpl.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginImpl.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/BrowersProperties.java" />
+        <option value="$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-register.html" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signUp.html" />
+        <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/api/SocialUserInfo.java" />
+        <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/controller/SecurityHandlerController.java" />
+        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/security/SelfConnectionSignUp.java" />
+        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SocialConfig.java" />
       </list>
     </option>
   </component>
@@ -339,7 +350,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="63" />
+    <option name="x" value="58" />
     <option name="width" value="962" />
     <option name="height" value="1080" />
   </component>
@@ -351,7 +362,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -362,94 +373,70 @@
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
@@ -457,6 +444,12 @@
               <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
@@ -464,6 +457,15 @@
               <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -572,57 +574,13 @@
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="social" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="social" type="462c0819:PsiDirectoryNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="social" type="462c0819:PsiDirectoryNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="social" type="462c0819:PsiDirectoryNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-              <item name="connect" type="462c0819:PsiDirectoryNode" />
+              <item name="properties" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -634,7 +592,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="OAuth2AuthenticationService&#9;PSI&#9;JAVA://org.springframework.social.security.provider.OAuth2AuthenticationService&#10;SocialAuthenticationFilter&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuth&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationFilter&#10;UsernamePassword&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java&#10;UsernameP&#9;PSI&#9;JAVA://org.springframework.security.authentication.UsernamePasswordAuthenticationToken&#10;Username&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter&#10;StatusCode&#9;PSI&#9;JAVA://com.learn.redisson.api.response.StatusCode&#10;BaseResponse&#9;PSI&#9;JAVA://com.learn.redisson.api.response.BaseResponse&#10;BasicErrorController&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.6.RELEASE/spring-boot-autoconfigure-1.5.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/BasicErrorController.java&#10;BasicErro&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.web.BasicErrorController&#10;XmlBeanDe&#9;PSI&#9;JAVA://org.springframework.beans.factory.xml.XmlBeanDefinitionReader&#10;ApplicationContextEvent&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-context/5.2.4.RELEASE/spring-context-5.2.4.RELEASE-sources.jar!/org/springframework/context/event/ApplicationContextEvent.java&#10;ConfigurationClassP&#9;PSI&#9;JAVA://org.springframework.context.annotation.ConfigurationClassPostProcessor&#10;Abstract&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-context/5.2.4.RELEASE/spring-context-5.2.4.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java&#10;BeanDefinition&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.BeanDefinition&#10;ApplicationEventMu&#9;PSI&#9;JAVA://org.springframework.context.event.ApplicationEventMulticaster&#10;ApplicationEventPublisher&#9;PSI&#9;JAVA://org.springframework.context.ApplicationEventPublisher&#10;ApplicationListener&#9;PSI&#9;JAVA://org.springframework.context.ApplicationListener&#10;ApplicationEvent&#9;PSI&#9;JAVA://org.springframework.context.ApplicationEvent&#10;Aware&#9;PSI&#9;JAVA://org.springframework.beans.factory.Aware&#10;BeanDefinitionRegis&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-beans/5.2.4.RELEASE/spring-beans-5.2.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/BeanDefinitionRegistry.java&#10;Xml&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-beans/5.2.4.RELEASE/spring-beans-5.2.4.RELEASE-sources.jar!/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java&#10;BeanDefinitionReader&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.BeanDefinitionReader&#10;XmlBeanDefinitionReader&#9;PSI&#9;JAVA://org.springframework.beans.factory.xml.XmlBeanDefinitionReader&#10;SmsCodeGenerator&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCodeGenerator.java&#10;AbstractValidateCodeProcessor&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/impl/AbstractValidateCodeProcessor.java&#10;FilterSec&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.java&#10;passwordenc&#9;PSI&#9;JAVA://org.springframework.security.crypto.password.PasswordEncoder&#10;FilterSe&#9;PSI&#9;JAVA://org.springframework.security.web.access.intercept.FilterSecurityInterceptor" />
+    <property name="SearchEverywhereHistoryKey" value="SocialAut&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationProvider.java&#10;SocialAuth&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvider&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;OAuth2AuthenticationService&#9;PSI&#9;JAVA://org.springframework.social.security.provider.OAuth2AuthenticationService&#10;SocialAuthenticationFilter&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;UsernamePassword&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java&#10;UsernameP&#9;PSI&#9;JAVA://org.springframework.security.authentication.UsernamePasswordAuthenticationToken&#10;Username&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter&#10;StatusCode&#9;PSI&#9;JAVA://com.learn.redisson.api.response.StatusCode&#10;BaseResponse&#9;PSI&#9;JAVA://com.learn.redisson.api.response.BaseResponse&#10;BasicErrorController&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.6.RELEASE/spring-boot-autoconfigure-1.5.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/BasicErrorController.java&#10;BasicErro&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.web.BasicErrorController&#10;XmlBeanDe&#9;PSI&#9;JAVA://org.springframework.beans.factory.xml.XmlBeanDefinitionReader&#10;ApplicationContextEvent&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-context/5.2.4.RELEASE/spring-context-5.2.4.RELEASE-sources.jar!/org/springframework/context/event/ApplicationContextEvent.java&#10;ConfigurationClassP&#9;PSI&#9;JAVA://org.springframework.context.annotation.ConfigurationClassPostProcessor&#10;Abstract&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-context/5.2.4.RELEASE/spring-context-5.2.4.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java&#10;BeanDefinition&#9;PSI&#9;JAVA://org.springframework.beans.factory.config.BeanDefinition&#10;ApplicationEventMu&#9;PSI&#9;JAVA://org.springframework.context.event.ApplicationEventMulticaster&#10;ApplicationEventPublisher&#9;PSI&#9;JAVA://org.springframework.context.ApplicationEventPublisher&#10;ApplicationListener&#9;PSI&#9;JAVA://org.springframework.context.ApplicationListener&#10;ApplicationEvent&#9;PSI&#9;JAVA://org.springframework.context.ApplicationEvent&#10;Aware&#9;PSI&#9;JAVA://org.springframework.beans.factory.Aware&#10;BeanDefinitionRegis&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-beans/5.2.4.RELEASE/spring-beans-5.2.4.RELEASE-sources.jar!/org/springframework/beans/factory/support/BeanDefinitionRegistry.java&#10;Xml&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-beans/5.2.4.RELEASE/spring-beans-5.2.4.RELEASE-sources.jar!/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java&#10;BeanDefinitionReader&#9;PSI&#9;JAVA://org.springframework.beans.factory.support.BeanDefinitionReader&#10;XmlBeanDefinitionReader&#9;PSI&#9;JAVA://org.springframework.beans.factory.xml.XmlBeanDefinitionReader&#10;SmsCodeGenerator&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/demo/security/core/validate/smscode/SmsCodeGenerator.java&#10;AbstractValidateCodeProcessor&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/demo/security/core/validate/code/impl/AbstractValidateCodeProcessor.java&#10;FilterSec&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.java&#10;passwordenc&#9;PSI&#9;JAVA://org.springframework.security.crypto.password.PasswordEncoder&#10;FilterSe&#9;PSI&#9;JAVA://org.springframework.security.web.access.intercept.FilterSecurityInterceptor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="F:/spring-security/spring-security-demo-master/pom.xml" />
@@ -658,11 +616,11 @@
       <recent name="com.learn.springsecurity.browser.api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\2021_learn_project\spring-security-browser\src\main\resources\resources" />
       <recent name="F:\2021_learn_project\spring-security-businessdemo\src\main\java\com\learn\springsecurity\demo\dto" />
       <recent name="F:\2021_learn_project\spring-security-core\src\main\java\com\learn\demo\security\core\social\qqlogin\connect" />
       <recent name="F:\2021_learn_project\self_spring_read_demo\src\main\resources" />
       <recent name="F:\2021_learn_project\self_spring_read_demo\src\main\java\com\learn\springread" />
-      <recent name="F:\2021_learn_project\self_spring_demo\src\main\java\com\learn\readdemo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1012,7 +970,8 @@
       <workItem from="1625835213297" duration="38417000" />
       <workItem from="1626053317583" duration="7229000" />
       <workItem from="1626311140189" duration="11622000" />
-      <workItem from="1626499124545" duration="11275000" />
+      <workItem from="1626499124545" duration="13289000" />
+      <workItem from="1626572810608" duration="7639000" />
     </task>
     <task id="LOCAL-00001" summary="【redisson分布式集合对象】普通map学习实例">
       <created>1616769179905</created>
@@ -1245,7 +1204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625988540996</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="【spring-security】QQ第三方登录（未解决signup的问题）">
+      <created>1626527823786</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1626527823786</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1281,11 +1247,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="588936000" />
+    <option name="totallyTimeSpent" value="598589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -1293,56 +1258,56 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4983165" weight="0.34123483" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.75536484" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290461" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.75536484" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.5683572" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.22216097" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.3296582" />
       <window_info id="Web" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Tail" order="8" />
       <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Structure" order="8" sideWeight="0.5016835" side_tool="true" weight="0.17144433" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.50536484" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.50536484" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.31866953" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.31866953" />
     </layout>
     <layout-to-restore>
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5100671" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22814499" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32885906" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32997763" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32997763" />
       <window_info anchor="right" id="Bean Validation" order="4" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32997763" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32885906" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32995737" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="4" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1362,7 +1327,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="【redisson分布式集合对象】MultiMap，Set学习实例" />
     <MESSAGE value="【redisson分布式集合对象】Queue学习实例" />
     <MESSAGE value="【kafka简单实例学习】kafka-stream的word-count" />
     <MESSAGE value="【spring源码简单实例开始】self_spring_demo创建成功" />
@@ -1387,7 +1351,8 @@
     <MESSAGE value="【spring-security】初步图形验证码" />
     <MESSAGE value="【spring-security】短信验证码登录（验证码重构）" />
     <MESSAGE value="【spring-security】短信验证码登录初版" />
-    <option name="LAST_COMMIT_MESSAGE" value="【spring-security】短信验证码登录初版" />
+    <MESSAGE value="【spring-security】QQ第三方登录（未解决signup的问题）" />
+    <option name="LAST_COMMIT_MESSAGE" value="【spring-security】QQ第三方登录（未解决signup的问题）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1585,83 +1550,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/processor/SmsVerifyCodeProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="9" selection-start-line="9" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE-sources.jar!/org/springframework/security/authentication/UsernamePasswordAuthenticationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="71" column="65" selection-start-line="34" selection-start-column="49" selection-end-line="103" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="182" column="5" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="182" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/ImageVerifyCodeFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/BaseVerifyCodeProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/VerifyCodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="76" column="86" lean-forward="true" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/authenticationhandler/SelfAuthenticationSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/authenticationhandler/SelfAuthenticationFailureHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/ImageVerifyCodeProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/VerifyCodeProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/update/ImageVerifyCodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -1739,45 +1627,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" selection-start-line="4" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQUserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="83" column="25" lean-forward="true" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" selection-start-line="8" selection-end-line="48" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE.jar!/org/springframework/social/connect/jdbc/JdbcUsersConnectionRepository.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE-sources.jar!/org/springframework/social/connect/jdbc/JdbcUsersConnectionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1818,19 +1671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/SecurityProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/SocialLoginProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -1851,13 +1691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="58" column="76" lean-forward="true" selection-start-line="58" selection-start-column="76" selection-end-line="58" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1865,44 +1698,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/QQAutoConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE-sources.jar!/org/springframework/security/config/annotation/SecurityConfigurerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="e#2573#2574#0" expanded="true" />
-            <element signature="e#2635#2636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SelfSpringSocialConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" selection-start-line="6" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SocialConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1927,27 +1726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="42" column="51" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE-sources.jar!/org/springframework/social/oauth2/OAuth2Template.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1955,24 +1733,226 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQOAuth2Template.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/SimpleUrlAuthenticationFailureHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+        <state relative-caret-position="178">
+          <caret line="105" column="35" lean-forward="true" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/SimpleUrlAuthenticationFailureHandler.java">
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="115" column="9" lean-forward="true" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
+        <state relative-caret-position="436">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1992">
+          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/api/QQLoginImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQOAuth2Template.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.6.RELEASE/spring-boot-autoconfigure-1.5.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/social/SocialAutoConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/QQAutoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="322" column="40" lean-forward="true" selection-start-line="322" selection-start-column="27" selection-end-line="322" selection-end-column="43" />
+          <folding>
+            <element signature="e#7186#7187#0" expanded="true" />
+            <element signature="e#7218#7219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/SecurityProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="e#900#901#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/properties/BrowersProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="e#795#796#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="378">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SelfSpringSocialConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/resources/demo-signUp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-web/1.1.4.RELEASE/spring-social-web-1.1.4.RELEASE-sources.jar!/org/springframework/social/connect/web/ProviderSignInUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="33" column="81" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/api/SocialUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-652">
+          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/controller/SecurityHandlerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="76" column="15" lean-forward="true" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="66" column="62" lean-forward="true" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="77" column="73" lean-forward="true" selection-start-line="77" selection-start-column="73" selection-end-line="77" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE-sources.jar!/org/springframework/social/connect/UsersConnectionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-core/1.1.4.RELEASE/spring-social-core-1.1.4.RELEASE-sources.jar!/org/springframework/social/connect/jdbc/JdbcUsersConnectionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="82" column="41" lean-forward="true" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/security/SelfConnectionSignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="9" selection-start-line="9" selection-end-line="31" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/SocialConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

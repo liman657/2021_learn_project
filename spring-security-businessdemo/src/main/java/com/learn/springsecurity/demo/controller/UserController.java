@@ -4,11 +4,15 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.learn.springsecurity.demo.dto.User;
 import com.learn.springsecurity.demo.dto.UserQueryCondition;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.social.connect.web.ProviderSignInUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.ServletWebRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +26,9 @@ import java.util.List;
 @RequestMapping("/user")
 @Slf4j
 public class UserController {
+
+    @Autowired
+    private ProviderSignInUtils providerSignInUtils;
 
     /**
      * Pageable 用于分页的对象，如果用的是spring-data 这个会很方便
@@ -68,6 +75,17 @@ public class UserController {
 
         user.setId("1");
         return user;
+    }
+
+    @PostMapping("/register")
+    public void userRegister(@RequestBody User user, HttpServletRequest request) {
+        //TODO:这里要完成用户注册，同时将用户信息存入到我们自己的数据表
+        //TODO:还需要将用户信息与第三方用户信息做一个关联
+        //TODO:如果是绑定，请求也会走到这里，也可以完成上述操作。
+
+        //利用providerSignInUtils，将注册之后的用户信息，关联到会话中
+        providerSignInUtils.doPostSignUp(user.getId(),new ServletWebRequest(request));
+
     }
 
     @DeleteMapping("/{id:\\d+}")

@@ -1,6 +1,7 @@
 package com.learn.springsecurity.browser.controller;
 
 import com.learn.springsecurity.browser.api.BaseResponse;
+import com.learn.springsecurity.browser.api.SocialUserInfo;
 import com.learn.springsecurity.browser.api.StatusCode;
 import com.learn.springsecurity.core.properties.SecurityProperties;
 import lombok.extern.slf4j.Slf4j;
@@ -12,9 +13,13 @@ import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.savedrequest.SavedRequest;
+import org.springframework.social.connect.Connection;
+import org.springframework.social.connect.web.ProviderSignInUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.ServletWebRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,6 +42,8 @@ public class SecurityHandlerController {
 
     @Autowired
     private SecurityProperties securityProperties;
+    @Autowired
+    private ProviderSignInUtils providerSignInUtils;
 
     /**
      * 需要身份认证的时候，跳转到这里
@@ -59,6 +66,21 @@ public class SecurityHandlerController {
         }
 
         return new BaseResponse(StatusCode.NEED_LOGIN);
+    }
+
+    @GetMapping("/socialuserinfo")
+    public BaseResponse getSocialUserInfo(HttpServletRequest request){
+        BaseResponse result = new BaseResponse(StatusCode.Success);
+        log.info("开始获取会话中的第三方用户信息");
+        //利用providerSignInUtils，从会话中读取第三方用户信息
+        Connection<?> connectionFromSession = providerSignInUtils.getConnectionFromSession(new ServletWebRequest(request));
+        SocialUserInfo socialUserInfo = new SocialUserInfo();
+        socialUserInfo.setProviderId(connectionFromSession.getKey().getProviderId());
+        socialUserInfo.setProviderUserId(connectionFromSession.getKey().getProviderUserId());
+        socialUserInfo.setNickName(connectionFromSession.getDisplayName());
+        socialUserInfo.setHeadImg(connectionFromSession.getImageUrl());
+        result.setData(socialUserInfo);
+        return result;
     }
 
 }

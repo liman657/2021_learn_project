@@ -71,6 +71,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()//并且要认证请求
                 .antMatchers("/authentication/require", securityProperties.getBrowser().getLoginPage(),
+                        securityProperties.getBrowser().getSiguUpPage(),//第三方认证跳转的注册页不需要登录认证
                         "/verifycode/*").permitAll()//登录页的请求不需要认证
                 .anyRequest()//对任意的请求
                 .authenticated()//都需要做认证

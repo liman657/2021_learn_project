@@ -8,8 +8,10 @@ import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.social.config.annotation.EnableSocial;
 import org.springframework.social.config.annotation.SocialConfigurerAdapter;
 import org.springframework.social.connect.ConnectionFactoryLocator;
+import org.springframework.social.connect.ConnectionSignUp;
 import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
+import org.springframework.social.connect.web.ProviderSignInUtils;
 import org.springframework.social.security.SpringSocialConfigurer;
 
 import javax.sql.DataSource;
@@ -25,9 +27,13 @@ public class SocialConfig extends SocialConfigurerAdapter {
 
     @Autowired
     private DataSource dataSource;
-
     @Autowired
     private SecurityProperties securityProperties;
+    @Autowired
+    private ConnectionFactoryLocator connectionFactoryLocator;
+    @Autowired(required = false)
+    private ConnectionSignUp connectionSignUp;
+
 
     @Override
     public UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
@@ -35,16 +41,25 @@ public class SocialConfig extends SocialConfigurerAdapter {
         //第三个是加解密
         JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource, connectionFactoryLocator, Encryptors.noOpText());
         repository.setTablePrefix("imooc_");
+        if(connectionSignUp!=null){
+            repository.setConnectionSignUp(connectionSignUp);
+        }
         return repository;
     }
 
     @Bean
     public SpringSocialConfigurer selfSocialSecurityConfig(){
-
         String processFilterUrl = securityProperties.getSocial().getProcessFilterUrl();
-
         SelfSpringSocialConfig selfSpringSocialConfig = new SelfSpringSocialConfig(processFilterUrl);
 
+        //指定第三方用户信息认证不存在的注册页
+        selfSpringSocialConfig.signupUrl(securityProperties.getBrowser().getSiguUpPage());
         return selfSpringSocialConfig;
+    }
+
+    @Bean
+    public ProviderSignInUtils providerSignInUtils(ConnectionFactoryLocator connectionFactoryLocator){
+        return new ProviderSignInUtils(connectionFactoryLocator,
+                getUsersConnectionRepository(connectionFactoryLocator));
     }
 }
