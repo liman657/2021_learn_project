@@ -20,7 +20,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-public class MyUserDetailService implements UserDetailsService,SocialUserDetailsService {
+public class MyUserDetailService implements UserDetailsService
+//        ,SocialUserDetailsService
+{
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -37,20 +39,20 @@ public class MyUserDetailService implements UserDetailsService,SocialUserDetails
         log.info("根据用户名查找用户信息:{}",username);
         return new User(username,passwordEncoder.encode("123456"),
                 true,true,true,true,
-                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+                AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
     }
 
-    /**
-     * 这里的参数是spring-social根据openId查出来的userId
-     * @param userId
-     * @return
-     * @throws UsernameNotFoundException
-     */
-    @Override
-    public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
-        log.info("社交登录用户id:{}",userId);
-        return new SocialUser(userId,passwordEncoder.encode("123456"),
-                true,true,true,true,
-                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
-    }
+//    /**
+//     * 这里的参数是spring-social根据openId查出来的userId
+//     * @param userId
+//     * @return
+//     * @throws UsernameNotFoundException
+//     */
+//    @Override
+//    public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
+//        log.info("社交登录用户id:{}",userId);
+//        return new SocialUser(userId,passwordEncoder.encode("123456"),
+//                true,true,true,true,
+//                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+//    }
 }

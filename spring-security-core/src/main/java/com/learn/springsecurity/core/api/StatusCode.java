@@ -1,4 +1,4 @@
-package com.learn.springsecurity.browser.api;
+package com.learn.springsecurity.core.api;
 
 /**
  * 接口的响应状态码

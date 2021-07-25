@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.social.connect.web.ProviderSignInUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -27,8 +29,8 @@ import java.util.List;
 @Slf4j
 public class UserController {
 
-    @Autowired
-    private ProviderSignInUtils providerSignInUtils;
+//    @Autowired
+//    private ProviderSignInUtils providerSignInUtils;
 
     /**
      * Pageable 用于分页的对象，如果用的是spring-data 这个会很方便
@@ -84,8 +86,14 @@ public class UserController {
         //TODO:如果是绑定，请求也会走到这里，也可以完成上述操作。
 
         //利用providerSignInUtils，将注册之后的用户信息，关联到会话中
-        providerSignInUtils.doPostSignUp(user.getId(),new ServletWebRequest(request));
+//        providerSignInUtils.doPostSignUp(user.getId(),new ServletWebRequest(request));
 
+    }
+
+    @GetMapping("/me")
+    public Object getCurrentUser(@AuthenticationPrincipal UserDetails userDetails){
+        log.info("user me test");
+        return userDetails;
     }
 
     @DeleteMapping("/{id:\\d+}")

@@ -1,4 +1,4 @@
-package com.learn.springsecurity.browser.authenticationhandler;
+package com.learn.springsecurity.app.authenticationhandler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.learn.springsecurity.core.api.BaseResponse;

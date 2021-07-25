@@ -1,4 +1,4 @@
-package com.learn.springsecurity.browser.api;
+package com.learn.springsecurity.core.api;
 /**
  * Created by Administrator on 2020/2/6.
  */

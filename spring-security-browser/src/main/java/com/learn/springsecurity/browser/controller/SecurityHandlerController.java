@@ -1,8 +1,8 @@
 package com.learn.springsecurity.browser.controller;
 
-import com.learn.springsecurity.browser.api.BaseResponse;
 import com.learn.springsecurity.browser.api.SocialUserInfo;
-import com.learn.springsecurity.browser.api.StatusCode;
+import com.learn.springsecurity.core.api.BaseResponse;
+import com.learn.springsecurity.core.api.StatusCode;
 import com.learn.springsecurity.core.properties.SecurityProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;

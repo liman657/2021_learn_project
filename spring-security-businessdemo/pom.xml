@@ -18,9 +18,16 @@
 
 
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>com.coderman.learn</groupId>-->
+            <!--<artifactId>spring-security-browser</artifactId>-->
+            <!--<version>${self.app.version}</version>-->
+        <!--</dependency>-->
+
+        <!--进入到第6章 引用换成App模块-->
         <dependency>
             <groupId>com.coderman.learn</groupId>
-            <artifactId>spring-security-browser</artifactId>
+            <artifactId>spring-security-app</artifactId>
             <version>${self.app.version}</version>
         </dependency>
         <dependency>
