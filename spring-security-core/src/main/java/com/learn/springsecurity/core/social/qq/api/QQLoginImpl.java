@@ -20,7 +20,7 @@ import java.io.IOException;
 @Slf4j
 public class QQLoginImpl extends AbstractOAuth2ApiBinding implements QQLoginInterface {
 
-    //获取用户OPENID的url
+    //根据AccessToken获取用户OPENID的url，Accesstoken是根据授权码去QQ获取的
     private static final String URL_GET_OPENID = "https://graph.qq.com/oauth2.0/me?access_token=%s";
     //根据openId获取用户信息的url
     private static final String URL_GET_USERINFO = "https://graph.qq.com/user/get_user_info?oauth_consumer_key=%s&openid=%s";
@@ -32,6 +32,11 @@ public class QQLoginImpl extends AbstractOAuth2ApiBinding implements QQLoginInte
     @Autowired
     private ObjectMapper objectMapper;
 
+    /**
+     * 构造函数中获取openId
+     * @param accessToken
+     * @param appId
+     */
     public QQLoginImpl(String accessToken, String appId) {
         super(accessToken, TokenStrategy.ACCESS_TOKEN_PARAMETER);//将token作为参数放到url后面
         this.appId = appId;

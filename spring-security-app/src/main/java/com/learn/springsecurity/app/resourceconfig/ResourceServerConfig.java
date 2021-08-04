@@ -2,6 +2,7 @@ package com.learn.springsecurity.app.resourceconfig;
 
 import com.learn.springsecurity.app.authenticationhandler.SelfAuthenticationFailureHandler;
 import com.learn.springsecurity.app.authenticationhandler.SelfAuthenticationSuccessHandler;
+import com.learn.springsecurity.app.social.openid.OpenIdAuthenticationSecurityConfig;
 import com.learn.springsecurity.core.verify.ImageVerifyCodeFilter;
 import com.learn.springsecurity.core.verify.SmsVerifyCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,9 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Autowired
     private SelfAuthenticationFailureHandler selfAuthenticationFailureHandler;
 
+    @Autowired
+    private OpenIdAuthenticationSecurityConfig openIdAuthenticationSecurityConfig;
+
     @Override
     public void configure(HttpSecurity http) throws Exception {
 //        ImageVerifyCodeFilter imageVerifyCodeFilter = new ImageVerifyCodeFilter();
@@ -41,6 +45,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 
         http
+                .apply(openIdAuthenticationSecurityConfig)
+                .and()
 //                .addFilterBefore(imageVerifyCodeFilter, UsernamePasswordAuthenticationFilter.class)
 //                .addFilterBefore(smsVerifyCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()//采用表单登录

@@ -44,17 +44,12 @@ public class SelfAuthenticationSuccessHandler extends SimpleUrlAuthenticationSuc
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response
             , Authentication authentication) throws IOException, ServletException {
-//        log.info("自定义登录成功处理器");
-//        response.setContentType("application/json;charset=utf-8");
-//        response.getWriter().write(objectMapper.writeValueAsString(authentication));//将authentication作为json写到前端
 
         log.info("自定义登录成功的处理器");
 
         String header = request.getHeader("Authorization");
 
         if (header == null || !header.startsWith("Basic ")) {
-//            chain.doFilter(request, response);
-//            return;
             throw new UnapprovedClientAuthenticationException("请求头中没有client相关的信息");
         }
 
