@@ -1,4 +1,4 @@
-package com.learn.springsecurity.browser.api;
+package com.learn.springsecurity.core.social.support;
 
 import lombok.Data;
 import lombok.ToString;

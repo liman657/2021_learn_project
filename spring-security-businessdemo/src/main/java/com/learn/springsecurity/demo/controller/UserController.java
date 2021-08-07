@@ -1,6 +1,7 @@
 package com.learn.springsecurity.demo.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.learn.springsecurity.core.social.AppSignUpUtils;
 import com.learn.springsecurity.demo.dto.User;
 import com.learn.springsecurity.demo.dto.UserQueryCondition;
 import lombok.extern.slf4j.Slf4j;
@@ -29,8 +30,10 @@ import java.util.List;
 @Slf4j
 public class UserController {
 
-//    @Autowired
-//    private ProviderSignInUtils providerSignInUtils;
+    @Autowired
+    private ProviderSignInUtils providerSignInUtils;
+    @Autowired
+    private AppSignUpUtils appSignUpUtils;
 
     /**
      * Pageable 用于分页的对象，如果用的是spring-data 这个会很方便
@@ -87,6 +90,7 @@ public class UserController {
 
         //利用providerSignInUtils，将注册之后的用户信息，关联到会话中
 //        providerSignInUtils.doPostSignUp(user.getId(),new ServletWebRequest(request));
+        appSignUpUtils.doPostSignUp(new ServletWebRequest(request),user.getId());
 
     }
 

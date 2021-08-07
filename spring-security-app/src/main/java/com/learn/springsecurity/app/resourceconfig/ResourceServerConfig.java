@@ -58,7 +58,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .authorizeRequests()//并且要认证请求
                 .antMatchers("/authentication/require",
                         "/authentication/sessiontimeout",//session失效的路径放开登录校验
-                        "/verifycode/*").permitAll()//登录页的请求不需要认证
+                        "/verifycode/*","/authentication/openid").permitAll()//登录页的请求不需要认证
                 .anyRequest()//对任意的请求
                 .authenticated()//都需要做认证
                 .and().csrf().disable();//关闭csrf

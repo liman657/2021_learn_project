@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 //import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+//import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -19,13 +19,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @RestController
 @EnableSwagger2
 //如果引入的是app项目，则打开如下注解
-//@ComponentScan(basePackages = {"com.learn.springsecurity.app","com.learn.springsecurity.demo"
-//,"com.learn.springsecurity.core"})
+@ComponentScan(basePackages = {"com.learn.springsecurity.app","com.learn.springsecurity.demo"
+,"com.learn.springsecurity.core"})
 //@EnableWebSecurity
 //如果引入的是browser项目，则打开如下注解
-@ComponentScan(basePackages = {"com.learn.springsecurity.browser","com.learn.springsecurity.demo"
-,"com.learn.springsecurity.core"})
-@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 60*10,redisNamespace = "self#security#session")
+//@ComponentScan(basePackages = {"com.learn.springsecurity.browser","com.learn.springsecurity.demo"
+//,"com.learn.springsecurity.core"})
+//@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 60*10,redisNamespace = "self#security#session")
 public class SpringSecurityDemoApplication {
 
     public static void main(String[] args) {

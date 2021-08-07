@@ -1,6 +1,7 @@
 package com.learn.springsecurity.core.config.social;
 
 import com.learn.springsecurity.core.properties.SecurityProperties;
+import com.learn.springsecurity.core.social.support.SocialAuthenticationFilterPostProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,11 +30,13 @@ public class SocialConfig extends SocialConfigurerAdapter {
     private DataSource dataSource;
     @Autowired
     private SecurityProperties securityProperties;
-    @Autowired
-    private ConnectionFactoryLocator connectionFactoryLocator;
+//    @Autowired
+//    private ConnectionFactoryLocator connectionFactoryLocator;
 
     @Autowired(required = false)
     private ConnectionSignUp connectionSignUp;
+    @Autowired(required = false)
+    private SocialAuthenticationFilterPostProcessor socialAuthenticationFilterPostProcessor;
 
 
     @Override
@@ -55,6 +58,8 @@ public class SocialConfig extends SocialConfigurerAdapter {
 
         //指定第三方用户信息认证不存在的注册页
         selfSpringSocialConfig.signupUrl(securityProperties.getBrowser().getSiguUpPage());
+        selfSpringSocialConfig.setConnectionSignUp(connectionSignUp);
+        selfSpringSocialConfig.setSocialAuthenticationFilterPostProcessor(socialAuthenticationFilterPostProcessor);
         return selfSpringSocialConfig;
     }
 
