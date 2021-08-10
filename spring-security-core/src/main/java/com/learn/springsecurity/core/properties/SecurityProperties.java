@@ -16,6 +16,8 @@ public class SecurityProperties {
 
     private SocialLoginProperties social = new SocialLoginProperties();
 
+    private OAuth2Properties oauth2 = new OAuth2Properties();
+
     public BrowersProperties getBrowser() {
         return browser;
     }
@@ -38,5 +40,13 @@ public class SecurityProperties {
 
     public void setSocial(SocialLoginProperties social) {
         this.social = social;
+    }
+
+    public OAuth2Properties getOauth2() {
+        return oauth2;
+    }
+
+    public void setOauth2(OAuth2Properties oauth2) {
+        this.oauth2 = oauth2;
     }
 }

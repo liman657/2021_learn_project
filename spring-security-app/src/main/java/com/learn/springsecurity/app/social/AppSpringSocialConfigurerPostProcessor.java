@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class AppSpringSocialConfigurerPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        return null;
+        return bean;
     }
 
     @Override
