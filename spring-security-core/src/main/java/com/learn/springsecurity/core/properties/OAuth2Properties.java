@@ -7,6 +7,9 @@ package com.learn.springsecurity.core.properties;
  */
 public class OAuth2Properties {
 
+    //用于签名的密钥配置
+    private String jwtSigninKey = "self-security-jwt-key";
+
     private OAuth2ClientProperties[] clients = {};
 
     public OAuth2ClientProperties[] getClients() {
@@ -15,5 +18,13 @@ public class OAuth2Properties {
 
     public void setClients(OAuth2ClientProperties[] clients) {
         this.clients = clients;
+    }
+
+    public String getJwtSigninKey() {
+        return jwtSigninKey;
+    }
+
+    public void setJwtSigninKey(String jwtSigninKey) {
+        this.jwtSigninKey = jwtSigninKey;
     }
 }

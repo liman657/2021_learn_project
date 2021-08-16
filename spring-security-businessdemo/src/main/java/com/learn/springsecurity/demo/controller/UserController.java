@@ -4,10 +4,14 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.learn.springsecurity.core.social.AppSignUpUtils;
 import com.learn.springsecurity.demo.dto.User;
 import com.learn.springsecurity.demo.dto.UserQueryCondition;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.social.connect.web.ProviderSignInUtils;
@@ -17,6 +21,7 @@ import org.springframework.web.context.request.ServletWebRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,10 +99,27 @@ public class UserController {
 
     }
 
+    //@GetMapping("/me")
+    //public Object getCurrentUser(@AuthenticationPrincipal UserDetails userDetails){
+    //    log.info("user me test");
+    //    return userDetails;
+    //}
+
+    //Oauth获取用户信息的方法
     @GetMapping("/me")
-    public Object getCurrentUser(@AuthenticationPrincipal UserDetails userDetails){
+    public Object getCurrentUser(Authentication user,HttpServletRequest request) throws Exception {
         log.info("user me test");
-        return userDetails;
+
+        log.info("开始解析JWT中的用户信息");
+        //从header中截取token（JWT）
+        String authorization = request.getHeader("Authorization");
+        String token = StringUtils.substringAfter(authorization, "bearer ");
+        Claims playload = Jwts.parser().setSigningKey("self-security-jwt-key".getBytes("UTF-8")).parseClaimsJws(token).getBody();
+
+        String extentionInfo = (String) playload.get("self_extention_info");
+        log.info("extention_info,{}",extentionInfo);
+
+        return user;
     }
 
     @DeleteMapping("/{id:\\d+}")
