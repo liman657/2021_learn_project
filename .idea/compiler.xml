@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="baidu_map_learn" />
         <module name="for-hibernate-jar-api" />
         <module name="for-hibernate-jar-common" />
         <module name="for-hibernate-jar-module" />
