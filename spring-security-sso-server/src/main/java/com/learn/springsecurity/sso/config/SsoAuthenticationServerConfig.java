@@ -17,28 +17,48 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
  * comment:
  */
 @Configuration
+//有了这个注解，我们的应用就是一个OAuth认证服务器了
 @EnableAuthorizationServer
 public class SsoAuthenticationServerConfig extends AuthorizationServerConfigurerAdapter {
 
+    /**
+     * 配置认证服务器的appid与appSecret（认证服务器可以给哪些应用访问），这里为了简单直接配置在内存里头
+     * @param clients
+     * @throws Exception
+     */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
+                //第一个应用
                 .withClient("selfSSOClient01")
                 .secret("ssoClientSecret01")
                 .authorizedGrantTypes("authorization_code", "refresh_token")
                 .scopes("all")
                 .and()
+                //第二个应用
                 .withClient("selfSSOClient02")
                 .secret("ssoClientSecret02")
                 .authorizedGrantTypes("authorization_code", "refresh_token")
                 .scopes("all");
     }
 
+    /**
+     * 配置获取签名的密钥需要通过认证
+     * @param security
+     * @throws Exception
+     */
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        //业务应用为了验证JWT需要获取认证服务器签发JWT的密钥
+        //这里配置的就是业务应用服务器为了获取认证服务器签发JWT的密钥，需要通过认证服务器的认证操作
         security.tokenKeyAccess("isAuthenticated()");//获取签名的密钥需要认证
     }
 
+    /**
+     * 生成令牌的配置
+     * @param endpoints
+     * @throws Exception
+     */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints
@@ -46,6 +66,7 @@ public class SsoAuthenticationServerConfig extends AuthorizationServerConfigurer
                 .accessTokenConverter(jwtAccessTokenConverter());
     }
 
+    //配置JWT的tokenStore
     @Bean
     public TokenStore tokenStore() {
         return new JwtTokenStore(jwtAccessTokenConverter());

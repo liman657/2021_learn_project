@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/spring-security-sso-client01/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security-sso-client02/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security-sso-server/pom.xml" />
+        <option value="$PROJECT_DIR$/foundation-demo/pom.xml" />
       </list>
     </option>
   </component>

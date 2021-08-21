@@ -11,6 +11,7 @@
         <module name="for-hibernate-jar-common" />
         <module name="for-hibernate-jar-module" />
         <module name="for-hibernate-jar-server" />
+        <module name="foundation-demo" />
         <module name="kafka_application_case" />
         <module name="kafka_learn" />
         <module name="redisson-springboot-learn-api" />
