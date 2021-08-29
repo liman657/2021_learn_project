@@ -39,7 +39,7 @@ public class MyUserDetailService implements UserDetailsService
         log.info("根据用户名查找用户信息:{}",username);
         return new User(username,passwordEncoder.encode("123456"),
                 true,true,true,true,
-                AuthorityUtils.commaSeparatedStringToAuthorityList("admin,ROLE_USER"));
+                AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER,ROLE_ADMIN"));
     }
 
     /**

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -80,8 +81,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-        http.addFilterBefore(imageVerifyCodeFilter, UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore(smsVerifyCodeFilter, UsernamePasswordAuthenticationFilter.class)
+        http
+                //.addFilterBefore(imageVerifyCodeFilter, UsernamePasswordAuthenticationFilter.class)
+                //.addFilterBefore(smsVerifyCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()//采用表单登录
                 .loginPage("/authentication/require")//指定登录的页面
                 .loginProcessingUrl("/authentication/form")//覆盖 UsernamePasswordAuthenticationFilter 中的请求配置，但最终处理这个请求的还是 UsernamePasswordAuthenticationFilter
@@ -106,7 +108,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                         securityProperties.getBrowser().getSiguUpPage(),//第三方认证跳转的注册页不需要登录认证
                         "/authentication/sessiontimeout",//session失效的路径放开登录校验
                         "/verifycode/*","/login/weixin").permitAll()//登录页的请求不需要认证
-                .anyRequest()//对任意的请求
+                .antMatchers(HttpMethod.POST,"/user/*").hasRole("ADMIN")
+                .anyRequest()//对其余任意的请求
                 .authenticated()//都需要做认证
                 .and().csrf().disable()//关闭csrf
                 .apply(smsVerifyCodeAuthenticationSecurityConfig)//导入短信验证码登录的安全配置

@@ -89,7 +89,7 @@ public class ImageVerifyCodeFilter extends OncePerRequestFilter implements Initi
     //真正校验验证码的方法
     private void validateVerifyCode(ServletWebRequest request) throws VerifyCodeException{
         //从会话中获取验证码
-        ImageVerifyCode codeInSession = (ImageVerifyCode) sessionStrategy.getAttribute(request,VerifyCodeController.SESSION_VERIFY_IMG_CODE);
+        BaseVerifyCode codeInSession = (BaseVerifyCode) sessionStrategy.getAttribute(request,VerifyCodeController.SESSION_VERIFY_IMG_CODE);
         String codeInRequest;
         try {
             //从请求中获取图形验证码
