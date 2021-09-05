@@ -3,6 +3,7 @@ package com.learn.springsecurity.app.resourceconfig;
 import com.learn.springsecurity.app.authenticationhandler.SelfAuthenticationFailureHandler;
 import com.learn.springsecurity.app.authenticationhandler.SelfAuthenticationSuccessHandler;
 import com.learn.springsecurity.app.social.openid.OpenIdAuthenticationSecurityConfig;
+import com.learn.springsecurity.core.authentication.AuthorizeConfigManager;
 import com.learn.springsecurity.core.verify.ImageVerifyCodeFilter;
 import com.learn.springsecurity.core.verify.SmsVerifyCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,9 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     @Autowired
     private OpenIdAuthenticationSecurityConfig openIdAuthenticationSecurityConfig;
 
+    @Autowired
+    private AuthorizeConfigManager authorizeConfigManager;
+
     @Override
     public void configure(HttpSecurity http) throws Exception {
 //        ImageVerifyCodeFilter imageVerifyCodeFilter = new ImageVerifyCodeFilter();
@@ -55,12 +59,14 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .successHandler(selfAuthenticationSuccessHandler)//自定义登录成功处理器
                 .failureHandler(selfAuthenticationFailureHandler)
                 .and()
-                .authorizeRequests()//并且要认证请求
-                .antMatchers("/authentication/require",
-                        "/authentication/sessiontimeout",//session失效的路径放开登录校验
-                        "/verifycode/*","/authentication/openid").permitAll()//登录页的请求不需要认证
-                .anyRequest()//对任意的请求
-                .authenticated()//都需要做认证
-                .and().csrf().disable();//关闭csrf
+                //.authorizeRequests()//并且要认证请求
+                //.antMatchers("/authentication/require",
+                //        "/authentication/sessiontimeout",//session失效的路径放开登录校验
+                //        "/verifycode/*","/authentication/openid").permitAll()//登录页的请求不需要认证
+                //.anyRequest()//对任意的请求
+                //.authenticated()//都需要做认证
+                //.and()
+                .csrf().disable();//关闭csrf
+        authorizeConfigManager.config(http.authorizeRequests());
     }
 }

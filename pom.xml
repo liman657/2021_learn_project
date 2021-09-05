@@ -13,6 +13,7 @@
         <module>kafka_application_case</module>
         <module>for-hibernate-jar</module>
         <module>self_spring_demo</module>
+        <module>spring-security-rbac-auth</module>
         <!--<module>spring-springsecurity-businessdemo</module>-->
     </modules>
 

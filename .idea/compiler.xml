@@ -25,6 +25,7 @@
         <module name="spring-security-businessdemo" />
         <module name="spring-security-core" />
         <module name="spring-security-demo" />
+        <module name="spring-security-rbac-auth" />
         <module name="spring-security-sso" />
         <module name="spring-security-sso-client01" />
         <module name="spring-security-sso-client02" />

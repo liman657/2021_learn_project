@@ -4,6 +4,7 @@ import com.learn.springsecurity.browser.authenticationhandler.SelfAuthentication
 import com.learn.springsecurity.browser.authenticationhandler.SelfAuthenticationSuccessHandler;
 import com.learn.springsecurity.browser.authenticationhandler.SelfLogoutSuccessHandler;
 import com.learn.springsecurity.browser.session.SelfExpireSessionStrategy;
+import com.learn.springsecurity.core.authentication.AuthorizeConfigManager;
 import com.learn.springsecurity.core.config.SmsVerifyCodeAuthenticationSecurityConfig;
 import com.learn.springsecurity.core.properties.SecurityProperties;
 import com.learn.springsecurity.core.verify.ImageVerifyCodeFilter;
@@ -43,6 +44,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private SpringSocialConfigurer selfSocialSecurityConfig;
+
+    @Autowired
+    private AuthorizeConfigManager authorizeConfigManager;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -104,17 +108,22 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .deleteCookies("JSESSIONID")
                 .and()
                 .authorizeRequests()//并且要认证请求
-                .antMatchers("/authentication/require", securityProperties.getBrowser().getLoginPage(),
-                        securityProperties.getBrowser().getSiguUpPage(),//第三方认证跳转的注册页不需要登录认证
-                        "/authentication/sessiontimeout",//session失效的路径放开登录校验
-                        "/verifycode/*","/login/weixin").permitAll()//登录页的请求不需要认证
-                .antMatchers(HttpMethod.POST,"/user/*").hasRole("ADMIN")
-                .anyRequest()//对其余任意的请求
-                .authenticated()//都需要做认证
-                .and().csrf().disable()//关闭csrf
+
+                //.antMatchers("/authentication/require", securityProperties.getBrowser().getLoginPage(),
+                //        securityProperties.getBrowser().getSiguUpPage(),//第三方认证跳转的注册页不需要登录认证
+                //        "/authentication/sessiontimeout",//session失效的路径放开登录校验
+                //        "/verifycode/*","/login/weixin").permitAll()//登录页的请求不需要认证
+                //.antMatchers(HttpMethod.POST,"/user/*").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST,"/user/*").access("hasRole('ADMIN') and hasIpAddress('192.168.0.103')")
+                //.anyRequest()//对其余任意的请求
+                //.authenticated()//都需要做认证
+                .and()
+                .csrf().disable()//关闭csrf
                 .apply(smsVerifyCodeAuthenticationSecurityConfig)//导入短信验证码登录的安全配置
                 .and()
                 .apply(selfSocialSecurityConfig);//引入社交登录的配置
+
+        authorizeConfigManager.config(http.authorizeRequests());
 
 
 
