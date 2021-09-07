@@ -6,8 +6,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/resourceconfig/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/resourceconfig/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,6 +36,7 @@
     <ignored path="$PROJECT_DIR$/spring-security-sso-server/target/" />
     <ignored path="$PROJECT_DIR$/foundation-demo/target/" />
     <ignored path="$PROJECT_DIR$/spring-security-rbac-auth/target/" />
+    <ignored path="$PROJECT_DIR$/concurrency-foundation/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,98 +68,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BrowserSecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DemoAuthorizationProvider.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/config/DemoAuthorizationProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-rbac-auth/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RbacService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" selection-start-line="7" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RbacServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-browser/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="13" selection-start-line="5" selection-start-column="4" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceServerConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/resourceconfig/ResourceServerConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorizeConfigProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/AuthorizeConfigProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="53" selection-start-column="53" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultAuthorizeConifgProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/DefaultAuthorizeConifgProvider.java">
+      <file leaf-file-name="RunnableStyle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/RunnableStyle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BothRunnableThread.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/BothRunnableThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+              <folding>
+                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadStyle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/ThreadStyle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -182,7 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>slf4j</find>
       <find>tomcat</find>
       <find>userAuthenticationProvider</find>
       <find>auth2</find>
@@ -212,6 +148,7 @@
       <find>2号</find>
       <find>loginType</find>
       <find>authentication/form</find>
+      <find>start</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -244,11 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/baidu_map_learn/src/main/java/com/learn/baidumap/config/RestTemplateConfig.java" />
-        <option value="$PROJECT_DIR$/baidu_map_learn/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/baidu_map_learn/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/baidu_map_learn/src/main/java/com/learn/baidumap/api/vo/ProvinceInfoVO.java" />
-        <option value="$PROJECT_DIR$/baidu_map_learn/pom.xml" />
         <option value="$PROJECT_DIR$/baidu_map_learn/src/main/java/com/learn/baidumap/api/vo/CityInfoVO.java" />
         <option value="$PROJECT_DIR$/baidu_map_learn/src/main/java/com/learn/baidumap/controller/LocationController.java" />
         <option value="$PROJECT_DIR$/spring-security-sso/pom.xml" />
@@ -295,6 +227,11 @@
         <option value="$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacServiceImpl.java" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/config/DemoAuthorizationProvider.java" />
         <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/CreateThreadMethod.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/ThreadStyle.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/RunnableStyle.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/BothRunnableThread.java" />
       </list>
     </option>
   </component>
@@ -359,6 +296,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -370,30 +308,25 @@
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -401,7 +334,7 @@
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -410,7 +343,7 @@
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -420,125 +353,77 @@
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+              <item name="foundataion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-businessdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+              <item name="foundataion" type="462c0819:PsiDirectoryNode" />
+              <item name="threadcoreknowledge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="self_spring_demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="rbac" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-security-rbac-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="springsecurity" type="462c0819:PsiDirectoryNode" />
-              <item name="rbac" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -574,11 +459,11 @@
       <recent name="com.learn.springsecurity.core.properties" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\2021_learn_project\concurrency-foundation\src\main\resources" />
       <recent name="F:\2021_learn_project\spring-security-sso-server\src\main\java\com\learn\springsecurity\sso\controller" />
       <recent name="F:\2021_learn_project\spring-security-sso-client01\src\main\java\com\learn\springsecurity\sso\client01\controller" />
       <recent name="F:\2021_learn_project\foundation-demo\src\main\resources" />
       <recent name="F:\2021_learn_project\spring-security-sso-client01\src\main\resources" />
-      <recent name="F:\2021_learn_project\spring-security-sso-client02\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -593,7 +478,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringSecurityDemoApplication">
+  <component name="RunManager" selected="Application.BothRunnableThread">
+    <configuration name="BothRunnableThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadcoreknowledge.BothRunnableThread" />
+      <module name="concurrency-foundation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadcoreknowledge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="RunnableStyle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadcoreknowledge.RunnableStyle" />
+      <module name="concurrency-foundation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ThreadStyle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadcoreknowledge.ThreadStyle" />
+      <module name="concurrency-foundation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadcoreknowledge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -666,16 +584,6 @@
         </option>
       </MavenSettings>
     </configuration>
-    <configuration name="BaiDuMapApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="baidu_map_learn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.baidumap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.baidumap.BaiDuMapApplication" />
-    </configuration>
     <configuration name="DemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-security-businessdemo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.DemoApplication" />
@@ -710,16 +618,6 @@
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
-    <configuration name="SampleStartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="foundation-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.sample.SampleStartApplication" />
-    </configuration>
     <configuration name="SpringSecurityDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-security-businessdemo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.springsecurity.demo.SpringSecurityDemoApplication" />
@@ -743,16 +641,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.springsecurity.sso.client02.SsoClient02Application" />
-    </configuration>
-    <configuration name="SsoServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="spring-security-sso-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.springsecurity.sso.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.springsecurity.sso.SsoServerApplication" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -784,19 +672,19 @@
       <item itemvalue="Spring Boot.DemoApplication (1)" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.SpringSecurityDemoApplication" />
-      <item itemvalue="Spring Boot.BaiDuMapApplication" />
       <item itemvalue="Spring Boot.SsoClient01Application" />
       <item itemvalue="Spring Boot.SsoClient02Application" />
-      <item itemvalue="Spring Boot.SsoServerApplication" />
-      <item itemvalue="Spring Boot.SampleStartApplication" />
+      <item itemvalue="Application.RunnableStyle" />
+      <item itemvalue="Application.ThreadStyle" />
+      <item itemvalue="Application.BothRunnableThread" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BothRunnableThread" />
+        <item itemvalue="Application.ThreadStyle" />
+        <item itemvalue="Application.RunnableStyle" />
         <item itemvalue="Spring Boot.SsoClient02Application" />
         <item itemvalue="Spring Boot.SsoClient01Application" />
-        <item itemvalue="Spring Boot.SsoServerApplication" />
-        <item itemvalue="Spring Boot.SampleStartApplication" />
-        <item itemvalue="Spring Boot.BaiDuMapApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -893,6 +781,8 @@
       <workItem from="1630027351502" duration="602000" />
       <workItem from="1630115996018" duration="12087000" />
       <workItem from="1630805631382" duration="9986000" />
+      <workItem from="1630833110067" duration="380000" />
+      <workItem from="1631014715012" duration="2114000" />
     </task>
     <task id="LOCAL-00001" summary="【redisson分布式集合对象】普通map学习实例">
       <created>1616769179905</created>
@@ -1209,7 +1099,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630204170835</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="【spring-security】第七章-spring security整合自定义RBAC模型">
+      <created>1630833212843</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1630833212843</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1245,29 +1142,30 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="784720000" />
+    <option name="totallyTimeSpent" value="787214000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.31866953" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4967811" weight="0.3411514" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.53969955" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.43669528" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49787235" weight="0.4490022" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49787235" visible="true" weight="0.24310915" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32910696" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Tail" order="8" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
-      <window_info anchor="right" id="Structure" order="7" sideWeight="0.5032189" side_tool="true" weight="0.3411514" />
+      <window_info anchor="right" id="Structure" order="7" sideWeight="0.5032189" side_tool="true" weight="0.34068358" />
       <window_info id="Favorites" order="1" sideWeight="0.50212765" side_tool="true" weight="0.26066098" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34334764" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.32995737" />
@@ -1278,12 +1176,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.31866953" />
     </layout>
     <layout-to-restore>
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Tail" order="14" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.53969955" />
       <window_info id="Favorites" order="1" sideWeight="0.50212765" side_tool="true" weight="0.26066098" />
       <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49787235" visible="true" weight="0.25053304" />
@@ -1295,20 +1193,19 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295964" />
       <window_info id="Designer" order="0" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32939914" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.3296582" />
       <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.52682406" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.31866953" />
-      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4983165" weight="0.3411514" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1354,7 +1251,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="【spring-security业务实例初版】spring-security业务实例初版" />
     <MESSAGE value="【spring源码实例5-8完成】bean容器的CRUD完成" />
     <MESSAGE value="【spring源码6-1完成】解释了一下BeanDefinition" />
     <MESSAGE value="【spring-security表单登录完成4-9】记住我的功能完成" />
@@ -1379,7 +1275,8 @@
     <MESSAGE value="【spring-security】第六章-sso单点登录helloworld" />
     <MESSAGE value="【spring-security】第六章-sso单点登录总结完成" />
     <MESSAGE value="【spring-security】第七章-spring security权限认证helloworld" />
-    <option name="LAST_COMMIT_MESSAGE" value="【spring-security】第七章-spring security权限认证helloworld" />
+    <MESSAGE value="【spring-security】第七章-spring security整合自定义RBAC模型" />
+    <option name="LAST_COMMIT_MESSAGE" value="【spring-security】第七章-spring security整合自定义RBAC模型" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1679,89 +1576,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="303" column="7" lean-forward="true" selection-start-line="303" selection-start-column="7" selection-end-line="303" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-sso-client01/src/main/java/com/learn/springsecurity/sso/client01/SsoClient01Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/SsoServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-sso-client02/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/config/SsoAuthenticationServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/server/SsoUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/config/SsoSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/controller/SsoApprovalEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/WhitelabelApprovalEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/controller/SsoSpelView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/mobile/SmsVerifyCodeAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="834">
@@ -1931,13 +1745,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/config/AppSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#978#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/config/TokenStoreConfig.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1964,9 +1772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="136" selection-start-line="12" selection-start-column="136" selection-end-line="12" selection-end-column="136" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1974,9 +1779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1984,23 +1786,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
-          <folding>
-            <element signature="e#4014#4015#0" expanded="true" />
-            <element signature="e#4090#4091#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="1992">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/DefaultAuthorizeConifgProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="336">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2034,14 +1832,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/resourceconfig/ResourceServerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="1032">
           <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="96">
           <caret line="7" selection-start-line="7" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2051,8 +1849,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="312">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2061,10 +1859,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/config/DemoAuthorizationProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="480">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self_spring_read_demo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/self_spring_demo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="45" column="21" selection-start-line="34" selection-start-column="8" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/CreateThreadMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/RunnableStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#439#440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="462" column="11" selection-start-line="462" selection-start-column="11" selection-end-line="462" selection-end-column="11" />
+          <folding>
+            <element signature="e#15704#15705#0" expanded="true" />
+            <element signature="e#15770#15771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/ThreadStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/BothRunnableThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+          <folding>
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2124,7 +2010,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>self_spring_read_demo</last-edited>
+          <last-edited>concurrency-foundation</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
