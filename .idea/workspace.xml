@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseMonitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepInterrupted.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -65,36 +69,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProducerConsumerModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/ProducerConsumerModel.java">
+      <file leaf-file-name="SleepDontReleaseMonitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#472#473#0" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="48">
+              <caret line="2" selection-start-line="2" selection-end-line="29" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaitNotifyPrintOddEvenSync.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEvenSync.java">
+      <file leaf-file-name="JoinDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WaitNotifyPrintOddEveWait.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEveWait.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+            <state relative-caret-position="264">
+              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -178,11 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spring-security-sso-client01/src/main/java/com/learn/springsecurity/sso/client01/SsoClient01Application.java" />
-        <option value="$PROJECT_DIR$/spring-security-sso-client02/src/main/java/com/learn/springsecurity/sso/client02/controller/SsoSpelView.java" />
-        <option value="$PROJECT_DIR$/spring-security-sso-client01/src/main/java/com/learn/springsecurity/sso/client01/controller/SsoSpelView.java" />
-        <option value="$PROJECT_DIR$/spring-security-sso-client01/src/main/java/com/learn/springsecurity/sso/client01/controller/SsoApprovalEndpoint.java" />
-        <option value="$PROJECT_DIR$/spring-security-sso-client02/src/main/java/com/learn/springsecurity/sso/client02/controller/SsoApprovalEndpoint.java" />
         <option value="$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/config/SsoAuthenticationServerConfig.java" />
         <option value="$PROJECT_DIR$/spring-security-sso-server/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/controller/SsoApprovalEndpoint.java" />
@@ -227,8 +210,13 @@
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyAllDemo.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyReleaseOwnMonitor.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/ProducerConsumerModel.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEvenSync.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEveWait.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEvenSync.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseMonitor.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseLock.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepInterrupted.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinSimpleDemo.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinDemo.java" />
       </list>
     </option>
   </component>
@@ -281,10 +269,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="64" />
+    <option name="width" value="962" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -294,6 +281,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -386,7 +374,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -442,9 +429,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WaitNotifyPrintOddEveWait">
-    <configuration name="ProducerConsumerModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.ProducerConsumerModel" />
+  <component name="RunManager" selected="Application.SleepInterrupted">
+    <configuration name="SleepDontReleaseLock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.SleepDontReleaseLock" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -454,8 +441,19 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="WaitNotifyAllDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.WaitNotifyAllDemo" />
+    <configuration name="SleepDontReleaseMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.SleepDontReleaseMonitor" />
+      <module name="concurrency-foundation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="SleepInterrupted" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.SleepInterrupted" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -478,17 +476,6 @@
     </configuration>
     <configuration name="WaitNotifyPrintOddEvenSync" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.WaitNotifyPrintOddEvenSync" />
-      <module name="concurrency-foundation" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="WaitNotifyReleaseOwnMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.WaitNotifyReleaseOwnMonitor" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -638,19 +625,19 @@
       <item itemvalue="Spring Boot.DemoApplication (1)" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.SpringSecurityDemoApplication" />
-      <item itemvalue="Application.WaitNotifyAllDemo" />
-      <item itemvalue="Application.WaitNotifyReleaseOwnMonitor" />
-      <item itemvalue="Application.ProducerConsumerModel" />
       <item itemvalue="Application.WaitNotifyPrintOddEvenSync" />
       <item itemvalue="Application.WaitNotifyPrintOddEveWait" />
+      <item itemvalue="Application.SleepDontReleaseMonitor" />
+      <item itemvalue="Application.SleepDontReleaseLock" />
+      <item itemvalue="Application.SleepInterrupted" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SleepInterrupted" />
+        <item itemvalue="Application.SleepDontReleaseLock" />
+        <item itemvalue="Application.SleepDontReleaseMonitor" />
         <item itemvalue="Application.WaitNotifyPrintOddEveWait" />
         <item itemvalue="Application.WaitNotifyPrintOddEvenSync" />
-        <item itemvalue="Application.ProducerConsumerModel" />
-        <item itemvalue="Application.WaitNotifyReleaseOwnMonitor" />
-        <item itemvalue="Application.WaitNotifyAllDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -752,7 +739,8 @@
       <workItem from="1631104463117" duration="1612000" />
       <workItem from="1631151939734" duration="4976000" />
       <workItem from="1631324720981" duration="16482000" />
-      <workItem from="1631614698594" duration="10695000" />
+      <workItem from="1631614698594" duration="18804000" />
+      <workItem from="1631962682433" duration="600000" />
     </task>
     <task id="LOCAL-00001" summary="【redisson分布式集合对象】普通map学习实例">
       <created>1616769179905</created>
@@ -1090,7 +1078,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631622047252</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="【并发编程基础】7-7，wait，notify打印奇偶数">
+      <created>1631626538053</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1631626538053</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1126,25 +1121,23 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="820979000" />
+    <option name="totallyTimeSpent" value="829688000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.31759655" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4967811" weight="0.3411514" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32939914" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.4334764" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.4334764" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932165" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49621212" visible="true" weight="0.20948827" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49621212" visible="true" weight="0.28721058" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32910696" />
       <window_info id="Web" order="3" sideWeight="0.50481695" side_tool="true" weight="0.20948827" />
       <window_info anchor="bottom" id="Tail" order="8" />
@@ -1160,36 +1153,37 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.31759655" />
     </layout>
     <layout-to-restore>
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Tail" order="14" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
-      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.53969955" />
-      <window_info id="Favorites" order="1" sideWeight="0.50212765" side_tool="true" weight="0.26066098" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.31866953" />
       <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49787235" visible="true" weight="0.25053304" />
       <window_info anchor="right" id="Structure" order="8" sideWeight="0.5016835" side_tool="true" weight="0.25586355" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295964" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Designer" order="0" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32939914" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.3296582" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32939914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.52682406" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.31866953" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295964" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4983165" weight="0.3411514" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="1" sideWeight="0.50212765" side_tool="true" weight="0.26066098" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1235,7 +1229,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="【spring-security表单登录完成4-9】记住我的功能完成" />
     <MESSAGE value="【spring源码学习】完成模板方法模式" />
     <MESSAGE value="【spring源码学习】加入读取跟踪调试的实例" />
     <MESSAGE value="【spring源码学习】7-1~7-4，spring中的事件监听模式" />
@@ -1260,7 +1253,8 @@
     <MESSAGE value="【spring-security】第七章-spring security整合自定义RBAC模型" />
     <MESSAGE value="【并发编程基础】1~6，线程的正确启动，正确停止，线程的6种状态" />
     <MESSAGE value="【并发编程基础】7，wait noitfy基础" />
-    <option name="LAST_COMMIT_MESSAGE" value="【并发编程基础】7，wait noitfy基础" />
+    <MESSAGE value="【并发编程基础】7-7，wait，notify打印奇偶数" />
+    <option name="LAST_COMMIT_MESSAGE" value="【并发编程基础】7-7，wait，notify打印奇偶数" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1560,55 +1554,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/config/TokenStoreConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/security/SelfConnectionSignUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="647" column="92" selection-start-line="647" selection-start-column="11" selection-end-line="647" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/AuthorizeConfigManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="136" selection-start-line="12" selection-start-column="136" selection-end-line="12" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/DefaultAuthorizeConfigManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/AbstractRequestMatcherRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1992">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/DefaultAuthorizeConifgProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -1834,9 +1779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="5" selection-start-line="5" selection-end-line="38" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1844,13 +1786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1229#1230#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1840#1841#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1858,9 +1793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1917,27 +1849,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEvenSync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEveWait.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+        <state relative-caret-position="264">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEvenSync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-register.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepInterrupted.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinSimpleDemo.java" />
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseMonitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
