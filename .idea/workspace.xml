@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinInterrupt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinPrinciple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinThreadState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadproperty/ThreadIdProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinDemo.java" afterDir="false" />
-    </list>
+    <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/kafka_learn/target/" />
@@ -70,27 +63,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SleepDontReleaseLock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseLock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JoinDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JoinInterrupt.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinInterrupt.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,24 +81,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WaitNotifyAllDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyAllDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WaitNotifyDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JoinPrinciple.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinPrinciple.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -136,20 +90,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadIdProperty.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ThreadIdProperty.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadproperty/ThreadIdProperty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+            <state relative-caret-position="72">
+              <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java">
+      <file leaf-file-name="ExceptionInChildThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/ExceptionInChildThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="381" column="29" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
+            <state relative-caret-position="397">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="2" selection-end-line="22" selection-end-column="1" />
+              <folding>
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CatchSubThreadExceptionInMainThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/CatchSubThreadExceptionInMainThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="84" lean-forward="true" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
+              <folding>
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelfThreadExceptionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/SelfThreadExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RightThreadExceptionDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/RightThreadExceptionDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="22" selection-start-line="2" selection-end-line="29" selection-end-column="1" />
+              <folding>
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,12 +150,21 @@
       <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
         <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="300" column="30" selection-start-line="300" selection-start-column="30" selection-end-line="300" selection-end-column="30" />
+            <state relative-caret-position="380">
+              <caret line="1856" column="33" lean-forward="true" selection-start-line="1856" selection-start-column="33" selection-end-line="1856" selection-end-column="33" />
               <folding>
                 <element signature="e#15704#15705#0" expanded="true" />
                 <element signature="e#15770#15771#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadGroup.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="1014" column="7" selection-start-line="1014" selection-end-line="1063" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -184,7 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>userAuthenticationProvider</find>
       <find>auth2</find>
       <find>redis</find>
       <find>imooc</find>
@@ -214,6 +215,7 @@
       <find>authentication/form</find>
       <find>start</find>
       <find>RUNNABLE</find>
+      <find>uncaughtException</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -246,10 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/config/SsoSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/spring-security-sso-server/src/main/java/com/learn/springsecurity/sso/server/SsoUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/SpringSecurityDemoApplication.java" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/ImageVerifyCodeFilter.java" />
@@ -297,6 +295,10 @@
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinThreadState.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinPrinciple.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadproperty/ThreadIdProperty.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/ExceptionInChildThread.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/CatchSubThreadExceptionInMainThread.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/RightThreadExceptionDemo.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/SelfThreadExceptionHandler.java" />
       </list>
     </option>
   </component>
@@ -369,6 +371,87 @@
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+              <item name="foundataion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+              <item name="foundataion" type="462c0819:PsiDirectoryNode" />
+              <item name="uncaughtexception" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -385,7 +468,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="ExceptionTrans&#9;PSI&#9;JAVA://org.springframework.security.web.access.ExceptionTranslationFilter&#10;FilterSecurity&#9;PSI&#9;JAVA://org.springframework.security.web.access.intercept.FilterSecurityInterceptor&#10;Anony&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.AnonymousAuthenticationFilter&#10;White&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/WhitelabelApprovalEndpoint.java&#10;UserCon&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;TokenStoreConfig&#9;PSI&#9;JAVA://com.learn.springsecurity.core.config.social.TokenStoreConfig&#10;DefaultToken&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java&#10;Default&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java&#10;TokenCon&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/TokenStoreConfig.java&#10;TokenEndpoint&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpoint&#10;Social&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvid&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;SocialU&#9;PSI&#9;JAVA://com.learn.springsecurity.browser.api.SocialUserInfo&#10;UserCo&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;SecurityHandlerController&#9;PSI&#9;JAVA://com.learn.springsecurity.browser.controller.SecurityHandlerController&#10;BasicAuthen&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.www.BasicAuthenticationFilter&#10;OAuth2AuthenticationService&#9;PSI&#9;JAVA://org.springframework.social.security.provider.OAuth2AuthenticationService&#10;self-login.html&#9;FILE&#9;file://F:/2021_learn_project/spring-security-browser/src/main/resources/resources/self-login.html&#10;SmsVerifyCodeFilter&#9;PSI&#9;JAVA://com.learn.springsecurity.core.verify.SmsVerifyCodeFilter&#10;Abs&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/AbstractTokenGranter.java&#10;TokenG&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/TokenGranter.java&#10;My&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java&#10;ResourceOwner&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter&#10;TokenEndPoint&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;ImageVerifyCodeFilter&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/ImageVerifyCodeFilter.java&#10;UsernamePasswordAuthenticationFilter&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter&#10;BasicAu&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java&#10;UserCont&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;MyUserDetailService&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java&#10;UserC&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;TokenEn&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;OAuth2AuthenticationPro&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter&#10;FilterS&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.java&#10;ExceptionTr&#9;PSI&#9;JAVA://org.springframework.security.web.access.ExceptionTranslationFilter&#10;Ano&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.AnonymousAuthenticationFilter&#10;SecurityContextHolder&#9;PSI&#9;JAVA://org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter&#10;TokenEnd&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpoint&#10;UserController&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;OAuth2Connection&#9;PSI&#9;JAVA://org.springframework.social.connect.support.OAuth2Connection&#10;QQ&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java&#10;Verify&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/mobile/SmsVerifyCodeAuthenticationProvider.java&#10;TomcatEmbedS&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory&#10;TomcatEm&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer&#10;SocialAut&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationProvider.java&#10;SocialAuth&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvider&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;SocialAuthenticationFilter&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;UsernamePassword&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java&#10;UsernameP&#9;PSI&#9;JAVA://org.springframework.security.authentication.UsernamePasswordAuthenticationToken&#10;Username&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter" />
+    <property name="SearchEverywhereHistoryKey" value="ThreadGroup&#9;PSI&#9;JAVA://java.lang.ThreadGroup&#10;Uncaught&#9;PSI&#9;JAVA://java.lang.Thread.UncaughtExceptionHandler&#10;ExceptionTrans&#9;PSI&#9;JAVA://org.springframework.security.web.access.ExceptionTranslationFilter&#10;FilterSecurity&#9;PSI&#9;JAVA://org.springframework.security.web.access.intercept.FilterSecurityInterceptor&#10;Anony&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.AnonymousAuthenticationFilter&#10;White&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/WhitelabelApprovalEndpoint.java&#10;UserCon&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;TokenStoreConfig&#9;PSI&#9;JAVA://com.learn.springsecurity.core.config.social.TokenStoreConfig&#10;DefaultToken&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java&#10;Default&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java&#10;TokenCon&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/TokenStoreConfig.java&#10;TokenEndpoint&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpoint&#10;Social&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvid&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;SocialU&#9;PSI&#9;JAVA://com.learn.springsecurity.browser.api.SocialUserInfo&#10;UserCo&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;SecurityHandlerController&#9;PSI&#9;JAVA://com.learn.springsecurity.browser.controller.SecurityHandlerController&#10;BasicAuthen&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.www.BasicAuthenticationFilter&#10;OAuth2AuthenticationService&#9;PSI&#9;JAVA://org.springframework.social.security.provider.OAuth2AuthenticationService&#10;self-login.html&#9;FILE&#9;file://F:/2021_learn_project/spring-security-browser/src/main/resources/resources/self-login.html&#10;SmsVerifyCodeFilter&#9;PSI&#9;JAVA://com.learn.springsecurity.core.verify.SmsVerifyCodeFilter&#10;Abs&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/AbstractTokenGranter.java&#10;TokenG&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/TokenGranter.java&#10;My&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java&#10;ResourceOwner&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter&#10;TokenEndPoint&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;ImageVerifyCodeFilter&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/ImageVerifyCodeFilter.java&#10;UsernamePasswordAuthenticationFilter&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter&#10;BasicAu&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java&#10;UserCont&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;MyUserDetailService&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java&#10;UserC&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;TokenEn&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;OAuth2AuthenticationPro&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter&#10;FilterS&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.java&#10;ExceptionTr&#9;PSI&#9;JAVA://org.springframework.security.web.access.ExceptionTranslationFilter&#10;Ano&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.AnonymousAuthenticationFilter&#10;SecurityContextHolder&#9;PSI&#9;JAVA://org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter&#10;TokenEnd&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpoint&#10;UserController&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;OAuth2Connection&#9;PSI&#9;JAVA://org.springframework.social.connect.support.OAuth2Connection&#10;QQ&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java&#10;Verify&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/mobile/SmsVerifyCodeAuthenticationProvider.java&#10;TomcatEmbedS&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory&#10;TomcatEm&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer&#10;SocialAut&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationProvider.java&#10;SocialAuth&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvider&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;SocialAuthenticationFilter&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;UsernamePassword&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="F:/spring-security/spring-security-demo-master/pom.xml" />
@@ -402,11 +485,11 @@
       <recent name="com.learn.self.springframework.core" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.learn.concurrency.foundataion.uncaughtexception" />
       <recent name="com.learn.concurrency.foundataion.stopthread.volatiledemo" />
       <recent name="com.learn.concurrency.foundataion.stopthread" />
       <recent name="com.learn.springsecurity.sso.client01" />
       <recent name="com.learn.springsecurity.core.social.support" />
-      <recent name="com.learn.springsecurity.core.api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\2021_learn_project\concurrency-foundation\src\main\java\com\learn\concurrency\foundataion\stopthread\volatiledemo" />
@@ -428,25 +511,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ThreadIdProperty">
-    <configuration name="JoinDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.JoinDemo" />
+  <component name="RunManager" selected="Application.RightThreadExceptionDemo">
+    <configuration name="CatchSubThreadExceptionInMainThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.uncaughtexception.CatchSubThreadExceptionInMainThread" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.uncaughtexception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="JoinInterrupt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.JoinInterrupt" />
+    <configuration name="ExceptionInChildThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.uncaughtexception.ExceptionInChildThread" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.uncaughtexception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -462,13 +545,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SleepInterrupted" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.SleepInterrupted" />
+    <configuration name="RightThreadExceptionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.uncaughtexception.RightThreadExceptionDemo" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.uncaughtexception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -624,19 +707,19 @@
       <item itemvalue="Spring Boot.DemoApplication (1)" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.SpringSecurityDemoApplication" />
-      <item itemvalue="Application.SleepInterrupted" />
-      <item itemvalue="Application.JoinDemo" />
-      <item itemvalue="Application.JoinInterrupt" />
       <item itemvalue="Application.JoinThreadState" />
       <item itemvalue="Application.ThreadIdProperty" />
+      <item itemvalue="Application.ExceptionInChildThread" />
+      <item itemvalue="Application.CatchSubThreadExceptionInMainThread" />
+      <item itemvalue="Application.RightThreadExceptionDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RightThreadExceptionDemo" />
+        <item itemvalue="Application.CatchSubThreadExceptionInMainThread" />
+        <item itemvalue="Application.ExceptionInChildThread" />
         <item itemvalue="Application.ThreadIdProperty" />
         <item itemvalue="Application.JoinThreadState" />
-        <item itemvalue="Application.JoinInterrupt" />
-        <item itemvalue="Application.JoinDemo" />
-        <item itemvalue="Application.SleepInterrupted" />
       </list>
     </recent_temporary>
   </component>
@@ -739,14 +822,7 @@
       <workItem from="1631151939734" duration="4976000" />
       <workItem from="1631324720981" duration="16482000" />
       <workItem from="1631614698594" duration="18804000" />
-      <workItem from="1631962682433" duration="9532000" />
-    </task>
-    <task id="LOCAL-00002" summary="【redisson分布式集合对象】localCacheMap学习实例">
-      <created>1616850443049</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1616850443049</updated>
+      <workItem from="1631962682433" duration="13832000" />
     </task>
     <task id="LOCAL-00003" summary="【redisson分布式集合对象】localCacheMap学习实例">
       <created>1616850465723</created>
@@ -1084,7 +1160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631968575279</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="【并发编程基础】7结束，join方法实例结束">
+      <created>1632055432784</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1632055432784</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1120,10 +1203,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="838620000" />
+    <option name="totallyTimeSpent" value="842920000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.31759655" />
@@ -1133,11 +1217,11 @@
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4967811" weight="0.3411514" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.42596567" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.42596567" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932165" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49621212" visible="true" weight="0.23098126" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49621212" weight="0.4821634" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32910696" />
       <window_info id="Web" order="3" sideWeight="0.50481695" side_tool="true" weight="0.20948827" />
       <window_info anchor="bottom" id="Tail" order="8" />
@@ -1228,7 +1312,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="【spring源码学习】加入读取跟踪调试的实例" />
     <MESSAGE value="【spring源码学习】7-1~7-4，spring中的事件监听模式" />
     <MESSAGE value="【spring-security】完成1~2章" />
     <MESSAGE value="【spring-security】完成第3章，wiremock controller多线程，swagger" />
@@ -1253,7 +1336,8 @@
     <MESSAGE value="【并发编程基础】7，wait noitfy基础" />
     <MESSAGE value="【并发编程基础】7-7，wait，notify打印奇偶数" />
     <MESSAGE value="【并发编程基础】7-8，sleep方法实例" />
-    <option name="LAST_COMMIT_MESSAGE" value="【并发编程基础】7-8，sleep方法实例" />
+    <MESSAGE value="【并发编程基础】7结束，join方法实例结束" />
+    <option name="LAST_COMMIT_MESSAGE" value="【并发编程基础】7结束，join方法实例结束" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1553,41 +1637,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" selection-start-line="7" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/config/DemoAuthorizationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/self_spring_read_demo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/self_spring_demo/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -1840,17 +1889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="300" column="30" selection-start-line="300" selection-start-column="30" selection-end-line="300" selection-end-column="30" />
-          <folding>
-            <element signature="e#15704#15705#0" expanded="true" />
-            <element signature="e#15770#15771#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1902,8 +1940,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadproperty/ThreadIdProperty.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/ExceptionInChildThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="2" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="1856" column="33" lean-forward="true" selection-start-line="1856" selection-start-column="33" selection-end-line="1856" selection-end-column="33" />
+          <folding>
+            <element signature="e#15704#15705#0" expanded="true" />
+            <element signature="e#15770#15771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="1014" column="7" selection-start-line="1014" selection-end-line="1063" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/SelfThreadExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/CatchSubThreadExceptionInMainThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="84" lean-forward="true" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
+          <folding>
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/RightThreadExceptionDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+          <caret line="5" column="22" selection-start-line="2" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
