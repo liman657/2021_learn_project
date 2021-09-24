@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="" />
+    <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/regex-java-learn.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherGroupTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/kafka_learn/target/" />
@@ -32,6 +44,7 @@
     <ignored path="$PROJECT_DIR$/foundation-demo/target/" />
     <ignored path="$PROJECT_DIR$/spring-security-rbac-auth/target/" />
     <ignored path="$PROJECT_DIR$/concurrency-foundation/target/" />
+    <ignored path="$PROJECT_DIR$/regex-java-learn/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,108 +76,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JoinInterrupt.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinInterrupt.java">
+      <file leaf-file-name="MatcherTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="35" column="1" lean-forward="true" selection-start-line="2" selection-end-line="35" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JoinThreadState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinThreadState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JoinPrinciple.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinPrinciple.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" selection-start-line="2" selection-end-line="31" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadIdProperty.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadproperty/ThreadIdProperty.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExceptionInChildThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/ExceptionInChildThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="2" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="459">
+              <caret line="31" column="49" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="49" />
               <folding>
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CatchSubThreadExceptionInMainThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/CatchSubThreadExceptionInMainThread.java">
+      <file leaf-file-name="MatcherGroupTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherGroupTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="84" lean-forward="true" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
+            <state relative-caret-position="267">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="24" />
               <folding>
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelfThreadExceptionHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/SelfThreadExceptionHandler.java">
+      <file leaf-file-name="PatternDemo01.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo01.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RightThreadExceptionDemo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/RightThreadExceptionDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="22" selection-start-line="2" selection-end-line="29" selection-end-column="1" />
+            <state relative-caret-position="306">
+              <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
               <folding>
-                <element signature="e#229#230#0" expanded="true" />
-                <element signature="e#272#273#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="1856" column="33" lean-forward="true" selection-start-line="1856" selection-start-column="33" selection-end-line="1856" selection-end-column="33" />
-              <folding>
-                <element signature="e#15704#15705#0" expanded="true" />
-                <element signature="e#15770#15771#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreadGroup.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="1014" column="7" selection-start-line="1014" selection-end-line="1063" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -248,12 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/ImageVerifyCodeFilter.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/AuthorizeConfigProvider.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/AuthorizeConfigManager.java" />
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/DefaultAuthorizeConfigManager.java" />
         <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/DefaultAuthorizeConifgProvider.java" />
         <option value="$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/resourceconfig/ResourceServerConfig.java" />
         <option value="$PROJECT_DIR$/spring-security-rbac-auth/pom.xml" />
@@ -299,6 +236,12 @@
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/CatchSubThreadExceptionInMainThread.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/RightThreadExceptionDemo.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/SelfThreadExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" />
+        <option value="$PROJECT_DIR$/regex-java-learn/pom.xml" />
+        <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java" />
+        <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherGroupTest.java" />
+        <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo01.java" />
       </list>
     </option>
   </component>
@@ -364,6 +307,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -395,12 +339,38 @@
               <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -409,54 +379,60 @@
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
-              <item name="foundataion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
-              <item name="foundataion" type="462c0819:PsiDirectoryNode" />
-              <item name="uncaughtexception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="regex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="regex" type="462c0819:PsiDirectoryNode" />
+              <item name="helloworld" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="regex" type="462c0819:PsiDirectoryNode" />
+              <item name="pattern" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,11 +468,11 @@
       <recent name="com.learn.springsecurity.core.social.support" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\2021_learn_project\regex-java-learn\src\main\resources" />
       <recent name="F:\2021_learn_project\concurrency-foundation\src\main\java\com\learn\concurrency\foundataion\stopthread\volatiledemo" />
       <recent name="F:\2021_learn_project\concurrency-foundation\src\main\resources" />
       <recent name="F:\2021_learn_project\spring-security-sso-server\src\main\java\com\learn\springsecurity\sso\controller" />
       <recent name="F:\2021_learn_project\spring-security-sso-client01\src\main\java\com\learn\springsecurity\sso\client01\controller" />
-      <recent name="F:\2021_learn_project\foundation-demo\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -511,36 +487,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RightThreadExceptionDemo">
-    <configuration name="CatchSubThreadExceptionInMainThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.uncaughtexception.CatchSubThreadExceptionInMainThread" />
-      <module name="concurrency-foundation" />
+  <component name="RunManager" selected="Application.PatternDemo01">
+    <configuration name="MatcherGroupTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.regex.helloworld.MatcherGroupTest" />
+      <module name="regex-java-learn" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.uncaughtexception.*" />
+          <option name="PATTERN" value="com.learn.regex.helloworld.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="ExceptionInChildThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.uncaughtexception.ExceptionInChildThread" />
-      <module name="concurrency-foundation" />
+    <configuration name="MatcherTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.regex.helloworld.MatcherTest" />
+      <module name="regex-java-learn" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.uncaughtexception.*" />
+          <option name="PATTERN" value="com.learn.regex.helloworld.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="JoinThreadState" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.JoinThreadState" />
+    <configuration name="MultiThreadsError" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadsecurity.MultiThreadsError" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadobjectcommonmethods.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadsecurity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="PatternDemo01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.regex.pattern.PatternDemo01" />
+      <module name="regex-java-learn" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.regex.pattern.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -552,17 +539,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.learn.concurrency.foundataion.uncaughtexception.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="ThreadIdProperty" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadproperty.ThreadIdProperty" />
-      <module name="concurrency-foundation" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadproperty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -707,19 +683,19 @@
       <item itemvalue="Spring Boot.DemoApplication (1)" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.SpringSecurityDemoApplication" />
-      <item itemvalue="Application.JoinThreadState" />
-      <item itemvalue="Application.ThreadIdProperty" />
-      <item itemvalue="Application.ExceptionInChildThread" />
-      <item itemvalue="Application.CatchSubThreadExceptionInMainThread" />
       <item itemvalue="Application.RightThreadExceptionDemo" />
+      <item itemvalue="Application.MultiThreadsError" />
+      <item itemvalue="Application.MatcherTest" />
+      <item itemvalue="Application.MatcherGroupTest" />
+      <item itemvalue="Application.PatternDemo01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PatternDemo01" />
+        <item itemvalue="Application.MatcherGroupTest" />
+        <item itemvalue="Application.MatcherTest" />
+        <item itemvalue="Application.MultiThreadsError" />
         <item itemvalue="Application.RightThreadExceptionDemo" />
-        <item itemvalue="Application.CatchSubThreadExceptionInMainThread" />
-        <item itemvalue="Application.ExceptionInChildThread" />
-        <item itemvalue="Application.ThreadIdProperty" />
-        <item itemvalue="Application.JoinThreadState" />
       </list>
     </recent_temporary>
   </component>
@@ -823,6 +799,9 @@
       <workItem from="1631324720981" duration="16482000" />
       <workItem from="1631614698594" duration="18804000" />
       <workItem from="1631962682433" duration="13832000" />
+      <workItem from="1632273280557" duration="3707000" />
+      <workItem from="1632361473283" duration="9804000" />
+      <workItem from="1632463596339" duration="6776000" />
     </task>
     <task id="LOCAL-00003" summary="【redisson分布式集合对象】localCacheMap学习实例">
       <created>1616850465723</created>
@@ -1203,11 +1182,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="842920000" />
+    <option name="totallyTimeSpent" value="863207000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.31759655" />
@@ -1217,18 +1195,18 @@
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4967811" weight="0.3411514" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32939914" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.42596567" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.37660944" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932165" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49621212" weight="0.4821634" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49621212" visible="true" weight="0.24531423" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32910696" />
       <window_info id="Web" order="3" sideWeight="0.50481695" side_tool="true" weight="0.20948827" />
       <window_info anchor="bottom" id="Tail" order="8" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Structure" order="7" sideWeight="0.5032189" side_tool="true" weight="0.34068358" />
       <window_info id="Favorites" order="2" sideWeight="0.5037879" side_tool="true" weight="0.20948827" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43454936" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4334764" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1242,31 +1220,31 @@
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Tail" order="14" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.53969955" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.31866953" />
+      <window_info id="Favorites" order="1" sideWeight="0.50212765" side_tool="true" weight="0.26066098" />
       <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49787235" visible="true" weight="0.25053304" />
       <window_info anchor="right" id="Structure" order="8" sideWeight="0.5016835" side_tool="true" weight="0.25586355" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295964" />
       <window_info id="Designer" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32939914" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.3296582" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32939914" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.52682406" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295964" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.31866953" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4983165" weight="0.3411514" />
-      <window_info id="Favorites" order="1" sideWeight="0.50212765" side_tool="true" weight="0.26066098" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1594,11 +1572,17 @@
           <properties />
           <option name="timeStamp" value="185" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="195" />
+      <option name="time" value="196" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -1637,62 +1621,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/self_spring_demo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="45" column="21" selection-start-line="34" selection-start-column="8" selection-end-line="45" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/CreateThreadMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/RunnableStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/ThreadStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/BothRunnableThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithoutSleep.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -1883,9 +1811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1926,8 +1851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinInterrupt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="2" selection-end-line="35" selection-end-column="1" />
+        <state relative-caret-position="840">
+          <caret line="35" column="1" selection-start-line="2" selection-end-line="35" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1941,35 +1866,27 @@
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadproperty/ThreadIdProperty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/ExceptionInChildThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="2" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="480">
+          <caret line="22" column="1" selection-start-line="2" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="1856" column="33" lean-forward="true" selection-start-line="1856" selection-start-column="33" selection-end-line="1856" selection-end-column="33" />
-          <folding>
-            <element signature="e#15704#15705#0" expanded="true" />
-            <element signature="e#15770#15771#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="42648">
+          <caret line="1856" column="33" selection-start-line="1856" selection-start-column="33" selection-end-line="1856" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="23400">
           <caret line="1014" column="7" selection-start-line="1014" selection-end-line="1063" selection-end-column="5" />
         </state>
       </provider>
@@ -1984,11 +1901,7 @@
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/CatchSubThreadExceptionInMainThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="11" column="84" lean-forward="true" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
-          <folding>
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
-          </folding>
+          <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -1996,9 +1909,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="22" selection-start-line="2" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
           <folding>
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="49" column="12" selection-start-line="18" selection-start-column="4" selection-end-line="49" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherGroupTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

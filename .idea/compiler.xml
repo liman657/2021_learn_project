@@ -19,6 +19,7 @@
         <module name="redisson-springboot-learn-common" />
         <module name="redisson-springboot-learn-module" />
         <module name="redisson-springboot-learn-server" />
+        <module name="regex-java-learn" />
         <module name="self_spring_demo" />
         <module name="self_spring_read_demo" />
         <module name="spring-security-app" />

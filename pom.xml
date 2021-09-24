@@ -15,6 +15,7 @@
         <module>self_spring_demo</module>
         <module>spring-security-rbac-auth</module>
         <module>concurrency-foundation</module>
+        <module>regex-java-learn</module>
         <!--<module>spring-springsecurity-businessdemo</module>-->
     </modules>
 
