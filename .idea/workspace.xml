@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/regex-java-learn.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherGroupTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithOutConstructComplete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/HTMLMatcherDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternExampleDemo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/WebLogInfoDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,11 +74,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MatcherTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java">
+      <file leaf-file-name="DeadLockDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="31" column="49" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="49" />
+            <state relative-caret-position="504">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectPublish.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublish.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,11 +95,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatcherGroupTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherGroupTest.java">
+      <file leaf-file-name="ObjectPublishWithOutConstructComplete.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithOutConstructComplete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="288">
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectPublishListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+              <folding>
+                <element signature="e#436#437#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatternDemo02.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo02.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1920">
+              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +128,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PatternDemo01.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo01.java">
+      <file leaf-file-name="PatternExampleDemo01.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternExampleDemo01.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+            <state relative-caret-position="168">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebLogInfoDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/WebLogInfoDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTMLMatcherDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/HTMLMatcherDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiThreadsError.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,14 +252,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/DefaultAuthorizeConifgProvider.java" />
-        <option value="$PROJECT_DIR$/spring-security-app/src/main/java/com/learn/springsecurity/app/resourceconfig/ResourceServerConfig.java" />
-        <option value="$PROJECT_DIR$/spring-security-rbac-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacService.java" />
-        <option value="$PROJECT_DIR$/spring-security-rbac-auth/src/main/java/com/learn/springsecurity/rbac/service/RbacServiceImpl.java" />
-        <option value="$PROJECT_DIR$/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/config/DemoAuthorizationProvider.java" />
-        <option value="$PROJECT_DIR$/spring-security-browser/src/main/java/com/learn/springsecurity/browser/config/BrowserSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/pom.xml" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/CreateThreadMethod.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/ThreadStyle.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/RunnableStyle.java" />
@@ -237,11 +290,19 @@
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/RightThreadExceptionDemo.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/uncaughtexception/SelfThreadExceptionHandler.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" />
         <option value="$PROJECT_DIR$/regex-java-learn/pom.xml" />
         <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java" />
         <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherGroupTest.java" />
         <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo01.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" />
+        <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo02.java" />
+        <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternExampleDemo01.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublish.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithConstruct.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithOutConstructComplete.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishListener.java" />
+        <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/WebLogInfoDemo.java" />
+        <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/HTMLMatcherDemo.java" />
       </list>
     </option>
   </component>
@@ -306,8 +367,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,6 +398,69 @@
               <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+              <item name="foundataion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
+              <item name="foundataion" type="462c0819:PsiDirectoryNode" />
+              <item name="threadsecurity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -396,18 +518,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="regex" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="regex" type="462c0819:PsiDirectoryNode" />
-              <item name="helloworld" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
@@ -421,18 +531,12 @@
               <item name="regex" type="462c0819:PsiDirectoryNode" />
               <item name="pattern" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,11 +565,11 @@
       <recent name="com.learn.self.springframework.core" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.learn.regex.pattern" />
       <recent name="com.learn.concurrency.foundataion.uncaughtexception" />
       <recent name="com.learn.concurrency.foundataion.stopthread.volatiledemo" />
       <recent name="com.learn.concurrency.foundataion.stopthread" />
       <recent name="com.learn.springsecurity.sso.client01" />
-      <recent name="com.learn.springsecurity.core.social.support" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\2021_learn_project\regex-java-learn\src\main\resources" />
@@ -487,42 +591,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PatternDemo01">
-    <configuration name="MatcherGroupTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.regex.helloworld.MatcherGroupTest" />
-      <module name="regex-java-learn" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.regex.helloworld.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="MatcherTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.regex.helloworld.MatcherTest" />
-      <module name="regex-java-learn" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.regex.helloworld.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="MultiThreadsError" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadsecurity.MultiThreadsError" />
-      <module name="concurrency-foundation" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadsecurity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="PatternDemo01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.regex.pattern.PatternDemo01" />
+  <component name="RunManager" selected="Application.HTMLMatcherDemo">
+    <configuration name="HTMLMatcherDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.regex.pattern.HTMLMatcherDemo" />
       <module name="regex-java-learn" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -532,13 +603,46 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="RightThreadExceptionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.uncaughtexception.RightThreadExceptionDemo" />
+    <configuration name="ObjectPublish" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadsecurity.ObjectPublish" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.uncaughtexception.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadsecurity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ObjectPublishWithOutConstructComplete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadsecurity.ObjectPublishWithOutConstructComplete" />
+      <module name="concurrency-foundation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadsecurity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="PatternDemo02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.regex.pattern.PatternDemo02" />
+      <module name="regex-java-learn" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.regex.pattern.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="WebLogInfoDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.regex.pattern.WebLogInfoDemo" />
+      <module name="regex-java-learn" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.regex.pattern.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -683,19 +787,19 @@
       <item itemvalue="Spring Boot.DemoApplication (1)" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.SpringSecurityDemoApplication" />
-      <item itemvalue="Application.RightThreadExceptionDemo" />
-      <item itemvalue="Application.MultiThreadsError" />
-      <item itemvalue="Application.MatcherTest" />
-      <item itemvalue="Application.MatcherGroupTest" />
-      <item itemvalue="Application.PatternDemo01" />
+      <item itemvalue="Application.PatternDemo02" />
+      <item itemvalue="Application.ObjectPublish" />
+      <item itemvalue="Application.ObjectPublishWithOutConstructComplete" />
+      <item itemvalue="Application.WebLogInfoDemo" />
+      <item itemvalue="Application.HTMLMatcherDemo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PatternDemo01" />
-        <item itemvalue="Application.MatcherGroupTest" />
-        <item itemvalue="Application.MatcherTest" />
-        <item itemvalue="Application.MultiThreadsError" />
-        <item itemvalue="Application.RightThreadExceptionDemo" />
+        <item itemvalue="Application.HTMLMatcherDemo" />
+        <item itemvalue="Application.WebLogInfoDemo" />
+        <item itemvalue="Application.ObjectPublishWithOutConstructComplete" />
+        <item itemvalue="Application.PatternDemo02" />
+        <item itemvalue="Application.ObjectPublish" />
       </list>
     </recent_temporary>
   </component>
@@ -801,14 +905,13 @@
       <workItem from="1631962682433" duration="13832000" />
       <workItem from="1632273280557" duration="3707000" />
       <workItem from="1632361473283" duration="9804000" />
-      <workItem from="1632463596339" duration="6776000" />
-    </task>
-    <task id="LOCAL-00003" summary="【redisson分布式集合对象】localCacheMap学习实例">
-      <created>1616850465723</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1616850465723</updated>
+      <workItem from="1632463596339" duration="7170000" />
+      <workItem from="1632535480802" duration="1190000" />
+      <workItem from="1632618892327" duration="5322000" />
+      <workItem from="1632704157417" duration="1713000" />
+      <workItem from="1632741180119" duration="2696000" />
+      <workItem from="1632811056462" duration="5965000" />
+      <workItem from="1633483178061" duration="181000" />
     </task>
     <task id="LOCAL-00004" summary="【redisson分布式集合对象】localCacheMap学习实例">
       <created>1616850606774</created>
@@ -1146,7 +1249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632055432784</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="【Java正则基础实例】Java 正则表达式简单实例">
+      <created>1632474715046</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1632474715047</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1182,31 +1292,30 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="863207000" />
+    <option name="totallyTimeSpent" value="880487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.31759655" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4967811" weight="0.3411514" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.37660944" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.35944206" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932165" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49621212" visible="true" weight="0.24531423" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49621212" visible="true" weight="0.27453142" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32910696" />
       <window_info id="Web" order="3" sideWeight="0.50481695" side_tool="true" weight="0.20948827" />
       <window_info anchor="bottom" id="Tail" order="8" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Structure" order="7" sideWeight="0.5032189" side_tool="true" weight="0.34068358" />
       <window_info id="Favorites" order="2" sideWeight="0.5037879" side_tool="true" weight="0.20948827" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4334764" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4334764" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1215,12 +1324,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.31759655" />
     </layout>
     <layout-to-restore>
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Tail" order="14" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
-      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.53969955" />
       <window_info id="Favorites" order="1" sideWeight="0.50212765" side_tool="true" weight="0.26066098" />
       <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49787235" visible="true" weight="0.25053304" />
@@ -1232,19 +1341,20 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295964" />
       <window_info id="Designer" order="0" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32939914" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.3296582" />
       <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.52682406" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.31866953" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4983165" weight="0.3411514" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1290,8 +1400,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="【spring源码学习】7-1~7-4，spring中的事件监听模式" />
-    <MESSAGE value="【spring-security】完成1~2章" />
     <MESSAGE value="【spring-security】完成第3章，wiremock controller多线程，swagger" />
     <MESSAGE value="【spring-security】完成第3章博客总结" />
     <MESSAGE value="【spring-security】完成4-3" />
@@ -1315,7 +1423,9 @@
     <MESSAGE value="【并发编程基础】7-7，wait，notify打印奇偶数" />
     <MESSAGE value="【并发编程基础】7-8，sleep方法实例" />
     <MESSAGE value="【并发编程基础】7结束，join方法实例结束" />
-    <option name="LAST_COMMIT_MESSAGE" value="【并发编程基础】7结束，join方法实例结束" />
+    <MESSAGE value="【Java正则基础实例】Java 正则表达式简单实例" />
+    <MESSAGE value="【Java正则基础实例】Java 正则表达式简单实例2" />
+    <option name="LAST_COMMIT_MESSAGE" value="【Java正则基础实例】Java 正则表达式简单实例2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1621,55 +1731,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithoutSleep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleepEveryLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/CanInterrupt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/ProdRightWayStopThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/ProdRightWayStopThreadResetInterrupt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="32" column="18" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/WrongStopThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="28" column="9" lean-forward="true" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/BlockingQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="261" column="6" selection-start-line="261" selection-start-column="6" selection-end-line="261" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleep.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -1912,23 +1973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -1950,30 +1994,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="31" column="49" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherGroupTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="26" column="24" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/helloworld/MatcherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo01.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+        <state relative-caret-position="476">
+          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="104" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublish.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternExampleDemo01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding>
+            <element signature="e#436#437#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithOutConstructComplete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/WebLogInfoDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/HTMLMatcherDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
