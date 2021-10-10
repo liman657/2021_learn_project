@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithOutConstructComplete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/HTMLMatcherDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternExampleDemo01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/WebLogInfoDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/jmm/OutOfOrderExecution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartTwiceDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartAndRunMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartAndRunMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/CanInterrupt.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/CanInterrupt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayInterruptMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayInterruptMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithoutSleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithoutSleep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileCannotStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileCannotStop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/BlockedWaitingTimedWaiting.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/BlockedWaitingTimedWaiting.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,101 +75,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DeadLockDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/DeadLockDemo.java">
+      <file leaf-file-name="WrongWayVolatileCannotStop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileCannotStop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="720">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectPublish.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublish.java">
+      <file leaf-file-name="WrongWayVolatileFixCannotStop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileFixCannotStop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="456">
+              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectPublishWithOutConstructComplete.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithOutConstructComplete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectPublishListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishListener.java">
+      <file leaf-file-name="RightWayStopThreadWithSleepEveryLoop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleepEveryLoop.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WrongStopThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/WrongStopThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="1753" column="16" selection-start-line="1753" selection-start-column="8" selection-end-line="1753" selection-end-column="16" />
               <folding>
-                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#36709#36710#0" expanded="true" />
+                <element signature="e#36767#36768#0" expanded="true" />
+                <element signature="e#37304#37305#0" expanded="true" />
+                <element signature="e#37347#37348#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PatternDemo02.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternDemo02.java">
+      <file leaf-file-name="BlockedWaitingTimedWaiting.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/BlockedWaitingTimedWaiting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1920">
-              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="50" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PatternExampleDemo01.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/PatternExampleDemo01.java">
+      <file leaf-file-name="NewRunnableTerminated.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/NewRunnableTerminated.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="31" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebLogInfoDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/WebLogInfoDemo.java">
+      <file leaf-file-name="RightWayInterruptMethod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayInterruptMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLMatcherDemo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/HTMLMatcherDemo.java">
+      <file leaf-file-name="ProdRightWayStopThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/ProdRightWayStopThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiThreadsError.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/MultiThreadsError.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -190,10 +179,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>auth2</find>
-      <find>redis</find>
-      <find>imooc</find>
-      <find>您无权访问此页面</find>
       <find>DEFAULT_UNAUTHENTICATION_URL</find>
       <find>manager.html</find>
       <find>loginPage</find>
@@ -217,9 +202,13 @@
       <find>2号</find>
       <find>loginType</find>
       <find>authentication/form</find>
-      <find>start</find>
       <find>RUNNABLE</find>
       <find>uncaughtException</find>
+      <find>run</find>
+      <find>interrupt</find>
+      <find>isInterrupted</find>
+      <find>start</find>
+      <find>threadStatus</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -252,24 +241,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/CreateThreadMethod.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/ThreadStyle.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/RunnableStyle.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/BothRunnableThread.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartAndRunMethod.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithoutSleep.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleep.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleepEveryLoop.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/CanInterrupt.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/ProdRightWayStopThread.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/ProdRightWayStopThreadResetInterrupt.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/WrongStopThread.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatile.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileCannotStop.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileFixCannotStop.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayInterruptMethod.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/NewRunnableTerminated.java" />
-        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/BlockedWaitingTimedWaiting.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyDemo.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyAllDemo.java" />
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyReleaseOwnMonitor.java" />
@@ -303,6 +280,18 @@
         <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishListener.java" />
         <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/WebLogInfoDemo.java" />
         <option value="$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/HTMLMatcherDemo.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/RunnableStyle.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartAndRunMethod.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartTwiceDemo.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/jmm/OutOfOrderExecution.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithoutSleep.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleep.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleepEveryLoop.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/CanInterrupt.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileCannotStop.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/InterruptMethodDemo.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayInterruptMethod.java" />
+        <option value="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/BlockedWaitingTimedWaiting.java" />
       </list>
     </option>
   </component>
@@ -367,6 +356,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -453,90 +444,12 @@
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="concurrency" type="462c0819:PsiDirectoryNode" />
               <item name="foundataion" type="462c0819:PsiDirectoryNode" />
-              <item name="threadsecurity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency-foundation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="regex" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_2021_learn_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2021_learn_project" type="462c0819:PsiDirectoryNode" />
-              <item name="regex-java-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="regex" type="462c0819:PsiDirectoryNode" />
-              <item name="pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="threadstate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,7 +461,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="ThreadGroup&#9;PSI&#9;JAVA://java.lang.ThreadGroup&#10;Uncaught&#9;PSI&#9;JAVA://java.lang.Thread.UncaughtExceptionHandler&#10;ExceptionTrans&#9;PSI&#9;JAVA://org.springframework.security.web.access.ExceptionTranslationFilter&#10;FilterSecurity&#9;PSI&#9;JAVA://org.springframework.security.web.access.intercept.FilterSecurityInterceptor&#10;Anony&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.AnonymousAuthenticationFilter&#10;White&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/WhitelabelApprovalEndpoint.java&#10;UserCon&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;TokenStoreConfig&#9;PSI&#9;JAVA://com.learn.springsecurity.core.config.social.TokenStoreConfig&#10;DefaultToken&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java&#10;Default&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java&#10;TokenCon&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/TokenStoreConfig.java&#10;TokenEndpoint&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpoint&#10;Social&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvid&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;SocialU&#9;PSI&#9;JAVA://com.learn.springsecurity.browser.api.SocialUserInfo&#10;UserCo&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;SecurityHandlerController&#9;PSI&#9;JAVA://com.learn.springsecurity.browser.controller.SecurityHandlerController&#10;BasicAuthen&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.www.BasicAuthenticationFilter&#10;OAuth2AuthenticationService&#9;PSI&#9;JAVA://org.springframework.social.security.provider.OAuth2AuthenticationService&#10;self-login.html&#9;FILE&#9;file://F:/2021_learn_project/spring-security-browser/src/main/resources/resources/self-login.html&#10;SmsVerifyCodeFilter&#9;PSI&#9;JAVA://com.learn.springsecurity.core.verify.SmsVerifyCodeFilter&#10;Abs&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/AbstractTokenGranter.java&#10;TokenG&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/TokenGranter.java&#10;My&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java&#10;ResourceOwner&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter&#10;TokenEndPoint&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;ImageVerifyCodeFilter&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/ImageVerifyCodeFilter.java&#10;UsernamePasswordAuthenticationFilter&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter&#10;BasicAu&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java&#10;UserCont&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;MyUserDetailService&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java&#10;UserC&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;TokenEn&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;OAuth2AuthenticationPro&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter&#10;FilterS&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.java&#10;ExceptionTr&#9;PSI&#9;JAVA://org.springframework.security.web.access.ExceptionTranslationFilter&#10;Ano&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.AnonymousAuthenticationFilter&#10;SecurityContextHolder&#9;PSI&#9;JAVA://org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter&#10;TokenEnd&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpoint&#10;UserController&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;OAuth2Connection&#9;PSI&#9;JAVA://org.springframework.social.connect.support.OAuth2Connection&#10;QQ&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java&#10;Verify&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/mobile/SmsVerifyCodeAuthenticationProvider.java&#10;TomcatEmbedS&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory&#10;TomcatEm&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer&#10;SocialAut&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationProvider.java&#10;SocialAuth&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvider&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;SocialAuthenticationFilter&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;UsernamePassword&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java" />
+    <property name="SearchEverywhereHistoryKey" value="Thread&#9;FILE&#9;jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java&#10;ThreadGroup&#9;PSI&#9;JAVA://java.lang.ThreadGroup&#10;Uncaught&#9;PSI&#9;JAVA://java.lang.Thread.UncaughtExceptionHandler&#10;ExceptionTrans&#9;PSI&#9;JAVA://org.springframework.security.web.access.ExceptionTranslationFilter&#10;FilterSecurity&#9;PSI&#9;JAVA://org.springframework.security.web.access.intercept.FilterSecurityInterceptor&#10;Anony&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.AnonymousAuthenticationFilter&#10;White&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/WhitelabelApprovalEndpoint.java&#10;UserCon&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;TokenStoreConfig&#9;PSI&#9;JAVA://com.learn.springsecurity.core.config.social.TokenStoreConfig&#10;DefaultToken&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java&#10;Default&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java&#10;TokenCon&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/config/social/TokenStoreConfig.java&#10;TokenEndpoint&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpoint&#10;Social&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvid&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;SocialU&#9;PSI&#9;JAVA://com.learn.springsecurity.browser.api.SocialUserInfo&#10;UserCo&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;SecurityHandlerController&#9;PSI&#9;JAVA://com.learn.springsecurity.browser.controller.SecurityHandlerController&#10;BasicAuthen&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.www.BasicAuthenticationFilter&#10;OAuth2AuthenticationService&#9;PSI&#9;JAVA://org.springframework.social.security.provider.OAuth2AuthenticationService&#10;self-login.html&#9;FILE&#9;file://F:/2021_learn_project/spring-security-browser/src/main/resources/resources/self-login.html&#10;SmsVerifyCodeFilter&#9;PSI&#9;JAVA://com.learn.springsecurity.core.verify.SmsVerifyCodeFilter&#10;Abs&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/AbstractTokenGranter.java&#10;TokenG&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/TokenGranter.java&#10;My&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java&#10;ResourceOwner&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter&#10;TokenEndPoint&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;ImageVerifyCodeFilter&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/verify/ImageVerifyCodeFilter.java&#10;UsernamePasswordAuthenticationFilter&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter&#10;BasicAu&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/www/BasicAuthenticationFilter.java&#10;UserCont&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;MyUserDetailService&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/userdetails/MyUserDetailService.java&#10;UserC&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;TokenEn&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/oauth/spring-security-oauth2/2.0.14.RELEASE/spring-security-oauth2-2.0.14.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/endpoint/TokenEndpoint.java&#10;OAuth2AuthenticationPro&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter&#10;FilterS&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.java&#10;ExceptionTr&#9;PSI&#9;JAVA://org.springframework.security.web.access.ExceptionTranslationFilter&#10;Ano&#9;PSI&#9;JAVA://org.springframework.security.web.authentication.AnonymousAuthenticationFilter&#10;SecurityContextHolder&#9;PSI&#9;JAVA://org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter&#10;TokenEnd&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.endpoint.TokenEndpoint&#10;UserController&#9;FILE&#9;file://F:/2021_learn_project/spring-security-businessdemo/src/main/java/com/learn/springsecurity/demo/controller/UserController.java&#10;OAuth2Connection&#9;PSI&#9;JAVA://org.springframework.social.connect.support.OAuth2Connection&#10;QQ&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/social/qq/connect/QQServiceProvider.java&#10;Verify&#9;FILE&#9;file://F:/2021_learn_project/spring-security-core/src/main/java/com/learn/springsecurity/core/authentication/mobile/SmsVerifyCodeAuthenticationProvider.java&#10;TomcatEmbedS&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory&#10;TomcatEm&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer&#10;SocialAut&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationProvider.java&#10;SocialAuth&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java&#10;SocialAuthenticationProvider&#9;PSI&#9;JAVA://org.springframework.social.security.SocialAuthenticationProvider&#10;SocialAuthenticationFilter&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/social/spring-social-security/1.1.4.RELEASE/spring-social-security-1.1.4.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="F:/spring-security/spring-security-demo-master/pom.xml" />
@@ -591,58 +504,58 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HTMLMatcherDemo">
-    <configuration name="HTMLMatcherDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.regex.pattern.HTMLMatcherDemo" />
-      <module name="regex-java-learn" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.regex.pattern.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="ObjectPublish" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadsecurity.ObjectPublish" />
+  <component name="RunManager" selected="Application.BlockedWaitingTimedWaiting">
+    <configuration name="BlockedWaitingTimedWaiting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadstate.BlockedWaitingTimedWaiting" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadsecurity.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadstate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="ObjectPublishWithOutConstructComplete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.threadsecurity.ObjectPublishWithOutConstructComplete" />
+    <configuration name="CanInterrupt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.stopthread.CanInterrupt" />
       <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.foundataion.threadsecurity.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.stopthread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="PatternDemo02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.regex.pattern.PatternDemo02" />
-      <module name="regex-java-learn" />
+    <configuration name="RightWayInterruptMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.stopthread.RightWayInterruptMethod" />
+      <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.regex.pattern.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.stopthread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="WebLogInfoDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.regex.pattern.WebLogInfoDemo" />
-      <module name="regex-java-learn" />
+    <configuration name="WrongWayVolatile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.stopthread.volatiledemo.WrongWayVolatile" />
+      <module name="concurrency-foundation" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.regex.pattern.*" />
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.stopthread.volatiledemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="WrongWayVolatileCannotStop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.stopthread.volatiledemo.WrongWayVolatileCannotStop" />
+      <module name="concurrency-foundation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.stopthread.volatiledemo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -787,19 +700,19 @@
       <item itemvalue="Spring Boot.DemoApplication (1)" />
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.SpringSecurityDemoApplication" />
-      <item itemvalue="Application.PatternDemo02" />
-      <item itemvalue="Application.ObjectPublish" />
-      <item itemvalue="Application.ObjectPublishWithOutConstructComplete" />
-      <item itemvalue="Application.WebLogInfoDemo" />
-      <item itemvalue="Application.HTMLMatcherDemo" />
+      <item itemvalue="Application.CanInterrupt" />
+      <item itemvalue="Application.WrongWayVolatileCannotStop" />
+      <item itemvalue="Application.WrongWayVolatile" />
+      <item itemvalue="Application.RightWayInterruptMethod" />
+      <item itemvalue="Application.BlockedWaitingTimedWaiting" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HTMLMatcherDemo" />
-        <item itemvalue="Application.WebLogInfoDemo" />
-        <item itemvalue="Application.ObjectPublishWithOutConstructComplete" />
-        <item itemvalue="Application.PatternDemo02" />
-        <item itemvalue="Application.ObjectPublish" />
+        <item itemvalue="Application.BlockedWaitingTimedWaiting" />
+        <item itemvalue="Application.RightWayInterruptMethod" />
+        <item itemvalue="Application.WrongWayVolatileCannotStop" />
+        <item itemvalue="Application.WrongWayVolatile" />
+        <item itemvalue="Application.CanInterrupt" />
       </list>
     </recent_temporary>
   </component>
@@ -911,14 +824,9 @@
       <workItem from="1632704157417" duration="1713000" />
       <workItem from="1632741180119" duration="2696000" />
       <workItem from="1632811056462" duration="5965000" />
-      <workItem from="1633483178061" duration="181000" />
-    </task>
-    <task id="LOCAL-00004" summary="【redisson分布式集合对象】localCacheMap学习实例">
-      <created>1616850606774</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1616850606774</updated>
+      <workItem from="1633483178061" duration="5911000" />
+      <workItem from="1633654085523" duration="12706000" />
+      <workItem from="1633848503575" duration="2463000" />
     </task>
     <task id="LOCAL-00005" summary="【redisson分布式集合对象】MultiMap，Set学习实例">
       <created>1617454623283</created>
@@ -1256,7 +1164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632474715047</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="【Java正则基础实例】Java 正则表达式简单实例2">
+      <created>1633483389655</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1633483389656</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1292,23 +1207,24 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="880487000" />
+    <option name="totallyTimeSpent" value="901567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.31759655" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4967811" weight="0.3411514" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.35944206" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.35944206" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932165" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49621212" visible="true" weight="0.27453142" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49621212" visible="true" weight="0.23594266" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32910696" />
       <window_info id="Web" order="3" sideWeight="0.50481695" side_tool="true" weight="0.20948827" />
       <window_info anchor="bottom" id="Tail" order="8" />
@@ -1324,12 +1240,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.31759655" />
     </layout>
     <layout-to-restore>
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Tail" order="14" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497309" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.53969955" />
       <window_info id="Favorites" order="1" sideWeight="0.50212765" side_tool="true" weight="0.26066098" />
       <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49787235" visible="true" weight="0.25053304" />
@@ -1341,20 +1257,19 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295964" />
       <window_info id="Designer" order="0" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32939914" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.3296582" />
       <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.44295302" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.52682406" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.31866953" />
-      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4983165" weight="0.3411514" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1731,136 +1646,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/ArrayBlockingQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="352" selection-start-line="352" selection-end-line="352" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47448">
-          <caret line="2038" selection-start-line="2038" selection-end-line="2038" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/locks/LockSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3384">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/Unsafe.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7392">
-          <caret line="353" column="23" selection-start-line="353" selection-start-column="23" selection-end-line="353" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="5" selection-start-line="5" selection-end-line="38" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileCannotStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileFixCannotStop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayInterruptMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="33" column="1" selection-start-line="2" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartAndRunMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/BlockedWaitingTimedWaiting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/NewRunnableTerminated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyReleaseOwnMonitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/ProducerConsumerModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEveWait.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/WaitNotifyPrintOddEvenSync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-register.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepInterrupted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-security-browser/src/main/resources/resources/self-login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/JoinSimpleDemo.java" />
     <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadobjectcommonmethods/SleepDontReleaseMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1938,13 +1723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42648">
-          <caret line="1856" column="33" selection-start-line="1856" selection-start-column="33" selection-end-line="1856" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23400">
@@ -2012,9 +1790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="104" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2022,9 +1797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
           <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2049,9 +1821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2066,16 +1835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <element signature="e#436#437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithOutConstructComplete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -2083,19 +1842,167 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/regex-java-learn/src/main/java/com/learn/regex/pattern/HTMLMatcherDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="72">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadsecurity/ObjectPublishWithOutConstructComplete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/ThreadStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/BothRunnableThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadcoreknowledge/RunnableStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartAndRunMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/startthread/StartTwiceDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/jmm/OutOfOrderExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithoutSleep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/CanInterrupt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/ProdRightWayStopThreadResetInterrupt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileFixCannotStop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayStopThreadWithSleepEveryLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/WrongStopThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/ProdRightWayStopThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/InterruptMethodDemo.java" />
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/volatiledemo/WrongWayVolatileCannotStop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/stopthread/RightWayInterruptMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="1753" column="16" selection-start-line="1753" selection-start-column="8" selection-end-line="1753" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#36709#36710#0" expanded="true" />
+            <element signature="e#36767#36768#0" expanded="true" />
+            <element signature="e#37304#37305#0" expanded="true" />
+            <element signature="e#37347#37348#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/NewRunnableTerminated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/threadstate/BlockedWaitingTimedWaiting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="50" selection-end-column="1" />
         </state>
       </provider>
     </entry>

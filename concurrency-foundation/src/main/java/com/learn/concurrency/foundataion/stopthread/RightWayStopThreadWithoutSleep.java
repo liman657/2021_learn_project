@@ -11,7 +11,8 @@ public class RightWayStopThreadWithoutSleep implements Runnable {
     public void run() {
         int num = 0;
         //boolean isInterrut = Thread.currentThread().isInterrupted();//还不能这样写，这样调用之后标记为会被清空
-        while (!Thread.currentThread().isInterrupted() && num <= Integer.MAX_VALUE / 2) {
+        while (!Thread.currentThread().isInterrupted()
+                && num <= Integer.MAX_VALUE / 2) {
             if (num % 10000 == 0) {
                 System.out.println(num + " is 10000 的倍数");
             }

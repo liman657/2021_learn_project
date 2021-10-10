@@ -28,7 +28,7 @@ public class WrongWayVolatileCannotStop{
             log.info("数据:{} 被消费者消费了",consumer.dataQueue.take());
             Thread.sleep(100);//模拟消费者对获取到的数据进行处理
         }
-        log.info("消费者消费数据完成，给生产者发送中断信号");
+        log.info("消费者不再需要更多数据，给生产者发送中断信号");
 
         producer.canceled = true;//消费者数据消费完成，停止生产者
     }

@@ -10,7 +10,7 @@ public class CanInterrupt {
     public static void main(String[] args) throws InterruptedException {
         Runnable runnable = ()->{
             int num = 0;
-            while(num <= 10000){
+            while(num <= 10000 && !Thread.currentThread().isInterrupted()){
                 if(num % 100 == 0){
                     System.out.println(num + " is 100 的倍数");
                 }

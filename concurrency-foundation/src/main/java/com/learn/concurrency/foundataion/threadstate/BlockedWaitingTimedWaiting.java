@@ -37,7 +37,7 @@ public class BlockedWaitingTimedWaiting implements Runnable{
         }
         //打印出TIME_WAITING，因为线程1正在sleep
         log.info("线程1当前的状态为：{}",thread1.getState());
-        //线程2想拿到sync的锁，但是拿不到
+        //线程2想拿到sync的锁，但是拿不到，这里线程2就是BLOCKED状态
         log.info("线程2当前的状态为：{}",thread2.getState());
         try {
             //主线程暂停一下，以便线程1进入到wait状态线程最新的状态
@@ -45,6 +45,7 @@ public class BlockedWaitingTimedWaiting implements Runnable{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        //由于调用了wait方法，这里线程1就是wait状态
         log.info("线程1当前的状态为：{}",thread1.getState());
     }
 }

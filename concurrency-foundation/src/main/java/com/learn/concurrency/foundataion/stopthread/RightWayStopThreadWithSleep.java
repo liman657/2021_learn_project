@@ -17,7 +17,7 @@ public class RightWayStopThreadWithSleep {
                 num++;
             }
             try {
-                Thread.sleep(1000);//执行完运算之后，等待1秒
+                Thread.sleep(5000);//执行完运算之后，等待1秒
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -25,7 +25,7 @@ public class RightWayStopThreadWithSleep {
 
         Thread thread = new Thread(runnable);
         thread.start();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         thread.interrupt();
     }
 }

@@ -22,9 +22,9 @@ public class RightWayInterruptMethod {
         threadOne.interrupt();
         //获取中断标志
         System.out.println("isInterrupted: " + threadOne.isInterrupted());
-        //获取中断标志并重置
+        //输出当前线程的中断标志结果（当前线程是main，不管调用这个方法的对象是什么，因为这个方法是静态方法）
         System.out.println("isInterrupted: " + threadOne.interrupted());
-        //获取中断标志并重直
+        //输出当前线程的中断标志结果（当前线程是main）
         System.out.println("isInterrupted: " + Thread.interrupted());
         //获取中断标志
         System.out.println("isInterrupted: " + threadOne.isInterrupted());
