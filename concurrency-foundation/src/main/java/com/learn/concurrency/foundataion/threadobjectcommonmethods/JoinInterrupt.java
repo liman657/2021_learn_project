@@ -8,6 +8,7 @@ package com.learn.concurrency.foundataion.threadobjectcommonmethods;
 public class JoinInterrupt {
 
     public static void main(String[] args) {
+        //拿到主线程的引用
         Thread mainThread = Thread.currentThread();
         Thread thread = new Thread(() -> {
             try {

@@ -18,11 +18,13 @@ public class WaitNotifyPrintOddEveWait {
         public void run() {
             while(count<=100){
                 synchronized (lock){
+                    //拿到锁就直接打印
                     System.out.println(Thread.currentThread().getName()+":"+count++);
+                    //打印完成之后，唤醒其他线程，然后自己休眠
                     lock.notify();
                     if(count<=100){
                         try {
-                            //如果任务还没结束，就让出当前的锁，自己休眠
+                            //打印完了之后，count还是小于100，就自己休眠
                             lock.wait();
                         } catch (InterruptedException e) {
                             e.printStackTrace();

@@ -7,6 +7,7 @@ package com.learn.concurrency.foundataion.threadobjectcommonmethods;
  */
 public class WaitNotifyReleaseOwnMonitor {
 
+    //需要准备两把锁
     private static volatile Object resourceA = new Object();
     private static volatile Object resourceB = new Object();
 
@@ -18,7 +19,7 @@ public class WaitNotifyReleaseOwnMonitor {
                    System.out.println(Thread.currentThread().getName()+" get resourceB lock");
                    try {
                        System.out.println(Thread.currentThread().getName()+ "release resourceA lock");
-                       resourceA.wait();
+                       resourceA.wait();//线程进入wait会释放锁，但是只是释放其拥有的对象的锁
                    } catch (InterruptedException e) {
                        e.printStackTrace();
                    }

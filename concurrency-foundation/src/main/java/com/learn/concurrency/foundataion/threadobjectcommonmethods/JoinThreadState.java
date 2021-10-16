@@ -13,7 +13,7 @@ public class JoinThreadState {
         Thread thread = new Thread(() -> {
             try {
                 Thread.sleep(3000);
-                System.out.println("主线程的状态：" + mainThread.getState());//这里输出的是主线程join时候的状态
+                System.out.println("主线程join期间的状态：" + mainThread.getState());//这里输出的是主线程join时候的状态
                 System.out.println(Thread.currentThread().getName() + "运行结束");
             } catch (InterruptedException e) {
                 e.printStackTrace();

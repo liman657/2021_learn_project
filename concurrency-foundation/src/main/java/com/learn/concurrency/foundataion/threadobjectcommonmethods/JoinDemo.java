@@ -31,7 +31,9 @@ public class JoinDemo {
         //这里的join由子线程的对象进行调用，但含义实质是将子线程加入到主线程中
         thread1.join();//含义：子线程加入到主线程中，主线程需要等待子线程执行完毕之后再运行
         thread2.join();
-        System.out.println("所有子线程执行完毕");
+        System.out.println("所有子线程执行完毕，下面主线程可以运行了");
+        Thread.sleep(500);
+        System.out.println("主线程执行完毕");
     }
 
 }

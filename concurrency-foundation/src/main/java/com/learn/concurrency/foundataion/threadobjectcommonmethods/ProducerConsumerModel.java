@@ -80,7 +80,7 @@ class EventStorage{
 
         storage.add(new Date());
         System.out.println("仓库里有了"+storage.size()+"个产品");
-        notify();//通知消费者取元素
+        notify();//通知消费者取元素，这里为了简单，只有一个消费者，因此直接notify
     }
 
     /**
