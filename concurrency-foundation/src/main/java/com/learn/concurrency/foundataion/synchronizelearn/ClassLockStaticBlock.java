@@ -9,6 +9,7 @@ public class ClassLockStaticBlock implements Runnable{
 
     private static ClassLockStaticBlock instance1 = new ClassLockStaticBlock();
     private static ClassLockStaticBlock instance2 = new ClassLockStaticBlock();
+
     @Override
     public void run() {
         method();

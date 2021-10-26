@@ -16,6 +16,7 @@
         <module>spring-security-rbac-auth</module>
         <module>concurrency-foundation</module>
         <module>regex-java-learn</module>
+        <module>spring-all-component</module>
         <!--<module>spring-springsecurity-businessdemo</module>-->
     </modules>
 

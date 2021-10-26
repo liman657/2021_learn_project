@@ -31,7 +31,7 @@ public class SynchronizedMethodAndYesSame implements Runnable{
     }
 
     public synchronized void otherSyncMethod(){
-        System.out.println("这个也是同步加锁的方法，当前线程为:" + Thread.currentThread().getName());
+        System.out.println("这个是【另一个】同步加锁的方法，当前线程为:" + Thread.currentThread().getName());
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {

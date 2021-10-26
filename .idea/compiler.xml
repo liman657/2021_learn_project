@@ -22,6 +22,7 @@
         <module name="regex-java-learn" />
         <module name="self_spring_demo" />
         <module name="self_spring_read_demo" />
+        <module name="spring-all-helloworld" />
         <module name="spring-security-app" />
         <module name="spring-security-browser" />
         <module name="spring-security-businessdemo" />
