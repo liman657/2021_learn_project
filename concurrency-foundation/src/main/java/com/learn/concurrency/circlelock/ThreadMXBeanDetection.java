@@ -1,9 +1,6 @@
 package com.learn.concurrency.circlelock;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.MonitorInfo;
-import java.lang.management.ThreadInfo;
-import java.lang.management.ThreadMXBean;
+import java.lang.management.*;
 import java.util.stream.Stream;
 
 /**
@@ -42,7 +39,8 @@ public class ThreadMXBeanDetection implements Runnable {
                 ThreadInfo threadInfo = threadMXBean.getThreadInfo(deadlockedThreads[i]);
                 System.out.println(threadInfo.getThreadName()+"发生死锁");
                 String lockName = threadInfo.getLockName();
-                System.out.println("相关的锁信息为"+lockName);
+                LockInfo[] lockedSynchronizers = threadInfo.getLockedSynchronizers();
+                System.out.println("相关的锁信息为"+lockedSynchronizers);
             }
         }
 

@@ -8,9 +8,10 @@ import org.springframework.util.StringUtils;
 import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -21,10 +22,17 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ReadVideo {
 
+    private static Set<String> videoFileSuffix = new HashSet<>();
+
+    static{
+        videoFileSuffix.add("mp4");
+        //videoFileSuffix.add("avi");
+    }
+
 
     public static void main(String[] args){
 
-        String path = "E:\\自我学习\\33 算法面试通关40讲";
+        String path = "E:\\自我学习\\41 Nginx核心知识100讲";
         //1.读取文件夹下的所有视频文件
         List<File> fileList = new ArrayList<>();
         readFileInDir(path,fileList);
@@ -50,9 +58,20 @@ public class ReadVideo {
             if(file.isDirectory()){
                 readFileInDir(file.getAbsolutePath(),fileList);
             }else{
-                fileList.add(file);
+                if(isVideoFile(file.getName())) {
+                    fileList.add(file);
+                }
             }
         }
+    }
+
+    public static boolean isVideoFile(String fileName){
+        boolean result = false;
+        String suffix = fileName.substring(fileName.lastIndexOf('.')+1);
+        if(videoFileSuffix.contains(suffix)){
+            result = true;
+        }
+        return result;
     }
 
     public static double calVideoFilePlayTime(List<File> fileList){

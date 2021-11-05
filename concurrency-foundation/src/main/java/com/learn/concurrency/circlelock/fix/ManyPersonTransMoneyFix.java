@@ -2,47 +2,61 @@ package com.learn.concurrency.circlelock.fix;
 
 import com.learn.concurrency.circlelock.TransferAccount;
 
+import java.util.Random;
+
 /**
  * autor:liman
- * createtime:2021-10-31
- * comment: 转账的死锁修复
- * 通过避免相反的获取锁的顺序 利用对象的hashCode决定获取锁的顺序
+ * createtime:2021-10-30
+ * comment: 多人同时转账 依旧很危险
  */
-public class TransferMoneyFix implements Runnable {
+public class ManyPersonTransMoneyFix {
 
-    int flag = 1;
-    static FixAccount fromAccount = new FixAccount(500);
-    static FixAccount toAccount = new FixAccount(500);
+    //账户个数，随机从500个账户中抽出多个进行转账
+    private static final int NUM_ACCOUNTS = 500;
+    private static final int ACCOUNT_MONEY = 1000;
+    //模拟每秒在线转账的次数
+    private static final int TRANS_MONEY_COUNT = 1000000;
+    private static final int NUM_TRANS_THREAD = 20;
     static Object extendLock = new Object();
 
-    public static void main(String[] args) throws InterruptedException {
-        TransferMoneyFix transferAccountOne = new TransferMoneyFix();
-        TransferMoneyFix transferAccountTwo = new TransferMoneyFix();
-        transferAccountOne.flag = 0;
-        transferAccountTwo.flag = 1;
-        Thread threadOne = new Thread(transferAccountOne);
-        Thread threadTwo = new Thread(transferAccountTwo);
-        threadOne.start();
-        threadTwo.start();
-        threadOne.join();
-        threadTwo.join();
-        System.out.println("账户from的余额:"+fromAccount.balance);
-        System.out.println("账户to的余额:"+toAccount.balance);
-    }
+    public static void main(String[] args) {
+        Random random = new Random();
+        FixAccount[] accounts = new FixAccount[NUM_ACCOUNTS];
 
-    @Override
-    public void run() {
-        if (flag == 1) {
-            transMoney(fromAccount, toAccount, 200);
+        for (int i = 0; i < accounts.length; i++) {
+            accounts[i] = new FixAccount(ACCOUNT_MONEY);
         }
 
-        if (flag == 0) {
-            transMoney(toAccount, fromAccount, 200);
+        class TransferThread extends Thread{
+            @Override
+            public void run() {
+                //模拟每次转账的账户个数
+                for(int i=0;i<TRANS_MONEY_COUNT;i++){
+                    //随机得到转账账户和金额
+                    int fromAcct = random.nextInt(NUM_ACCOUNTS);
+                    int toAcct = random.nextInt(NUM_ACCOUNTS);
+                    if(fromAcct!=toAcct){
+                        int amount = random.nextInt(ACCOUNT_MONEY);
+                        //转账
+                        transMoney(accounts[fromAcct],accounts[toAcct],amount);
+                    }
+                }
+            }
+        }
+
+        //启动多个线程，进行转账
+        for(int i=0;i<NUM_TRANS_THREAD;i++){
+            new TransferThread().start();
         }
     }
 
+    /**
+     * 模拟转账的函数
+     * @param fromAccount 转出账号
+     * @param toAccount     转入账号
+     * @param amount    金额
+     */
     public static void transMoney(FixAccount fromAccount, FixAccount toAccount, int amount) {
-
         class Helper{
             public void transfer(){
                 if (fromAccount.balance - amount < 0) {
@@ -104,6 +118,7 @@ public class TransferMoneyFix implements Runnable {
         }
     }
 
+    //简单的账户对象
     static class FixAccount {
 
         public FixAccount(int balance) {

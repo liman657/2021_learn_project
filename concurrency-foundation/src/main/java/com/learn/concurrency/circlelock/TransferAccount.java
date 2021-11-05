@@ -37,17 +37,23 @@ public class TransferAccount implements Runnable {
         }
     }
 
+    /**
+     * 模拟转账的函数
+     * @param fromAccount 转出账号
+     * @param toAccount     转入账号
+     * @param amount    金额
+     */
     public static void transMoney(Account fromAccount, Account toAccount, int amount) {
-        synchronized (fromAccount) {
+        synchronized (fromAccount) {//先获取转出账号的锁
 
             //模拟通信耗时，有了这个就会造成死锁
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            //try {
+            //    Thread.sleep(500);
+            //} catch (InterruptedException e) {
+            //    e.printStackTrace();
+            //}
 
-            synchronized (toAccount) {
+            synchronized (toAccount) {//再获取转入账号的锁
                 if (fromAccount.balance - amount < 0) {
                     System.out.println("余额不足，转账失败");
                 }
@@ -59,6 +65,7 @@ public class TransferAccount implements Runnable {
         }
     }
 
+    //简单的账户对象
     static class Account {
 
         public Account(int balance) {
