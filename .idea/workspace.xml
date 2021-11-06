@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2021_learn_project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foundation-demo/src/main/java/com/learn/sample/FileVideoTimeLengthCal.java" beforeDir="false" afterPath="$PROJECT_DIR$/foundation-demo/src/main/java/com/learn/sample/FileVideoTimeLengthCal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regex-java-learn/regex-java-learn.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-app/spring-security-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-rbac-auth/spring-security-rbac-auth.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-security-sso/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-security-sso/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/CreateThreadMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency-foundation/src/main/java/com/learn/concurrency/foundataion/CreateThreadMethod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +368,21 @@
       <recent name="com.learn.concurrency.foundataion.synchronizelearn" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FileVideoTimeLengthCal">
+  <component name="RunManager" selected="Application.CreateThreadMethod">
+    <configuration name="CreateThreadMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.foundataion.CreateThreadMethod" />
+      <module name="concurrency-foundation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.concurrency.foundataion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DiningPhilosophers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.circlelock.DiningPhilosophers" />
       <module name="concurrency-foundation" />
@@ -414,20 +419,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.learn.concurrency.juclearn.threadpool.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManyPersonTransMoneyFix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.concurrency.circlelock.fix.ManyPersonTransMoneyFix" />
-      <module name="concurrency-foundation" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.concurrency.circlelock.fix.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -602,7 +593,6 @@
     <list>
       <item itemvalue="Application.FixThreadPoolOOM" />
       <item itemvalue="Application.DiningPhilosophers" />
-      <item itemvalue="Application.ManyPersonTransMoneyFix" />
       <item itemvalue="Maven.spring-security-learn-package" />
       <item itemvalue="Maven.self_spring_demo[tomcat:run]" />
       <item itemvalue="Spring Boot.KafkaClientApplication" />
@@ -614,14 +604,15 @@
       <item itemvalue="Spring Boot.BaiDuMapApplication" />
       <item itemvalue="Application.FileVideoTimeLengthCal" />
       <item itemvalue="Application.ReadVideo" />
+      <item itemvalue="Application.CreateThreadMethod" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CreateThreadMethod" />
         <item itemvalue="Application.FileVideoTimeLengthCal" />
         <item itemvalue="Application.ReadVideo" />
         <item itemvalue="Spring Boot.BaiDuMapApplication" />
         <item itemvalue="Application.DiningPhilosophers" />
-        <item itemvalue="Application.ManyPersonTransMoneyFix" />
       </list>
     </recent_temporary>
   </component>
@@ -749,14 +740,7 @@
       <workItem from="1635836385835" duration="17750000" />
       <workItem from="1636191309050" duration="2292000" />
       <workItem from="1636194991879" duration="1202000" />
-      <workItem from="1636196238769" duration="332000" />
-    </task>
-    <task id="LOCAL-00012" summary="【spring源码简单学习】泛型+工厂模式完成（4-3完成）">
-      <created>1619244682555</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1619244682555</updated>
+      <workItem from="1636196238769" duration="632000" />
     </task>
     <task id="LOCAL-00013" summary="【spring源码简单学习】反射基础实例+操作获取构造函数">
       <created>1619276429991</created>
@@ -1094,7 +1078,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635771476620</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="lombok插件版本升级">
+      <created>1636196797616</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1636196797616</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1222,7 +1213,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="【spring-security】QQ第三方登录（未解决signup的问题）" />
     <MESSAGE value="【spring-security】QQ第三方登录完结" />
     <MESSAGE value="【spring-security】微信登录完成（QQ登录和微信登录待测试）" />
     <MESSAGE value="【spring-security】第六章，spring-security自定义认证服务器简单demo" />
@@ -1247,7 +1237,8 @@
     <MESSAGE value="【Java多线程】原子性-单例模式重新总结" />
     <MESSAGE value="【Java多线程】死锁完成初学" />
     <MESSAGE value="【Java多线程JUC】线程池初次学习" />
-    <option name="LAST_COMMIT_MESSAGE" value="【Java多线程JUC】线程池初次学习" />
+    <MESSAGE value="lombok插件版本升级" />
+    <option name="LAST_COMMIT_MESSAGE" value="lombok插件版本升级" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
