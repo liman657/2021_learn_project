@@ -32,7 +32,7 @@ public class ReadVideo {
 
     public static void main(String[] args){
 
-        String path = "E:\\自我学习\\41 Nginx核心知识100讲";
+        String path = "F:\\学习资料\\41 Nginx核心知识100讲";
         //1.读取文件夹下的所有视频文件
         List<File> fileList = new ArrayList<>();
         readFileInDir(path,fileList);
