@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_ADDITIONAL_VM_OPTIONS" value="-Djps.track.ap.dependencies=false" />
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -29,7 +31,6 @@
         <module name="spring-security-core" />
         <module name="spring-security-demo" />
         <module name="spring-security-rbac-auth" />
-        <module name="spring-security-sso" />
         <module name="spring-security-sso-client01" />
         <module name="spring-security-sso-client02" />
         <module name="spring-security-sso-server" />
