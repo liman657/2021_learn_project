@@ -11,7 +11,7 @@ import java.util.LinkedList;
 public class FileVideoTimeLengthCal {
 
     public static void main(String[] args) {
-        String filePath = "E:\\自我学习\\33 算法面试通关40讲";
+        String filePath = "F:\\学习资料\\41 Nginx核心知识100讲";
         readFileDirFile(filePath);
     }
 
