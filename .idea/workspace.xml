@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0271b2e-7484-48e3-b0fb-fa3fb18cd4e5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foundation-demo/src/main/java/com/learn/sample/ReplaceDocFileTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/foundation-demo/src/main/java/com/learn/sample/ReplaceDocFileTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foundation-demo/target/classes/com/learn/sample/FileNameModifyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/foundation-demo/target/classes/com/learn/sample/FileNameModifyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foundation-demo/target/classes/com/learn/sample/MatcherReplaceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/foundation-demo/target/classes/com/learn/sample/MatcherReplaceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foundation-demo/target/classes/com/learn/sample/ReadMDDocFile.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -750,14 +755,7 @@
       <workItem from="1636191309050" duration="2292000" />
       <workItem from="1636194991879" duration="1202000" />
       <workItem from="1636196238769" duration="2338000" />
-      <workItem from="1636251650537" duration="5862000" />
-    </task>
-    <task id="LOCAL-00014" summary="【spring源码简单学习】完成4-7 反射方法内容完成">
-      <created>1619442498779</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1619442498779</updated>
+      <workItem from="1636251650537" duration="8506000" />
     </task>
     <task id="LOCAL-00015" summary="【spring源码简单学习】完成chapter04,注解的内容">
       <created>1619615507384</created>
@@ -1095,7 +1093,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636196994050</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="markdown文档批量替换图片路径工具">
+      <created>1636261385725</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1636261385726</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1223,7 +1228,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="【spring-security】QQ第三方登录完结" />
     <MESSAGE value="【spring-security】微信登录完成（QQ登录和微信登录待测试）" />
     <MESSAGE value="【spring-security】第六章，spring-security自定义认证服务器简单demo" />
     <MESSAGE value="【spring-security】第六章，spring-security（社交登录完成令牌改造）" />
@@ -1248,7 +1252,8 @@
     <MESSAGE value="【Java多线程】死锁完成初学" />
     <MESSAGE value="【Java多线程JUC】线程池初次学习" />
     <MESSAGE value="lombok插件版本升级" />
-    <option name="LAST_COMMIT_MESSAGE" value="lombok插件版本升级" />
+    <MESSAGE value="markdown文档批量替换图片路径工具" />
+    <option name="LAST_COMMIT_MESSAGE" value="markdown文档批量替换图片路径工具" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

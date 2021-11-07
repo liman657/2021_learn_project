@@ -1,5 +1,7 @@
 # Idea
 .idea
+.idea/**.xml
+.idea/**.*
 *.iml
 # Package Files #
 *.jar
