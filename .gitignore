@@ -1,5 +1,7 @@
 # Idea
 .idea
+./**/target
+./**/**/target
 .idea/**.xml
 .idea/**.*
 *.class
