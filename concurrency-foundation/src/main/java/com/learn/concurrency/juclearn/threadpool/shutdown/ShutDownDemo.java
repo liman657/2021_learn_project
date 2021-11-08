@@ -10,25 +10,26 @@ import java.util.concurrent.Executors;
  */
 public class ShutDownDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ExecutorService fixedThreadPool = Executors.newFixedThreadPool(10);
-        for(int i=0;i<1000;i++){
+        for (int i = 0; i < 1000; i++) {
             fixedThreadPool.execute(new ShutDownTask());
         }
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(1500);
         fixedThreadPool.shutdown();
     }
 
 }
 
-class ShutDownTask implements Runnable{
+class ShutDownTask implements Runnable {
 
     @Override
     public void run() {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println(Thread.currentThread().getName());
     }
 }
