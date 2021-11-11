@@ -48,5 +48,4 @@ public class SimpleDateFormatLockSlove {
         }
         return result;
     }
-
 }

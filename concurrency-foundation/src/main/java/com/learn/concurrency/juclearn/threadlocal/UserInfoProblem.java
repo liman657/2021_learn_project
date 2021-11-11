@@ -43,6 +43,8 @@ class ServiceThree{
     public void process(){
         User user = UserContextHolder.holder.get();
         System.out.println("server three 中拿到的对象"+user);
+        //不用了要记得手动remove
+        UserContextHolder.holder.remove();
     }
 }
 

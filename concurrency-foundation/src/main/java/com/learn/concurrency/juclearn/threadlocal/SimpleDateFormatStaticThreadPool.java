@@ -43,5 +43,4 @@ public class SimpleDateFormatStaticThreadPool {
         resultSet.add(result);
         return result;
     }
-
 }

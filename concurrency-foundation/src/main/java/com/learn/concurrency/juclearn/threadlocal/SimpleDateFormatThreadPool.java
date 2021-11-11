@@ -25,6 +25,4 @@ public class SimpleDateFormatThreadPool {
         }
         threadPool.shutdown();
     }
-
-
 }
