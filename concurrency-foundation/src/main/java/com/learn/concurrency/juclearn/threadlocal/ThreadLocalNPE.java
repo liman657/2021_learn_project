@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
  * autor:liman
  * createtime:2021/11/11
  * comment: ThreadLocal nullpointException的问题
+ * 注意装箱和拆箱导致的问题
  */
 @Slf4j
 public class ThreadLocalNPE {
