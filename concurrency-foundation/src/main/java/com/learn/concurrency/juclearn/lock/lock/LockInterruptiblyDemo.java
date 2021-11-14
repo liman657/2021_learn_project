@@ -21,15 +21,17 @@ public class LockInterruptiblyDemo implements Runnable{
         Thread threadTwo = new Thread(lockInterruptiblyDemo,"线程2");
         threadOne.start();
         threadTwo.start();
+        //main线程休眠2秒
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
+        //刚启动的线程1会进入休眠，会在sleep的时候被中断
         threadOne.interrupt();//打断线程1和打断线程2会有不同的结果，因为其中有一个是sleep，有一个是尝试获取锁
+        //后启动的线程2会在尝试获取锁的时候被中断
         threadTwo.interrupt();
-
     }
 
     @Override
