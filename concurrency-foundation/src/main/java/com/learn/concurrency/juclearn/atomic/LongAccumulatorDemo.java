@@ -20,6 +20,7 @@ public class LongAccumulatorDemo {
         ExecutorService executorService = Executors.newFixedThreadPool(8);
         IntStream.rangeClosed(1,100).forEach(t->executorService.submit(()->accumulator.accumulate(t)));
         executorService.shutdown();
+        //等待线程池结束，主线程自旋
         while(!executorService.isTerminated()){
 
         }
