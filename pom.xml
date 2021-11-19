@@ -17,6 +17,7 @@
         <module>concurrency-foundation</module>
         <module>regex-java-learn</module>
         <module>spring-all-component</module>
+        <module>leetcode-2021</module>
         <!--<module>spring-springsecurity-businessdemo</module>-->
     </modules>
 
