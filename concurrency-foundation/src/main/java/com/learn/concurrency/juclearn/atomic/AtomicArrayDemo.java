@@ -18,20 +18,23 @@ public class AtomicArrayDemo {
         AtomicIntegerArray atomicIntegerArray = new AtomicIntegerArray(1000);
         Incrementer incrementer = new Incrementer(atomicIntegerArray);
         Decrementer decrementer = new Decrementer(atomicIntegerArray);
+        //新建100个线程做加法，100个线程做减法
         Thread[] incrementThread = new Thread[100];
         Thread[] decrementThread = new Thread[100];
         for(int i=0;i<100;i++){
             incrementThread[i] = new Thread(incrementer);
             decrementThread[i] = new Thread(decrementer);
         }
-
+        //依次启动每个线程
         Arrays.stream(incrementThread).forEach(Thread::start);
         Arrays.stream(decrementThread).forEach(Thread::start);
+        //等待所有子线程运行结束
         for(int i=0;i<100;i++){
             incrementThread[i].join();
             decrementThread[i].join();
         }
         for(int i=0;i<atomicIntegerArray.length();i++){
+            //如果数组中存在一个不是0的就判断为出现异常
             if(atomicIntegerArray.get(i)!=0){
                 System.out.println("发现异常");
             }

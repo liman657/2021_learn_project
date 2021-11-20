@@ -12,9 +12,11 @@ public class AtomicIntegerFieldUpdateDemo implements Runnable{
     static Candidate tom;
     static Candidate peter;
 
+    //构造的时候，第一个参数为Class，第二个为其中的属性名称
     public static AtomicIntegerFieldUpdater<Candidate> scoreUpdater
             =AtomicIntegerFieldUpdater.newUpdater(Candidate.class,"score");
 
+    //用于示例，静态内部类
     public static class Candidate{
         volatile int score;
     }
