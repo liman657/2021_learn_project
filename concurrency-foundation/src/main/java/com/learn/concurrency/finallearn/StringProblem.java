@@ -21,18 +21,19 @@ public class StringProblem {
     }
 
     public static void testStrDemo1(){
+        //字符串常量池中就会定义hello2
         String strA = "hello2";
-        final String strB = "hello";
-        String strC = "hello";
-        String strD = strB+2;
-        String strE = strC+2;
+        final String strB = "hello";//编译的时候就能确定值
+        String strC = "hello";//字符串常量池中会定义hello，但不是hello2
+        String strD = strB+2;//同样，编译的时候也能确定值
+        String strE = strC+2;//运行的时候才能确定值，因此在堆上建立对象
         System.out.println((strA == strD));
         System.out.println((strA == strE));
     }
 
     public static void testStrDemo2(){
         String strA = "demo2";
-        final String strB = getDemoStr();
+        final String strB = getDemoStr();//运行时才能确定值
         String strC = "demo";
         String strD = strB+2;
         String strE = strC+2;
