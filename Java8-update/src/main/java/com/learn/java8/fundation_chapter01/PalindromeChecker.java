@@ -1,4 +1,4 @@
-package com.learn.java8.fundation;
+package com.learn.java8.fundation_chapter01;
 
 /**
  * autor:liman

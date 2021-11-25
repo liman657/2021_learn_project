@@ -1,4 +1,4 @@
-package com.learn.java8.fundation;
+package com.learn.java8.fundation_chapter01;
 
 import java.util.Arrays;
 import java.util.Comparator;

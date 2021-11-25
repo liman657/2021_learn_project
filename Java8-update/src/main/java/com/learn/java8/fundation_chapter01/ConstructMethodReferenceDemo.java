@@ -1,6 +1,6 @@
-package com.learn.java8.fundation;
+package com.learn.java8.fundation_chapter01;
 
-import com.learn.java8.fundation.entity.Person;
+import com.learn.java8.fundation_chapter01.entity.Person;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;

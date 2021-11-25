@@ -1,4 +1,4 @@
-package com.learn.java8.fundation.entity;
+package com.learn.java8.fundation_chapter01.entity;
 
 import java.util.Arrays;
 import java.util.Objects;
