@@ -15,8 +15,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CopyOnWriteArrayListUseDemo {
 
     public static void main(String[] args) {
-//        ordinalListDemo();
-        copyOnWriteArrayListDemo();
+        ordinalListDemo();
+        //copyOnWriteArrayListDemo();
     }
 
     public static void ordinalListDemo(){
