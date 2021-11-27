@@ -23,8 +23,6 @@ public class ArrayBlockingQueueDemo {
         new Thread(interviewer).start();
         new Thread(consumer).start();
     }
-
-
 }
 
 //模拟的是面试者
