@@ -34,7 +34,7 @@ public class ConditionDemo {
         lock.lock();
         try{
             System.out.println("准备工作完成，唤醒其他线程");
-            condition.signal();
+            condition.signal();//唤醒在condition上等待的线程
         }finally {
             lock.unlock();
         }
@@ -45,11 +45,12 @@ public class ConditionDemo {
         new Thread(()->{
             try {
                 Thread.sleep(1000);
-                conditionDemo.method02();//唤醒这condition上等待的线程
+                conditionDemo.method02();//唤醒在condition上等待的线程
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }).start();
+        //主线程调用method01先行阻塞，在1秒之后，被上面新建的线程唤醒
         conditionDemo.method01();
     }
 }
