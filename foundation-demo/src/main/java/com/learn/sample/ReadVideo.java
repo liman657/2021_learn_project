@@ -32,7 +32,7 @@ public class ReadVideo {
 
     public static void main(String[] args){
 
-        String path = "E:\\自我学习\\实战视频\\2021\\mksz270 - java设计模式精讲 Debug 方式+内存分析";
+        String path = "F:\\BaiduNetdiskDownload\\mksz162 - Java企业级电商项目架构演进之路 Tomcat集群与Redis分布式";
         //1.读取文件夹下的所有视频文件
         List<File> fileList = new ArrayList<>();
         readFileInDir(path,fileList);
