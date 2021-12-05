@@ -36,8 +36,8 @@ public class GetExceptionDemo {
 
         @Override
         public Integer call() throws Exception {
+            //模拟抛出异常
             throw new IllegalArgumentException("callable抛出exception");
         }
     }
-
 }

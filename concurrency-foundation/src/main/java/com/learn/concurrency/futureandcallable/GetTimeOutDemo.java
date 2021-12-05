@@ -84,5 +84,4 @@ public class GetTimeOutDemo {
         GetTimeOutDemo timeOutDemo = new GetTimeOutDemo();
         timeOutDemo.printAd();
     }
-
 }

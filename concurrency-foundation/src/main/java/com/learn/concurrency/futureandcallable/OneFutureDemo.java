@@ -32,7 +32,7 @@ public class OneFutureDemo {
         @Override
         public Integer call() throws Exception {
             Thread.sleep(3000);
-            return new Random().nextInt();
+            return new Random().nextInt(100);
         }
     }
 }

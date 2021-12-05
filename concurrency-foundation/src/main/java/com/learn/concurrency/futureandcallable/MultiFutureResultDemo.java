@@ -34,7 +34,6 @@ public class MultiFutureResultDemo {
         });
         //关闭线程池
         threadPool.shutdown();
-
     }
 
     static class CallableTask implements Callable<Integer> {
@@ -45,5 +44,4 @@ public class MultiFutureResultDemo {
             return new Random().nextInt(100);
         }
     }
-
 }
