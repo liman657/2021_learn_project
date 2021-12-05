@@ -30,12 +30,10 @@ public class SelfCountDownLatchDemo {
         @Override
         protected int tryAcquireShared(int arg) {
             return (getState() == 1) ? 1 : -1;
-//            return super.tryAcquireShared(arg);
         }
 
         @Override
         protected boolean tryReleaseShared(int arg) {
-//            return super.tryReleaseShared(arg);
             setState(1);
             return true;
         }
@@ -45,7 +43,7 @@ public class SelfCountDownLatchDemo {
         SelfCountDownLatchDemo selfCountDownLatchDemo = new SelfCountDownLatchDemo();
         for (int i = 0; i < 10; i++) {
             new Thread(()->{
-                System.out.println(Thread.currentThread().getName()+"尝试获取自定义latch，获取失败就等待");
+                System.out.println(Thread.currentThread().getName()+"尝试获取自定义latch......");
                 selfCountDownLatchDemo.await();
                 System.out.println(Thread.currentThread().getName()+"继续运行");
             }).start();
@@ -53,9 +51,9 @@ public class SelfCountDownLatchDemo {
         Thread.sleep(5000);
         selfCountDownLatchDemo.signal();//唤醒所有线程
         new Thread(()->{
-            System.out.println(Thread.currentThread().getName()+"尝试获取自定义latch，获取失败就等待");
+            System.out.println(Thread.currentThread().getName()+"尝试获取自定义latch......");
             selfCountDownLatchDemo.await();
             System.out.println(Thread.currentThread().getName()+"继续运行");
-        }).start();
+        },"main-sub-thread").start();
     }
 }
