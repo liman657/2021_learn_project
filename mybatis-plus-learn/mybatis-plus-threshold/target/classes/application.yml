@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_mybatis_plus_learn?useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+## %p \u7EA7\u522B\uFF0C%m\u5185\u5BB9,%n\u6362\u884C
+logging:
+  level:
+    root: info
+    com.coderman.learn.mybatisplus: trace
+  pattern:
+    console: '%p%m%n'
