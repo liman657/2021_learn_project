@@ -32,7 +32,7 @@ public class ReadVideo {
 
     public static void main(String[] args){
 
-        String path = "F:\\BaiduNetdiskDownload\\mksz162 - Java企业级电商项目架构演进之路 Tomcat集群与Redis分布式";
+        String path = "F:\\学习资料\\2021\\mksz332 - 零基础入门 全角度解读企业主流数据库MySQL8.0\\第9章 【架构师视角】搞定数据库并发高压，服务器永不宕机【可用于彰显你的眼界&格局】";
         //1.读取文件夹下的所有视频文件
         List<File> fileList = new ArrayList<>();
         readFileInDir(path,fileList);
