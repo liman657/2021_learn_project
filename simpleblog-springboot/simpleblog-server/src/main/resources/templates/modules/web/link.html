@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>友情链接</title>
+<#include "/header.html">
+</head>
+<body>
+<div id="pmpapp" v-cloak>
+
+	<div v-show="showList">
+		<div class="grid-btn">
+
+			<div class="form-group col-sm-2" style="width: 108px;margin-left: -13px;padding-top: 6px;font-size: 15px;">
+				<span class="control-label">内容搜索：</span>
+			</div>
+			<div class="form-group col-sm-2" style="width: 215px;margin-left: -35px">
+				<input type="text" class="form-control" v-model="q.search" @keyup.enter="query" placeholder="请输入链接名、链接url...">
+			</div>
+
+
+			<a class="btn btn-default" @click="query"><i class="fa fa-search"></i>&nbsp;查询</a>
+			<a class="btn btn-warning btn-rounded btn-sm" @click="reset"><i class="fa fa-refresh"></i>&nbsp;重置</a>
+
+			<a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			<a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			<a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+
+		</div>
+		<table id="jqGrid"></table>
+		<div id="jqGridPager"></div>
+	</div>
+
+	<div v-show="!showList" class="panel panel-default">
+		<div class="panel-heading">{{title}}</div>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<div class="col-sm-2 control-label">友链名称</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="link.name" placeholder="友链名称"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">链接URL</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="link.url" placeholder="链接url"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">排序编号</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="link.orderBy" placeholder="排序编号"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">备注</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="link.memo" placeholder="备注"/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-2 control-label"></div>
+				<input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+				&nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+			</div>
+		</form>
+	</div>
+    
+</div>
+
+
+<script src="${request.contextPath}/statics/js/modules/web/link.js?_${.now?long}"></script>
+
+</body>
+</html>

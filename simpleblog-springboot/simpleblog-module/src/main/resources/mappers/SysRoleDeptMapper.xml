@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.learn.simpleblog.module.mapper.SysRoleDeptMapper" >
+  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.SysRoleDept" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="role_id" property="roleId" jdbcType="BIGINT" />
+    <result column="dept_id" property="deptId" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from sys_role_dept
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.SysRoleDept" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sys_role_dept (role_id, dept_id)
+    values (#{roleId,jdbcType=BIGINT}, #{deptId,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.SysRoleDept" >
+    update sys_role_dept
+    set role_id = #{roleId,jdbcType=BIGINT},
+      dept_id = #{deptId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, role_id, dept_id
+    from sys_role_dept
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, role_id, dept_id
+    from sys_role_dept
+  </select>
+</mapper>

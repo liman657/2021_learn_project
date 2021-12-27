@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.learn.simpleblog.module.mapper.UserMsgMapper" >
+  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.UserMsg" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="module" property="module" jdbcType="VARCHAR" />
+    <result column="module_id" property="moduleId" jdbcType="INTEGER" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="is_read" property="isRead" jdbcType="INTEGER" />
+    <result column="read_time" property="readTime" jdbcType="TIMESTAMP" />
+    <result column="receiver_id" property="receiverId" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="is_delete" property="isDelete" jdbcType="INTEGER" />
+    <result column="delete_time" property="deleteTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user_msg
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.UserMsg" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into user_msg (`module`, module_id, content, 
+      is_read, read_time, receiver_id, 
+      create_time, is_delete, delete_time, 
+      update_time)
+    values (#{module,jdbcType=VARCHAR}, #{moduleId,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, 
+      #{isRead,jdbcType=INTEGER}, #{readTime,jdbcType=TIMESTAMP}, #{receiverId,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=INTEGER}, #{deleteTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.UserMsg" >
+    update user_msg
+    set `module` = #{module,jdbcType=VARCHAR},
+      module_id = #{moduleId,jdbcType=INTEGER},
+      content = #{content,jdbcType=VARCHAR},
+      is_read = #{isRead,jdbcType=INTEGER},
+      read_time = #{readTime,jdbcType=TIMESTAMP},
+      receiver_id = #{receiverId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      is_delete = #{isDelete,jdbcType=INTEGER},
+      delete_time = #{deleteTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, `module`, module_id, content, is_read, read_time, receiver_id, create_time, 
+    is_delete, delete_time, update_time
+    from user_msg
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, `module`, module_id, content, is_read, read_time, receiver_id, create_time, 
+    is_delete, delete_time, update_time
+    from user_msg
+  </select>
+</mapper>

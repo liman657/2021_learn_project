@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.learn.simpleblog.module.mapper.ReplyMapper" >
+  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.Reply" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="blog_id" property="blogId" jdbcType="INTEGER" />
+    <result column="comment_id" property="commentId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="reply_from" property="replyFrom" jdbcType="VARCHAR" />
+    <result column="reply_to" property="replyTo" jdbcType="VARCHAR" />
+    <result column="reply_time" property="replyTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from reply
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.Reply" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into reply (blog_id, comment_id, user_id, 
+      content, reply_from, reply_to, 
+      reply_time, `status`, create_time, 
+      update_time)
+    values (#{blogId,jdbcType=INTEGER}, #{commentId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
+      #{content,jdbcType=VARCHAR}, #{replyFrom,jdbcType=VARCHAR}, #{replyTo,jdbcType=VARCHAR}, 
+      #{replyTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.Reply" >
+    update reply
+    set blog_id = #{blogId,jdbcType=INTEGER},
+      comment_id = #{commentId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      content = #{content,jdbcType=VARCHAR},
+      reply_from = #{replyFrom,jdbcType=VARCHAR},
+      reply_to = #{replyTo,jdbcType=VARCHAR},
+      reply_time = #{replyTime,jdbcType=TIMESTAMP},
+      `status` = #{status,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, blog_id, comment_id, user_id, content, reply_from, reply_to, reply_time, 
+    `status`, create_time, update_time
+    from reply
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, blog_id, comment_id, user_id, content, reply_from, reply_to, reply_time, 
+    `status`, create_time, update_time
+    from reply
+  </select>
+</mapper>

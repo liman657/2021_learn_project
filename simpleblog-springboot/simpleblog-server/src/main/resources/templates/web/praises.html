@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>我赞过的</title>
+    <link rel="stylesheet" id="style-css" href="${request.contextPath}/statics/css/style.css" type="text/css"
+          media="all">
+    <link rel="stylesheet" id="lmlblog-css" href="${request.contextPath}/statics/css/lmlblog.css" type="text/css"
+          media="all">
+    <link rel="stylesheet" id="all-css" href="${request.contextPath}/statics/css/all.css" type="text/css" media="all">
+    <link rel="stylesheet" href="${request.contextPath}/statics/css/frame.css" type="text/css" media="all">
+    <link rel="stylesheet" href="${request.contextPath}/statics/css/extra.css" type="text/css" media="all">
+    <script type="text/javascript" src="${request.contextPath}/statics/js/jquery.min.js"></script>
+    <script type="text/javascript" src="${request.contextPath}/statics/js/ueditor.all.min.js"></script>
+    <script async="" charset="utf-8" src="${request.contextPath}/statics/layer/layer.js"></script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+
+        .lmlblog-member-left-bg-xg li {
+            text-align: center;
+            height: 30px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .lmlblog-member-left-bg-xg li a:hover {
+            color: #FF8862;
+            cursor: pointer;
+        }
+
+        .S_bg2, blockquote, .W_btn_b, .W_input, .SW_fun_bg {
+            background-color: #261d3b;
+        }
+
+        .send_weibo {
+            background-image: none;
+        }
+
+        .send_weibo_long {
+            height: auto;
+            overflow: visible;
+        }
+
+        .send_weibo {
+            margin: 0 0 10px 0;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+            border-radius: 2px;
+            padding: 15px 10px 10px;
+            height: 140px;
+            /*overflow: hidden;*/
+        }
+
+        .send_weibo .title_area {
+            position: relative;
+            overflow: hidden;
+            height: 21px;
+        }
+
+        .clearfix {
+            display: block;
+        }
+
+        .S_spetxt, a.S_ficon:hover, a:hover .S_ficon, a.current .S_ficon {
+            color: #fa7d3c;
+        }
+
+        .S_error {
+            color: #f00;
+        }
+
+        .S_spetxt_bg {
+            background-color: #fa7d3c;
+        }
+
+        .W_btn_prev:hover, .W_btn_next:hover {
+            border-color: #fa7d3c;
+        }
+
+        .W_btn_prev:hover, .W_btn_next:hover, a.S_ficon:hover, a:hover .S_ficon, a.current .S_ficon, a.S_txt1:hover, a.current .S_txt1, a.S_txt2:hover, .SW_fun:hover .S_func1 {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .S_ficon_dis, a.S_ficon_dis:hover, a:hover .S_ficon_dis {
+            cursor: default;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+
+        .WB_timeline .current em {
+            color: #fff;
+        }
+
+        .send_weibo {
+            background-image: none;
+        }
+
+        .WB_miniblog {
+            padding-top: 50px;
+        }
+
+        .S_page .WB_miniblog {
+            padding-top: 50px;
+        }
+
+        .S_page .WB_frame {
+            background-color: transparent !important;
+        }
+
+        #js_skin_public_base {
+            height: 42px;
+        }
+
+        body, .S_page {
+            background-color: #b4daf0;
+            /*background-image: url("images/body_repeat.png?id=1414052827385");*/
+            background-repeat: repeat-x;
+            background-position: center 0;
+        }
+
+        .send_weibo .ficon_swtxt {
+            color: #1b7fb6;
+        }
+
+        body, legend, .W_input:focus, .S_txt1, .W_btn_b, .SW_fun .S_func1 {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .S_txt1_bg {
+            background-color: #333;
+        }
+
+        .S_txt1_br {
+            border-color: #333;
+        }
+
+        .S_txt2, .W_input, .W_btn_b_disable, .W_btn_b_disable:hover {
+            color: #808080;
+            text-decoration: none;
+        }
+
+        .S_txt2_bg {
+            background-color: #808080;
+        }
+
+        .S_txt2_br {
+            border-color: #808080;
+        }
+
+        .S_ficon, .S_ficon_dis, a.S_ficon_dis:hover, a:hover .S_ficon_dis {
+            color: #696e78;
+        }
+
+        .S_ficon_bg {
+            background-color: #696e78;
+        }
+
+        .S_ficon_br {
+            border-color: #696e78;
+        }
+
+        a, .S_link1, a.S_txt1:hover, a.current .S_txt1, a.S_txt2:hover, .SW_fun:hover .S_func1 {
+            color: #eb7350;
+        }
+
+        .S_link1_bg {
+            background-color: #eb7350;
+        }
+
+        .S_link1_br {
+            border-color: #eb7350;
+        }
+
+        .S_bg1, .SW_fun_bg:hover, .SW_fun_bg_active {
+            background-color: #f2f2f5;
+        }
+
+        .S_bg1_c {
+            color: #f2f2f5;
+        }
+
+        .S_bg1_br {
+            border-color: #f2f2f5;
+        }
+
+        .W_btn_cardlink, .W_btn_tag_cur, .W_btn_tag_cur:hover {
+            background-color: #f2f2f5 !important;
+        }
+
+        .S_bg2, blockquote, .W_btn_b, .W_input, .SW_fun_bg {
+            background-color: #fff;
+        }
+
+        .S_bg2_c {
+            color: #fff;
+        }
+
+        .S_bg2_br {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .S_bg3 {
+            background-color: #eaeaec;
+        }
+
+        .S_line1, .W_btn_prev, .W_btn_next, .W_btn_b {
+            border-color: #d9d9d9;
+        }
+
+        .W_btn_b_disable, .W_btn_b_disable:hover, .W_btn_tag_cur, .W_btn_tag_cur:hover {
+            border-color: #d9d9d9 !important;
+        }
+
+        .S_line1_c {
+            color: #d9d9d9;
+        }
+
+        .W_btn_b_disable .S_ficon {
+            color: #d9d9d9 !important;
+        }
+
+        .S_line2 {
+            border-color: #f2f2f5;
+        }
+
+        .S_line2_c {
+            color: #f2f2f5;
+        }
+
+        .S_line3, .W_input, .send_weibo .input, .W_btn_b:hover {
+            border-color: #cccccc;
+        }
+
+        .W_input, .send_weibo .input {
+            background-color: #fff;
+        }
+
+        .WB_left_nav .S_txt1, .WB_left_nav a.S_txt1:hover, .WB_left_nav .S_ficon, .WB_left_nav a:hover .S_ficon, .WB_left_nav a.S_ficon:hover {
+            color: #fff;
+        }
+
+        .WB_left_nav .lev a:hover, .WB_left_nav .lev_curr, .WB_left_nav .lev_curr:hover, .WB_left_nav .levmore .more {
+            background-color: #82b9dc;
+            background-color: rgba(255, 255, 255, 0.2);
+            *background-color: #82b9dc;
+        }
+
+        .WB_left_nav .lev_Box, .WB_left_nav fieldset {
+            border-color: #82b9dc;
+            border-color: rgba(255, 255, 255, 0.2);
+            *border-color: #82b9dc;
+        }
+
+        .WB_frame {
+            background-color: #93c5e3;
+            background-color: rgba(70, 149, 194, 0.3);
+            *background-color: #93c5e3;
+        }
+
+        .WB_timeline .S {
+            color: #47a6d9;
+            border-left-color: #47a6d9;
+        }
+
+        .WB_timeline .current em, .WB_timeline .S_dot, .W_gotop {
+            background-color: #47a6d9;
+        }
+
+        .WB_miniblog {
+            background: url("images/body_bg.jpg?id=201503261330") no-repeat top center;
+        }
+
+        .S_page .WB_miniblog {
+            background: url("images/body_bg_page.jpg?id=201503261330") no-repeat top center;
+        }
+
+        #js_skin_skin048_skin {
+            height: 42px;
+        }
+
+        .W_ficon {
+            font-family: "wbficonregular" !important;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .layer_pic_list {
+            width: 252px;
+            overflow: hidden;
+            padding: 10px 0 5px 0;
+        }
+
+        .drag_pic_list .add a {
+            display: block;
+            font-size: 40px;
+            font-weight: bold;
+            color: #ccc;
+            margin-top: 25px;
+        }
+        .lmlblog-post-images-list {
+            height: auto;
+            overflow: hidden;
+            margin: 10px 20px;
+        }
+        .lmlblog-post-images-list img {
+            /*width: 95%;*/
+            width: 200px;
+            height: 180px;
+        }
+        .lmlblog-post-images-list a {
+            overflow: hidden;
+            position: relative;
+            float: left;
+            width: 31%;
+            box-sizing: border-box;
+            padding: 0 10px 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- 菜单 -->
+<div class="menu-bar">
+    <div class="head_content">
+        <h1 class="m-logo"><a href="/"></a></h1>
+        <div id="nav" class="menu-menu-1-container">
+            <ul id="menu-menu-1" class="menu">
+                <li class="menu-item menu-item-type-custom"><a href="${request.contextPath}"><i class="fa fa-home"></i>
+                    首页</a></li>
+                <li class="menu-item"><a href="${request.contextPath}/web/blogs">我的微博</a></li>
+                <li class="menu-item"><a href="${request.contextPath}/web/praises">我赞过的</a></li>
+                <li class="menu-item"><a href="${request.contextPath}/web/collects">我的收藏</a></li>
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="${request.contextPath}/web/friends"><i
+                        class="fa fa-comments-o"></i> 好友圈</a></li>
+            </ul>
+        </div>
+        <span class="head_user_info">
+            <ul>
+                <!--<li id="head_search"><i class="fa fa-search"></i></li>-->
+                <span class="not_login" style="display: none;">
+                    <li id="head_login" onclick="window.location.href='${request.contextPath}/login.html'">登录</li>
+                    <span class="head_login_middle">or</span>
+                    <li id="head_reg" onclick="window.location.href='${request.contextPath}/register.html'">注册</li>
+                </span>
+                <span class="is_login" style="display: none;">
+                    <li id="head_login" style="width: 100px;background-color: transparent;color:black;">
+                        <span onclick="window.location.href='${request.contextPath}/web/center'" id="name"></span>
+                        <span onclick="window.location.href='${request.contextPath}/logout'">&nbsp;&nbsp;&nbsp;&nbsp;退出</span>
+                    </li>
+                </span>
+
+            </ul>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+</div><!-- menu-bar -->
+<div style="clear: both;"></div>
+<div class="lmlblog-member-main" data="1">
+    <div class="lmlblog-member-bg" style="background-image: none;margin-top: -25px;">
+        <div class="lmlblog-member-content">
+            <div class="lmlblog-member-content-list clear">
+                <div class="lmlblog-member-left" style="width: 133px;">
+                    <div class="lmlblog-member-left-bg-xg clear" style="width:100px;">
+                        <li><a href="${request.contextPath}/web/center">个人信息</a></li>
+                        <li><a href="${request.contextPath}/web/blogs">我的微博</a></li>
+                        <li><a href="${request.contextPath}/web/praises">我赞过的</a></li>
+                        <li><a href="${request.contextPath}/web/collects">我的收藏</a></li>
+                        <li><a href="${request.contextPath}/web/friends">好友圈</a></li>
+                    </div>
+                </div>
+                <div class="lmlblog-member-right" style="width: 165px;float: right;">
+                    <div class="lmlblog-member-left-follow clear">
+                        <div align="center">
+                            <img id="imgUrl" style="width: 80px;border-radius: 50px;"
+                                 src="${request.contextPath}/statics/img/defaultImg.jpg"
+                                 class="avatar">
+                        </div>
+                        <div id="username" style="margin-top: 10px;text-align: center;">游客</div>
+                        <div style="margin-top: 10px;">
+                            <li style="width: 33%;" onclick="window.location.href='${request.contextPath}/web/blogs'">
+                                <strong id="blogTotal">0</strong>
+                                <span>微博</span>
+                            </li>
+                            <li style="width: 33%;">
+                                <strong id="concernsTotal">0</strong>
+                                <span>关注</span>
+                            </li>
+                            <li style="width: 33%;">
+                                <strong id="fansTotal">0</strong>
+                                <span>粉丝</span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="lmlblog-member-right" style="margin-right: 10px;">
+                    <div class="lmlblog-post-list">
+                        <div id="list"></div>
+                        <div class="lmlblog-pager">
+                            <!--                            <a class="lmlblog-pager-left" href="" style="width: 50%;text-align: center;">上一页</a>-->
+                            <!--                            <div class="lmlblog-pager-center layui-form">-->
+                            <!--                                <select>-->
+                            <!--                                    <option value="#=1">第 1 页</option>-->
+                            <!--                                    <option value="#=2">第 2 页</option>-->
+                            <!--                                    <option selected="selected" value="#3">第 3 页</option>-->
+                            <!--                                </select>第 1 页-->
+                            <!--                            </div>-->
+                            <a id="p" class="lmlblog-pager-right" href="javascript:void(0);"
+                               style="width: 100%;text-align: center;" onclick="next_page()">下一页</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+<div style="clear:both"></div>
+<div class="footer">
+    <div class="footer_b_foot">
+        <div class="footer_b_top">
+        </div>
+        <div class="footer_b_bottom" style="font-size: 20px;"><a href="http://www.fightjava.com" target="_blank">程序员实战基地 @2020-2040 &nbsp; 仿微博平台-前后端前程实战</a></div>
+    </div>
+</div>
+<!-- 返回顶部 -->
+<a href="javascript:returnTop();" class="cd-top"></a>
+
+<script type="text/javascript">
+    var sdelay = 0;
+
+    function returnTop() {
+        /*window.scrollBy(0, -100);//Only for y vertical-axis
+        if (document.body.scrollTop > 0) {
+            sdelay = setTimeout('returnTop()', 50);
+        }*/
+
+        window.scrollTo(0, 0);
+    }
+</script>
+
+<script type="text/javascript" src="${request.contextPath}/statics/js/base.js"></script>
+<script type="text/javascript" src="${request.contextPath}/statics/js/all.js"></script>
+<script type="text/javascript" src="${request.contextPath}/statics/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="${request.contextPath}/statics/layui/layui.js"></script>
+<script>
+    var is_login = false;
+    var user_id = "";
+    var page = 1;
+    jQuery(document).ready(function ($) {
+        get_Userinfo();
+        get_data(page, 2, "");
+        $.fn.smartFloat = function () {
+            var position = function (element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function () {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                top: 50
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    } else {
+                        element.css({
+                            position: "absolute",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function () {
+                position($(this));
+            });
+        };
+        $(".lmlblog-member-left-bg-xg").smartFloat();
+
+
+        $("input[name='pic1']").change(function () {
+            var num_totla = $(".pic").length;
+            if(num_totla >=9 ){
+                layer.msg("最多只能上传9张图片!");
+                return;
+            }
+            var formData = new FormData();
+            formData.append('img', $(this)[0].files[0]);
+            $.ajax({
+                "url": "${request.contextPath}/web/center/image/upload",
+                type: "POST",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                    if (res.code == 0) {
+                        $(".W_layer_pop").show();
+                        $(".add").before('<li data-imgid="'+res.data.imgId+'" class="pic">\n' +
+                            '<div style="background:url('+res.data.imgUrl+') center center;width:80px;height:80px;background-repeat: no-repeat;"></div>' +
+                            '<span class="picbg"></span>\n' +
+                            '<a  href="javascript:;" action-type="deleteImg" class="ico_delpic"></a>\n' +
+                            '<i style="display:none;" class="W_icon icon_taged_pic"></i>\n' +
+                            '</li>');
+                        $(".num_totla").text(Number($(".num_totla").text()) + 1);
+                        $(".num_remain").text(Number($(".num_remain").text()) - 1);
+                    } else {
+                        layer.msg(res.msg);
+                    }
+                },
+                error: function (status) {
+
+                }
+            });
+        });
+
+        $("#fbwb").click(function (res) {
+            if (!is_login) {
+                layer.msg("请先登录,再操作!");
+                return;
+            }
+            var weibo = $(".W_input").val();
+            if (weibo == "") {
+                layer.msg("没有输入要发布的内容!");
+                return;
+            }
+            var imgids = [];
+            $(".pic").each(function(){
+                imgids.push($(this).data("imgid"));
+            });
+            $.ajax({
+                url: "${request.contextPath}/web/center/blog/send",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify({content: weibo, imgIds:imgids.join(",")}),
+                dataType: "json",
+                success: function (result) {
+                    layer.msg("发布成功!");
+                    console.log(JSON.stringify(result));
+                    setTimeout(function (res) {
+                        window.location.href = "${request.contextPath}/";
+                    },1000);
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            });
+        });
+
+        $(document).on('click', '.ico_delpic',function () {
+            $(this).parent().remove();
+            $(".num_totla").text(Number($(".num_totla").text())-1);
+            $(".num_remain").text(Number($(".num_remain").text())+1);
+        });
+
+        $(".ficon_close").click(function () {
+            $(".W_layer_pop").hide();
+        });
+    });
+
+    function get_Userinfo() {
+        $.get("${request.contextPath}/web/center/info/my", function (res) {
+            console.log(res);
+            if (res.code == 0) {
+                $(".is_login").show();
+                $(".not_login").hide();
+                $("#username").text(res.data.userInfo.username);
+                $("#name").text(res.data.userInfo.name);
+                $("#concernsTotal").text(res.data.concernsTotal);
+                $("#fansTotal").text(res.data.fansTotal);
+                $("#blogTotal").text(res.data.blogTotal);
+                $("#imgUrl").attr("src", res.data.userInfo.imgUrl);
+                is_login = true;
+                user_id = res.data.userInfo.userId;
+            } else {
+                $(".is_login").hide();
+                $(".not_login").show();
+            }
+        })
+    }
+
+    function get_data(pageNo, searchType, searchText) {
+        $.get("${request.contextPath}/web/center/praises/my", {
+            pageNo: pageNo,
+            searchType: searchType,
+            searchText: searchText
+        }, function (res) {
+            var html = '';
+            for (var i = 0; i < res.data.blogList.list.length; i++) {
+                html += '<div class="lmlblog-posts-list words" style="background-image:url(images/058.png); " data="4197">\n' ;
+                html +=    '                            <div class="lmlblog-post-user-info">\n' ;
+                html +=   '                                <div class="lmlblog-post-user-info-avatar" user-data="1">\n' ;
+                html +=   '                                    <a href="#" style="display: inline-block;">\n' ;
+                html +=   '                                        <span class="lmlblog-vip-icon"></span><img src="' + res.data.blogList.list[i].headerImg + '" class="avatar"></a>\n' ;
+                html +=   '                                    <div class="lmlblog-user-info-card">\n' ;
+                html +=   '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' ;
+                html +=   '                                            <p>资料加载中...</p>\n' ;
+                html +=   '                                        </div>\n' ;
+                html +=   '                                    </div>\n' ;
+                html +=    '                                </div>\n' ;
+                html +=   '                                <div class="lmlblog-post-user-info-name">\n' ;
+                html +=    '                                    <a href="/#1">\n' ;
+                html +=   '                                        <font style="color:#333;font-weight:600">' + res.data.blogList.list[i].nickName + '</font>\n' ;
+                html +=    '                                    </a>\n' ;
+                html +=   '                                    <span class="lmlblog-mark lmlblog-lv" title="经验：3815"></span><span class="lmlblog-mark lmlblog-vip"></span>\n' ;
+                html +=   '                                </div>\n' ;
+                html +=   '                                <div class="lmlblog-post-user-info-time" title="2017-12-14 05:25">' + res.data.blogList.list[i].createTime + '</div>\n' ;
+                html +=   '                            </div>' ;
+                html +=   '                            <div class="lmlblog-post-content ">' + res.data.blogList.list[i].content + '</div>' ;
+                if(res.data.blogList.list[i].imgUrls!=null && res.data.blogList.list[i].imgUrls.length>0){
+                    html +=   '<div class="lmlblog-post-images-list clear">\n' ;
+                    $.each(res.data.blogList.list[i].imgUrls,function (index,domEle){
+                        html +=   '<a href="'+res.data.blogList.list[i].imgUrls[index]+'" data-fancybox="gallery"  class="fa lmlblog">' ;
+                        html +=   '<img src="'+res.data.blogList.list[i].imgUrls[index]+'"></a>';
+                    });
+                    html +=   '</div>' ;
+                }
+                if(res.data.blogList.list[i].type == 2){
+                    html += '<div class="lmlblog-posts-list words" style="background-color: aliceblue;margin: 0 10px 0 40px;background-image:url(images/058.png); " data="4197">\n' ;
+                    html +=    '                            <div class="lmlblog-post-user-info">\n' ;
+                    html +=   '                                <div class="lmlblog-post-user-info-avatar" user-data="1">\n' ;
+                    html +=   '                                    <a href="#" style="display: inline-block;">\n' ;
+                    html +=   '                                        <span class="lmlblog-vip-icon"></span><img src="' + res.data.blogList.list[i].otherMap.fromBlog.headerImg + '" class="avatar"></a>\n' ;
+                    html +=   '                                    <div class="lmlblog-user-info-card">\n' ;
+                    html +=   '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' ;
+                    html +=   '                                            <p>资料加载中...</p>\n' ;
+                    html +=   '                                        </div>\n' ;
+                    html +=   '                                    </div>\n' ;
+                    html +=    '                                </div>\n' ;
+                    html +=   '                                <div class="lmlblog-post-user-info-name">\n' ;
+                    html +=    '                                    <a href="/#1">\n' ;
+                    html +=   '                                        <font style="color:#333;font-weight:600">' + res.data.blogList.list[i].otherMap.fromBlog.nickName + '</font>\n' ;
+                    html +=    '                                    </a>\n' ;
+                    html +=   '                                    <span class="lmlblog-mark lmlblog-lv" title="经验：3815"></span><span class="lmlblog-mark lmlblog-vip"></span>\n' ;
+                    html +=   '                                </div>\n' ;
+                    html +=   '                                <div class="lmlblog-post-user-info-time" title="2017-12-14 05:25">' + res.data.blogList.list[i].otherMap.fromBlog.createTime + '</div>\n' ;
+                    html +=   '                            </div>' ;
+                    html +=   '                            <div class="lmlblog-post-content ">' + res.data.blogList.list[i].otherMap.fromBlog.content + '</div>' ;
+                    if(res.data.blogList.list[i].otherMap.fromBlog.imgUrls!=null && res.data.blogList.list[i].otherMap.fromBlog.imgUrls.length>0){
+                        html +=   '<div class="lmlblog-post-images-list clear">\n' ;
+                        $.each(res.data.blogList.list[i].otherMap.fromBlog.imgUrls,function (index,domEle){
+                            html +=   '<a href="'+res.data.blogList.list[i].otherMap.fromBlog.imgUrls[index]+'" data-fancybox="gallery"  class="fa lmlblog">' ;
+                            html +=   '<img src="'+res.data.blogList.list[i].otherMap.fromBlog.imgUrls[index]+'"></a>';
+                        });
+                        html +=   '</div>' ;
+                    }
+                    html +=   '                        </div>';
+                }
+                html +=    '                            <div class="lmlblog-post-bar" style="background-color: white;">\n' ;
+                html +=   '                                <li class="lmlblog-no-like" onclick="dz(this, ' + res.data.blogList.list[i].id + ')">\n' ;
+                html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasPraise == 1 ? '已点赞' : '点赞') + '</span>\n' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="sc(this, ' + res.data.blogList.list[i].id + ')">\n' ;
+                html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasCollect == 1 ? '已收藏' : '收藏') + '</span>\n' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="zf(this, ' + res.data.blogList.list[i].id + ')">\n' ;
+                html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasCollect == 1 ? '已转发' : '转发') + '</span>\n' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="pl(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
+                html +=   '                                    <i class="lmlblog-icon"></i>评论' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="get_comment(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
+                html +=   '                                    <i class="lmlblog-icon"></i>查看评论 <span>' + res.data.blogList.list[i].otherMap.commentTotal + '</span>\n' ;
+                html +=   '                                </li>\n' ;
+                if(user_id != "" && user_id == res.data.blogList.list[i].userId){
+                    html +=   '                                <li onclick="del(this, ' + res.data.blogList.list[i].id + ');">\n' ;
+                    html +=   '                                    <i class="lmlblog-icon"></i>删除 <span></span>\n' ;
+                    html +=   '                                </li>\n' ;
+                }
+                html +=   '                            </div>\n' ;
+                html +=   '                            <div class="lmlblog-post-footer-bar" style="background-color: white;margin-top: 0px;">\n' ;
+                html +=    '                                <span title="2017-12-14 05:25:48"></span>\n' ;
+                html +=   '                                <span></span></div><div id="pllb"></div>' ;
+                html +=   '                        </div>';
+            }
+            $("#list").append(html);
+            if (res.data.blogList.list.length > 0 && res.data.blogList.totalPage > page) {
+                page++;
+            } else {
+                $(".lmlblog-pager").hide();
+            }
+        })
+    }
+
+    function dz(_this, id) {
+        if (!is_login) {
+            layer.msg("请先登录,再操作!");
+            return;
+        }
+        if ($(_this).text().replace(/[ ]/g, "").replace(/[\r\n]/g, "") == "点赞") {
+            $.ajax({
+                url: "${request.contextPath}/web/center/praise/on",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify({blogId: id}),
+                dataType: "json",
+                success: function (result) {
+                    layer.msg("点赞成功!");
+                    $(_this).find("span").text("已点赞");
+                    console.log(JSON.stringify(result));
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            });
+        } else {
+            $.ajax({
+                url: "${request.contextPath}/web/center/praise/cancel",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify({blogId: id}),
+                dataType: "json",
+                success: function (result) {
+                    layer.msg("取消点赞成功!");
+                    $(_this).find("span").text("点赞");
+                    console.log(JSON.stringify(result));
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            });
+        }
+    }
+
+    function sc(_this, id) {
+        if (!is_login) {
+            layer.msg("请先登录,再操作!");
+            return;
+        }
+        if ($(_this).text().replace(/[ ]/g, "").replace(/[\r\n]/g, "") == "收藏") {
+            $.ajax({
+                url: "${request.contextPath}/web/center/collect/on",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify({blogId: id}),
+                dataType: "json",
+                success: function (result) {
+                    layer.msg("收藏成功!");
+                    $(_this).find("span").text("已收藏");
+                    console.log(JSON.stringify(result));
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            });
+        } else {
+            $.ajax({
+                url: "${request.contextPath}/web/center/collect/cancel",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify({blogId: id}),
+                dataType: "json",
+                success: function (result) {
+                    layer.msg("取消收藏成功!");
+                    $(_this).find("span").text("收藏");
+                    console.log(JSON.stringify(result));
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            });
+        }
+
+    }
+
+    function pl(_this, id) {
+        if (!is_login) {
+            layer.msg("请先登录,再操作!");
+            return;
+        }
+        console.log("评论:" + id);
+        layer.prompt({title: '评论微博',},function(val, index){
+            $.ajax({
+                url: "${request.contextPath}/web/center/comment/on",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify({blogId: id, content: val}),
+                dataType: "json",
+                success: function (result) {
+                    layer.msg(result.msg);
+                    setTimeout(function () {
+                        window.location.reload();
+                        layer.close(index);
+                    },1000);
+                },
+                error: function (msg) {
+                    layer.msg(msg);
+                    console.log(msg);
+                }
+            });
+        });
+    }
+
+    function del(_this, id) {
+        if (!is_login) {
+            layer.msg("请先登录,再操作!");
+            return;
+        }
+        console.log("评论:" + id);
+        layer.confirm('确定要删除吗?', {icon: 3, title:'删除'}, function(index){
+            $.ajax({
+                url: "${request.contextPath}/web/center/blog/delete",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify({id: id}),
+                dataType: "json",
+                success: function (result) {
+                    layer.msg(result.msg);
+                    setTimeout(function () {
+                        window.location.reload();
+                        layer.close(index);
+                    },1000);
+                },
+                error: function (msg) {
+                    layer.msg(msg);
+                    console.log(msg);
+                }
+            });
+        });
+    }
+
+    function zf(_this, id) {
+        if (!is_login) {
+            layer.msg("请先登录,再操作!");
+            return;
+        }
+        console.log("评论:" + id);
+        layer.prompt({title: '转发微博',},function(val, index){
+            $.ajax({
+                url: "${request.contextPath}/web/center/blog/forward",
+                type: "POST",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify({blogId: id, content: val}),
+                dataType: "json",
+                success: function (result) {
+                    layer.msg(result.msg);
+                    setTimeout(function () {
+                        window.location.reload();
+                        layer.close(index);
+                    },1000);
+                },
+                error: function (msg) {
+                    layer.msg(msg);
+                    console.log(msg);
+                }
+            });
+            layer.close(index);
+        });
+    }
+
+    function next_page() {
+        get_data(page, 2, "");
+    }
+
+    function get_comment(_this, id, num) {
+        if ($(_this).parent().parent().find("#pllb").text() != "") {
+            $(_this).parent().parent().find("#pllb").empty();
+            return;
+        }
+        $.get("${request.contextPath}/web/center/comments/blog", {blogId: id}, function (res) {
+            console.log(res);
+            var html = '';
+            for (var i = 0; i < res.data.length; i++) {
+                html += '<div class="lmlblog-posts-list words" style="background-image:url(images/058.png); padding: 0;height: 35px;" data="4197">\n' +
+                    '                            <div class="lmlblog-post-user-info" style="margin: 0 0 5px 20px;">\n' +
+                    '                                <div class="lmlblog-post-user-info-avatar" user-data="1">\n' +
+                    '                                    <a href="#" style="display: inline-block;">\n' +
+                    '                                        <span class="lmlblog-vip-icon"></span><img style="width:30px;height: 30px;" src="' + res.data[i].headerImg + '" class="avatar"></a>\n' +
+                    '                                    <div class="lmlblog-user-info-card">\n' +
+                    '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' +
+                    '                                            <p>资料加载中...</p>\n' +
+                    '                                        </div>\n' +
+                    '                                    </div>\n' +
+                    '                                </div>\n' +
+                    '                                <div class="lmlblog-post-user-info-name">\n' +
+                    '                                    <a href="/#1">\n' +
+                    '                                        <font style="color:#795f98;">' + res.data[i].nickName + '</font>：<span>' + res.data[i].content + '</span>' +
+                    '                                    </a>\n' +
+                    '                                    <span class="lmlblog-mark lmlblog-lv" title="经验：3815"></span><span class="lmlblog-mark lmlblog-vip"></span>\n' +
+                    '                                </div>\n' +
+                    '                                <div class="lmlblog-post-user-info-time" title="2017-12-14 05:25">' + res.data[i].commentTime + '</div>\n' +
+                    '                            </div>' +
+                    '                        </div>';
+                for (var j = 0; j < res.data[i].replys.length; j++) {
+                    html += '<div class="lmlblog-posts-list words" style="background-image:url(images/058.png); padding: 0 0 0 30px;height: 35px;" data="4197">\n' +
+                        '                            <div class="lmlblog-post-user-info" style="margin: 0 0 5px 20px;">\n' +
+                        '                                <div class="lmlblog-post-user-info-avatar" user-data="1">\n' +
+                        '                                    <a href="#" style="display: inline-block;">\n' +
+                        '                                        <span class="lmlblog-vip-icon"></span><img style="width:30px;height: 30px;" src="http://127.0.0.1:9095//image/20200211\\user\\485772252381700.jpg" class="avatar"></a>\n' +
+                        '                                    <div class="lmlblog-user-info-card">\n' +
+                        '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' +
+                        '                                            <p>资料加载中...</p>\n' +
+                        '                                        </div>\n' +
+                        '                                    </div>\n' +
+                        '                                </div>\n' +
+                        '                                <div class="lmlblog-post-user-info-name">\n' +
+                        '                                    <a href="/#1">\n' +
+                        '                                        <font style="color:#795f98;">' + res.data[i].replys[j].replyFrom + '<span style="color:#918ea5;">：回复</span>@' + res.data[i].nickName + '</font>：<span>' + res.data[i].replys[j].content + '</span>' +
+                        '                                    </a>\n' +
+                        '                                    <span class="lmlblog-mark lmlblog-lv" title="经验：3815"></span><span class="lmlblog-mark lmlblog-vip"></span>\n' +
+                        '                                </div>\n' +
+                        '                                <div class="lmlblog-post-user-info-time" title="2017-12-14 05:25">' + res.data[i].replys[j].replyTime + '</div>\n' +
+                        '                            </div>' +
+                        '                        </div>';
+                }
+            }
+            $(_this).parent().parent().find("#pllb").empty().append(html);
+        });
+    }
+</script>
+</body>
+</html>

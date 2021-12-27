@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.learn.simpleblog.module.mapper.SysDictMapper" >
+  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.SysDict" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="value" property="value" jdbcType="VARCHAR" />
+    <result column="order_num" property="orderNum" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="del_flag" property="delFlag" jdbcType="TINYINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from sys_dict
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.SysDict" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sys_dict (`name`, `type`, code, 
+      `value`, order_num, remark, 
+      del_flag)
+    values (#{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{value,jdbcType=VARCHAR}, #{orderNum,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
+      #{delFlag,jdbcType=TINYINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.SysDict" >
+    update sys_dict
+    set `name` = #{name,jdbcType=VARCHAR},
+      `type` = #{type,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      `value` = #{value,jdbcType=VARCHAR},
+      order_num = #{orderNum,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      del_flag = #{delFlag,jdbcType=TINYINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, `name`, `type`, code, `value`, order_num, remark, del_flag
+    from sys_dict
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, `name`, `type`, code, `value`, order_num, remark, del_flag
+    from sys_dict
+  </select>
+</mapper>

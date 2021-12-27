@@ -19,6 +19,7 @@
         <module>spring-all-component</module>
         <module>leetcode-2021</module>
         <module>Java8-update</module>
+        <module>simpleblog-springboot</module>
         <!--<module>spring-springsecurity-businessdemo</module>-->
     </modules>
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.learn.simpleblog.module.mapper.BlogImageMapper" >
+  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.BlogImage" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="blog_id" property="blogId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="size" property="size" jdbcType="VARCHAR" />
+    <result column="suffix" property="suffix" jdbcType="VARCHAR" />
+    <result column="file_url" property="fileUrl" jdbcType="VARCHAR" />
+    <result column="is_active" property="isActive" jdbcType="TINYINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from blog_image
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.BlogImage" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into blog_image (blog_id, `name`, `size`, 
+      suffix, file_url, is_active, 
+      create_time)
+    values (#{blogId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{size,jdbcType=VARCHAR}, 
+      #{suffix,jdbcType=VARCHAR}, #{fileUrl,jdbcType=VARCHAR}, #{isActive,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.BlogImage" >
+    update blog_image
+    set blog_id = #{blogId,jdbcType=INTEGER},
+      `name` = #{name,jdbcType=VARCHAR},
+      `size` = #{size,jdbcType=VARCHAR},
+      suffix = #{suffix,jdbcType=VARCHAR},
+      file_url = #{fileUrl,jdbcType=VARCHAR},
+      is_active = #{isActive,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, blog_id, `name`, `size`, suffix, file_url, is_active, create_time
+    from blog_image
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, blog_id, `name`, `size`, suffix, file_url, is_active, create_time
+    from blog_image
+  </select>
+</mapper>
