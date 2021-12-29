@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>用户列表</title>
+<#include "/header.html"/>
+
+</head>
+<body>
+<div id="pmpapp" v-cloak>
+	<div v-show="showList">
+		<div class="grid-btn">
+			<div class="form-group col-sm-2">
+				<input type="text" class="form-control" v-model="q.username" @keyup.enter="query" placeholder="请输入用户名、昵称...">
+			</div>
+			<a class="btn btn-default" @click="query">查询</a>
+			<a class="btn btn-warning btn-rounded btn-sm" @click="reset">重置</a>
+
+			<#if shiro.hasPermission("sys:user:save")>
+				<a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			</#if>
+			<#if shiro.hasPermission("sys:user:update")>
+				<a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+			<#if shiro.hasPermission("sys:user:delete")>
+				<a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			</#if>
+			<#if shiro.hasPermission("sys:user:resetPsd")>
+				<a class="btn btn-primary" @click="resetPsd"><i class="fa fa-refresh"></i>&nbsp;重置密码</a>
+			</#if>
+
+
+		</div>
+		<!--类似于easyui 的datagrid一样，代表数据网格，即一个二维式的数据矩阵，其实就是数据列表的展示-->
+	    <table id="jqGrid"></table>
+		<!--数据列表下面的分页组件-->
+	    <div id="jqGridPager"></div>
+    </div>
+
+	<!--vue model数据模型~数据的绑定-->
+	<div v-show="!showList" class="panel panel-default">
+		<div class="panel-heading">{{title}}</div>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<div class="col-sm-2 control-label">用户名</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="user.username" placeholder="登录账号"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">昵称</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="user.name" placeholder="昵称"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">密码</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="user.password" placeholder="密码"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">邮箱</div>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" v-model="user.email" placeholder="邮箱"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-2 control-label">角色</div>
+				<div class="col-sm-10 roleClass">
+					<label v-for="role in roleList" class="checkbox-inline">
+						<input type="checkbox" :value="role.roleId" v-model="user.roleIdList">{{role.roleName}}
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-2 control-label">状态</div>
+				<label class="radio-inline">
+					<input type="radio" name="status" value="0" v-model="user.status"/> 禁用
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="status" value="1" v-model="user.status"/> 启用
+				</label>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-2 control-label"></div>
+				<input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+				&nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/user.js?_${.now?long}"></script>
+</body>
+</html>

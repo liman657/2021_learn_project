@@ -15,8 +15,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @SpringBootApplication
 @MapperScan(basePackages = "com.learn.simpleblog.module.mapper")
-@EnableAsync
-@EnableScheduling
 public class SimpleBlogApplication extends SpringBootServletInitializer {
 
     @Override

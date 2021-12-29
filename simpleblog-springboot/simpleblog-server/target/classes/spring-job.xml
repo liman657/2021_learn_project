@@ -1,0 +1,57 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+       <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+       <!--xmlns:reg="http://www.dangdang.com/schema/ddframe/reg"-->
+       <!--xmlns:job="http://www.dangdang.com/schema/ddframe/job"-->
+       <!--xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+        <!--http://www.springframework.org/schema/beans/spring-beans.xsd-->
+        <!--http://www.dangdang.com/schema/ddframe/reg-->
+        <!--http://www.dangdang.com/schema/ddframe/reg/reg.xsd-->
+        <!--http://www.dangdang.com/schema/ddframe/job-->
+        <!--http://www.dangdang.com/schema/ddframe/job/job.xsd-->
+        <!--">-->
+    <!--&lt;!&ndash;配置作业注册中心 &ndash;&gt;-->
+    <!--<reg:zookeeper id="regCenter"-->
+                   <!--server-lists="${job.registry.host}"-->
+                   <!--namespace="${job.registry.namespace}"-->
+                   <!--base-sleep-time-milliseconds="1000"-->
+                   <!--max-sleep-time-milliseconds="3000"-->
+                   <!--max-retries="3"/>-->
+
+    <!--&lt;!&ndash; 批量清理已被废弃的微博图片 &ndash;&gt;-->
+    <!--<job:dataflow id="elasticJobBlogImage" class="com.debug.mini.blog.server.elasticJob.ElasticJobBlogImage"-->
+                  <!--registry-center-ref="regCenter"-->
+                  <!--cron="${job.elastic.blog.image.cron}"-->
+                  <!--sharding-total-count="${job.elastic.blog.image.shardingTotalCount}"-->
+                  <!--sharding-item-parameters="${job.elastic.blog.image.shardingItemParameters}"-->
+                  <!--description="${job.elastic.blog.image.description}"-->
+                  <!--job-parameter="${job.elastic.blog.image.jobParameter}"-->
+                  <!--monitor-execution="${job.elastic.blog.image.monitorExecution}"-->
+                  <!--failover="${job.failover}"-->
+                  <!--overwrite="true"-->
+                  <!--streaming-process="${job.elastic.blog.image.streaming.process}"-->
+
+    <!--&gt;-->
+    <!--</job:dataflow>-->
+
+<!--</beans>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
