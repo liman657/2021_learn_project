@@ -4,7 +4,6 @@ import org.springframework.validation.BindingResult;
 
 /**
  * 请求参数统一校验工具
- * @Author:debug (SteadyJack) - wx:debug0868
  **/
 public class ValidatorUtil {
 

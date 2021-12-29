@@ -8,8 +8,8 @@ import org.springframework.context.ApplicationEvent;
 import java.io.Serializable;
 
 /**
- * @Author:debug (SteadyJack)
- **/
+ *
+ */
 @Data
 public class BlogMsg extends ApplicationEvent implements Serializable{
     private Integer blogId;

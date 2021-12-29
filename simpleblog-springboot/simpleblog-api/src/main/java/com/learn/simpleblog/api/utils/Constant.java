@@ -8,7 +8,6 @@ import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * 常量
- * @Author:debug (SteadyJack) wx：debug0868
  */
 public class Constant {
 

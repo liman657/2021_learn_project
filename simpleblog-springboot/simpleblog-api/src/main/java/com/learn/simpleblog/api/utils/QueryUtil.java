@@ -9,7 +9,6 @@ import java.util.Map;
 
 /**
  * 查询统一封装的工具类
- * @Author:debug (SteadyJack) - wx:debug0868
  **/
 public class QueryUtil<T> {
 
