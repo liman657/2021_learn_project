@@ -26,13 +26,14 @@ public class ReadVideo {
 
     static{
         videoFileSuffix.add("mp4");
+        videoFileSuffix.add("wmv");
         //videoFileSuffix.add("avi");
     }
 
 
     public static void main(String[] args){
 
-        String path = "F:\\学习资料\\2021\\mksz332 - 零基础入门 全角度解读企业主流数据库MySQL8.0\\第9章 【架构师视角】搞定数据库并发高压，服务器永不宕机【可用于彰显你的眼界&格局】";
+        String path = "E:\\自我学习\\实战视频\\2021\\打造扛得住的MySQL数据库架构";
         //1.读取文件夹下的所有视频文件
         List<File> fileList = new ArrayList<>();
         readFileInDir(path,fileList);
@@ -89,7 +90,7 @@ public class ReadVideo {
                 Double beDevided = 60000.0d;//得到分钟数
                 BigDecimal toDevided = new BigDecimal(beDevided);
                 BigDecimal minute = millSecondBigDecimal.divide(toDevided, 3, RoundingMode.HALF_UP);
-                log.info("文件{},总时长为:{}毫秒,{}分钟",file.getName(),millsecond,minute);
+                log.info("文件:{},总时长为:{}毫秒,{}分钟",file.getName(),millsecond,minute);
                 totalMillsecond+=millsecond;
                 totalMinute=totalMinute.add(new BigDecimal(minute.toString()));
             } catch (Exception e) {
