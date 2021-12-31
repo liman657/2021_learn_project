@@ -14,26 +14,142 @@
     <result column="delete_time" property="deleteTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
+  <sql id="Base_Column_List" >
+    id, module, module_id, content, is_read, read_time, receiver_id, create_time, is_delete, 
+    delete_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_msg
+    where id = #{id,jdbcType=INTEGER}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user_msg
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.learn.simpleblog.module.domain.UserMsg" >
-    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into user_msg (`module`, module_id, content, 
-      is_read, read_time, receiver_id, 
-      create_time, is_delete, delete_time, 
-      update_time)
-    values (#{module,jdbcType=VARCHAR}, #{moduleId,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, 
-      #{isRead,jdbcType=INTEGER}, #{readTime,jdbcType=TIMESTAMP}, #{receiverId,jdbcType=INTEGER}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=INTEGER}, #{deleteTime,jdbcType=TIMESTAMP}, 
-      #{updateTime,jdbcType=TIMESTAMP})
+    insert into user_msg (id, module, module_id, 
+      content, is_read, read_time, 
+      receiver_id, create_time, is_delete, 
+      delete_time, update_time)
+    values (#{id,jdbcType=INTEGER}, #{module,jdbcType=VARCHAR}, #{moduleId,jdbcType=INTEGER}, 
+      #{content,jdbcType=VARCHAR}, #{isRead,jdbcType=INTEGER}, #{readTime,jdbcType=TIMESTAMP}, 
+      #{receiverId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=INTEGER}, 
+      #{deleteTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
+  <insert id="insertSelective" parameterType="com.learn.simpleblog.module.domain.UserMsg" >
+    insert into user_msg
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="module != null" >
+        module,
+      </if>
+      <if test="moduleId != null" >
+        module_id,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+      <if test="isRead != null" >
+        is_read,
+      </if>
+      <if test="readTime != null" >
+        read_time,
+      </if>
+      <if test="receiverId != null" >
+        receiver_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="isDelete != null" >
+        is_delete,
+      </if>
+      <if test="deleteTime != null" >
+        delete_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="module != null" >
+        #{module,jdbcType=VARCHAR},
+      </if>
+      <if test="moduleId != null" >
+        #{moduleId,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="isRead != null" >
+        #{isRead,jdbcType=INTEGER},
+      </if>
+      <if test="readTime != null" >
+        #{readTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="receiverId != null" >
+        #{receiverId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDelete != null" >
+        #{isDelete,jdbcType=INTEGER},
+      </if>
+      <if test="deleteTime != null" >
+        #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learn.simpleblog.module.domain.UserMsg" >
+    update user_msg
+    <set >
+      <if test="module != null" >
+        module = #{module,jdbcType=VARCHAR},
+      </if>
+      <if test="moduleId != null" >
+        module_id = #{moduleId,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="isRead != null" >
+        is_read = #{isRead,jdbcType=INTEGER},
+      </if>
+      <if test="readTime != null" >
+        read_time = #{readTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="receiverId != null" >
+        receiver_id = #{receiverId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDelete != null" >
+        is_delete = #{isDelete,jdbcType=INTEGER},
+      </if>
+      <if test="deleteTime != null" >
+        delete_time = #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
   <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.UserMsg" >
     update user_msg
-    set `module` = #{module,jdbcType=VARCHAR},
+    set module = #{module,jdbcType=VARCHAR},
       module_id = #{moduleId,jdbcType=INTEGER},
       content = #{content,jdbcType=VARCHAR},
       is_read = #{isRead,jdbcType=INTEGER},
@@ -45,15 +161,43 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select id, `module`, module_id, content, is_read, read_time, receiver_id, create_time, 
-    is_delete, delete_time, update_time
-    from user_msg
-    where id = #{id,jdbcType=INTEGER}
+
+
+  <select id="selectByModuleUIdIsRead" resultType="com.learn.simpleblog.module.domain.UserMsg">
+    SELECT <include refid="Base_Column_List"/>
+    FROM user_msg
+    WHERE is_delete = 0 AND module = #{moduleCode} AND receiver_id = #{uId}
+          <if test="isRead==0 or isRead==1">
+            AND is_read = #{isRead}
+          </if>
+    ORDER BY is_read ASC, create_time DESC
+    LIMIT 0,12
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id, `module`, module_id, content, is_read, read_time, receiver_id, create_time, 
-    is_delete, delete_time, update_time
-    from user_msg
+
+  <select id="countModuleUIdIsRead" resultType="java.lang.Integer">
+    SELECT COUNT(id) AS total
+    FROM user_msg
+    WHERE is_delete = 0 AND module = #{moduleCode} AND receiver_id = #{uId} AND is_read = #{isRead}
   </select>
+
+
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

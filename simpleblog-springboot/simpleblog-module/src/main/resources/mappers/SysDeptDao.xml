@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.debug.coding.fight.model.mapper.SysDeptDao">
+
+	<select id="queryList" resultType="com.learn.simpleblog.module.domain.SysDeptEntity">
+		SELECT
+			t1.*,
+			(SELECT t2.name
+			FROM sys_dept t2
+			WHERE t2.dept_id = t1.parent_id) parentName
+		FROM sys_dept t1
+		WHERE t1.del_flag = 0
+
+		<!--做后续的数据权限过滤的-->
+		<if test="sql_filter != null">
+			and ${sql_filter}
+		</if>
+	</select>
+
+
+	<select id="queryListV2" resultType="com.learn.simpleblog.module.domain.SysDeptEntity">
+		SELECT
+		  t1.*,
+		  (SELECT t2.name
+		   FROM sys_dept t2
+		   WHERE t2.dept_id = t1.parent_id) parentName
+		FROM sys_dept t1
+		WHERE t1.del_flag = 0
+
+		<if test="deptDataIds !=null and deptDataIds!='' ">
+			AND t1.dept_id IN (${deptDataIds})
+		</if>
+		
+	</select>
+
+
+	<select id="queryDeptIds" resultType="long">
+		SELECT dept_id
+		FROM sys_dept
+		WHERE del_flag = 0 AND parent_id = #{parentId}
+	</select>
+
+
+	<select id="queryAllDeptIds" resultType="java.lang.Long">
+		SELECT dept_id
+		FROM sys_dept
+		WHERE del_flag = 0
+	</select>
+
+</mapper>

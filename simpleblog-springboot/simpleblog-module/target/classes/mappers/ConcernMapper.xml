@@ -10,21 +10,100 @@
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     <result column="memo" property="memo" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List" >
+    id, concern_id, concern_be_id, concern_time, is_active, update_time, memo
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from concern
+    where id = #{id,jdbcType=INTEGER}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from concern
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.learn.simpleblog.module.domain.Concern" >
-    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into concern (concern_id, concern_be_id, concern_time, 
-      is_active, update_time, memo
-      )
-    values (#{concernId,jdbcType=INTEGER}, #{concernBeId,jdbcType=INTEGER}, #{concernTime,jdbcType=TIMESTAMP}, 
-      #{isActive,jdbcType=TINYINT}, #{updateTime,jdbcType=TIMESTAMP}, #{memo,jdbcType=VARCHAR}
-      )
+    insert into concern (id, concern_id, concern_be_id,
+      concern_time, is_active, update_time, 
+      memo)
+    values (#{id,jdbcType=INTEGER}, #{concernId,jdbcType=INTEGER}, #{concernBeId,jdbcType=INTEGER}, 
+      #{concernTime,jdbcType=TIMESTAMP}, #{isActive,jdbcType=TINYINT}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{memo,jdbcType=VARCHAR})
   </insert>
+  <insert id="insertSelective" keyProperty="id" useGeneratedKeys="true" parameterType="com.learn.simpleblog.module.domain.Concern" >
+    insert into concern
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="concernId != null" >
+        concern_id,
+      </if>
+      <if test="concernBeId != null" >
+        concern_be_id,
+      </if>
+      <if test="concernTime != null" >
+        concern_time,
+      </if>
+      <if test="isActive != null" >
+        is_active,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="memo != null" >
+        memo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="concernId != null" >
+        #{concernId,jdbcType=INTEGER},
+      </if>
+      <if test="concernBeId != null" >
+        #{concernBeId,jdbcType=INTEGER},
+      </if>
+      <if test="concernTime != null" >
+        #{concernTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isActive != null" >
+        #{isActive,jdbcType=TINYINT},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learn.simpleblog.module.domain.Concern" >
+    update concern
+    <set >
+      <if test="concernId != null" >
+        concern_id = #{concernId,jdbcType=INTEGER},
+      </if>
+      <if test="concernBeId != null" >
+        concern_be_id = #{concernBeId,jdbcType=INTEGER},
+      </if>
+      <if test="concernTime != null" >
+        concern_time = #{concernTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isActive != null" >
+        is_active = #{isActive,jdbcType=TINYINT},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        memo = #{memo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
   <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.Concern" >
     update concern
     set concern_id = #{concernId,jdbcType=INTEGER},
@@ -35,13 +114,55 @@
       memo = #{memo,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select id, concern_id, concern_be_id, concern_time, is_active, update_time, memo
+
+
+  <select id="countByConcernBeId" resultType="java.lang.Integer">
+    select count(1) as total
     from concern
-    where id = #{id,jdbcType=INTEGER}
+    where concern_id = #{concernId} and concern_be_id=#{beConcernId} LIMIT 1
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id, concern_id, concern_be_id, concern_time, is_active, update_time, memo
-    from concern
+
+  <delete id="deleteByConcernBeId">
+    delete from concern
+    where concern_id = #{concernId} and concern_be_id=#{beConcernId}
+  </delete>
+
+
+  <select id="countFansByUserId" resultType="java.lang.Integer">
+    SELECT count(1) AS total
+    FROM concern
+    WHERE is_active=1 AND concern_be_id=#{userId}
   </select>
+
+  <select id="countConcernsByUserId" resultType="java.lang.Integer">
+    SELECT count(1) AS total
+    FROM concern
+    WHERE is_active=1 AND concern_id=#{userId}
+  </select>
+
+
+  <select id="selectMyConcerns" resultType="java.lang.Integer">
+    SELECT concern_be_id
+    FROM concern
+    WHERE is_active = 1 AND concern_id = #{userId}
+  </select>
+  
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

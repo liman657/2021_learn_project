@@ -2,6 +2,7 @@ package com.learn.simpleblog.controller;
 
 import com.learn.simpleblog.api.response.BaseResponse;
 import com.learn.simpleblog.api.response.StatusCode;
+import com.learn.simpleblog.module.domain.SysUserEntity;
 import com.learn.simpleblog.service.blog.IBlogService;
 import com.learn.simpleblog.service.web.IIndexCenterService;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +23,7 @@ import java.util.Map;
 @Slf4j
 @RestController
 @RequestMapping("web/center")
-public class IndexCenterController {
+public class IndexCenterController extends AbstractController{
 
     @Autowired
     private IBlogService blogService;
@@ -38,9 +39,25 @@ public class IndexCenterController {
         BaseResponse response=new BaseResponse(StatusCode.Success);
         try {
             response.setData(indexCenterService.data(paramMap));
-
         }catch (Exception e){
             log.info("调用出现异常，异常信息为:{}",e);
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    //我的个人信息
+    @RequestMapping(value = "info/my",method = RequestMethod.GET)
+    public BaseResponse myInfo(){
+        SysUserEntity entity=getUser();
+        if (null == entity){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            //这里是获取用户额外的信息，比如粉丝人数
+            response.setData(indexCenterService.getInfoByUId(entity.getUserId()));
+        }catch (Exception e){
             response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
         }
         return response;

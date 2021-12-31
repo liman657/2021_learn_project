@@ -10,38 +10,156 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
+  <sql id="Base_Column_List" >
+    id, blog_id, user_id, praise_time, status, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from praise
+    where id = #{id,jdbcType=INTEGER}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from praise
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.learn.simpleblog.module.domain.Praise" >
-    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into praise (blog_id, user_id, praise_time, 
-      `status`, create_time, update_time
-      )
-    values (#{blogId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{praiseTime,jdbcType=TIMESTAMP}, 
-      #{status,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
-      )
+    insert into praise (id, blog_id, user_id, 
+      praise_time, status, create_time, 
+      update_time)
+    values (#{id,jdbcType=INTEGER}, #{blogId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, 
+      #{praiseTime,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
   </insert>
+  <insert id="insertSelective" keyProperty="id" useGeneratedKeys="true" parameterType="com.learn.simpleblog.module.domain.Praise" >
+    insert into praise
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="blogId != null" >
+        blog_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="praiseTime != null" >
+        praise_time,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="blogId != null" >
+        #{blogId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="praiseTime != null" >
+        #{praiseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.learn.simpleblog.module.domain.Praise" >
+    update praise
+    <set >
+      <if test="blogId != null" >
+        blog_id = #{blogId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="praiseTime != null" >
+        praise_time = #{praiseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
   <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.Praise" >
     update praise
     set blog_id = #{blogId,jdbcType=INTEGER},
       user_id = #{userId,jdbcType=INTEGER},
       praise_time = #{praiseTime,jdbcType=TIMESTAMP},
-      `status` = #{status,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select id, blog_id, user_id, praise_time, `status`, create_time, update_time
+
+
+  <select id="selectByUBlogId" resultType="com.learn.simpleblog.module.domain.Praise">
+    select
+    <include refid="Base_Column_List" />
     from praise
-    where id = #{id,jdbcType=INTEGER}
+    where blog_id = #{blogId} and user_id=#{userId}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id, blog_id, user_id, praise_time, `status`, create_time, update_time
-    from praise
+
+  <select id="countByUBlogId" resultType="java.lang.Integer">
+    select
+      count(1) as total
+    from praise where status=1 and blog_id = #{blogId}
+    <if test="userId!=null">
+      and user_id=#{userId}
+    </if>
   </select>
+
+
+  <delete id="deleteByUBlogId">
+    delete from praise
+    where blog_id = #{blogId} and user_id=#{userId}
+  </delete>
+
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
