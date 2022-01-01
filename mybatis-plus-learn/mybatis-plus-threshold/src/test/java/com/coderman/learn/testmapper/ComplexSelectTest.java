@@ -165,22 +165,24 @@ public class ComplexSelectTest {
         log.info("not all column result:{}", userEntities);
     }
 
-//    @Test
-//    public void testConditionWrapper() {
-//        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<UserEntity>();
-//        //如果没有condition参数，则会一个个去判断，一个个去拼接
-//        //if (StringUtils.isNotEmpty(name)) {
-//        //    queryWrapper.like("name", name);
-//        //}
-//
-//        //if (StringUtils.isNotEmpty(email)) {
-//        //    queryWrapper.like("email", email);
-//        //}
-//
-//        //如果某一个字符串不为空，才会将其加入到where语句中
-//        queryWrapper.like(StringUtils.isNotEmpty(name), "name", name)
-//                .like(StringUtils.isNotEmpty(email), "email", email);
-//    }
+    @Test
+    public void testConditionWrapper() {
+        String email = "";
+        String name ="王";
+        QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<UserEntity>();
+        //如果没有condition参数，则会一个个去判断，一个个去拼接
+        //if (StringUtils.isNotEmpty(name)) {
+        //    queryWrapper.like("name", name);
+        //}
+
+        //if (StringUtils.isNotEmpty(email)) {
+        //    queryWrapper.like("email", email);
+        //}
+
+        //如果某一个字符串不为空，才会将其加入到where语句中
+        queryWrapper.like(StringUtils.isNotEmpty(name), "name", name)
+                .like(StringUtils.isNotEmpty(email), "email", email);
+    }
 
     /**
      * 对象作为查询条件
@@ -191,7 +193,8 @@ public class ComplexSelectTest {
         paramUserEntity.setName("张雨琪");
         paramUserEntity.setAge(31);
 
-        //默认是等值比对，如果想利用对象查询的同时，需要在对应属性上加入非等值的条件查询，就需要在Entity上加入TableField注解
+        //默认是等值比对，如果想利用对象查询的同时，
+        // 需要在对应属性上加入非等值的条件查询，就需要在Entity上加入TableField注解
         QueryWrapper<UserEntity> queryWrapper = new QueryWrapper<UserEntity>(paramUserEntity);
         List<UserEntity> userEntities = userMapper.selectList(queryWrapper);
         //queryWrapper.like("name","雨");//这里拼接的查询条件与实体拼接的查询条件不冲突
