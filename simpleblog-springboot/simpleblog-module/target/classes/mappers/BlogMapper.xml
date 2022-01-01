@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.learn.simpleblog.module.mapper.BlogMapper" >
+
   <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.Blog" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="content" property="content" jdbcType="VARCHAR" />
-    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="type" property="type" jdbcType="INTEGER" />
     <result column="blog_id" property="blogId" jdbcType="INTEGER" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
@@ -16,7 +17,7 @@
   </resultMap>
 
   <sql id="Base_Column_List" >
-    id, content, user_id, type, blog_id, create_time, is_active, is_delete, delete_time,
+    id, content, user_id, type, blog_id, create_time, is_active, is_delete, delete_time, 
     update_time, memo_a
   </sql>
 
@@ -30,6 +31,14 @@
     FROM blog AS a LEFT JOIN sys_user AS b ON b.user_id = a.user_id
     WHERE a.is_delete = 0 AND a.is_active = 1
   </sql>
+
+
+  <!--<if test="paramMap.searchType==1 and paramMap.searchText!=null and paramMap.searchText!=''">
+      AND a.content LIKE CONCAT('%',#{paramMap.searchText},'%')
+    </if>
+    <if test="paramMap.searchType==0 and paramMap.searchText!=null and paramMap.searchText!=''">
+      AND b.name LIKE CONCAT('%',#{paramMap.searchText},'%')
+    </if>-->
 
   <select id="pageCenterBlog" resultType="com.learn.simpleblog.module.domain.Blog" parameterType="Map">
     <include refid="indexBlogSql"/>
@@ -45,46 +54,159 @@
     ORDER BY a.create_time DESC
   </select>
 
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from blog
-    where id = #{id,jdbcType=INTEGER}
+
+  <select id="selectByPK" resultType="com.learn.simpleblog.module.domain.Blog">
+    <include refid="indexBlogSql"/>
+
+    AND a.id=#{id}
+  </select>
+
+
+  <select id="countByForwardBlog" resultType="java.lang.Integer">
+    SELECT count(1) AS total
+    FROM blog
+    WHERE is_delete = 0
+          AND type = 2 AND user_id = #{userId} AND blog_id = #{blogId}
+  </select>
+
+
+  <select id="countByUserId" resultType="java.lang.Integer">
+    SELECT COUNT(1) AS total
+    FROM blog
+    WHERE is_delete = 0 AND is_active = 1
+          AND user_id = #{userId}
+  </select>
+
+  <select id="selectBlogByUIds" resultType="com.learn.simpleblog.module.domain.Blog">
+    <include refid="indexBlogSql"/>
+
+      AND a.user_id IN (${userIds})
+    ORDER BY a.create_time DESC
+  </select>
+  <!--另外的写法-->
+  <!--<select id="">
+    SELECT
+        a.*
+    FROM
+        blog AS a
+    JOIN concern AS b ON b.concern_be_id = a.user_id
+    WHERE
+        b.concern_id = 6
+    AND a.is_active = 1
+    AND a.is_delete = 0;
+  </select>-->
+
+
+  <select id="selectPraiseBlogByUId" resultType="com.learn.simpleblog.module.domain.Blog">
+    SELECT
+      a.*,
+      b.username AS userName,
+      b.name     AS nickName,
+      b.img_url  AS headerImg
+    FROM praise AS p
+      LEFT JOIN blog AS a ON p.blog_id = a.id
+      LEFT JOIN sys_user AS b ON b.user_id = a.user_id
+    WHERE p.status = 1 AND a.is_delete = 0
+    <if test="paramMap.userId!=null and paramMap.userId!=0">
+      AND p.user_id = #{paramMap.userId}
+    </if>
+
+    ORDER BY p.praise_time DESC
+  </select>
+
+  <select id="selectCollectBlogByUId" resultType="com.learn.simpleblog.module.domain.Blog" parameterType="Map">
+    SELECT
+      a.*,
+      b.username AS userName,
+      b.name     AS nickName,
+      b.img_url  AS headerImg
+    FROM collect AS p
+      LEFT JOIN blog AS a ON p.blog_id = a.id
+      LEFT JOIN sys_user AS b ON b.user_id = a.user_id
+    WHERE p.status = 1 AND a.is_delete = 0
+    <if test="paramMap.userId!=null and paramMap.userId!=0">
+      AND p.user_id = #{paramMap.userId}
+    </if>
+
+    ORDER BY p.collect_time DESC
+  </select>
+
+  <select id="pageBlogAdmin" resultType="com.learn.simpleblog.module.domain.Blog" parameterType="Map">
+    SELECT
+      a.*,
+      b.username AS userName,
+      b.name     AS nickName,
+      b.img_url  AS headerImg
+    FROM blog AS a LEFT JOIN sys_user AS b ON b.user_id = a.user_id
+    WHERE a.is_delete = 0
+
+    <if test="paramMap.userName!=null and paramMap.userName!='' ">
+      AND ( b.username LIKE CONCAT('%',#{paramMap.userName},'%') OR b.name LIKE CONCAT('%',#{paramMap.userName},'%') )
+    </if>
+    <if test="paramMap.status!=null and paramMap.status!='' and paramMap.status!=-1 ">
+      AND a.is_active = #{paramMap.status}
+    </if>
+    <if test="paramMap.startDate!=null and paramMap.startDate!='' and paramMap.endDate!=null and paramMap.endDate!='' ">
+      AND <![CDATA[ (DATE_FORMAT(a.create_time,'%Y-%m-%d') >= #{paramMap.startDate}
+                     AND DATE_FORMAT(a.create_time,'%Y-%m-%d') <= #{paramMap.endDate})   ]]>
+    </if>
+
+    ORDER BY a.create_time DESC
+  </select>
+
+
+  <delete id="deletes">
+    UPDATE blog SET is_delete=1
+    WHERE id IN (${ids})
   </delete>
-<!--  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.Blog" >-->
-<!--    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >-->
-<!--      SELECT LAST_INSERT_ID()-->
-<!--    </selectKey>-->
-<!--    insert into blog (content, user_id, `type`, -->
-<!--      blog_id, create_time, is_active, -->
-<!--      is_delete, delete_time, update_time, -->
-<!--      memo_a)-->
-<!--    values (#{content,jdbcType=VARCHAR}, #{userId,jdbcType=BIGINT}, #{type,jdbcType=INTEGER}, -->
-<!--      #{blogId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{isActive,jdbcType=INTEGER}, -->
-<!--      #{isDelete,jdbcType=INTEGER}, #{deleteTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, -->
-<!--      #{memoA,jdbcType=VARCHAR})-->
-<!--  </insert>-->
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.Blog" >
-    update blog
-    set content = #{content,jdbcType=VARCHAR},
-      user_id = #{userId,jdbcType=BIGINT},
-      `type` = #{type,jdbcType=INTEGER},
-      blog_id = #{blogId,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      is_active = #{isActive,jdbcType=INTEGER},
-      is_delete = #{isDelete,jdbcType=INTEGER},
-      delete_time = #{deleteTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP},
-      memo_a = #{memoA,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+
+  <update id="actives">
+    UPDATE blog SET is_active = !is_active WHERE id IN (${ids})
   </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select id, content, user_id, `type`, blog_id, create_time, is_active, is_delete, 
-    delete_time, update_time, memo_a
-    from blog
-    where id = #{id,jdbcType=INTEGER}
+
+
+  <select id="selectAll" resultType="com.learn.simpleblog.module.domain.Blog">
+    <include refid="indexBlogSql"/>
+
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id, content, user_id, `type`, blog_id, create_time, is_active, is_delete, 
-    delete_time, update_time, memo_a
-    from blog
+
+  <select id="selectByIds" resultType="com.learn.simpleblog.module.domain.Blog">
+    SELECT
+      a.*,
+      b.username AS userName,
+      b.name     AS nickName,
+      b.img_url  AS headerImg
+    FROM blog AS a LEFT JOIN sys_user AS b ON b.user_id = a.user_id
+    WHERE a.is_delete = 0
+
+    AND a.id IN (${ids})
   </select>
+
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

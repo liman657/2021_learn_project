@@ -17,4 +17,6 @@ public interface IIndexCenterService {
      */
     Map<String,Object> data(Map<String, Object> paramMap) throws Exception;
 
+    Map<String,Object> getInfoByUId(Long userId) throws Exception;
+
 }

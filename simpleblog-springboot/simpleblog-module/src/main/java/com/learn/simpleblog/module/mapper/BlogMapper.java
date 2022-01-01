@@ -3,12 +3,14 @@ package com.learn.simpleblog.module.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.learn.simpleblog.module.domain.Blog;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
 
-public interface BlogMapper extends BaseMapper<Blog> {
+@Mapper
+public interface BlogMapper extends BaseMapper<Blog>{
 
 
     List<Blog> pageCenterBlog(IPage<Blog> iPage, @Param("paramMap") Map<String, Object> paramMap);

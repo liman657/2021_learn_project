@@ -19,7 +19,7 @@
                    <!--max-retries="3"/>-->
 
     <!--&lt;!&ndash; 批量清理已被废弃的微博图片 &ndash;&gt;-->
-    <!--<job:dataflow id="elasticJobBlogImage" class="com.debug.mini.blog.server.elasticJob.ElasticJobBlogImage"-->
+    <!--<job:dataflow id="elasticJobBlogImage" class="com.learn.simpleblog.service.elasticJob.ElasticJobBlogImage"-->
                   <!--registry-center-ref="regCenter"-->
                   <!--cron="${job.elastic.blog.image.cron}"-->
                   <!--sharding-total-count="${job.elastic.blog.image.shardingTotalCount}"-->
