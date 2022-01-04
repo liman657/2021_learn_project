@@ -33,7 +33,7 @@ public class ReadVideo {
 
     public static void main(String[] args){
 
-        String path = "E:\\自我学习\\实战视频\\2021\\mksz189 - 系统学习Docker 践行DevOps理念 2020全新升级";
+        String path = "E:\\待学习课程\\mksz380 - Spring Cloud微服务实战 打造企业级优惠券系统";
         //1.读取文件夹下的所有视频文件
         List<File> fileList = new ArrayList<>();
         readFileInDir(path,fileList);
