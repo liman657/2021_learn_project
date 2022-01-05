@@ -169,10 +169,12 @@
             if(res.code == 0){
                 layer.msg("登录成功!");
                 setTimeout(function () {
+                    console.log(res.data.userType)
                     if(res.data.userType == 0){
-                        window.location.href="";
+                        console.log(res.data.userType)
+                        window.location.href="simpleblog/";
                     }else{
-                        window.location.href="index.html";
+                        window.location.href="login.html";
                     }
                 },1000);
 

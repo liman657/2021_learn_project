@@ -11,10 +11,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 /**
  * autor:liman
@@ -24,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("web/user")
-public class UserController {
+public class UserController extends AbstractController{
 
     @Autowired
     private IIndexUserService indexUserService;
@@ -55,6 +53,27 @@ public class UserController {
             userRequest.setStatus(1);
             log.info("前端用户注册，提交的信息：{}",userRequest);
             indexUserService.registerUser(userRequest);
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    /**
+     * 头像上传
+     * @param request
+     * @return
+     */
+    //上传用户头像
+    @RequestMapping(value = "image/upload",method = RequestMethod.POST)
+    public BaseResponse uploadMyImage(MultipartHttpServletRequest request){
+        if (null==getUser()){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            response.setData(indexUserService.uploadImg(request,getUserId()));
+
         }catch (Exception e){
             response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
         }
