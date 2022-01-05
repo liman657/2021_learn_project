@@ -14,12 +14,7 @@ public class MvcWebConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        //registry.addResourceHandler("/statics/css/**.css").addResourceLocations("classpath:/statics/css/");
-        //registry.addResourceHandler("/statics/js/**.js").addResourceLocations("classpath:/statics/js/");
-        //registry.addResourceHandler("/statics/**/**.*").addResourceLocations("classpath:/statics/**/");
-//        registry.addResourceHandler("/statics/**").addResourceLocations("classpath:/statics/");
-        registry.addResourceHandler("/**.html").addResourceLocations("classpath:/templates/");
         registry.addResourceHandler("/statics/**").addResourceLocations("classpath:/statics/");
-        registry.addResourceHandler("/image/**").addResourceLocations("classpath:/statics/images/");
+        registry.addResourceHandler("**.html").addResourceLocations("classpath:/templates/");
     }
 }

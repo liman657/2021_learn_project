@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>登录</title>
-    <link rel="stylesheet" href="${request.contextPath}/statics/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="statics/bootstrap/css/bootstrap.min.css">
     <meta name="theme-color" content="#563d7c">
     <style>
         html,
@@ -131,7 +131,7 @@
 <body>
 <div class="form-signin">
     <div class="text-center mb-4">
-        <img class="mb-4" src="${request.contextPath}/statics/img/bootstrap-solid.svg" alt="" width="72" height="72">
+        <img class="mb-4" src="statics/img/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">仿微博平台登录</h1>
     </div>
 
@@ -151,12 +151,12 @@
 <!--        </label>-->
 <!--    </div>-->
     <button class="btn btn-lg btn-primary btn-block" id="submit">登录</button>
-    <a class="btn btn-lg btn-primary btn-block" href="${request.contextPath}/">首页</a>
+    <a class="btn btn-lg btn-primary btn-block" href="">首页</a>
     <p class="mt-5 mb-3 text-muted text-center">&copy;<a href="http://www.fightjava.com" target="_blank">程序员实战基地</a> 2020-2040</p>
 </div>
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="${request.contextPath}/statics/bootstrap/js/bootstrap.min.js"></script>
-<script async="" charset="utf-8" src="${request.contextPath}/statics/layer/layer.js"></script>
+<script src="statics/bootstrap/js/bootstrap.min.js"></script>
+<script async="" charset="utf-8" src="statics/layer/layer.js"></script>
 <script>
     $("#submit").click(function () {
         userLogin();
@@ -170,9 +170,9 @@
                 layer.msg("登录成功!");
                 setTimeout(function () {
                     if(res.data.userType == 0){
-                        window.location.href="${request.contextPath}/";
+                        window.location.href="";
                     }else{
-                        window.location.href="${request.contextPath}/index.html";
+                        window.location.href="index.html";
                     }
                 },1000);
 

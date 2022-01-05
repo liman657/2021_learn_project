@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>注册</title>
-    <link rel="stylesheet" href="${request.contextPath}/statics/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/simpleblog/statics/bootstrap/css/bootstrap.min.css">
     <meta name="theme-color" content="#563d7c">
     <style type="text/css">
         html,
@@ -131,7 +131,7 @@
 <body>
 <div class="form-signin">
     <div class="text-center mb-4">
-        <img class="mb-4" src="${request.contextPath}/statics/img/bootstrap-solid.svg" alt="" width="72" height="72">
+        <img class="mb-4" src="/simpleblog/statics/img/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">仿微博平台注册</h1>
     </div>
 
@@ -154,21 +154,13 @@
         <input type="password" id="password" class="form-control" placeholder="请输入密码" required>
         <label for="password">密码(默认123456就行啦)</label>
     </div>
-
-
-
-<!--    <div class="checkbox mb-3">-->
-<!--        <label>-->
-<!--            <input type="checkbox" value="remember-me"> Remember me-->
-<!--        </label>-->
-<!--    </div>-->
     <button class="btn btn-lg btn-primary btn-block" id="submit">注册</button>
     <a class="btn btn-lg btn-primary btn-block" href="${request.contextPath}/">首页</a>
     <p class="mt-5 mb-3 text-muted text-center">&copy; <a href="http://fightjava.com" target="_blank">程序员实战基地</a> 2020-2040</p>
 </div>
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="${request.contextPath}/statics/bootstrap/js/bootstrap.min.js"></script>
-<script async="" charset="utf-8" src="${request.contextPath}/statics/layer/layer.js"></script>
+<script src="/simpleblog/statics/bootstrap/js/bootstrap.min.js"></script>
+<script charset="utf-8" src="/simpleblog/statics/layer/layer.js"></script>
 <script>
     $("#submit").click(function () {
         var username = $("#username").val();
@@ -176,17 +168,8 @@
         var email = $("#email").val();
         var nickName = $("#nickName").val();
 
-        /*$.post("${request.contextPath}/web/user/register",{username: username,email: email, password: password,name: nickName}, function (res) {
-            layer.msg(res.msg);
-            if(res.code == 0){
-                setTimeout(function () {
-                    window.location.href = "${request.contextPath}/";
-                },1000);
-            }
-        });*/
-
         $.ajax({
-            url: "${request.contextPath}/web/user/register",
+            url: "/simpleblog/web/user/register",
             type: "POST",
             contentType: "application/json;charset=utf-8",
             data: JSON.stringify({username: username,email: email, password: password,name: nickName}),
