@@ -79,6 +79,7 @@ public class IndexUserServiceImpl implements IIndexUserService {
         MultipartFile multipartFile=request.getFile("img");
         Map<String,Object> dataMap=commonService.uploadV2(multipartFile, SysModule.ModuleUser);
 
+        //图片上传之后，更新用户信息
         sysUserDao.updateUserImg(userId,String.valueOf(dataMap.get("fileUrl")));
         return env.getProperty("common.file.access.root.url") + dataMap.get("fileUrl");
     }

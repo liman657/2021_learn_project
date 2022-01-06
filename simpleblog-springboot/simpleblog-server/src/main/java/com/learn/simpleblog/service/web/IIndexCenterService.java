@@ -1,5 +1,7 @@
 package com.learn.simpleblog.service.web;
 
+import com.learn.simpleblog.api.request.BlogRequest;
+
 import java.util.Map;
 
 /**
@@ -18,5 +20,14 @@ public interface IIndexCenterService {
     Map<String,Object> data(Map<String, Object> paramMap) throws Exception;
 
     Map<String,Object> getInfoByUId(Long userId) throws Exception;
+
+    /**
+     * 发布博客
+     * @param request
+     * @param userId
+     * @return
+     * @throws Exception
+     */
+    public Integer sendBlog(BlogRequest request, Long userId) throws Exception;
 
 }
