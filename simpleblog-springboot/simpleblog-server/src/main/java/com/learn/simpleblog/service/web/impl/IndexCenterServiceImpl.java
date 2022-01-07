@@ -2,25 +2,30 @@ package com.learn.simpleblog.service.web.impl;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Maps;
-import com.learn.simpleblog.api.request.BlogRequest;
+import com.learn.simpleblog.api.request.*;
 import com.learn.simpleblog.api.utils.Constant;
-import com.learn.simpleblog.module.domain.Blog;
-import com.learn.simpleblog.module.domain.SysUserEntity;
-import com.learn.simpleblog.module.mapper.BlogImageMapper;
-import com.learn.simpleblog.module.mapper.BlogMapper;
-import com.learn.simpleblog.module.mapper.ConcernMapper;
+import com.learn.simpleblog.common.CommonService;
+import com.learn.simpleblog.common.SysModule;
+import com.learn.simpleblog.common.UserMsgService;
+import com.learn.simpleblog.module.domain.*;
+import com.learn.simpleblog.module.mapper.*;
 import com.learn.simpleblog.service.blog.IBlogService;
 import com.learn.simpleblog.service.pmp.SysUserService;
 import com.learn.simpleblog.service.web.IIndexCenterService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * autor:liman
@@ -43,9 +48,27 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
     private ConcernMapper concernMapper;
     @Autowired
     private BlogImageMapper blogImageMapper;
+    @Autowired
+    private CommonService commonService;
+    @Autowired
+    private UserMsgService userMsgService;
+    @Autowired
+    private PraiseMapper praiseMapper;
+    @Autowired
+    private CollectMapper collectMapper;
+    @Autowired
+    private CommentMapper commentMapper;
+    @Autowired
+    private ReplyMapper replyMapper;
 //    @Autowired
 //    private LuceneBlogService luceneBlogService;
 
+    /**
+     * 查询所有博客记录，分页
+     * @param paramMap
+     * @return
+     * @throws Exception
+     */
     @Override
     public Map<String, Object> data(Map<String, Object> paramMap) throws Exception {
         Map<String,Object> resMap= Maps.newHashMap();
@@ -56,7 +79,12 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
         return resMap;
     }
 
-    //获取个人信息
+    /**
+     * 获取个人信息
+     * @param userId
+     * @return
+     * @throws Exception
+     */
     @Override
     public Map<String,Object> getInfoByUId(Long userId) throws Exception {
         Map<String,Object> resMap=Maps.newHashMap();
@@ -84,7 +112,13 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
         return resMap;
     }
 
-    //发微博
+    /**
+     * 发微博
+     * @param request
+     * @param userId
+     * @return
+     * @throws Exception
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public Integer sendBlog(BlogRequest request, Long userId) throws Exception {
@@ -106,6 +140,7 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
             }*/
 
             //优化：批量更新
+            //批量更新图片
             blogImageMapper.updateBlogByIds(blog.getId(), Joiner.on(",").join(imgArr));
         }
 
@@ -113,5 +148,217 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
 //        luceneBlogService.createDocument(blogMapper.selectByPK(blog.getId()));
 
         return 1;
+    }
+
+    /**
+     * 上传微博图片
+     * @param request
+     * @return
+     * @throws Exception
+     */
+    //上传微博图片
+    @Override
+    public Map<String, Object> uploadImg(MultipartHttpServletRequest request) throws Exception {
+        Map<String, Object> resMap=Maps.newHashMap();
+
+        MultipartFile multipartFile=request.getFile("img");
+        Map<String,Object> dataMap=commonService.uploadV2(multipartFile, SysModule.ModuleBlog);
+
+        BlogImage image=new BlogImage(String.valueOf(dataMap.get("fileName")),String.valueOf(dataMap.get("size")),String.valueOf(dataMap.get("suffix")),String.valueOf(dataMap.get("fileUrl")));
+        blogImageMapper.insertSelective(image);
+
+        resMap.put("imgId",image.getId());
+        resMap.put("imgUrl",env.getProperty("common.file.access.root.url")+dataMap.get("fileUrl"));
+        return resMap;
+    }
+
+    /**
+     * 关注
+     * @param request
+     * @param entity
+     * @return
+     * @throws Exception
+     */
+    //关注：当前用户为关注者，前端提交被关注者id过来即可
+    @Override
+    public Integer concernOn(ConcernRequest request, SysUserEntity entity) throws Exception {
+        if (concernMapper.countByConcernBeId(entity.getUserId().intValue(),request.getBeConcernUserId())<=0){
+            if (!Objects.equals(request.getBeConcernUserId(),entity.getUserId().intValue())){
+                Concern concern=new Concern(entity.getUserId().intValue(),request.getBeConcernUserId(),DateTime.now().toDate());
+                int res=concernMapper.insertSelective(concern);
+
+                //消息服务
+                if (res>0){
+                    userMsgService.concernMsg(request,entity,concern);
+                }
+                return 1;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 取消关注
+     * @param request
+     * @param userId
+     * @return
+     * @throws Exception
+     */
+    //取消关注
+    @Override
+    public Integer concernCancel(ConcernRequest request, Long userId) throws Exception {
+        return concernMapper.deleteByConcernBeId(userId.intValue(),request.getBeConcernUserId());
+    }
+
+    /**
+     * 点赞
+     * @param request
+     * @param entity
+     * @return
+     * @throws Exception
+     */
+    //点赞-先判断当前用户是否点赞过当前微博
+    @Override
+    public Integer praiseOn(OperationRequest request, SysUserEntity entity) throws Exception {
+        Praise p=praiseMapper.selectByUBlogId(request.getBlogId(),entity.getUserId());
+        if (null!=p && p.getStatus()==1) {
+            return 1;
+        }
+        if (null!=p){
+            //取消点赞
+            p.setStatus(1);
+            p.setUpdateTime(DateTime.now().toDate());
+            praiseMapper.updateByPrimaryKeySelective(p);
+        }else{
+            //点赞
+            p=new Praise(request.getBlogId(),entity.getUserId().intValue(),DateTime.now().toDate(),1);
+            praiseMapper.insertSelective(p);
+        }
+
+        //消息服务
+        Blog srcBlog=blogMapper.selectByPK(request.getBlogId());
+        if (!Objects.isNull(srcBlog) && !Objects.equals(entity.getUserId(),srcBlog.getUserId())){
+            userMsgService.praiseMsg(entity,srcBlog,p);
+        }
+        return 1;
+    }
+
+    //取消点赞 ~ 前端得判断当前微博的作者 与 发起取消点赞动作的人 是否为同一个（即只能 取消点赞 自己 点赞 过的微博）
+    @Override
+    public Integer praiseCancel(OperationRequest request, Long userId) throws Exception {
+        //方式一
+        return praiseMapper.deleteByUBlogId(request.getBlogId(),userId);
+
+        //方式二：更新点赞记录的status=0
+    }
+
+    //收藏
+    @Override
+    public Integer collectOn(OperationRequest request, Long userId) throws Exception {
+        Collect c=collectMapper.selectByUBlogId(request.getBlogId(),userId);
+        if (null!=c && c.getStatus()==1) {
+            return 1;
+        }
+        if (null!=c){
+            //取消收藏
+            c.setStatus(1);
+            c.setUpdateTime(DateTime.now().toDate());
+            collectMapper.updateByPrimaryKeySelective(c);
+        }else{
+            //收藏
+            c=new Collect(request.getBlogId(),userId.intValue(),DateTime.now().toDate(),1);
+            collectMapper.insertSelective(c);
+        }
+        return 1;
+    }
+
+    //取消收藏
+    @Override
+    public Integer collectCancel(OperationRequest request, Long userId) throws Exception {
+        return collectMapper.deleteByUBlogId(request.getBlogId(),userId);
+    }
+
+    //发评论
+    @Override
+    public Integer commentOn(CommentRequest request, SysUserEntity user) throws Exception {
+        Comment comment=new Comment(request.getBlogId(),user.getUserId().intValue(),request.getContent(),DateTime.now().toDate(),1);
+        int res=commentMapper.insertSelective(comment);
+
+        //消息服务
+        Blog srcBlog=blogMapper.selectByPK(request.getBlogId());
+        if (res>0 && !Objects.isNull(srcBlog) && !Objects.equals(srcBlog.getUserId(),user.getUserId())){
+            userMsgService.commentMsg(request,comment.getId(),user,srcBlog);
+        }
+        return 1;
+    }
+
+    //发起回复：如果是评论，则不需要传“被回复者”，否则需要将 被回复者 的昵称传过来
+    @Override
+    public Integer replyOn(ReplyRequest request, SysUserEntity entity) throws Exception {
+        Comment c=commentMapper.selectByPrimaryKey(request.getCommentId());
+        if (null!=c && c.getStatus().equals(1) && !Objects.equals(c.getUserId(),entity.getUserId().intValue())){
+            Reply reply=new Reply(request.getBlogId(),request.getCommentId(),entity.getUserId().intValue(),request.getContent(),entity.getName(),DateTime.now().toDate(),1);
+            int res=replyMapper.insertSelective(reply);
+
+            //消息服务
+            if (res>0 && !Objects.equals(entity.getUserId().intValue(),c.getUserId())){
+                userMsgService.replyMsg(request,entity,reply.getId(),c.getUserId());
+            }
+        }
+        return 1;
+    }
+
+    //删除微博 - 只能删除自己的
+    @Override
+    public Integer deleteSelfBlog(IdRequest request, SysUserEntity entity) throws Exception {
+        Blog blog=blogMapper.selectByPK(request.getId());
+        if (null!=blog && Objects.equals(blog.getUserId(),entity.getUserId())){
+            int res=blogMapper.deleteById(request.getId());
+
+            //更新底层索引库
+//            if (res>0){
+//                luceneBlogService.deleteDocument(request.getId());
+//            }
+        }
+        return -1;
+    }
+
+    //获取微博下的评论列表
+    @Override
+    public List<Comment> getCommentsByBlog(Integer blogId) throws Exception {
+        List<Comment> list=commentMapper.selectByBlogId(blogId);
+        if (!CollectionUtils.isEmpty(list)){
+            list.forEach(c -> {
+                //遍历每一条评论数据，获取回复数据列表
+                List<Reply> replies=replyMapper.selectByCommentId(c.getId());
+                if (!CollectionUtils.isEmpty(replies)){
+                    replies.forEach(r -> {
+                        //设置用户头像
+                        if (StringUtils.isBlank(r.getHeaderImg())){
+                            r.setHeaderImg(env.getProperty("common.user.img.default"));
+                        }
+                        if (r.getHeaderImg().startsWith("/statics")){
+                            r.setHeaderImg(env.getProperty("common.user.img.root.url")+r.getHeaderImg());
+                        }else{
+                            r.setHeaderImg(env.getProperty("common.file.access.root.url")+r.getHeaderImg());
+                        }
+                    });
+                }
+
+                //设置评论下的回复数据
+                c.setReplys(replies);
+
+                //设置评论者的头像
+                if (StringUtils.isBlank(c.getHeaderImg())){
+                    c.setHeaderImg(env.getProperty("common.user.img.default"));
+                }
+                if (c.getHeaderImg().startsWith("/statics")){
+                    c.setHeaderImg(env.getProperty("common.user.img.root.url")+c.getHeaderImg());
+                }else{
+                    c.setHeaderImg(env.getProperty("common.file.access.root.url")+c.getHeaderImg());
+                }
+            });
+        }
+        return list;
     }
 }

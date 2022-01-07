@@ -70,7 +70,13 @@ public class IndexUserServiceImpl implements IIndexUserService {
         return true;
     }
 
-
+    /**
+     * 上传用户头像
+     * @param request
+     * @param userId
+     * @return
+     * @throws Exception
+     */
     //上传用户头像
     @Transactional(rollbackFor = Exception.class)
     public String uploadImg(MultipartHttpServletRequest request,Long userId) throws Exception{

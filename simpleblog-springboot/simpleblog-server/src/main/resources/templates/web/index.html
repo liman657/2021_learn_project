@@ -564,7 +564,7 @@
                                         <a href="#" style="display: inline-block;">
                                             <span class="lmlblog-vip-icon"></span><img src="http://127.0.0.1:9900/miniBlog/image/20210111/user/1348527156908797952.png" class="avatar"></a>
                                         <div class="lmlblog-user-info-card">
-                                            <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">
+                                            <div class="info_card_loading"><img src="/simpleblog/statics/images/chat-loading.gif">
                                                 <p>资料加载中...</p>
                                             </div>
                                         </div>
@@ -813,7 +813,7 @@
                 html +=   '                                    <a href="#" style="display: inline-block;">\n' ;
                 html +=   '                                        <span class="lmlblog-vip-icon"></span><img src="' + res.data.blogList.list[i].headerImg + '" class="avatar"></a>\n' ;
                 html +=   '                                    <div class="lmlblog-user-info-card">\n' ;
-                html +=   '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' ;
+                html +=   '                                        <div class="info_card_loading"><img src="/simpleblog/statics/images/chat-loading.gif">\n' ;
                 html +=   '                                            <p>资料加载中...</p>\n' ;
                 html +=   '                                        </div>\n' ;
                 html +=   '                                    </div>\n' ;
@@ -822,9 +822,9 @@
                 html +=    '                                    <a href="#">\n' ;
                 html +=   '                                        <font style="color:#333;font-weight:600">' + res.data.blogList.list[i].nickName + '</font>\n' ;
                 html +=    '                                    </a>\n' ;
-                // html +=    '                                    <a href="javascript:void(0);" onclick="gz(this, ' + res.data.blogList.list[i].userId + ')">\n' ;
-                // html +=   '                                        <font style="color:#333;font-weight:0">'+(res.data.blogList.list[i].otherMap.hasConcern >= 1 ? '已关注' : '关注')+'</font>\n' ;
-                // html +=    '                                    </a>\n' ;
+                html +=    '                                    <a href="javascript:void(0);" onclick="gz(this, ' + res.data.blogList.list[i].userId + ')">\n' ;
+                html +=   '                                        <font style="color:#333;font-weight:0">'+(res.data.blogList.list[i].otherMap.hasConcern >= 1 ? '已关注' : '关注')+'</font>\n' ;
+                html +=    '                                    </a>\n' ;
                 html +=   '                                    <span class="lmlblog-mark lmlblog-lv" title="经验：3815"></span><span class="lmlblog-mark lmlblog-vip"></span>\n' ;
                 html +=   '                                </div>\n' ;
                 html +=   '                                <div class="lmlblog-post-user-info-time" title="2017-12-14 05:25">' + res.data.blogList.list[i].createTime + '</div>\n' ;
@@ -845,7 +845,7 @@
                     html +=   '                                    <a href="#" style="display: inline-block;">\n' ;
                     html +=   '                                        <span class="lmlblog-vip-icon"></span><img src="'+ res.data.blogList.list[i].otherMap.fromBlog.headerImg + '" class="avatar"></a>\n' ;
                     html +=   '                                    <div class="lmlblog-user-info-card">\n' ;
-                    html +=   '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' ;
+                    html +=   '                                        <div class="info_card_loading"><img src="/simpleblog/statics/images/chat-loading.gif">\n' ;
                     html +=   '                                            <p>资料加载中...</p>\n' ;
                     html +=   '                                        </div>\n' ;
                     html +=   '                                    </div>\n' ;
@@ -870,21 +870,21 @@
                     html +=   '                        </div>';
                 }
                 html +=    '                            <div class="lmlblog-post-bar" style="background-color: white;">\n' ;
-                // html +=   '                                <li class="lmlblog-no-like" onclick="dz(this, ' + res.data.blogList.list[i].id + ')">\n' ;
-                // html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasPraise >= 1 ? '已点赞' : '点赞') + '</span>\n' ;
-                // html +=   '                                </li>\n' ;
-                // html +=   '                                <li onclick="sc(this, ' + res.data.blogList.list[i].id + ')">\n' ;
-                // html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasCollect >= 1 ? '已收藏' : '收藏') + '</span>\n' ;
-                // html +=   '                                </li>\n' ;
-                // html +=   '                                <li onclick="zf(this, ' + res.data.blogList.list[i].id + ')">\n' ;
-                // html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasForward >= 1 ? '已转发' : '转发') + '</span>\n' ;
-                // html +=   '                                </li>\n' ;
-                // html +=   '                                <li onclick="pl(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
-                // html +=   '                                    <i class="lmlblog-icon"></i>评论' ;
-                // html +=   '                                </li>\n' ;
-                // html +=   '                                <li onclick="get_comment(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
-                // html +=   '                                    <i class="lmlblog-icon"></i>查看评论 <span>' + res.data.blogList.list[i].otherMap.commentTotal + '</span>\n' ;
-                // html +=   '                                </li>\n' ;
+                html +=   '                                <li class="lmlblog-no-like" onclick="dz(this, ' + res.data.blogList.list[i].id + ')">\n' ;
+                html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasPraise >= 1 ? '已点赞' : '点赞') + '</span>\n' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="sc(this, ' + res.data.blogList.list[i].id + ')">\n' ;
+                html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasCollect >= 1 ? '已收藏' : '收藏') + '</span>\n' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="zf(this, ' + res.data.blogList.list[i].id + ')">\n' ;
+                html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasForward >= 1 ? '已转发' : '转发') + '</span>\n' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="pl(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
+                html +=   '                                    <i class="lmlblog-icon"></i>评论' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="get_comment(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
+                html +=   '                                    <i class="lmlblog-icon"></i>查看评论 <span>' + res.data.blogList.list[i].otherMap.commentTotal + '</span>\n' ;
+                html +=   '                                </li>\n' ;
                 if(user_id != "" && user_id == res.data.blogList.list[i].userId){
                     html +=   '                                <li onclick="del(this, ' + res.data.blogList.list[i].id + ');">\n' ;
                     html +=   '                                    <i class="lmlblog-icon"></i>删除 <span></span>\n' ;
@@ -1272,7 +1272,7 @@
                     '                                    <a href="#" style="display: inline-block;">\n' +
                     '                                        <span class="lmlblog-vip-icon"></span><img style="width:30px;height: 30px;" src="' + res.data[i].headerImg + '" class="avatar"></a>\n' +
                     '                                    <div class="lmlblog-user-info-card">\n' +
-                    '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' +
+                    '                                        <div class="info_card_loading"><img src="/simpleblog/statics/images/chat-loading.gif">\n' +
                     '                                            <p>资料加载中...</p>\n' +
                     '                                        </div>\n' +
                     '                                    </div>\n' +
@@ -1292,7 +1292,7 @@
                         '                                    <a href="#" style="display: inline-block;">\n' +
                         '                                        <span class="lmlblog-vip-icon"></span><img style="width:30px;height: 30px;" src="'+res.data[i].replys[j].headerImg+'" class="avatar"></a>\n' +
                         '                                    <div class="lmlblog-user-info-card">\n' +
-                        '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' +
+                        '                                        <div class="info_card_loading"><img src="/simpleblog/statics/images/chat-loading.gif">\n' +
                         '                                            <p>资料加载中...</p>\n' +
                         '                                        </div>\n' +
                         '                                    </div>\n' +
@@ -1431,7 +1431,7 @@
                 html +=   '                                    <a href="#" style="display: inline-block;">\n' ;
                 html +=   '                                        <span class="lmlblog-vip-icon"></span><img src="' + res.data.blogList.list[i].headerImg + '" class="avatar"></a>\n' ;
                 html +=   '                                    <div class="lmlblog-user-info-card">\n' ;
-                html +=   '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' ;
+                html +=   '                                        <div class="info_card_loading"><img src="/simpleblog/statics/images/chat-loading.gif">\n' ;
                 html +=   '                                            <p>资料加载中...</p>\n' ;
                 html +=   '                                        </div>\n' ;
                 html +=   '                                    </div>\n' ;
@@ -1463,7 +1463,7 @@
                     html +=   '                                    <a href="#" style="display: inline-block;">\n' ;
                     html +=   '                                        <span class="lmlblog-vip-icon"></span><img src="'+ res.data.blogList.list[i].otherMap.fromBlog.headerImg + '" class="avatar"></a>\n' ;
                     html +=   '                                    <div class="lmlblog-user-info-card">\n' ;
-                    html +=   '                                        <div class="info_card_loading"><img src="/miniBlog/statics/images/chat-loading.gif">\n' ;
+                    html +=   '                                        <div class="info_card_loading"><img src="/simpleblog/statics/images/chat-loading.gif">\n' ;
                     html +=   '                                            <p>资料加载中...</p>\n' ;
                     html +=   '                                        </div>\n' ;
                     html +=   '                                    </div>\n' ;
@@ -1497,12 +1497,12 @@
                 html +=   '                                <li onclick="zf(this, ' + res.data.blogList.list[i].id + ')">\n' ;
                 html +=   '                                    <span>' + (res.data.blogList.list[i].otherMap.hasCollect == 1 ? '已转发' : '转发') + '</span>\n' ;
                 html +=   '                                </li>\n' ;
-                // html +=   '                                <li onclick="pl(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
-                // html +=   '                                    <i class="lmlblog-icon"></i>评论' ;
-                // html +=   '                                </li>\n' ;
-                // html +=   '                                <li onclick="get_comment(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
-                // html +=   '                                    <i class="lmlblog-icon"></i>查看评论 <span>' + res.data.blogList.list[i].otherMap.commentTotal + '</span>\n' ;
-                // html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="pl(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
+                html +=   '                                    <i class="lmlblog-icon"></i>评论' ;
+                html +=   '                                </li>\n' ;
+                html +=   '                                <li onclick="get_comment(this, ' + res.data.blogList.list[i].id + ', ' + res.data.blogList.list[i].otherMap.commentTotal + ');">\n' ;
+                html +=   '                                    <i class="lmlblog-icon"></i>查看评论 <span>' + res.data.blogList.list[i].otherMap.commentTotal + '</span>\n' ;
+                html +=   '                                </li>\n' ;
                 if(user_id != "" && user_id == res.data.blogList.list[i].userId){
                     html +=   '                                <li onclick="del(this, ' + res.data.blogList.list[i].id + ');">\n' ;
                     html +=   '                                    <i class="lmlblog-icon"></i>删除 <span></span>\n' ;
