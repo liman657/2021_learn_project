@@ -33,7 +33,7 @@ public class ReadVideo {
 
     public static void main(String[] args){
 
-        String path = "E:\\待学习课程\\mksz275 - Java并发编程高阶技术-高性能并发框架源码解析与实战";
+        String path = "E:\\待学习课程\\【无秘-更新中】【金职位】前端工程师2020版";
         //1.读取文件夹下的所有视频文件
         List<File> fileList = new ArrayList<>();
         readFileInDir(path,fileList);

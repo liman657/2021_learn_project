@@ -1,6 +1,7 @@
 package com.learn.simpleblog.service.web;
 
 import com.learn.simpleblog.api.request.*;
+import com.learn.simpleblog.module.domain.Blog;
 import com.learn.simpleblog.module.domain.Comment;
 import com.learn.simpleblog.module.domain.SysUserEntity;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -129,4 +130,45 @@ public interface IIndexCenterService {
      * @throws Exception
      */
     List<Comment> getCommentsByBlog(Integer blogId) throws Exception;
+
+    /**
+     * 转发微博
+     * @param request
+     * @param entity
+     * @return
+     * @throws Exception
+     */
+    Integer forwardBlog(BlogForwardRequest request, SysUserEntity entity) throws Exception;
+
+    /**
+     * 获取我的微博或者别人已发的微博
+     * @param paramMap
+     * @return
+     * @throws Exception
+     */
+    Map<String,Object> getBlogByUserId(Map<String, Object> paramMap) throws Exception;
+
+    /**
+     * 获取点赞的微博
+     * @param paramMap
+     * @return
+     * @throws Exception
+     */
+    Map<String,Object> getMyPraisesBlog(Map<String, Object> paramMap) throws Exception;
+
+    /**
+     * 获取我收藏的微博
+     * @param paramMap
+     * @return
+     * @throws Exception
+     */
+    Map<String,Object> getMyCollectsBlog(Map<String, Object> paramMap) throws Exception;
+
+    /**
+     * 获取所关注的人发的微博列表
+     * @param userId
+     * @return
+     * @throws Exception
+     */
+    public List<Blog> getMyFriendsBlog(Long userId) throws Exception;
 }

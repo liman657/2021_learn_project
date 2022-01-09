@@ -1,8 +1,10 @@
 package com.learn.simpleblog.controller;
 
+import com.google.common.collect.Maps;
 import com.learn.simpleblog.api.request.*;
 import com.learn.simpleblog.api.response.BaseResponse;
 import com.learn.simpleblog.api.response.StatusCode;
+import com.learn.simpleblog.api.utils.Constant;
 import com.learn.simpleblog.api.utils.ValidatorUtil;
 import com.learn.simpleblog.module.domain.SysUserEntity;
 import com.learn.simpleblog.service.blog.IBlogService;
@@ -29,6 +31,8 @@ import java.util.Objects;
 @RestController
 @RequestMapping("web/center")
 public class IndexCenterController extends AbstractController{
+
+    private static final Integer PageSize=10;
 
     @Autowired
     private IBlogService blogService;
@@ -368,6 +372,11 @@ public class IndexCenterController extends AbstractController{
         return response;
     }
 
+    /**
+     * 评论微博
+     * @param blogId
+     * @return
+     */
     //获取微博的评论列表 - 每条评论下附带了回复列表
     @RequestMapping(value = "comments/blog",method = RequestMethod.GET)
     public BaseResponse comments(@RequestParam Integer blogId){
@@ -384,5 +393,121 @@ public class IndexCenterController extends AbstractController{
         return response;
     }
 
+    /**
+     * 转发微博，不支持嵌套转发
+     * @param request
+     * @param result
+     * @return
+     */
+    @PostMapping("blog/forward")
+    public BaseResponse forwardBlog(@RequestBody @Validated BlogForwardRequest request, BindingResult result){
+        SysUserEntity entity=getUser();
+        if (null==entity){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        String checkRes=ValidatorUtil.checkResult(result);
+        if (StringUtils.isNotBlank(checkRes)){
+            return new BaseResponse(StatusCode.InvalidParams.getCode(),checkRes);
+        }
 
+        //转发的微博内容是否含敏感词 - 架构2.0
+
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            indexCenterService.forwardBlog(request,entity);
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    /**
+     * 我的微博
+     * @param paramMap
+     * @return
+     */
+    //我的微博 - 请求参数跟 “获取首页微博列表”的请求接口差不多 - 分页
+    @RequestMapping(value = "blogs",method = RequestMethod.GET)
+    public BaseResponse blogs(@RequestParam Map<String,Object> paramMap){
+        SysUserEntity entity=getUser();
+        if (null==entity){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            paramMap.put("userId",entity.getUserId());
+            response.setData(indexCenterService.getBlogByUserId(paramMap));
+
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    /**
+     * 我赞过的微博
+     * @param paramMap
+     * @return
+     */
+    //我的赞 ~ 我赞过的微博
+    @RequestMapping(value = "praises/my",method = RequestMethod.GET)
+    public BaseResponse myPraises(@RequestParam Map<String,Object> paramMap){
+        SysUserEntity entity=getUser();
+        if (null==entity){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            paramMap.put("userId",entity.getUserId());
+            response.setData(indexCenterService.getMyPraisesBlog(paramMap));
+
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    /**
+     * 我的收藏
+     * @param paramMap
+     * @return
+     */
+    //我的收藏
+    @RequestMapping(value = "collects/my",method = RequestMethod.GET)
+    public BaseResponse myCollects(@RequestParam Map<String,Object> paramMap){
+        SysUserEntity entity=getUser();
+        if (null==entity){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            paramMap.put("userId",entity.getUserId());
+            response.setData(indexCenterService.getMyCollectsBlog(paramMap));
+
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    /**
+     * 我的好友圈-查看我关注的人发的所有微博
+     * @return
+     */
+    //我的好友圈-查看我关注的人发的所有微博
+    @RequestMapping(value = "friends/my",method = RequestMethod.GET)
+    public BaseResponse myFriends(){
+        SysUserEntity entity=getUser();
+        if (null==entity){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            response.setData(indexCenterService.getMyFriendsBlog(entity.getUserId()));
+
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
 }

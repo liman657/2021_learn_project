@@ -1,12 +1,14 @@
 package com.learn.simpleblog.service.web.impl;
 
 import com.google.common.base.Joiner;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.learn.simpleblog.api.exception.CommonException;
 import com.learn.simpleblog.api.request.*;
 import com.learn.simpleblog.api.utils.Constant;
 import com.learn.simpleblog.common.CommonService;
 import com.learn.simpleblog.common.SysModule;
-import com.learn.simpleblog.common.UserMsgService;
+import com.learn.simpleblog.message.IMessageService;
 import com.learn.simpleblog.module.domain.*;
 import com.learn.simpleblog.module.mapper.*;
 import com.learn.simpleblog.service.blog.IBlogService;
@@ -26,6 +28,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * autor:liman
@@ -51,7 +54,7 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
     @Autowired
     private CommonService commonService;
     @Autowired
-    private UserMsgService userMsgService;
+    private IMessageService messageService;
     @Autowired
     private PraiseMapper praiseMapper;
     @Autowired
@@ -189,7 +192,8 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
 
                 //消息服务
                 if (res>0){
-                    userMsgService.concernMsg(request,entity,concern);
+                    //用户关注，发送消息
+                    messageService.concernMsg(request,entity,concern);
                 }
                 return 1;
             }
@@ -238,7 +242,7 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
         //消息服务
         Blog srcBlog=blogMapper.selectByPK(request.getBlogId());
         if (!Objects.isNull(srcBlog) && !Objects.equals(entity.getUserId(),srcBlog.getUserId())){
-            userMsgService.praiseMsg(entity,srcBlog,p);
+            messageService.praiseMsg(entity,srcBlog,p);
         }
         return 1;
     }
@@ -287,7 +291,7 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
         //消息服务
         Blog srcBlog=blogMapper.selectByPK(request.getBlogId());
         if (res>0 && !Objects.isNull(srcBlog) && !Objects.equals(srcBlog.getUserId(),user.getUserId())){
-            userMsgService.commentMsg(request,comment.getId(),user,srcBlog);
+            messageService.commentMsg(request,comment.getId(),user,srcBlog);
         }
         return 1;
     }
@@ -302,7 +306,7 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
 
             //消息服务
             if (res>0 && !Objects.equals(entity.getUserId().intValue(),c.getUserId())){
-                userMsgService.replyMsg(request,entity,reply.getId(),c.getUserId());
+                messageService.replyMsg(request,entity,reply.getId(),c.getUserId());
             }
         }
         return 1;
@@ -359,6 +363,107 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
                 }
             });
         }
+        return list;
+    }
+
+    //转发微博 - 判断当前用户是否已转发当前微博;判断待转发的微博是否存在;不能转发自己的微博；不能转发 类型为 "转发 type=2"的微博
+    @Override
+    public Integer forwardBlog(BlogForwardRequest request, SysUserEntity entity) throws Exception {
+        int total=blogService.countByForwardBlog(entity.getUserId(),request.getBlogId());
+        if (total>0){
+            throw new CommonException("您已经转发过该微博了！");
+        }
+        Blog srcBlog=blogService.getById(request.getBlogId());
+        if (Objects.isNull(srcBlog)){
+            throw new CommonException("待转发的微博已不存在！");
+        }
+        if (Objects.equals(srcBlog.getUserId(),entity.getUserId())){
+            throw new CommonException("不能转发自己的微博！");
+        }
+        if (Objects.equals(2,srcBlog.getType())){
+            throw new CommonException("请找到最原始的博客再点击进行转发！");
+        }
+
+        //插入转发微博数据
+        Blog blog=new Blog();
+        blog.setContent(StringUtils.isNotBlank(request.getContent())?request.getContent():"转发了...");
+        blog.setUserId(entity.getUserId());
+        blog.setType(2);//2为转发类型
+        blog.setBlogId(request.getBlogId());
+        blog.setCreateTime(DateTime.now().toDate());
+        Boolean res=blogService.save(blog);
+
+        //消息服务
+        if (res){
+            messageService.forwardMsg(entity,blog,srcBlog);
+
+            //更新底层lucene索引库的文档数据
+//            luceneBlogService.createDocument(blogMapper.selectByPK(blog.getId()));
+        }
+        return 1;
+    }
+
+    /**
+     * 底层还是调用的data方法
+     * @param paramMap
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public Map<String, Object> getBlogByUserId(Map<String, Object> paramMap) throws Exception {
+        return this.data(paramMap);
+    }
+
+    //我赞过的微博
+    @Override
+    public Map<String,Object> getMyPraisesBlog(Map<String,Object> paramMap) throws Exception {
+        Map<String,Object> resMap=Maps.newHashMap();
+
+        paramMap.put(Constant.LIMIT,PageSize);
+        paramMap.put(Constant.PAGE,paramMap.get("pageNo"));
+
+        //可重复用
+        resMap.put("blogList",blogService.queryPagePraises(paramMap));
+
+        return resMap;
+    }
+
+    //我收藏的微博
+    @Override
+    public Map<String,Object> getMyCollectsBlog(Map<String,Object> paramMap) throws Exception {
+        Map<String,Object> resMap=Maps.newHashMap();
+
+        paramMap.put(Constant.LIMIT,PageSize);
+        paramMap.put(Constant.PAGE,paramMap.get("pageNo"));
+        resMap.put("blogList",blogService.queryPageCollects(paramMap));
+
+        return resMap;
+    }
+
+    /**
+     * 获取我关注的人所发的微博列表
+     * @param userId
+     * @return
+     * @throws Exception
+     */
+    //获取我关注的人所发的微博列表
+    @Override
+    public List<Blog> getMyFriendsBlog(Long userId) throws Exception {
+        List<Blog> list= Lists.newLinkedList();
+
+        //方式一
+        Set<Integer> friends=concernMapper.selectMyConcerns(userId.intValue());
+        if (!CollectionUtils.isEmpty(friends)){
+            String userIds=Joiner.on(",").join(friends);
+            list=blogMapper.selectBlogByUIds(userIds);
+
+            //做下二次处理
+            blogService.commonManageBlog(list);
+        }
+
+
+        //方式二：join方法 - 交给你了！！
+
         return list;
     }
 }

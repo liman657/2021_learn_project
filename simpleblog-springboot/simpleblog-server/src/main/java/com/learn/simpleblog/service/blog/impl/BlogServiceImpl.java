@@ -136,4 +136,47 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
         }
     }
 
+    @Override
+    public int countByForwardBlog(Long userId, Integer blogId) {
+        return baseMapper.countByForwardBlog(userId,blogId);
+    }
+
+    /**
+     * 我点赞过的微博
+     * @param params
+     * @return
+     */
+    //分页查询-我点赞的微博列表
+    @Override
+    public PageUtil queryPagePraises(Map<String, Object> params) {
+        //构造pageNo pageSize
+        IPage<Blog> page=new QueryUtil<Blog>().getQueryPage(params);
+
+        //获取首页微博列表
+        List<Blog> list= baseMapper.selectPraiseBlogByUId(page,params);
+        commonManageBlog(list);
+
+        page.setRecords(list);
+        return new PageUtil(page);
+    }
+
+    /**
+     * 获取我收藏的微博
+     * @param params
+     * @return
+     */
+    //分页查询-我的收藏微博列表
+    @Override
+    public PageUtil queryPageCollects(Map<String, Object> params) {
+        //构造pageNo pageSize
+        IPage<Blog> page=new QueryUtil<Blog>().getQueryPage(params);
+
+        //获取首页微博列表
+        List<Blog> list= baseMapper.selectCollectBlogByUId(page,params);
+        commonManageBlog(list);
+
+        page.setRecords(list);
+        return new PageUtil(page);
+    }
+
 }

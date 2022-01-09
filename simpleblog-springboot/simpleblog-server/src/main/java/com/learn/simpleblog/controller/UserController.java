@@ -1,5 +1,6 @@
 package com.learn.simpleblog.controller;
 
+import com.learn.simpleblog.api.request.IdRequest;
 import com.learn.simpleblog.api.request.UserRequest;
 import com.learn.simpleblog.api.response.BaseResponse;
 import com.learn.simpleblog.api.response.StatusCode;
@@ -83,6 +84,12 @@ public class UserController extends AbstractController {
         return response;
     }
 
+    /**
+     * 修改个人信息
+     * @param userRequest
+     * @param result
+     * @return
+     */
     //修改个人信息
     @PostMapping(value = "info/update")
     public BaseResponse updateInfo(@RequestBody @Validated UserRequest userRequest, BindingResult result) {
@@ -97,6 +104,52 @@ public class UserController extends AbstractController {
 
         } catch (Exception e) {
             response = new BaseResponse(StatusCode.Fail.getCode(), e.getMessage());
+        }
+        return response;
+    }
+
+    /**
+     * 获取消息
+     * @return
+     */
+    @RequestMapping(value = "msg",method = RequestMethod.GET)
+    public BaseResponse register(){
+        SysUserEntity entity=getUser();
+        if (null==entity){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            response.setData(indexUserService.getUserMsg(entity.getUserId().intValue()));
+
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    /**
+     * 读取消息
+     * @param request
+     * @param result
+     * @return
+     */
+    @PostMapping("msg/read")
+    public BaseResponse readMsg(@RequestBody @Validated IdRequest request, BindingResult result){
+        SysUserEntity entity=getUser();
+        if (entity==null){
+            return new BaseResponse(StatusCode.UserNotLogin);
+        }
+        String checkRes= ValidatorUtil.checkResult(result);
+        if (StringUtils.isNotBlank(checkRes)){
+            return new BaseResponse(StatusCode.InvalidParams.getCode(),checkRes);
+        }
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            response.setData(indexUserService.readMsg(request,entity.getUserId()));
+
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
         }
         return response;
     }

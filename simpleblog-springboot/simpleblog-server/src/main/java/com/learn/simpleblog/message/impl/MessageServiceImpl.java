@@ -1,33 +1,29 @@
-package com.learn.simpleblog.common;
+package com.learn.simpleblog.message.impl;
 
 import com.google.gson.Gson;
 import com.learn.simpleblog.api.request.CommentRequest;
 import com.learn.simpleblog.api.request.ConcernRequest;
 import com.learn.simpleblog.api.request.ReplyRequest;
 import com.learn.simpleblog.api.utils.Constant;
+import com.learn.simpleblog.message.IMessageService;
 import com.learn.simpleblog.module.domain.*;
 import com.learn.simpleblog.module.mapper.UserMsgMapper;
 import com.learn.simpleblog.service.web.IIndexUserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.Map;
-import java.util.Objects;
 
 /**
- * 用户消息服务
- * @Author:debug (SteadyJack)
- * @Link: weixin-> debug0868 qq-> 1948831260
- **/
-@Service
-public class UserMsgService {
-
-    private static final Logger log= LoggerFactory.getLogger(UserMsgService.class);
-
+ * autor:liman
+ * createtime:2022/1/9
+ * comment:
+ */
+@Slf4j
+@Service("messageService")
+public class MessageServiceImpl implements IMessageService {
     private static final Gson GSON=new Gson();
 
     @Autowired
@@ -37,6 +33,7 @@ public class UserMsgService {
     private IIndexUserService indexUserService;
 
     //@Async
+    @Override
     public void sendMsg(UserMsg userMsg){
         try {
             //方式一：定时器轮询-pull的模式
@@ -49,6 +46,7 @@ public class UserMsgService {
 
 
     //转发
+    @Override
     @Async
     public void forwardMsg(SysUserEntity entity, Blog blog, Blog srcBlog){
         try {
@@ -61,6 +59,7 @@ public class UserMsgService {
     }
 
     //评论
+    @Override
     @Async
     public void commentMsg(CommentRequest request, Integer id, SysUserEntity user, Blog srcBlog){
         try {
@@ -73,6 +72,7 @@ public class UserMsgService {
     }
 
     //回复
+    @Override
     @Async
     public void replyMsg(ReplyRequest request, SysUserEntity entity, final Integer moduleId, final Integer msgUserId){
         try {
@@ -86,8 +86,9 @@ public class UserMsgService {
     }
 
     //点赞
+    @Override
     @Async
-    public void praiseMsg(SysUserEntity entity,final Blog srcBlog,final Praise p){
+    public void praiseMsg(SysUserEntity entity, final Blog srcBlog, final Praise p){
         try {
             String content=String.format(Constant.MsgModule.Praise.getContent(),entity.getName());
 
@@ -100,6 +101,7 @@ public class UserMsgService {
 
 
     //新粉丝关注
+    @Override
     @Async
     public void concernMsg(ConcernRequest request, SysUserEntity entity, Concern concern){
         try {
@@ -111,30 +113,4 @@ public class UserMsgService {
             log.error("用户消息服务-新粉丝关注模块");
         }
     }
-
-
-    //小作业：收藏
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
