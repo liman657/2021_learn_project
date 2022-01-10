@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 角色~部门 关联service
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Service("sysRoleDeptService")
 public class SysRoleDeptServiceImpl extends ServiceImpl<SysRoleDeptDao,SysRoleDeptEntity> implements SysRoleDeptService {

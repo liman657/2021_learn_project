@@ -11,7 +11,7 @@ import java.util.Set;
 
 /**
  * 通用的基于OkHttp3的http服务，发起请求、解析响应工具类
- * @Author:debug (SteadyJack)
+ * @Author:liman
  * @Link: weixin-> debug0868 qq-> 1948831260
  * @Date: 2020/2/8 15:38
  **/

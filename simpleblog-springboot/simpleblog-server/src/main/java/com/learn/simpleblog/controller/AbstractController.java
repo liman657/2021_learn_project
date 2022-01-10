@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 
 /**
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Controller
 public abstract class AbstractController {

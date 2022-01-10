@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 角色菜单服务
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Service("sysRoleMenuService")
 public class SysRoleMenuServiceImpl extends ServiceImpl<SysRoleMenuDao,SysRoleMenuEntity> implements SysRoleMenuService {

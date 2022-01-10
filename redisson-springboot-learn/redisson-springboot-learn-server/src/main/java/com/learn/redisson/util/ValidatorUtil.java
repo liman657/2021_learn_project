@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 请求参数的统一校验器
- * @Author:debug (SteadyJack)
+ * @Author:liman
  * @Link: weixin-> debug0868 qq-> 1948831260
  * @Date: 2019/12/24 14:34
  **/

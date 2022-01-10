@@ -510,4 +510,30 @@ public class IndexCenterController extends AbstractController{
         }
         return response;
     }
+
+    //全站数据lucene初始化
+    @RequestMapping(value = "data/search/init",method = RequestMethod.GET)
+    public BaseResponse dataSearchInit(){
+        BaseResponse response=new BaseResponse(StatusCode.Success);
+        try {
+            indexCenterService.initLuceneData();
+
+        }catch (Exception e){
+            response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+        }
+        return response;
+    }
+
+    ////首页中心数据列表-全文检索
+    //@RequestMapping(value = "data/search",method = RequestMethod.GET)
+    //public BaseResponse dataSearch(@RequestParam Map<String,Object> paramMap){
+    //    BaseResponse response=new BaseResponse(StatusCode.Success);
+    //    try {
+    //        response.setData(indexCenterService.dataSearchLucene(paramMap));
+    //
+    //    }catch (Exception e){
+    //        response=new BaseResponse(StatusCode.Fail.getCode(),e.getMessage());
+    //    }
+    //    return response;
+    //}
 }

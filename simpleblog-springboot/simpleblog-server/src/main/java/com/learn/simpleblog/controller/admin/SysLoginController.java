@@ -27,7 +27,7 @@ import java.util.Map;
 
 /**
  * 登录controller
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Controller
 public class SysLoginController extends AbstractController {

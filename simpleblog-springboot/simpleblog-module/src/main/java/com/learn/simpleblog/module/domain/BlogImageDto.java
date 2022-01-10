@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @Author:debug (SteadyJack)
+ * @Author:liman
  * @Link: weixin-> debug0868 qq-> 1948831260
  * @Date: 2021/1/6 21:01
  **/

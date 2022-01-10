@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * 关注request
- * @Author:debug (SteadyJack)
+ * @Author:liman
  * @Link: weixin-> debug0868 qq-> 1948831260
  **/
 @Data

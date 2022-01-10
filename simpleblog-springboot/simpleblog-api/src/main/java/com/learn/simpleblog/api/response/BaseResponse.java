@@ -2,7 +2,7 @@ package com.learn.simpleblog.api.response;
 
 /**
  * 通用的响应封装类
- * @Author:debug (SteadyJack) - wx：debug0868
+ * @Author:liman - wx：debug0868
  **/
 public class BaseResponse<T> {
 

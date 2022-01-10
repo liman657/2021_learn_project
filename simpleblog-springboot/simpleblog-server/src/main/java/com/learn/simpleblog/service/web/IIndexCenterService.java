@@ -171,4 +171,10 @@ public interface IIndexCenterService {
      * @throws Exception
      */
     public List<Blog> getMyFriendsBlog(Long userId) throws Exception;
+
+    /**
+     * Lucene数据初始化
+     * @throws Exception
+     */
+    public void initLuceneData() throws Exception;
 }

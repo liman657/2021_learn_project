@@ -9,7 +9,7 @@ import java.util.Properties;
 
 /**
  * 验证码的自定义注入配置
- * @Author:debug (SteadyJack)
+ * @Author:liman
  * @Date: 2019/7/30 17:28
  **/
 @Configuration

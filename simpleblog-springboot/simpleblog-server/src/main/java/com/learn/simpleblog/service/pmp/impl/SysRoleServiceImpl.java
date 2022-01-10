@@ -25,7 +25,7 @@ import java.util.Map;
 
 /**
  * 角色 服务service
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Service("sysRoleService")
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleDao,SysRoleEntity> implements SysRoleService {

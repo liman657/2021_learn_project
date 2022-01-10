@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * shiro的通用化配置
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Configuration
 public class ShiroConfig {

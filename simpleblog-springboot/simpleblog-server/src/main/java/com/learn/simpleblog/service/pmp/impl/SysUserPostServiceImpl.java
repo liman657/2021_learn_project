@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 /**
  * 用户~岗位服务service
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Service("sysUserPostService")
 public class SysUserPostServiceImpl extends ServiceImpl<SysUserPostDao, SysUserPostEntity> implements SysUserPostService {

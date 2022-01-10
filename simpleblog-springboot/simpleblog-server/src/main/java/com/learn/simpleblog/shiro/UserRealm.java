@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 
 /**
  * shiro用于认证用户~授权
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Component
 public class UserRealm extends AuthorizingRealm {

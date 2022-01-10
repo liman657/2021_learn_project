@@ -21,7 +21,7 @@ import java.util.Set;
 
 /**
  * 通用化的部门数据权限控制service
- * @Author:debug (SteadyJack)
+ * @Author:liman
  **/
 @Service
 public class CommonDataServiceImpl implements CommonDataService {

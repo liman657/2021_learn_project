@@ -4,7 +4,7 @@ package com.learn.redisson.api.response;/**
 
 /**
  * 接口的统一响应模型 ~ 规范
- * @Author:debug (SteadyJack)
+ * @Author:liman
  * @Link: weixin-> debug0868 qq-> 1948831260
  * @Date: 2020/2/6 17:26
  **/

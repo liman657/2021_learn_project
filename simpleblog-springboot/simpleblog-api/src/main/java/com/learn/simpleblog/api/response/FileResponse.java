@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * @Author:debug (SteadyJack) wx：debug0868
+ * @Author:liman wx：debug0868
  **/
 @Data
 @AllArgsConstructor

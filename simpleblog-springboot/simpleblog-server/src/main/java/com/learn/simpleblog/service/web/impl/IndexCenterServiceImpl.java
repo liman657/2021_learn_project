@@ -8,6 +8,7 @@ import com.learn.simpleblog.api.request.*;
 import com.learn.simpleblog.api.utils.Constant;
 import com.learn.simpleblog.common.CommonService;
 import com.learn.simpleblog.common.SysModule;
+import com.learn.simpleblog.lucene.LuceneBlogService;
 import com.learn.simpleblog.message.IMessageService;
 import com.learn.simpleblog.module.domain.*;
 import com.learn.simpleblog.module.mapper.*;
@@ -63,8 +64,8 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
     private CommentMapper commentMapper;
     @Autowired
     private ReplyMapper replyMapper;
-//    @Autowired
-//    private LuceneBlogService luceneBlogService;
+    @Autowired
+    private LuceneBlogService luceneBlogService;
 
     /**
      * 查询所有博客记录，分页
@@ -148,7 +149,7 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
         }
 
         //更新底层lucene索引库的文档数据
-//        luceneBlogService.createDocument(blogMapper.selectByPK(blog.getId()));
+        luceneBlogService.createDocument(blogMapper.selectByPK(blog.getId()));
 
         return 1;
     }
@@ -320,9 +321,9 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
             int res=blogMapper.deleteById(request.getId());
 
             //更新底层索引库
-//            if (res>0){
-//                luceneBlogService.deleteDocument(request.getId());
-//            }
+            if (res>0){
+                luceneBlogService.deleteDocument(request.getId());
+            }
         }
         return -1;
     }
@@ -398,7 +399,7 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
             messageService.forwardMsg(entity,blog,srcBlog);
 
             //更新底层lucene索引库的文档数据
-//            luceneBlogService.createDocument(blogMapper.selectByPK(blog.getId()));
+            luceneBlogService.createDocument(blogMapper.selectByPK(blog.getId()));
         }
         return 1;
     }
@@ -465,5 +466,18 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
         //方式二：join方法 - 交给你了！！
 
         return list;
+    }
+
+    //数据初始化-Lucene
+    @Override
+    public void initLuceneData() throws Exception {
+        List<Blog> list=blogMapper.selectAll();
+        if (list!=null && !list.isEmpty()){
+            list.forEach(blog -> {
+                try {
+                    luceneBlogService.createDocument(blog);
+                }catch (Exception e){e.printStackTrace();}
+            });
+        }
     }
 }
