@@ -480,4 +480,19 @@ public class IndexCenterServiceImpl implements IIndexCenterService {
             });
         }
     }
+
+    //门户网首页全文检索-lucene
+    @Override
+    public Map<String, Object> dataSearchLucene(Map<String,Object> paramMap) throws Exception {
+        Map<String,Object> resMap= Maps.newHashMap();
+
+        Integer pageNo=Integer.valueOf(Objects.isNull(paramMap.get("pageNo")) ? "1" : paramMap.get("pageNo").toString());
+
+        if (paramMap.get("searchText")!=null && StringUtils.isNotBlank(paramMap.get("searchText").toString())){
+            resMap.put("blogList",luceneBlogService.searchDocumentPage(paramMap.get("searchText").toString(),PageSize,pageNo));
+        }else{
+            resMap=this.data(paramMap);
+        }
+        return resMap;
+    }
 }

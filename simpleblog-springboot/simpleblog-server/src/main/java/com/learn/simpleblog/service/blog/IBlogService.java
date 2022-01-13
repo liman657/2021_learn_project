@@ -14,6 +14,12 @@ import java.util.Map;
  */
 public interface IBlogService extends IService<Blog> {
 
+    /**
+     * 处理每条微博的数据
+     * @param blog
+     */
+    public void commonManageSingleBlog(Blog blog);
+
     PageUtil queryPage(Map<String, Object> params);
 
     /**

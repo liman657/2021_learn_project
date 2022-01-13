@@ -33,7 +33,7 @@ public class ReadVideo {
 
     public static void main(String[] args){
 
-        String path = "E:\\待学习课程\\【无秘-更新中】【金职位】前端工程师2020版";
+        String path = "E:\\自我学习\\实战视频\\2021\\mksz429 - 理论+实战 构建完整JVM知识体系";
         //1.读取文件夹下的所有视频文件
         List<File> fileList = new ArrayList<>();
         readFileInDir(path,fileList);

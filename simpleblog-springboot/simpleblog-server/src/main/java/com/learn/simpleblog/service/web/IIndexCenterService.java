@@ -177,4 +177,12 @@ public interface IIndexCenterService {
      * @throws Exception
      */
     public void initLuceneData() throws Exception;
+
+    /**
+     * lucene数据查询
+     * @param paramMap
+     * @return
+     * @throws Exception
+     */
+    public Map<String, Object> dataSearchLucene(Map<String,Object> paramMap) throws Exception;
 }
