@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * 推送给前端使用的shiro对象变量
  * @Author:liman
  **/
-@Component
+@Component("shiro")
 public class ShiroVariable {
 
     /**

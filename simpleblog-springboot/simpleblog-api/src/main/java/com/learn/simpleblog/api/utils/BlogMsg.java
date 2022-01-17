@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationEvent;
 import java.io.Serializable;
 
 /**
- *
+ * 继承ApplicationEvent表示事件类型
  */
 @Data
 public class BlogMsg extends ApplicationEvent implements Serializable{

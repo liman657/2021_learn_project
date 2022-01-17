@@ -18,9 +18,9 @@ public class FreemarkerConfig {
         FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
         configurer.setTemplateLoaderPath("classpath:/templates");
 
-//        Map<String, Object> variables = new HashMap<>(1);
-//        variables.put("shiro", shiroVariable);
-//        configurer.setFreemarkerVariables(variables);
+        Map<String, Object> variables = new HashMap<>(1);
+        variables.put("shiro", shiroVariable);
+        configurer.setFreemarkerVariables(variables);
 
         Properties settings = new Properties();
         settings.setProperty("default_encoding", "utf-8");

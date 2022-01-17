@@ -173,8 +173,8 @@
                     if(res.data.userType == 0){
                         console.log(res.data.userType)
                         window.location.href="http://localhost:9099/simpleblog/";
-                    }else{
-                        window.location.href="login.html";
+                    }else{//如果用户是管理员，则跳转到后台的管理页面
+                        window.location.href="http://localhost:9099/simpleblog/index.html";
                     }
                 },1000);
 

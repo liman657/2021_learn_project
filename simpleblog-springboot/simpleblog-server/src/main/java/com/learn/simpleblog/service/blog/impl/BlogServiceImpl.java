@@ -2,7 +2,10 @@ package com.learn.simpleblog.service.blog.impl;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.google.common.base.Joiner;
 import com.google.common.collect.Maps;
+import com.learn.simpleblog.api.utils.BlogMsg;
+import com.learn.simpleblog.api.utils.Constant;
 import com.learn.simpleblog.api.utils.PageUtil;
 import com.learn.simpleblog.api.utils.QueryUtil;
 import com.learn.simpleblog.module.domain.Blog;
@@ -11,14 +14,18 @@ import com.learn.simpleblog.module.mapper.*;
 import com.learn.simpleblog.service.blog.IBlogService;
 import com.learn.simpleblog.shiro.ShiroUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.core.env.Environment;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * autor:liman
@@ -41,6 +48,9 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
     private CommentMapper commentMapper;
     @Autowired
     private ConcernMapper concernMapper;
+    //事件发布器
+    @Autowired
+    private ApplicationEventPublisher publisher;
 
     @Override
     public PageUtil queryPage(Map<String, Object> params) {
@@ -177,6 +187,103 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
 
         page.setRecords(list);
         return new PageUtil(page);
+    }
+
+    /**
+     * 管理系统查询博客数据
+     * @param params
+     * @return
+     */
+    @Override
+    public PageUtil queryPageAdmin(Map<String, Object> params) {
+        IPage<Blog> page=new QueryUtil<Blog>().getQueryPage(params);
+
+        List<Blog> list=baseMapper.pageBlogAdmin(page,params);
+        if (!CollectionUtils.isEmpty(list)){
+            list.forEach(b -> {
+                b.setCommentTotal(commentMapper.countByBlogId(b.getId()));
+                b.setPraiseTotal(praiseMapper.countByUBlogId(b.getId(),null));
+                b.setCollectTotal(collectMapper.countByUBlogId(b.getId(),null));
+            });
+        }
+
+        page.setRecords(list);
+        return new PageUtil(page);
+    }
+
+    /**
+     * 管理端删除微博
+     * @param ids
+     */
+    @Override
+    public void deleteEntity(List<Integer> ids) {
+        if (!CollectionUtils.isEmpty(ids)){
+            String idStr= Joiner.on(",").join(ids);
+            baseMapper.deletes(idStr);
+
+            ids.forEach(id -> {
+                try {
+                    //方式一
+                    //publisher.publishEvent(new BlogMsg(this,id, Constant.BlogIndexMsg.Delete.getType()));
+
+                    ////方式二
+                    Constant.BLOG_Queue.add(new BlogMsg(this,id, Constant.BlogIndexMsg.Delete.getType()));
+
+                }catch (Exception e){}
+            });
+        }
+    }
+
+    /**
+     * 管理端屏蔽微博
+     * @param ids
+     */
+    @Override
+    public void activeEntity(List<Integer> ids) {
+        if (ids!=null && !ids.isEmpty()){
+            String idStr= Joiner.on(",").join(ids);
+            baseMapper.actives(idStr);
+
+
+            //屏蔽掉的博客需要移除磁盘中的索引/恢复回来的博客则需要重新添加回索引
+            this.activeOrUnActiveIndex(idStr);
+        }
+    }
+
+    /**
+     * 屏蔽的博客索引优化
+     * @param ids
+     */
+    @Async
+    public void activeOrUnActiveIndex(String ids){
+        if (StringUtils.isNotBlank(ids)){
+            List<Blog> list=baseMapper.selectByIds(ids);
+            if (!CollectionUtils.isEmpty(list)){
+                list.forEach(blog -> {
+
+                    try {
+                        //方式一
+                        //if (Objects.equals(1,blog.getIsActive())){
+                        //    publisher.publishEvent(new BlogMsg(this,blog.getId(), Constant.BlogIndexMsg.Active.getType()));
+                        //}else{
+                        //    publisher.publishEvent(new BlogMsg(this,blog.getId(), Constant.BlogIndexMsg.UnActive.getType()));
+                        //}
+
+
+                        //方式二
+                        if (Objects.equals(1,blog.getIsActive())){//如果微博是激活的状态，则要更新底层lucene
+                            Constant.BLOG_Queue.add(new BlogMsg(this,blog.getId(), Constant.BlogIndexMsg.Active.getType()));
+                        }else{
+                            Constant.BLOG_Queue.add(new BlogMsg(this,blog.getId(), Constant.BlogIndexMsg.UnActive.getType()));
+                        }
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
+                });
+            }
+        }
     }
 
 }

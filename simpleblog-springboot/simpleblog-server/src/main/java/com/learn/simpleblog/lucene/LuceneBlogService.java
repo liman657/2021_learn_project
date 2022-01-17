@@ -133,8 +133,8 @@ public class LuceneBlogService {
             //直接根据id删除
             indexWriter.deleteDocuments(new Term("id",String.valueOf(id)));
 
-            indexWriter.close();
             indexWriter.commit();
+            indexWriter.close();
         }catch (Exception e){
             log.error("删除索引文件出现异常，异常信息为:{}",e);
         }finally {

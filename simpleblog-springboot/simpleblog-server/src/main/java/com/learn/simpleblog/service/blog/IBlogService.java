@@ -51,4 +51,23 @@ public interface IBlogService extends IService<Blog> {
      */
     List<Blog> commonManageBlog(List<Blog> list);
 
+    /**
+     * 管理员查看博客数据
+     * @param params
+     * @return
+     */
+    PageUtil queryPageAdmin(Map<String, Object> params);
+
+    /**
+     * 管理员删除博客实体数据
+     * @param ids
+     */
+    void deleteEntity(List<Integer> ids);
+
+    /**
+     * 管理员激活博客实体数据
+     * @param ids
+     */
+    void activeEntity(List<Integer> ids);
+
 }
