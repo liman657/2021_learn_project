@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbTablespacesBriefMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbTablespacesBrief" >
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PATH" property="path" jdbcType="VARCHAR" />
+    <result column="SPACE_TYPE" property="spaceType" jdbcType="VARCHAR" />
+    <result column="SPACE" property="space" jdbcType="VARBINARY" />
+    <result column="FLAG" property="flag" jdbcType="VARBINARY" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbTablespacesBrief" >
+    insert into INNODB_TABLESPACES_BRIEF (`NAME`, `PATH`, SPACE_TYPE, 
+      `SPACE`, FLAG)
+    values (#{name,jdbcType=VARCHAR}, #{path,jdbcType=VARCHAR}, #{spaceType,jdbcType=VARCHAR}, 
+      #{space,jdbcType=VARBINARY}, #{flag,jdbcType=VARBINARY})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `NAME`, `PATH`, SPACE_TYPE, `SPACE`, FLAG
+    from INNODB_TABLESPACES_BRIEF
+  </select>
+</mapper>

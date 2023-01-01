@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ThreadsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Threads" >
+    <id column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="PROCESSLIST_ID" property="processlistId" jdbcType="BIGINT" />
+    <result column="PROCESSLIST_USER" property="processlistUser" jdbcType="VARCHAR" />
+    <result column="PROCESSLIST_HOST" property="processlistHost" jdbcType="VARCHAR" />
+    <result column="PROCESSLIST_DB" property="processlistDb" jdbcType="VARCHAR" />
+    <result column="PROCESSLIST_COMMAND" property="processlistCommand" jdbcType="VARCHAR" />
+    <result column="PROCESSLIST_TIME" property="processlistTime" jdbcType="BIGINT" />
+    <result column="PROCESSLIST_STATE" property="processlistState" jdbcType="VARCHAR" />
+    <result column="PARENT_THREAD_ID" property="parentThreadId" jdbcType="BIGINT" />
+    <result column="ROLE" property="role" jdbcType="VARCHAR" />
+    <result column="INSTRUMENTED" property="instrumented" jdbcType="CHAR" />
+    <result column="HISTORY" property="history" jdbcType="CHAR" />
+    <result column="CONNECTION_TYPE" property="connectionType" jdbcType="VARCHAR" />
+    <result column="THREAD_OS_ID" property="threadOsId" jdbcType="BIGINT" />
+    <result column="RESOURCE_GROUP" property="resourceGroup" jdbcType="VARCHAR" />
+    <result column="PROCESSLIST_INFO" property="processlistInfo" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from threads
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Threads" >
+    insert into threads (THREAD_ID, `NAME`, `TYPE`, 
+      PROCESSLIST_ID, PROCESSLIST_USER, PROCESSLIST_HOST, 
+      PROCESSLIST_DB, PROCESSLIST_COMMAND, PROCESSLIST_TIME, 
+      PROCESSLIST_STATE, PARENT_THREAD_ID, `ROLE`, 
+      INSTRUMENTED, HISTORY, CONNECTION_TYPE, 
+      THREAD_OS_ID, RESOURCE_GROUP, PROCESSLIST_INFO
+      )
+    values (#{threadId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{processlistId,jdbcType=BIGINT}, #{processlistUser,jdbcType=VARCHAR}, #{processlistHost,jdbcType=VARCHAR}, 
+      #{processlistDb,jdbcType=VARCHAR}, #{processlistCommand,jdbcType=VARCHAR}, #{processlistTime,jdbcType=BIGINT}, 
+      #{processlistState,jdbcType=VARCHAR}, #{parentThreadId,jdbcType=BIGINT}, #{role,jdbcType=VARCHAR}, 
+      #{instrumented,jdbcType=CHAR}, #{history,jdbcType=CHAR}, #{connectionType,jdbcType=VARCHAR}, 
+      #{threadOsId,jdbcType=BIGINT}, #{resourceGroup,jdbcType=VARCHAR}, #{processlistInfo,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Threads" >
+    update threads
+    set `NAME` = #{name,jdbcType=VARCHAR},
+      `TYPE` = #{type,jdbcType=VARCHAR},
+      PROCESSLIST_ID = #{processlistId,jdbcType=BIGINT},
+      PROCESSLIST_USER = #{processlistUser,jdbcType=VARCHAR},
+      PROCESSLIST_HOST = #{processlistHost,jdbcType=VARCHAR},
+      PROCESSLIST_DB = #{processlistDb,jdbcType=VARCHAR},
+      PROCESSLIST_COMMAND = #{processlistCommand,jdbcType=VARCHAR},
+      PROCESSLIST_TIME = #{processlistTime,jdbcType=BIGINT},
+      PROCESSLIST_STATE = #{processlistState,jdbcType=VARCHAR},
+      PARENT_THREAD_ID = #{parentThreadId,jdbcType=BIGINT},
+      `ROLE` = #{role,jdbcType=VARCHAR},
+      INSTRUMENTED = #{instrumented,jdbcType=CHAR},
+      HISTORY = #{history,jdbcType=CHAR},
+      CONNECTION_TYPE = #{connectionType,jdbcType=VARCHAR},
+      THREAD_OS_ID = #{threadOsId,jdbcType=BIGINT},
+      RESOURCE_GROUP = #{resourceGroup,jdbcType=VARCHAR},
+      PROCESSLIST_INFO = #{processlistInfo,jdbcType=LONGVARCHAR}
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select THREAD_ID, `NAME`, `TYPE`, PROCESSLIST_ID, PROCESSLIST_USER, PROCESSLIST_HOST, 
+    PROCESSLIST_DB, PROCESSLIST_COMMAND, PROCESSLIST_TIME, PROCESSLIST_STATE, PARENT_THREAD_ID, 
+    `ROLE`, INSTRUMENTED, HISTORY, CONNECTION_TYPE, THREAD_OS_ID, RESOURCE_GROUP, PROCESSLIST_INFO
+    from threads
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select THREAD_ID, `NAME`, `TYPE`, PROCESSLIST_ID, PROCESSLIST_USER, PROCESSLIST_HOST, 
+    PROCESSLIST_DB, PROCESSLIST_COMMAND, PROCESSLIST_TIME, PROCESSLIST_STATE, PARENT_THREAD_ID, 
+    `ROLE`, INSTRUMENTED, HISTORY, CONNECTION_TYPE, THREAD_OS_ID, RESOURCE_GROUP, PROCESSLIST_INFO
+    from threads
+  </select>
+</mapper>

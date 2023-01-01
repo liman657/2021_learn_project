@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ImcCourseMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ImcCourse" >
+    <id column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="title_desc" property="titleDesc" jdbcType="VARCHAR" />
+    <result column="type_id" property="typeId" jdbcType="SMALLINT" />
+    <result column="class_id" property="classId" jdbcType="SMALLINT" />
+    <result column="level_id" property="levelId" jdbcType="SMALLINT" />
+    <result column="online_time" property="onlineTime" jdbcType="TIMESTAMP" />
+    <result column="study_cnt" property="studyCnt" jdbcType="INTEGER" />
+    <result column="course_time" property="courseTime" jdbcType="TIME" />
+    <result column="intro" property="intro" jdbcType="VARCHAR" />
+    <result column="info" property="info" jdbcType="VARCHAR" />
+    <result column="harvest" property="harvest" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="main_pic" property="mainPic" jdbcType="VARCHAR" />
+    <result column="content_score" property="contentScore" jdbcType="DECIMAL" />
+    <result column="level_score" property="levelScore" jdbcType="DECIMAL" />
+    <result column="logic_score" property="logicScore" jdbcType="DECIMAL" />
+    <result column="score" property="score" jdbcType="DECIMAL" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from imc_course
+    where course_id = #{courseId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ImcCourse" >
+    insert into imc_course (course_id, title, title_desc, 
+      type_id, class_id, level_id, 
+      online_time, study_cnt, course_time, 
+      intro, info, harvest, 
+      user_id, main_pic, content_score, 
+      level_score, logic_score, score
+      )
+    values (#{courseId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{titleDesc,jdbcType=VARCHAR}, 
+      #{typeId,jdbcType=SMALLINT}, #{classId,jdbcType=SMALLINT}, #{levelId,jdbcType=SMALLINT}, 
+      #{onlineTime,jdbcType=TIMESTAMP}, #{studyCnt,jdbcType=INTEGER}, #{courseTime,jdbcType=TIME}, 
+      #{intro,jdbcType=VARCHAR}, #{info,jdbcType=VARCHAR}, #{harvest,jdbcType=VARCHAR}, 
+      #{userId,jdbcType=INTEGER}, #{mainPic,jdbcType=VARCHAR}, #{contentScore,jdbcType=DECIMAL}, 
+      #{levelScore,jdbcType=DECIMAL}, #{logicScore,jdbcType=DECIMAL}, #{score,jdbcType=DECIMAL}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ImcCourse" >
+    update imc_course
+    set title = #{title,jdbcType=VARCHAR},
+      title_desc = #{titleDesc,jdbcType=VARCHAR},
+      type_id = #{typeId,jdbcType=SMALLINT},
+      class_id = #{classId,jdbcType=SMALLINT},
+      level_id = #{levelId,jdbcType=SMALLINT},
+      online_time = #{onlineTime,jdbcType=TIMESTAMP},
+      study_cnt = #{studyCnt,jdbcType=INTEGER},
+      course_time = #{courseTime,jdbcType=TIME},
+      intro = #{intro,jdbcType=VARCHAR},
+      info = #{info,jdbcType=VARCHAR},
+      harvest = #{harvest,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      main_pic = #{mainPic,jdbcType=VARCHAR},
+      content_score = #{contentScore,jdbcType=DECIMAL},
+      level_score = #{levelScore,jdbcType=DECIMAL},
+      logic_score = #{logicScore,jdbcType=DECIMAL},
+      score = #{score,jdbcType=DECIMAL}
+    where course_id = #{courseId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select course_id, title, title_desc, type_id, class_id, level_id, online_time, study_cnt, 
+    course_time, intro, info, harvest, user_id, main_pic, content_score, level_score, 
+    logic_score, score
+    from imc_course
+    where course_id = #{courseId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select course_id, title, title_desc, type_id, class_id, level_id, online_time, study_cnt, 
+    course_time, intro, info, harvest, user_id, main_pic, content_score, level_score, 
+    logic_score, score
+    from imc_course
+  </select>
+</mapper>

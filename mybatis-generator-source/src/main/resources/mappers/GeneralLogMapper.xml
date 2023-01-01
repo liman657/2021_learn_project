@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.GeneralLogMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.GeneralLog" >
+    <result column="event_time" property="eventTime" jdbcType="TIMESTAMP" />
+    <result column="thread_id" property="threadId" jdbcType="BIGINT" />
+    <result column="server_id" property="serverId" jdbcType="INTEGER" />
+    <result column="command_type" property="commandType" jdbcType="VARCHAR" />
+    <result column="user_host" property="userHost" jdbcType="LONGVARCHAR" />
+    <result column="argument" property="argument" jdbcType="LONGVARBINARY" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.GeneralLog" >
+    insert into general_log (event_time, thread_id, server_id, 
+      command_type, user_host, argument
+      )
+    values (#{eventTime,jdbcType=TIMESTAMP}, #{threadId,jdbcType=BIGINT}, #{serverId,jdbcType=INTEGER}, 
+      #{commandType,jdbcType=VARCHAR}, #{userHost,jdbcType=LONGVARCHAR}, #{argument,jdbcType=LONGVARBINARY}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select event_time, thread_id, server_id, command_type, user_host, argument
+    from general_log
+  </select>
+</mapper>

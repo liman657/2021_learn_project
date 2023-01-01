@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.foodie.mapper.ReplicationAsynchronousConnectionFailoverManagedMapper">
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailoverManaged">
+    <result column="CHANNEL_NAME" jdbcType="CHAR" property="channelName" />
+    <result column="MANAGED_NAME" jdbcType="CHAR" property="managedName" />
+    <result column="MANAGED_TYPE" jdbcType="CHAR" property="managedType" />
+    <result column="CONFIGURATION" jdbcType="LONGVARCHAR" property="configuration" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailoverManaged">
+    insert into replication_asynchronous_connection_failover_managed (CHANNEL_NAME, MANAGED_NAME, MANAGED_TYPE, 
+      CONFIGURATION)
+    values (#{channelName,jdbcType=CHAR}, #{managedName,jdbcType=CHAR}, #{managedType,jdbcType=CHAR}, 
+      #{configuration,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select CHANNEL_NAME, MANAGED_NAME, MANAGED_TYPE, CONFIGURATION
+    from replication_asynchronous_connection_failover_managed
+  </select>
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailoverManaged">
+    <id column="Channel_name" jdbcType="CHAR" property="channelName" />
+    <id column="Managed_name" jdbcType="CHAR" property="managedName" />
+    <result column="Managed_type" jdbcType="CHAR" property="managedType" />
+    <result column="Configuration" jdbcType="LONGVARCHAR" property="configuration" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from replication_asynchronous_connection_failover_managed
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and Managed_name = #{managedName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailoverManaged">
+    insert into replication_asynchronous_connection_failover_managed (Channel_name, Managed_name, Managed_type, 
+      Configuration)
+    values (#{channelName,jdbcType=CHAR}, #{managedName,jdbcType=CHAR}, #{managedType,jdbcType=CHAR}, 
+      #{configuration,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailoverManaged">
+    update replication_asynchronous_connection_failover_managed
+    set Managed_type = #{managedType,jdbcType=CHAR},
+      Configuration = #{configuration,jdbcType=LONGVARCHAR}
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and Managed_name = #{managedName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select Channel_name, Managed_name, Managed_type, Configuration
+    from replication_asynchronous_connection_failover_managed
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and Managed_name = #{managedName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select Channel_name, Managed_name, Managed_type, Configuration
+    from replication_asynchronous_connection_failover_managed
+  </select>
+</mapper>

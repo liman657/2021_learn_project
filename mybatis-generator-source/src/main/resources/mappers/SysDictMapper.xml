@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.SysDictMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.SysDict" >
+<mapper namespace="com.coderman.foodie.mapper.SysDictMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SysDict" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="type" property="type" jdbcType="VARCHAR" />
@@ -15,7 +15,7 @@
     delete from sys_dict
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.SysDict" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SysDict" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -26,7 +26,7 @@
       #{value,jdbcType=VARCHAR}, #{orderNum,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
       #{delFlag,jdbcType=TINYINT})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.SysDict" >
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SysDict" >
     update sys_dict
     set `name` = #{name,jdbcType=VARCHAR},
       `type` = #{type,jdbcType=VARCHAR},

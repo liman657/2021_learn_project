@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.RoleColumnGrantsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.RoleColumnGrants" >
+    <result column="GRANTOR" property="grantor" jdbcType="VARCHAR" />
+    <result column="GRANTOR_HOST" property="grantorHost" jdbcType="VARCHAR" />
+    <result column="GRANTEE" property="grantee" jdbcType="CHAR" />
+    <result column="GRANTEE_HOST" property="granteeHost" jdbcType="CHAR" />
+    <result column="TABLE_CATALOG" property="tableCatalog" jdbcType="VARCHAR" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="CHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="CHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="CHAR" />
+    <result column="PRIVILEGE_TYPE" property="privilegeType" jdbcType="CHAR" />
+    <result column="IS_GRANTABLE" property="isGrantable" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.RoleColumnGrants" >
+    insert into ROLE_COLUMN_GRANTS (GRANTOR, GRANTOR_HOST, GRANTEE, 
+      GRANTEE_HOST, TABLE_CATALOG, TABLE_SCHEMA, 
+      `TABLE_NAME`, `COLUMN_NAME`, PRIVILEGE_TYPE, 
+      IS_GRANTABLE)
+    values (#{grantor,jdbcType=VARCHAR}, #{grantorHost,jdbcType=VARCHAR}, #{grantee,jdbcType=CHAR}, 
+      #{granteeHost,jdbcType=CHAR}, #{tableCatalog,jdbcType=VARCHAR}, #{tableSchema,jdbcType=CHAR}, 
+      #{tableName,jdbcType=CHAR}, #{columnName,jdbcType=CHAR}, #{privilegeType,jdbcType=CHAR}, 
+      #{isGrantable,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select GRANTOR, GRANTOR_HOST, GRANTEE, GRANTEE_HOST, TABLE_CATALOG, TABLE_SCHEMA, 
+    `TABLE_NAME`, `COLUMN_NAME`, PRIVILEGE_TYPE, IS_GRANTABLE
+    from ROLE_COLUMN_GRANTS
+  </select>
+</mapper>

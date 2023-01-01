@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbBufferPageMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbBufferPage" >
+    <result column="POOL_ID" property="poolId" jdbcType="BIGINT" />
+    <result column="BLOCK_ID" property="blockId" jdbcType="BIGINT" />
+    <result column="SPACE" property="space" jdbcType="BIGINT" />
+    <result column="PAGE_NUMBER" property="pageNumber" jdbcType="BIGINT" />
+    <result column="PAGE_TYPE" property="pageType" jdbcType="VARCHAR" />
+    <result column="FLUSH_TYPE" property="flushType" jdbcType="BIGINT" />
+    <result column="FIX_COUNT" property="fixCount" jdbcType="BIGINT" />
+    <result column="IS_HASHED" property="isHashed" jdbcType="VARCHAR" />
+    <result column="NEWEST_MODIFICATION" property="newestModification" jdbcType="BIGINT" />
+    <result column="OLDEST_MODIFICATION" property="oldestModification" jdbcType="BIGINT" />
+    <result column="ACCESS_TIME" property="accessTime" jdbcType="BIGINT" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="NUMBER_RECORDS" property="numberRecords" jdbcType="BIGINT" />
+    <result column="DATA_SIZE" property="dataSize" jdbcType="BIGINT" />
+    <result column="COMPRESSED_SIZE" property="compressedSize" jdbcType="BIGINT" />
+    <result column="PAGE_STATE" property="pageState" jdbcType="VARCHAR" />
+    <result column="IO_FIX" property="ioFix" jdbcType="VARCHAR" />
+    <result column="IS_OLD" property="isOld" jdbcType="VARCHAR" />
+    <result column="FREE_PAGE_CLOCK" property="freePageClock" jdbcType="BIGINT" />
+    <result column="IS_STALE" property="isStale" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbBufferPage" >
+    insert into INNODB_BUFFER_PAGE (POOL_ID, BLOCK_ID, `SPACE`, 
+      PAGE_NUMBER, PAGE_TYPE, FLUSH_TYPE, 
+      FIX_COUNT, IS_HASHED, NEWEST_MODIFICATION, 
+      OLDEST_MODIFICATION, ACCESS_TIME, `TABLE_NAME`, 
+      INDEX_NAME, NUMBER_RECORDS, DATA_SIZE, 
+      COMPRESSED_SIZE, PAGE_STATE, IO_FIX, 
+      IS_OLD, FREE_PAGE_CLOCK, IS_STALE
+      )
+    values (#{poolId,jdbcType=BIGINT}, #{blockId,jdbcType=BIGINT}, #{space,jdbcType=BIGINT}, 
+      #{pageNumber,jdbcType=BIGINT}, #{pageType,jdbcType=VARCHAR}, #{flushType,jdbcType=BIGINT}, 
+      #{fixCount,jdbcType=BIGINT}, #{isHashed,jdbcType=VARCHAR}, #{newestModification,jdbcType=BIGINT}, 
+      #{oldestModification,jdbcType=BIGINT}, #{accessTime,jdbcType=BIGINT}, #{tableName,jdbcType=VARCHAR}, 
+      #{indexName,jdbcType=VARCHAR}, #{numberRecords,jdbcType=BIGINT}, #{dataSize,jdbcType=BIGINT}, 
+      #{compressedSize,jdbcType=BIGINT}, #{pageState,jdbcType=VARCHAR}, #{ioFix,jdbcType=VARCHAR}, 
+      #{isOld,jdbcType=VARCHAR}, #{freePageClock,jdbcType=BIGINT}, #{isStale,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select POOL_ID, BLOCK_ID, `SPACE`, PAGE_NUMBER, PAGE_TYPE, FLUSH_TYPE, FIX_COUNT, 
+    IS_HASHED, NEWEST_MODIFICATION, OLDEST_MODIFICATION, ACCESS_TIME, `TABLE_NAME`, INDEX_NAME, 
+    NUMBER_RECORDS, DATA_SIZE, COMPRESSED_SIZE, PAGE_STATE, IO_FIX, IS_OLD, FREE_PAGE_CLOCK, 
+    IS_STALE
+    from INNODB_BUFFER_PAGE
+  </select>
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SessionAccountConnectAttrsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SessionAccountConnectAttrs" >
+    <id column="PROCESSLIST_ID" property="processlistId" jdbcType="BIGINT" />
+    <id column="ATTR_NAME" property="attrName" jdbcType="VARCHAR" />
+    <result column="ATTR_VALUE" property="attrValue" jdbcType="VARCHAR" />
+    <result column="ORDINAL_POSITION" property="ordinalPosition" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from session_account_connect_attrs
+    where PROCESSLIST_ID = #{processlistId,jdbcType=BIGINT}
+      and ATTR_NAME = #{attrName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SessionAccountConnectAttrs" >
+    insert into session_account_connect_attrs (PROCESSLIST_ID, ATTR_NAME, ATTR_VALUE, 
+      ORDINAL_POSITION)
+    values (#{processlistId,jdbcType=BIGINT}, #{attrName,jdbcType=VARCHAR}, #{attrValue,jdbcType=VARCHAR}, 
+      #{ordinalPosition,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SessionAccountConnectAttrs" >
+    update session_account_connect_attrs
+    set ATTR_VALUE = #{attrValue,jdbcType=VARCHAR},
+      ORDINAL_POSITION = #{ordinalPosition,jdbcType=INTEGER}
+    where PROCESSLIST_ID = #{processlistId,jdbcType=BIGINT}
+      and ATTR_NAME = #{attrName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select PROCESSLIST_ID, ATTR_NAME, ATTR_VALUE, ORDINAL_POSITION
+    from session_account_connect_attrs
+    where PROCESSLIST_ID = #{processlistId,jdbcType=BIGINT}
+      and ATTR_NAME = #{attrName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select PROCESSLIST_ID, ATTR_NAME, ATTR_VALUE, ORDINAL_POSITION
+    from session_account_connect_attrs
+  </select>
+</mapper>

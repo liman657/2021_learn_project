@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XProcesslistMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XProcesslist" >
+    <result column="thd_id" property="thdId" jdbcType="BIGINT" />
+    <result column="conn_id" property="connId" jdbcType="BIGINT" />
+    <result column="user" property="user" jdbcType="VARCHAR" />
+    <result column="db" property="db" jdbcType="VARCHAR" />
+    <result column="command" property="command" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="BIGINT" />
+    <result column="statement_latency" property="statementLatency" jdbcType="BIGINT" />
+    <result column="progress" property="progress" jdbcType="DECIMAL" />
+    <result column="lock_latency" property="lockLatency" jdbcType="BIGINT" />
+    <result column="rows_examined" property="rowsExamined" jdbcType="BIGINT" />
+    <result column="rows_sent" property="rowsSent" jdbcType="BIGINT" />
+    <result column="rows_affected" property="rowsAffected" jdbcType="BIGINT" />
+    <result column="tmp_tables" property="tmpTables" jdbcType="BIGINT" />
+    <result column="tmp_disk_tables" property="tmpDiskTables" jdbcType="BIGINT" />
+    <result column="full_scan" property="fullScan" jdbcType="VARCHAR" />
+    <result column="last_statement_latency" property="lastStatementLatency" jdbcType="BIGINT" />
+    <result column="current_memory" property="currentMemory" jdbcType="DECIMAL" />
+    <result column="last_wait" property="lastWait" jdbcType="VARCHAR" />
+    <result column="last_wait_latency" property="lastWaitLatency" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="trx_latency" property="trxLatency" jdbcType="BIGINT" />
+    <result column="trx_state" property="trxState" jdbcType="CHAR" />
+    <result column="trx_autocommit" property="trxAutocommit" jdbcType="CHAR" />
+    <result column="pid" property="pid" jdbcType="VARCHAR" />
+    <result column="program_name" property="programName" jdbcType="VARCHAR" />
+    <result column="current_statement" property="currentStatement" jdbcType="LONGVARCHAR" />
+    <result column="last_statement" property="lastStatement" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XProcesslist" >
+    insert into x$processlist (thd_id, conn_id, `user`, 
+      db, command, `state`, 
+      `time`, statement_latency, progress, 
+      lock_latency, rows_examined, rows_sent, 
+      rows_affected, tmp_tables, tmp_disk_tables, 
+      full_scan, last_statement_latency, current_memory, 
+      last_wait, last_wait_latency, `source`, 
+      trx_latency, trx_state, trx_autocommit, 
+      pid, program_name, current_statement, 
+      last_statement)
+    values (#{thdId,jdbcType=BIGINT}, #{connId,jdbcType=BIGINT}, #{user,jdbcType=VARCHAR}, 
+      #{db,jdbcType=VARCHAR}, #{command,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
+      #{time,jdbcType=BIGINT}, #{statementLatency,jdbcType=BIGINT}, #{progress,jdbcType=DECIMAL}, 
+      #{lockLatency,jdbcType=BIGINT}, #{rowsExamined,jdbcType=BIGINT}, #{rowsSent,jdbcType=BIGINT}, 
+      #{rowsAffected,jdbcType=BIGINT}, #{tmpTables,jdbcType=BIGINT}, #{tmpDiskTables,jdbcType=BIGINT}, 
+      #{fullScan,jdbcType=VARCHAR}, #{lastStatementLatency,jdbcType=BIGINT}, #{currentMemory,jdbcType=DECIMAL}, 
+      #{lastWait,jdbcType=VARCHAR}, #{lastWaitLatency,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
+      #{trxLatency,jdbcType=BIGINT}, #{trxState,jdbcType=CHAR}, #{trxAutocommit,jdbcType=CHAR}, 
+      #{pid,jdbcType=VARCHAR}, #{programName,jdbcType=VARCHAR}, #{currentStatement,jdbcType=LONGVARCHAR}, 
+      #{lastStatement,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select thd_id, conn_id, `user`, db, command, `state`, `time`, statement_latency, 
+    progress, lock_latency, rows_examined, rows_sent, rows_affected, tmp_tables, tmp_disk_tables, 
+    full_scan, last_statement_latency, current_memory, last_wait, last_wait_latency, 
+    `source`, trx_latency, trx_state, trx_autocommit, pid, program_name, current_statement, 
+    last_statement
+    from x$processlist
+  </select>
+</mapper>

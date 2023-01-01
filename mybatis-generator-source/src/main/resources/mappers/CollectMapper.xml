@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.CollectMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.Collect" >
+<mapper namespace="com.coderman.foodie.mapper.CollectMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Collect" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="blog_id" property="blogId" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
@@ -14,7 +14,7 @@
     delete from collect
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.Collect" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Collect" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -25,7 +25,7 @@
       #{status,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.Collect" >
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Collect" >
     update collect
     set blog_id = #{blogId,jdbcType=INTEGER},
       user_id = #{userId,jdbcType=INTEGER},

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TablesPrivMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TablesPriv" >
+    <id column="Host" property="host" jdbcType="CHAR" />
+    <id column="Db" property="db" jdbcType="CHAR" />
+    <id column="User" property="user" jdbcType="CHAR" />
+    <id column="Table_name" property="tableName" jdbcType="CHAR" />
+    <result column="Grantor" property="grantor" jdbcType="VARCHAR" />
+    <result column="Timestamp" property="timestamp" jdbcType="TIMESTAMP" />
+    <result column="Table_priv" property="tablePriv" jdbcType="CHAR" />
+    <result column="Column_priv" property="columnPriv" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from tables_priv
+    where `Host` = #{host,jdbcType=CHAR}
+      and Db = #{db,jdbcType=CHAR}
+      and `User` = #{user,jdbcType=CHAR}
+      and `Table_name` = #{tableName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TablesPriv" >
+    insert into tables_priv (`Host`, Db, `User`, `Table_name`, 
+      Grantor, `Timestamp`, Table_priv, 
+      Column_priv)
+    values (#{host,jdbcType=CHAR}, #{db,jdbcType=CHAR}, #{user,jdbcType=CHAR}, #{tableName,jdbcType=CHAR}, 
+      #{grantor,jdbcType=VARCHAR}, #{timestamp,jdbcType=TIMESTAMP}, #{tablePriv,jdbcType=CHAR}, 
+      #{columnPriv,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.TablesPriv" >
+    update tables_priv
+    set Grantor = #{grantor,jdbcType=VARCHAR},
+      `Timestamp` = #{timestamp,jdbcType=TIMESTAMP},
+      Table_priv = #{tablePriv,jdbcType=CHAR},
+      Column_priv = #{columnPriv,jdbcType=CHAR}
+    where `Host` = #{host,jdbcType=CHAR}
+      and Db = #{db,jdbcType=CHAR}
+      and `User` = #{user,jdbcType=CHAR}
+      and `Table_name` = #{tableName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select `Host`, Db, `User`, `Table_name`, Grantor, `Timestamp`, Table_priv, Column_priv
+    from tables_priv
+    where `Host` = #{host,jdbcType=CHAR}
+      and Db = #{db,jdbcType=CHAR}
+      and `User` = #{user,jdbcType=CHAR}
+      and `Table_name` = #{tableName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `Host`, Db, `User`, `Table_name`, Grantor, `Timestamp`, Table_priv, Column_priv
+    from tables_priv
+  </select>
+</mapper>

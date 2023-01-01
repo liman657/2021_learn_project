@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ResourceGroupsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ResourceGroups" >
+    <result column="RESOURCE_GROUP_NAME" property="resourceGroupName" jdbcType="VARCHAR" />
+    <result column="RESOURCE_GROUP_TYPE" property="resourceGroupType" jdbcType="CHAR" />
+    <result column="RESOURCE_GROUP_ENABLED" property="resourceGroupEnabled" jdbcType="BIT" />
+    <result column="THREAD_PRIORITY" property="threadPriority" jdbcType="INTEGER" />
+    <result column="VCPU_IDS" property="vcpuIds" jdbcType="LONGVARBINARY" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ResourceGroups" >
+    insert into RESOURCE_GROUPS (RESOURCE_GROUP_NAME, RESOURCE_GROUP_TYPE, 
+      RESOURCE_GROUP_ENABLED, THREAD_PRIORITY, VCPU_IDS
+      )
+    values (#{resourceGroupName,jdbcType=VARCHAR}, #{resourceGroupType,jdbcType=CHAR}, 
+      #{resourceGroupEnabled,jdbcType=BIT}, #{threadPriority,jdbcType=INTEGER}, #{vcpuIds,jdbcType=LONGVARBINARY}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select RESOURCE_GROUP_NAME, RESOURCE_GROUP_TYPE, RESOURCE_GROUP_ENABLED, THREAD_PRIORITY, 
+    VCPU_IDS
+    from RESOURCE_GROUPS
+  </select>
+</mapper>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ItemsCommentsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ItemsComments" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="item_id" property="itemId" jdbcType="VARCHAR" />
+    <result column="item_name" property="itemName" jdbcType="VARCHAR" />
+    <result column="item_spec_id" property="itemSpecId" jdbcType="VARCHAR" />
+    <result column="sepc_name" property="sepcName" jdbcType="VARCHAR" />
+    <result column="comment_level" property="commentLevel" jdbcType="INTEGER" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="created_time" property="createdTime" jdbcType="TIMESTAMP" />
+    <result column="updated_time" property="updatedTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from items_comments
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ItemsComments" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into items_comments (user_id, item_id, item_name, 
+      item_spec_id, sepc_name, comment_level, 
+      content, created_time, updated_time
+      )
+    values (#{userId,jdbcType=VARCHAR}, #{itemId,jdbcType=VARCHAR}, #{itemName,jdbcType=VARCHAR}, 
+      #{itemSpecId,jdbcType=VARCHAR}, #{sepcName,jdbcType=VARCHAR}, #{commentLevel,jdbcType=INTEGER}, 
+      #{content,jdbcType=VARCHAR}, #{createdTime,jdbcType=TIMESTAMP}, #{updatedTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ItemsComments" >
+    update items_comments
+    set user_id = #{userId,jdbcType=VARCHAR},
+      item_id = #{itemId,jdbcType=VARCHAR},
+      item_name = #{itemName,jdbcType=VARCHAR},
+      item_spec_id = #{itemSpecId,jdbcType=VARCHAR},
+      sepc_name = #{sepcName,jdbcType=VARCHAR},
+      comment_level = #{commentLevel,jdbcType=INTEGER},
+      content = #{content,jdbcType=VARCHAR},
+      created_time = #{createdTime,jdbcType=TIMESTAMP},
+      updated_time = #{updatedTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, user_id, item_id, item_name, item_spec_id, sepc_name, comment_level, content, 
+    created_time, updated_time
+    from items_comments
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, user_id, item_id, item_name, item_spec_id, sepc_name, comment_level, content, 
+    created_time, updated_time
+    from items_comments
+  </select>
+</mapper>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ServersMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Servers" >
+    <id column="Server_name" property="serverName" jdbcType="CHAR" />
+    <result column="Host" property="host" jdbcType="CHAR" />
+    <result column="Db" property="db" jdbcType="CHAR" />
+    <result column="Username" property="username" jdbcType="CHAR" />
+    <result column="Password" property="password" jdbcType="CHAR" />
+    <result column="Port" property="port" jdbcType="INTEGER" />
+    <result column="Socket" property="socket" jdbcType="CHAR" />
+    <result column="Wrapper" property="wrapper" jdbcType="CHAR" />
+    <result column="Owner" property="owner" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from servers
+    where `Server_name` = #{serverName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Servers" >
+    insert into servers (`Server_name`, `Host`, Db, 
+      Username, `Password`, Port, 
+      Socket, Wrapper, `Owner`)
+    values (#{serverName,jdbcType=CHAR}, #{host,jdbcType=CHAR}, #{db,jdbcType=CHAR}, 
+      #{username,jdbcType=CHAR}, #{password,jdbcType=CHAR}, #{port,jdbcType=INTEGER}, 
+      #{socket,jdbcType=CHAR}, #{wrapper,jdbcType=CHAR}, #{owner,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Servers" >
+    update servers
+    set `Host` = #{host,jdbcType=CHAR},
+      Db = #{db,jdbcType=CHAR},
+      Username = #{username,jdbcType=CHAR},
+      `Password` = #{password,jdbcType=CHAR},
+      Port = #{port,jdbcType=INTEGER},
+      Socket = #{socket,jdbcType=CHAR},
+      Wrapper = #{wrapper,jdbcType=CHAR},
+      `Owner` = #{owner,jdbcType=CHAR}
+    where `Server_name` = #{serverName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select `Server_name`, `Host`, Db, Username, `Password`, Port, Socket, Wrapper, `Owner`
+    from servers
+    where `Server_name` = #{serverName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `Server_name`, `Host`, Db, Username, `Password`, Port, Socket, Wrapper, `Owner`
+    from servers
+  </select>
+</mapper>

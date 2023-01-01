@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TimeZoneMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TimeZone" >
+    <id column="Time_zone_id" property="timeZoneId" jdbcType="INTEGER" />
+    <result column="Use_leap_seconds" property="useLeapSeconds" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from time_zone
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TimeZone" >
+    insert into time_zone (Time_zone_id, Use_leap_seconds)
+    values (#{timeZoneId,jdbcType=INTEGER}, #{useLeapSeconds,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.TimeZone" >
+    update time_zone
+    set Use_leap_seconds = #{useLeapSeconds,jdbcType=CHAR}
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select Time_zone_id, Use_leap_seconds
+    from time_zone
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select Time_zone_id, Use_leap_seconds
+    from time_zone
+  </select>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.CondInstancesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.CondInstances" >
+    <id column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from cond_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.CondInstances" >
+    insert into cond_instances (OBJECT_INSTANCE_BEGIN, `NAME`)
+    values (#{objectInstanceBegin,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.CondInstances" >
+    update cond_instances
+    set `NAME` = #{name,jdbcType=VARCHAR}
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select OBJECT_INSTANCE_BEGIN, `NAME`
+    from cond_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_INSTANCE_BEGIN, `NAME`
+    from cond_instances
+  </select>
+</mapper>

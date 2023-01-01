@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.CarouselMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Carousel" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="image_url" property="imageUrl" jdbcType="VARCHAR" />
+    <result column="background_color" property="backgroundColor" jdbcType="VARCHAR" />
+    <result column="item_id" property="itemId" jdbcType="VARCHAR" />
+    <result column="cat_id" property="catId" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
+    <result column="is_show" property="isShow" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from carousel
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Carousel" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into carousel (image_url, background_color, item_id, 
+      cat_id, `type`, sort, 
+      is_show, create_time, update_time
+      )
+    values (#{imageUrl,jdbcType=VARCHAR}, #{backgroundColor,jdbcType=VARCHAR}, #{itemId,jdbcType=VARCHAR}, 
+      #{catId,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, 
+      #{isShow,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Carousel" >
+    update carousel
+    set image_url = #{imageUrl,jdbcType=VARCHAR},
+      background_color = #{backgroundColor,jdbcType=VARCHAR},
+      item_id = #{itemId,jdbcType=VARCHAR},
+      cat_id = #{catId,jdbcType=VARCHAR},
+      `type` = #{type,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      is_show = #{isShow,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, image_url, background_color, item_id, cat_id, `type`, sort, is_show, create_time, 
+    update_time
+    from carousel
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, image_url, background_color, item_id, cat_id, `type`, sort, is_show, create_time, 
+    update_time
+    from carousel
+  </select>
+</mapper>

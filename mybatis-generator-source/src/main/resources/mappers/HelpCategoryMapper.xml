@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.HelpCategoryMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.HelpCategory" >
+    <id column="help_category_id" property="helpCategoryId" jdbcType="SMALLINT" />
+    <result column="name" property="name" jdbcType="CHAR" />
+    <result column="parent_category_id" property="parentCategoryId" jdbcType="SMALLINT" />
+    <result column="url" property="url" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short" >
+    delete from help_category
+    where help_category_id = #{helpCategoryId,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.HelpCategory" >
+    insert into help_category (help_category_id, `name`, parent_category_id, 
+      url)
+    values (#{helpCategoryId,jdbcType=SMALLINT}, #{name,jdbcType=CHAR}, #{parentCategoryId,jdbcType=SMALLINT}, 
+      #{url,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.HelpCategory" >
+    update help_category
+    set `name` = #{name,jdbcType=CHAR},
+      parent_category_id = #{parentCategoryId,jdbcType=SMALLINT},
+      url = #{url,jdbcType=LONGVARCHAR}
+    where help_category_id = #{helpCategoryId,jdbcType=SMALLINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Short" >
+    select help_category_id, `name`, parent_category_id, url
+    from help_category
+    where help_category_id = #{helpCategoryId,jdbcType=SMALLINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select help_category_id, `name`, parent_category_id, url
+    from help_category
+  </select>
+</mapper>

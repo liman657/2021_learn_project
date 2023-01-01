@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.MetadataLocksMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.MetadataLocks" >
+    <id column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="LOCK_TYPE" property="lockType" jdbcType="VARCHAR" />
+    <result column="LOCK_DURATION" property="lockDuration" jdbcType="VARCHAR" />
+    <result column="LOCK_STATUS" property="lockStatus" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="OWNER_THREAD_ID" property="ownerThreadId" jdbcType="BIGINT" />
+    <result column="OWNER_EVENT_ID" property="ownerEventId" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from metadata_locks
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.MetadataLocks" >
+    insert into metadata_locks (OBJECT_INSTANCE_BEGIN, OBJECT_TYPE, OBJECT_SCHEMA, 
+      OBJECT_NAME, `COLUMN_NAME`, LOCK_TYPE, 
+      LOCK_DURATION, LOCK_STATUS, `SOURCE`, 
+      OWNER_THREAD_ID, OWNER_EVENT_ID)
+    values (#{objectInstanceBegin,jdbcType=BIGINT}, #{objectType,jdbcType=VARCHAR}, #{objectSchema,jdbcType=VARCHAR}, 
+      #{objectName,jdbcType=VARCHAR}, #{columnName,jdbcType=VARCHAR}, #{lockType,jdbcType=VARCHAR}, 
+      #{lockDuration,jdbcType=VARCHAR}, #{lockStatus,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
+      #{ownerThreadId,jdbcType=BIGINT}, #{ownerEventId,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.MetadataLocks" >
+    update metadata_locks
+    set OBJECT_TYPE = #{objectType,jdbcType=VARCHAR},
+      OBJECT_SCHEMA = #{objectSchema,jdbcType=VARCHAR},
+      OBJECT_NAME = #{objectName,jdbcType=VARCHAR},
+      `COLUMN_NAME` = #{columnName,jdbcType=VARCHAR},
+      LOCK_TYPE = #{lockType,jdbcType=VARCHAR},
+      LOCK_DURATION = #{lockDuration,jdbcType=VARCHAR},
+      LOCK_STATUS = #{lockStatus,jdbcType=VARCHAR},
+      `SOURCE` = #{source,jdbcType=VARCHAR},
+      OWNER_THREAD_ID = #{ownerThreadId,jdbcType=BIGINT},
+      OWNER_EVENT_ID = #{ownerEventId,jdbcType=BIGINT}
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select OBJECT_INSTANCE_BEGIN, OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, `COLUMN_NAME`, 
+    LOCK_TYPE, LOCK_DURATION, LOCK_STATUS, `SOURCE`, OWNER_THREAD_ID, OWNER_EVENT_ID
+    from metadata_locks
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_INSTANCE_BEGIN, OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, `COLUMN_NAME`, 
+    LOCK_TYPE, LOCK_DURATION, LOCK_STATUS, `SOURCE`, OWNER_THREAD_ID, OWNER_EVENT_ID
+    from metadata_locks
+  </select>
+</mapper>

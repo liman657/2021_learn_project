@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.MemorySummaryByThreadByEventNameMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.MemorySummaryByThreadByEventName" >
+    <id column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <id column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="COUNT_ALLOC" property="countAlloc" jdbcType="BIGINT" />
+    <result column="COUNT_FREE" property="countFree" jdbcType="BIGINT" />
+    <result column="SUM_NUMBER_OF_BYTES_ALLOC" property="sumNumberOfBytesAlloc" jdbcType="BIGINT" />
+    <result column="SUM_NUMBER_OF_BYTES_FREE" property="sumNumberOfBytesFree" jdbcType="BIGINT" />
+    <result column="LOW_COUNT_USED" property="lowCountUsed" jdbcType="BIGINT" />
+    <result column="CURRENT_COUNT_USED" property="currentCountUsed" jdbcType="BIGINT" />
+    <result column="HIGH_COUNT_USED" property="highCountUsed" jdbcType="BIGINT" />
+    <result column="LOW_NUMBER_OF_BYTES_USED" property="lowNumberOfBytesUsed" jdbcType="BIGINT" />
+    <result column="CURRENT_NUMBER_OF_BYTES_USED" property="currentNumberOfBytesUsed" jdbcType="BIGINT" />
+    <result column="HIGH_NUMBER_OF_BYTES_USED" property="highNumberOfBytesUsed" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from memory_summary_by_thread_by_event_name
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.MemorySummaryByThreadByEventName" >
+    insert into memory_summary_by_thread_by_event_name (THREAD_ID, EVENT_NAME, COUNT_ALLOC, 
+      COUNT_FREE, SUM_NUMBER_OF_BYTES_ALLOC, SUM_NUMBER_OF_BYTES_FREE, 
+      LOW_COUNT_USED, CURRENT_COUNT_USED, HIGH_COUNT_USED, 
+      LOW_NUMBER_OF_BYTES_USED, CURRENT_NUMBER_OF_BYTES_USED, 
+      HIGH_NUMBER_OF_BYTES_USED)
+    values (#{threadId,jdbcType=BIGINT}, #{eventName,jdbcType=VARCHAR}, #{countAlloc,jdbcType=BIGINT}, 
+      #{countFree,jdbcType=BIGINT}, #{sumNumberOfBytesAlloc,jdbcType=BIGINT}, #{sumNumberOfBytesFree,jdbcType=BIGINT}, 
+      #{lowCountUsed,jdbcType=BIGINT}, #{currentCountUsed,jdbcType=BIGINT}, #{highCountUsed,jdbcType=BIGINT}, 
+      #{lowNumberOfBytesUsed,jdbcType=BIGINT}, #{currentNumberOfBytesUsed,jdbcType=BIGINT}, 
+      #{highNumberOfBytesUsed,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.MemorySummaryByThreadByEventName" >
+    update memory_summary_by_thread_by_event_name
+    set COUNT_ALLOC = #{countAlloc,jdbcType=BIGINT},
+      COUNT_FREE = #{countFree,jdbcType=BIGINT},
+      SUM_NUMBER_OF_BYTES_ALLOC = #{sumNumberOfBytesAlloc,jdbcType=BIGINT},
+      SUM_NUMBER_OF_BYTES_FREE = #{sumNumberOfBytesFree,jdbcType=BIGINT},
+      LOW_COUNT_USED = #{lowCountUsed,jdbcType=BIGINT},
+      CURRENT_COUNT_USED = #{currentCountUsed,jdbcType=BIGINT},
+      HIGH_COUNT_USED = #{highCountUsed,jdbcType=BIGINT},
+      LOW_NUMBER_OF_BYTES_USED = #{lowNumberOfBytesUsed,jdbcType=BIGINT},
+      CURRENT_NUMBER_OF_BYTES_USED = #{currentNumberOfBytesUsed,jdbcType=BIGINT},
+      HIGH_NUMBER_OF_BYTES_USED = #{highNumberOfBytesUsed,jdbcType=BIGINT}
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select THREAD_ID, EVENT_NAME, COUNT_ALLOC, COUNT_FREE, SUM_NUMBER_OF_BYTES_ALLOC, 
+    SUM_NUMBER_OF_BYTES_FREE, LOW_COUNT_USED, CURRENT_COUNT_USED, HIGH_COUNT_USED, LOW_NUMBER_OF_BYTES_USED, 
+    CURRENT_NUMBER_OF_BYTES_USED, HIGH_NUMBER_OF_BYTES_USED
+    from memory_summary_by_thread_by_event_name
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select THREAD_ID, EVENT_NAME, COUNT_ALLOC, COUNT_FREE, SUM_NUMBER_OF_BYTES_ALLOC, 
+    SUM_NUMBER_OF_BYTES_FREE, LOW_COUNT_USED, CURRENT_COUNT_USED, HIGH_COUNT_USED, LOW_NUMBER_OF_BYTES_USED, 
+    CURRENT_NUMBER_OF_BYTES_USED, HIGH_NUMBER_OF_BYTES_USED
+    from memory_summary_by_thread_by_event_name
+  </select>
+</mapper>

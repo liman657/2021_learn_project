@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ImcSelectcourseMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ImcSelectcourse" >
+    <id column="select_id" property="selectId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="select_time" property="selectTime" jdbcType="TIMESTAMP" />
+    <result column="study_time" property="studyTime" jdbcType="TIME" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from imc_selectcourse
+    where select_id = #{selectId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ImcSelectcourse" >
+    insert into imc_selectcourse (select_id, user_id, course_id, 
+      select_time, study_time)
+    values (#{selectId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{courseId,jdbcType=INTEGER}, 
+      #{selectTime,jdbcType=TIMESTAMP}, #{studyTime,jdbcType=TIME})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ImcSelectcourse" >
+    update imc_selectcourse
+    set user_id = #{userId,jdbcType=INTEGER},
+      course_id = #{courseId,jdbcType=INTEGER},
+      select_time = #{selectTime,jdbcType=TIMESTAMP},
+      study_time = #{studyTime,jdbcType=TIME}
+    where select_id = #{selectId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select select_id, user_id, course_id, select_time, study_time
+    from imc_selectcourse
+    where select_id = #{selectId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select select_id, user_id, course_id, select_time, study_time
+    from imc_selectcourse
+  </select>
+</mapper>

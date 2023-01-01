@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ViewsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Views" >
+    <result column="TABLE_CATALOG" property="tableCatalog" jdbcType="VARCHAR" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="CHECK_OPTION" property="checkOption" jdbcType="CHAR" />
+    <result column="IS_UPDATABLE" property="isUpdatable" jdbcType="CHAR" />
+    <result column="DEFINER" property="definer" jdbcType="VARCHAR" />
+    <result column="SECURITY_TYPE" property="securityType" jdbcType="VARCHAR" />
+    <result column="CHARACTER_SET_CLIENT" property="characterSetClient" jdbcType="VARCHAR" />
+    <result column="COLLATION_CONNECTION" property="collationConnection" jdbcType="VARCHAR" />
+    <result column="VIEW_DEFINITION" property="viewDefinition" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Views" >
+    insert into VIEWS (TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, 
+      CHECK_OPTION, IS_UPDATABLE, `DEFINER`, 
+      SECURITY_TYPE, CHARACTER_SET_CLIENT, COLLATION_CONNECTION, 
+      VIEW_DEFINITION)
+    values (#{tableCatalog,jdbcType=VARCHAR}, #{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, 
+      #{checkOption,jdbcType=CHAR}, #{isUpdatable,jdbcType=CHAR}, #{definer,jdbcType=VARCHAR}, 
+      #{securityType,jdbcType=VARCHAR}, #{characterSetClient,jdbcType=VARCHAR}, #{collationConnection,jdbcType=VARCHAR}, 
+      #{viewDefinition,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, CHECK_OPTION, IS_UPDATABLE, `DEFINER`, 
+    SECURITY_TYPE, CHARACTER_SET_CLIENT, COLLATION_CONNECTION, VIEW_DEFINITION
+    from VIEWS
+  </select>
+</mapper>

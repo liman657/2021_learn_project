@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XUserSummaryByFileIoTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XUserSummaryByFileIoType" >
+    <result column="user" property="user" jdbcType="VARCHAR" />
+    <result column="event_name" property="eventName" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="BIGINT" />
+    <result column="latency" property="latency" jdbcType="BIGINT" />
+    <result column="max_latency" property="maxLatency" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XUserSummaryByFileIoType" >
+    insert into x$user_summary_by_file_io_type (`user`, event_name, total, 
+      latency, max_latency)
+    values (#{user,jdbcType=VARCHAR}, #{eventName,jdbcType=VARCHAR}, #{total,jdbcType=BIGINT}, 
+      #{latency,jdbcType=BIGINT}, #{maxLatency,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `user`, event_name, total, latency, max_latency
+    from x$user_summary_by_file_io_type
+  </select>
+</mapper>

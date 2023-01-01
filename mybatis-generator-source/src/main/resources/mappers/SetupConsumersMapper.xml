@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SetupConsumersMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SetupConsumers" >
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from setup_consumers
+    where `NAME` = #{name,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SetupConsumers" >
+    insert into setup_consumers (`NAME`, ENABLED)
+    values (#{name,jdbcType=VARCHAR}, #{enabled,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SetupConsumers" >
+    update setup_consumers
+    set ENABLED = #{enabled,jdbcType=CHAR}
+    where `NAME` = #{name,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select `NAME`, ENABLED
+    from setup_consumers
+    where `NAME` = #{name,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `NAME`, ENABLED
+    from setup_consumers
+  </select>
+</mapper>

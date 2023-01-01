@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ImcNoteMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ImcNote" >
+    <id column="note_id" property="noteId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="chapter_id" property="chapterId" jdbcType="INTEGER" />
+    <result column="sub_id" property="subId" jdbcType="INTEGER" />
+    <result column="note_title" property="noteTitle" jdbcType="VARCHAR" />
+    <result column="add_time" property="addTime" jdbcType="TIMESTAMP" />
+    <result column="note_content" property="noteContent" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from imc_note
+    where note_id = #{noteId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ImcNote" >
+    insert into imc_note (note_id, user_id, course_id, 
+      chapter_id, sub_id, note_title, 
+      add_time, note_content)
+    values (#{noteId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{courseId,jdbcType=INTEGER}, 
+      #{chapterId,jdbcType=INTEGER}, #{subId,jdbcType=INTEGER}, #{noteTitle,jdbcType=VARCHAR}, 
+      #{addTime,jdbcType=TIMESTAMP}, #{noteContent,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ImcNote" >
+    update imc_note
+    set user_id = #{userId,jdbcType=INTEGER},
+      course_id = #{courseId,jdbcType=INTEGER},
+      chapter_id = #{chapterId,jdbcType=INTEGER},
+      sub_id = #{subId,jdbcType=INTEGER},
+      note_title = #{noteTitle,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=TIMESTAMP},
+      note_content = #{noteContent,jdbcType=LONGVARCHAR}
+    where note_id = #{noteId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select note_id, user_id, course_id, chapter_id, sub_id, note_title, add_time, note_content
+    from imc_note
+    where note_id = #{noteId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select note_id, user_id, course_id, chapter_id, sub_id, note_title, add_time, note_content
+    from imc_note
+  </select>
+</mapper>

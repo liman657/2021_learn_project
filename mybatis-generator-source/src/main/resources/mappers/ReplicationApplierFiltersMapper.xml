@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationApplierFiltersMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationApplierFilters" >
+    <result column="CHANNEL_NAME" property="channelName" jdbcType="CHAR" />
+    <result column="FILTER_NAME" property="filterName" jdbcType="CHAR" />
+    <result column="CONFIGURED_BY" property="configuredBy" jdbcType="CHAR" />
+    <result column="ACTIVE_SINCE" property="activeSince" jdbcType="TIMESTAMP" />
+    <result column="COUNTER" property="counter" jdbcType="BIGINT" />
+    <result column="FILTER_RULE" property="filterRule" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationApplierFilters" >
+    insert into replication_applier_filters (CHANNEL_NAME, FILTER_NAME, CONFIGURED_BY, 
+      ACTIVE_SINCE, COUNTER, FILTER_RULE
+      )
+    values (#{channelName,jdbcType=CHAR}, #{filterName,jdbcType=CHAR}, #{configuredBy,jdbcType=CHAR}, 
+      #{activeSince,jdbcType=TIMESTAMP}, #{counter,jdbcType=BIGINT}, #{filterRule,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CHANNEL_NAME, FILTER_NAME, CONFIGURED_BY, ACTIVE_SINCE, COUNTER, FILTER_RULE
+    from replication_applier_filters
+  </select>
+</mapper>

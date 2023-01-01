@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.BinaryLogTransactionCompressionStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.BinaryLogTransactionCompressionStats" >
+    <result column="LOG_TYPE" property="logType" jdbcType="CHAR" />
+    <result column="COMPRESSION_TYPE" property="compressionType" jdbcType="VARCHAR" />
+    <result column="TRANSACTION_COUNTER" property="transactionCounter" jdbcType="BIGINT" />
+    <result column="COMPRESSED_BYTES_COUNTER" property="compressedBytesCounter" jdbcType="BIGINT" />
+    <result column="UNCOMPRESSED_BYTES_COUNTER" property="uncompressedBytesCounter" jdbcType="BIGINT" />
+    <result column="COMPRESSION_PERCENTAGE" property="compressionPercentage" jdbcType="SMALLINT" />
+    <result column="FIRST_TRANSACTION_COMPRESSED_BYTES" property="firstTransactionCompressedBytes" jdbcType="BIGINT" />
+    <result column="FIRST_TRANSACTION_UNCOMPRESSED_BYTES" property="firstTransactionUncompressedBytes" jdbcType="BIGINT" />
+    <result column="FIRST_TRANSACTION_TIMESTAMP" property="firstTransactionTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_TRANSACTION_COMPRESSED_BYTES" property="lastTransactionCompressedBytes" jdbcType="BIGINT" />
+    <result column="LAST_TRANSACTION_UNCOMPRESSED_BYTES" property="lastTransactionUncompressedBytes" jdbcType="BIGINT" />
+    <result column="LAST_TRANSACTION_TIMESTAMP" property="lastTransactionTimestamp" jdbcType="TIMESTAMP" />
+    <result column="FIRST_TRANSACTION_ID" property="firstTransactionId" jdbcType="LONGVARCHAR" />
+    <result column="LAST_TRANSACTION_ID" property="lastTransactionId" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.BinaryLogTransactionCompressionStats" >
+    insert into binary_log_transaction_compression_stats (LOG_TYPE, COMPRESSION_TYPE, TRANSACTION_COUNTER, 
+      COMPRESSED_BYTES_COUNTER, UNCOMPRESSED_BYTES_COUNTER, 
+      COMPRESSION_PERCENTAGE, FIRST_TRANSACTION_COMPRESSED_BYTES, 
+      FIRST_TRANSACTION_UNCOMPRESSED_BYTES, FIRST_TRANSACTION_TIMESTAMP, 
+      LAST_TRANSACTION_COMPRESSED_BYTES, LAST_TRANSACTION_UNCOMPRESSED_BYTES, 
+      LAST_TRANSACTION_TIMESTAMP, FIRST_TRANSACTION_ID, 
+      LAST_TRANSACTION_ID)
+    values (#{logType,jdbcType=CHAR}, #{compressionType,jdbcType=VARCHAR}, #{transactionCounter,jdbcType=BIGINT}, 
+      #{compressedBytesCounter,jdbcType=BIGINT}, #{uncompressedBytesCounter,jdbcType=BIGINT}, 
+      #{compressionPercentage,jdbcType=SMALLINT}, #{firstTransactionCompressedBytes,jdbcType=BIGINT}, 
+      #{firstTransactionUncompressedBytes,jdbcType=BIGINT}, #{firstTransactionTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastTransactionCompressedBytes,jdbcType=BIGINT}, #{lastTransactionUncompressedBytes,jdbcType=BIGINT}, 
+      #{lastTransactionTimestamp,jdbcType=TIMESTAMP}, #{firstTransactionId,jdbcType=LONGVARCHAR}, 
+      #{lastTransactionId,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select LOG_TYPE, COMPRESSION_TYPE, TRANSACTION_COUNTER, COMPRESSED_BYTES_COUNTER, 
+    UNCOMPRESSED_BYTES_COUNTER, COMPRESSION_PERCENTAGE, FIRST_TRANSACTION_COMPRESSED_BYTES, 
+    FIRST_TRANSACTION_UNCOMPRESSED_BYTES, FIRST_TRANSACTION_TIMESTAMP, LAST_TRANSACTION_COMPRESSED_BYTES, 
+    LAST_TRANSACTION_UNCOMPRESSED_BYTES, LAST_TRANSACTION_TIMESTAMP, FIRST_TRANSACTION_ID, 
+    LAST_TRANSACTION_ID
+    from binary_log_transaction_compression_stats
+  </select>
+</mapper>

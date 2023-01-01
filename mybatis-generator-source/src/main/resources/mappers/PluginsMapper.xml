@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.PluginsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Plugins" >
+    <result column="PLUGIN_NAME" property="pluginName" jdbcType="VARCHAR" />
+    <result column="PLUGIN_VERSION" property="pluginVersion" jdbcType="VARCHAR" />
+    <result column="PLUGIN_STATUS" property="pluginStatus" jdbcType="VARCHAR" />
+    <result column="PLUGIN_TYPE" property="pluginType" jdbcType="VARCHAR" />
+    <result column="PLUGIN_TYPE_VERSION" property="pluginTypeVersion" jdbcType="VARCHAR" />
+    <result column="PLUGIN_LIBRARY" property="pluginLibrary" jdbcType="VARCHAR" />
+    <result column="PLUGIN_LIBRARY_VERSION" property="pluginLibraryVersion" jdbcType="VARCHAR" />
+    <result column="PLUGIN_AUTHOR" property="pluginAuthor" jdbcType="VARCHAR" />
+    <result column="PLUGIN_DESCRIPTION" property="pluginDescription" jdbcType="VARCHAR" />
+    <result column="PLUGIN_LICENSE" property="pluginLicense" jdbcType="VARCHAR" />
+    <result column="LOAD_OPTION" property="loadOption" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Plugins" >
+    insert into PLUGINS (PLUGIN_NAME, PLUGIN_VERSION, PLUGIN_STATUS, 
+      PLUGIN_TYPE, PLUGIN_TYPE_VERSION, PLUGIN_LIBRARY, 
+      PLUGIN_LIBRARY_VERSION, PLUGIN_AUTHOR, PLUGIN_DESCRIPTION, 
+      PLUGIN_LICENSE, LOAD_OPTION)
+    values (#{pluginName,jdbcType=VARCHAR}, #{pluginVersion,jdbcType=VARCHAR}, #{pluginStatus,jdbcType=VARCHAR}, 
+      #{pluginType,jdbcType=VARCHAR}, #{pluginTypeVersion,jdbcType=VARCHAR}, #{pluginLibrary,jdbcType=VARCHAR}, 
+      #{pluginLibraryVersion,jdbcType=VARCHAR}, #{pluginAuthor,jdbcType=VARCHAR}, #{pluginDescription,jdbcType=VARCHAR}, 
+      #{pluginLicense,jdbcType=VARCHAR}, #{loadOption,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select PLUGIN_NAME, PLUGIN_VERSION, PLUGIN_STATUS, PLUGIN_TYPE, PLUGIN_TYPE_VERSION, 
+    PLUGIN_LIBRARY, PLUGIN_LIBRARY_VERSION, PLUGIN_AUTHOR, PLUGIN_DESCRIPTION, PLUGIN_LICENSE, 
+    LOAD_OPTION
+    from PLUGINS
+  </select>
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.GlobalGrantsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.GlobalGrants" >
+    <id column="USER" property="user" jdbcType="CHAR" />
+    <id column="HOST" property="host" jdbcType="CHAR" />
+    <id column="PRIV" property="priv" jdbcType="CHAR" />
+    <result column="WITH_GRANT_OPTION" property="withGrantOption" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from global_grants
+    where `USER` = #{user,jdbcType=CHAR}
+      and `HOST` = #{host,jdbcType=CHAR}
+      and PRIV = #{priv,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.GlobalGrants" >
+    insert into global_grants (`USER`, `HOST`, PRIV, WITH_GRANT_OPTION
+      )
+    values (#{user,jdbcType=CHAR}, #{host,jdbcType=CHAR}, #{priv,jdbcType=CHAR}, #{withGrantOption,jdbcType=CHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.GlobalGrants" >
+    update global_grants
+    set WITH_GRANT_OPTION = #{withGrantOption,jdbcType=CHAR}
+    where `USER` = #{user,jdbcType=CHAR}
+      and `HOST` = #{host,jdbcType=CHAR}
+      and PRIV = #{priv,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select `USER`, `HOST`, PRIV, WITH_GRANT_OPTION
+    from global_grants
+    where `USER` = #{user,jdbcType=CHAR}
+      and `HOST` = #{host,jdbcType=CHAR}
+      and PRIV = #{priv,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `USER`, `HOST`, PRIV, WITH_GRANT_OPTION
+    from global_grants
+  </select>
+</mapper>

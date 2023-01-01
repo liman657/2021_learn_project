@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.GtidExecutedMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.GtidExecuted" >
+    <id column="source_uuid" property="sourceUuid" jdbcType="CHAR" />
+    <id column="interval_start" property="intervalStart" jdbcType="BIGINT" />
+    <result column="interval_end" property="intervalEnd" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from gtid_executed
+    where source_uuid = #{sourceUuid,jdbcType=CHAR}
+      and interval_start = #{intervalStart,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.GtidExecuted" >
+    insert into gtid_executed (source_uuid, interval_start, interval_end
+      )
+    values (#{sourceUuid,jdbcType=CHAR}, #{intervalStart,jdbcType=BIGINT}, #{intervalEnd,jdbcType=BIGINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.GtidExecuted" >
+    update gtid_executed
+    set interval_end = #{intervalEnd,jdbcType=BIGINT}
+    where source_uuid = #{sourceUuid,jdbcType=CHAR}
+      and interval_start = #{intervalStart,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select source_uuid, interval_start, interval_end
+    from gtid_executed
+    where source_uuid = #{sourceUuid,jdbcType=CHAR}
+      and interval_start = #{intervalStart,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select source_uuid, interval_start, interval_end
+    from gtid_executed
+  </select>
+</mapper>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationApplierStatusByWorkerMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationApplierStatusByWorker" >
+    <id column="CHANNEL_NAME" property="channelName" jdbcType="CHAR" />
+    <id column="WORKER_ID" property="workerId" jdbcType="BIGINT" />
+    <result column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <result column="SERVICE_STATE" property="serviceState" jdbcType="CHAR" />
+    <result column="LAST_ERROR_NUMBER" property="lastErrorNumber" jdbcType="INTEGER" />
+    <result column="LAST_ERROR_MESSAGE" property="lastErrorMessage" jdbcType="VARCHAR" />
+    <result column="LAST_ERROR_TIMESTAMP" property="lastErrorTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_APPLIED_TRANSACTION" property="lastAppliedTransaction" jdbcType="CHAR" />
+    <result column="LAST_APPLIED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP" property="lastAppliedTransactionOriginalCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_APPLIED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP" property="lastAppliedTransactionImmediateCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_APPLIED_TRANSACTION_START_APPLY_TIMESTAMP" property="lastAppliedTransactionStartApplyTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_APPLIED_TRANSACTION_END_APPLY_TIMESTAMP" property="lastAppliedTransactionEndApplyTimestamp" jdbcType="TIMESTAMP" />
+    <result column="APPLYING_TRANSACTION" property="applyingTransaction" jdbcType="CHAR" />
+    <result column="APPLYING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP" property="applyingTransactionOriginalCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="APPLYING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP" property="applyingTransactionImmediateCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="APPLYING_TRANSACTION_START_APPLY_TIMESTAMP" property="applyingTransactionStartApplyTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_APPLIED_TRANSACTION_RETRIES_COUNT" property="lastAppliedTransactionRetriesCount" jdbcType="BIGINT" />
+    <result column="LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER" property="lastAppliedTransactionLastTransientErrorNumber" jdbcType="INTEGER" />
+    <result column="LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE" property="lastAppliedTransactionLastTransientErrorMessage" jdbcType="VARCHAR" />
+    <result column="LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP" property="lastAppliedTransactionLastTransientErrorTimestamp" jdbcType="TIMESTAMP" />
+    <result column="APPLYING_TRANSACTION_RETRIES_COUNT" property="applyingTransactionRetriesCount" jdbcType="BIGINT" />
+    <result column="APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER" property="applyingTransactionLastTransientErrorNumber" jdbcType="INTEGER" />
+    <result column="APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE" property="applyingTransactionLastTransientErrorMessage" jdbcType="VARCHAR" />
+    <result column="APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP" property="applyingTransactionLastTransientErrorTimestamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from replication_applier_status_by_worker
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+      and WORKER_ID = #{workerId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationApplierStatusByWorker" >
+    insert into replication_applier_status_by_worker (CHANNEL_NAME, WORKER_ID, THREAD_ID, 
+      SERVICE_STATE, LAST_ERROR_NUMBER, LAST_ERROR_MESSAGE, 
+      LAST_ERROR_TIMESTAMP, LAST_APPLIED_TRANSACTION, 
+      LAST_APPLIED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, LAST_APPLIED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, 
+      LAST_APPLIED_TRANSACTION_START_APPLY_TIMESTAMP, LAST_APPLIED_TRANSACTION_END_APPLY_TIMESTAMP, 
+      APPLYING_TRANSACTION, APPLYING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+      APPLYING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, APPLYING_TRANSACTION_START_APPLY_TIMESTAMP, 
+      LAST_APPLIED_TRANSACTION_RETRIES_COUNT, LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER, 
+      LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE, LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP, 
+      APPLYING_TRANSACTION_RETRIES_COUNT, APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER, 
+      APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE, APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP
+      )
+    values (#{channelName,jdbcType=CHAR}, #{workerId,jdbcType=BIGINT}, #{threadId,jdbcType=BIGINT}, 
+      #{serviceState,jdbcType=CHAR}, #{lastErrorNumber,jdbcType=INTEGER}, #{lastErrorMessage,jdbcType=VARCHAR}, 
+      #{lastErrorTimestamp,jdbcType=TIMESTAMP}, #{lastAppliedTransaction,jdbcType=CHAR}, 
+      #{lastAppliedTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP}, #{lastAppliedTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastAppliedTransactionStartApplyTimestamp,jdbcType=TIMESTAMP}, #{lastAppliedTransactionEndApplyTimestamp,jdbcType=TIMESTAMP}, 
+      #{applyingTransaction,jdbcType=CHAR}, #{applyingTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP}, 
+      #{applyingTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP}, #{applyingTransactionStartApplyTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastAppliedTransactionRetriesCount,jdbcType=BIGINT}, #{lastAppliedTransactionLastTransientErrorNumber,jdbcType=INTEGER}, 
+      #{lastAppliedTransactionLastTransientErrorMessage,jdbcType=VARCHAR}, #{lastAppliedTransactionLastTransientErrorTimestamp,jdbcType=TIMESTAMP}, 
+      #{applyingTransactionRetriesCount,jdbcType=BIGINT}, #{applyingTransactionLastTransientErrorNumber,jdbcType=INTEGER}, 
+      #{applyingTransactionLastTransientErrorMessage,jdbcType=VARCHAR}, #{applyingTransactionLastTransientErrorTimestamp,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationApplierStatusByWorker" >
+    update replication_applier_status_by_worker
+    set THREAD_ID = #{threadId,jdbcType=BIGINT},
+      SERVICE_STATE = #{serviceState,jdbcType=CHAR},
+      LAST_ERROR_NUMBER = #{lastErrorNumber,jdbcType=INTEGER},
+      LAST_ERROR_MESSAGE = #{lastErrorMessage,jdbcType=VARCHAR},
+      LAST_ERROR_TIMESTAMP = #{lastErrorTimestamp,jdbcType=TIMESTAMP},
+      LAST_APPLIED_TRANSACTION = #{lastAppliedTransaction,jdbcType=CHAR},
+      LAST_APPLIED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP = #{lastAppliedTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP},
+      LAST_APPLIED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP = #{lastAppliedTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP},
+      LAST_APPLIED_TRANSACTION_START_APPLY_TIMESTAMP = #{lastAppliedTransactionStartApplyTimestamp,jdbcType=TIMESTAMP},
+      LAST_APPLIED_TRANSACTION_END_APPLY_TIMESTAMP = #{lastAppliedTransactionEndApplyTimestamp,jdbcType=TIMESTAMP},
+      APPLYING_TRANSACTION = #{applyingTransaction,jdbcType=CHAR},
+      APPLYING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP = #{applyingTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP},
+      APPLYING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP = #{applyingTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP},
+      APPLYING_TRANSACTION_START_APPLY_TIMESTAMP = #{applyingTransactionStartApplyTimestamp,jdbcType=TIMESTAMP},
+      LAST_APPLIED_TRANSACTION_RETRIES_COUNT = #{lastAppliedTransactionRetriesCount,jdbcType=BIGINT},
+      LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER = #{lastAppliedTransactionLastTransientErrorNumber,jdbcType=INTEGER},
+      LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE = #{lastAppliedTransactionLastTransientErrorMessage,jdbcType=VARCHAR},
+      LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP = #{lastAppliedTransactionLastTransientErrorTimestamp,jdbcType=TIMESTAMP},
+      APPLYING_TRANSACTION_RETRIES_COUNT = #{applyingTransactionRetriesCount,jdbcType=BIGINT},
+      APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER = #{applyingTransactionLastTransientErrorNumber,jdbcType=INTEGER},
+      APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE = #{applyingTransactionLastTransientErrorMessage,jdbcType=VARCHAR},
+      APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP = #{applyingTransactionLastTransientErrorTimestamp,jdbcType=TIMESTAMP}
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+      and WORKER_ID = #{workerId,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select CHANNEL_NAME, WORKER_ID, THREAD_ID, SERVICE_STATE, LAST_ERROR_NUMBER, LAST_ERROR_MESSAGE, 
+    LAST_ERROR_TIMESTAMP, LAST_APPLIED_TRANSACTION, LAST_APPLIED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+    LAST_APPLIED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, LAST_APPLIED_TRANSACTION_START_APPLY_TIMESTAMP, 
+    LAST_APPLIED_TRANSACTION_END_APPLY_TIMESTAMP, APPLYING_TRANSACTION, APPLYING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+    APPLYING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, APPLYING_TRANSACTION_START_APPLY_TIMESTAMP, 
+    LAST_APPLIED_TRANSACTION_RETRIES_COUNT, LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER, 
+    LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE, LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP, 
+    APPLYING_TRANSACTION_RETRIES_COUNT, APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER, 
+    APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE, APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP
+    from replication_applier_status_by_worker
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+      and WORKER_ID = #{workerId,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CHANNEL_NAME, WORKER_ID, THREAD_ID, SERVICE_STATE, LAST_ERROR_NUMBER, LAST_ERROR_MESSAGE, 
+    LAST_ERROR_TIMESTAMP, LAST_APPLIED_TRANSACTION, LAST_APPLIED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+    LAST_APPLIED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, LAST_APPLIED_TRANSACTION_START_APPLY_TIMESTAMP, 
+    LAST_APPLIED_TRANSACTION_END_APPLY_TIMESTAMP, APPLYING_TRANSACTION, APPLYING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+    APPLYING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, APPLYING_TRANSACTION_START_APPLY_TIMESTAMP, 
+    LAST_APPLIED_TRANSACTION_RETRIES_COUNT, LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER, 
+    LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE, LAST_APPLIED_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP, 
+    APPLYING_TRANSACTION_RETRIES_COUNT, APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_NUMBER, 
+    APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_MESSAGE, APPLYING_TRANSACTION_LAST_TRANSIENT_ERROR_TIMESTAMP
+    from replication_applier_status_by_worker
+  </select>
+</mapper>

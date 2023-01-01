@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.HostCacheMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.HostCache" >
+    <id column="IP" property="ip" jdbcType="VARCHAR" />
+    <result column="HOST" property="host" jdbcType="VARCHAR" />
+    <result column="HOST_VALIDATED" property="hostValidated" jdbcType="CHAR" />
+    <result column="SUM_CONNECT_ERRORS" property="sumConnectErrors" jdbcType="BIGINT" />
+    <result column="COUNT_HOST_BLOCKED_ERRORS" property="countHostBlockedErrors" jdbcType="BIGINT" />
+    <result column="COUNT_NAMEINFO_TRANSIENT_ERRORS" property="countNameinfoTransientErrors" jdbcType="BIGINT" />
+    <result column="COUNT_NAMEINFO_PERMANENT_ERRORS" property="countNameinfoPermanentErrors" jdbcType="BIGINT" />
+    <result column="COUNT_FORMAT_ERRORS" property="countFormatErrors" jdbcType="BIGINT" />
+    <result column="COUNT_ADDRINFO_TRANSIENT_ERRORS" property="countAddrinfoTransientErrors" jdbcType="BIGINT" />
+    <result column="COUNT_ADDRINFO_PERMANENT_ERRORS" property="countAddrinfoPermanentErrors" jdbcType="BIGINT" />
+    <result column="COUNT_FCRDNS_ERRORS" property="countFcrdnsErrors" jdbcType="BIGINT" />
+    <result column="COUNT_HOST_ACL_ERRORS" property="countHostAclErrors" jdbcType="BIGINT" />
+    <result column="COUNT_NO_AUTH_PLUGIN_ERRORS" property="countNoAuthPluginErrors" jdbcType="BIGINT" />
+    <result column="COUNT_AUTH_PLUGIN_ERRORS" property="countAuthPluginErrors" jdbcType="BIGINT" />
+    <result column="COUNT_HANDSHAKE_ERRORS" property="countHandshakeErrors" jdbcType="BIGINT" />
+    <result column="COUNT_PROXY_USER_ERRORS" property="countProxyUserErrors" jdbcType="BIGINT" />
+    <result column="COUNT_PROXY_USER_ACL_ERRORS" property="countProxyUserAclErrors" jdbcType="BIGINT" />
+    <result column="COUNT_AUTHENTICATION_ERRORS" property="countAuthenticationErrors" jdbcType="BIGINT" />
+    <result column="COUNT_SSL_ERRORS" property="countSslErrors" jdbcType="BIGINT" />
+    <result column="COUNT_MAX_USER_CONNECTIONS_ERRORS" property="countMaxUserConnectionsErrors" jdbcType="BIGINT" />
+    <result column="COUNT_MAX_USER_CONNECTIONS_PER_HOUR_ERRORS" property="countMaxUserConnectionsPerHourErrors" jdbcType="BIGINT" />
+    <result column="COUNT_DEFAULT_DATABASE_ERRORS" property="countDefaultDatabaseErrors" jdbcType="BIGINT" />
+    <result column="COUNT_INIT_CONNECT_ERRORS" property="countInitConnectErrors" jdbcType="BIGINT" />
+    <result column="COUNT_LOCAL_ERRORS" property="countLocalErrors" jdbcType="BIGINT" />
+    <result column="COUNT_UNKNOWN_ERRORS" property="countUnknownErrors" jdbcType="BIGINT" />
+    <result column="FIRST_SEEN" property="firstSeen" jdbcType="TIMESTAMP" />
+    <result column="LAST_SEEN" property="lastSeen" jdbcType="TIMESTAMP" />
+    <result column="FIRST_ERROR_SEEN" property="firstErrorSeen" jdbcType="TIMESTAMP" />
+    <result column="LAST_ERROR_SEEN" property="lastErrorSeen" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from host_cache
+    where IP = #{ip,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.HostCache" >
+    insert into host_cache (IP, `HOST`, HOST_VALIDATED, 
+      SUM_CONNECT_ERRORS, COUNT_HOST_BLOCKED_ERRORS, 
+      COUNT_NAMEINFO_TRANSIENT_ERRORS, COUNT_NAMEINFO_PERMANENT_ERRORS, 
+      COUNT_FORMAT_ERRORS, COUNT_ADDRINFO_TRANSIENT_ERRORS, 
+      COUNT_ADDRINFO_PERMANENT_ERRORS, COUNT_FCRDNS_ERRORS, 
+      COUNT_HOST_ACL_ERRORS, COUNT_NO_AUTH_PLUGIN_ERRORS, 
+      COUNT_AUTH_PLUGIN_ERRORS, COUNT_HANDSHAKE_ERRORS, 
+      COUNT_PROXY_USER_ERRORS, COUNT_PROXY_USER_ACL_ERRORS, 
+      COUNT_AUTHENTICATION_ERRORS, COUNT_SSL_ERRORS, 
+      COUNT_MAX_USER_CONNECTIONS_ERRORS, COUNT_MAX_USER_CONNECTIONS_PER_HOUR_ERRORS, 
+      COUNT_DEFAULT_DATABASE_ERRORS, COUNT_INIT_CONNECT_ERRORS, 
+      COUNT_LOCAL_ERRORS, COUNT_UNKNOWN_ERRORS, FIRST_SEEN, 
+      LAST_SEEN, FIRST_ERROR_SEEN, LAST_ERROR_SEEN
+      )
+    values (#{ip,jdbcType=VARCHAR}, #{host,jdbcType=VARCHAR}, #{hostValidated,jdbcType=CHAR}, 
+      #{sumConnectErrors,jdbcType=BIGINT}, #{countHostBlockedErrors,jdbcType=BIGINT}, 
+      #{countNameinfoTransientErrors,jdbcType=BIGINT}, #{countNameinfoPermanentErrors,jdbcType=BIGINT}, 
+      #{countFormatErrors,jdbcType=BIGINT}, #{countAddrinfoTransientErrors,jdbcType=BIGINT}, 
+      #{countAddrinfoPermanentErrors,jdbcType=BIGINT}, #{countFcrdnsErrors,jdbcType=BIGINT}, 
+      #{countHostAclErrors,jdbcType=BIGINT}, #{countNoAuthPluginErrors,jdbcType=BIGINT}, 
+      #{countAuthPluginErrors,jdbcType=BIGINT}, #{countHandshakeErrors,jdbcType=BIGINT}, 
+      #{countProxyUserErrors,jdbcType=BIGINT}, #{countProxyUserAclErrors,jdbcType=BIGINT}, 
+      #{countAuthenticationErrors,jdbcType=BIGINT}, #{countSslErrors,jdbcType=BIGINT}, 
+      #{countMaxUserConnectionsErrors,jdbcType=BIGINT}, #{countMaxUserConnectionsPerHourErrors,jdbcType=BIGINT}, 
+      #{countDefaultDatabaseErrors,jdbcType=BIGINT}, #{countInitConnectErrors,jdbcType=BIGINT}, 
+      #{countLocalErrors,jdbcType=BIGINT}, #{countUnknownErrors,jdbcType=BIGINT}, #{firstSeen,jdbcType=TIMESTAMP}, 
+      #{lastSeen,jdbcType=TIMESTAMP}, #{firstErrorSeen,jdbcType=TIMESTAMP}, #{lastErrorSeen,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.HostCache" >
+    update host_cache
+    set `HOST` = #{host,jdbcType=VARCHAR},
+      HOST_VALIDATED = #{hostValidated,jdbcType=CHAR},
+      SUM_CONNECT_ERRORS = #{sumConnectErrors,jdbcType=BIGINT},
+      COUNT_HOST_BLOCKED_ERRORS = #{countHostBlockedErrors,jdbcType=BIGINT},
+      COUNT_NAMEINFO_TRANSIENT_ERRORS = #{countNameinfoTransientErrors,jdbcType=BIGINT},
+      COUNT_NAMEINFO_PERMANENT_ERRORS = #{countNameinfoPermanentErrors,jdbcType=BIGINT},
+      COUNT_FORMAT_ERRORS = #{countFormatErrors,jdbcType=BIGINT},
+      COUNT_ADDRINFO_TRANSIENT_ERRORS = #{countAddrinfoTransientErrors,jdbcType=BIGINT},
+      COUNT_ADDRINFO_PERMANENT_ERRORS = #{countAddrinfoPermanentErrors,jdbcType=BIGINT},
+      COUNT_FCRDNS_ERRORS = #{countFcrdnsErrors,jdbcType=BIGINT},
+      COUNT_HOST_ACL_ERRORS = #{countHostAclErrors,jdbcType=BIGINT},
+      COUNT_NO_AUTH_PLUGIN_ERRORS = #{countNoAuthPluginErrors,jdbcType=BIGINT},
+      COUNT_AUTH_PLUGIN_ERRORS = #{countAuthPluginErrors,jdbcType=BIGINT},
+      COUNT_HANDSHAKE_ERRORS = #{countHandshakeErrors,jdbcType=BIGINT},
+      COUNT_PROXY_USER_ERRORS = #{countProxyUserErrors,jdbcType=BIGINT},
+      COUNT_PROXY_USER_ACL_ERRORS = #{countProxyUserAclErrors,jdbcType=BIGINT},
+      COUNT_AUTHENTICATION_ERRORS = #{countAuthenticationErrors,jdbcType=BIGINT},
+      COUNT_SSL_ERRORS = #{countSslErrors,jdbcType=BIGINT},
+      COUNT_MAX_USER_CONNECTIONS_ERRORS = #{countMaxUserConnectionsErrors,jdbcType=BIGINT},
+      COUNT_MAX_USER_CONNECTIONS_PER_HOUR_ERRORS = #{countMaxUserConnectionsPerHourErrors,jdbcType=BIGINT},
+      COUNT_DEFAULT_DATABASE_ERRORS = #{countDefaultDatabaseErrors,jdbcType=BIGINT},
+      COUNT_INIT_CONNECT_ERRORS = #{countInitConnectErrors,jdbcType=BIGINT},
+      COUNT_LOCAL_ERRORS = #{countLocalErrors,jdbcType=BIGINT},
+      COUNT_UNKNOWN_ERRORS = #{countUnknownErrors,jdbcType=BIGINT},
+      FIRST_SEEN = #{firstSeen,jdbcType=TIMESTAMP},
+      LAST_SEEN = #{lastSeen,jdbcType=TIMESTAMP},
+      FIRST_ERROR_SEEN = #{firstErrorSeen,jdbcType=TIMESTAMP},
+      LAST_ERROR_SEEN = #{lastErrorSeen,jdbcType=TIMESTAMP}
+    where IP = #{ip,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select IP, `HOST`, HOST_VALIDATED, SUM_CONNECT_ERRORS, COUNT_HOST_BLOCKED_ERRORS, 
+    COUNT_NAMEINFO_TRANSIENT_ERRORS, COUNT_NAMEINFO_PERMANENT_ERRORS, COUNT_FORMAT_ERRORS, 
+    COUNT_ADDRINFO_TRANSIENT_ERRORS, COUNT_ADDRINFO_PERMANENT_ERRORS, COUNT_FCRDNS_ERRORS, 
+    COUNT_HOST_ACL_ERRORS, COUNT_NO_AUTH_PLUGIN_ERRORS, COUNT_AUTH_PLUGIN_ERRORS, COUNT_HANDSHAKE_ERRORS, 
+    COUNT_PROXY_USER_ERRORS, COUNT_PROXY_USER_ACL_ERRORS, COUNT_AUTHENTICATION_ERRORS, 
+    COUNT_SSL_ERRORS, COUNT_MAX_USER_CONNECTIONS_ERRORS, COUNT_MAX_USER_CONNECTIONS_PER_HOUR_ERRORS, 
+    COUNT_DEFAULT_DATABASE_ERRORS, COUNT_INIT_CONNECT_ERRORS, COUNT_LOCAL_ERRORS, COUNT_UNKNOWN_ERRORS, 
+    FIRST_SEEN, LAST_SEEN, FIRST_ERROR_SEEN, LAST_ERROR_SEEN
+    from host_cache
+    where IP = #{ip,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select IP, `HOST`, HOST_VALIDATED, SUM_CONNECT_ERRORS, COUNT_HOST_BLOCKED_ERRORS, 
+    COUNT_NAMEINFO_TRANSIENT_ERRORS, COUNT_NAMEINFO_PERMANENT_ERRORS, COUNT_FORMAT_ERRORS, 
+    COUNT_ADDRINFO_TRANSIENT_ERRORS, COUNT_ADDRINFO_PERMANENT_ERRORS, COUNT_FCRDNS_ERRORS, 
+    COUNT_HOST_ACL_ERRORS, COUNT_NO_AUTH_PLUGIN_ERRORS, COUNT_AUTH_PLUGIN_ERRORS, COUNT_HANDSHAKE_ERRORS, 
+    COUNT_PROXY_USER_ERRORS, COUNT_PROXY_USER_ACL_ERRORS, COUNT_AUTHENTICATION_ERRORS, 
+    COUNT_SSL_ERRORS, COUNT_MAX_USER_CONNECTIONS_ERRORS, COUNT_MAX_USER_CONNECTIONS_PER_HOUR_ERRORS, 
+    COUNT_DEFAULT_DATABASE_ERRORS, COUNT_INIT_CONNECT_ERRORS, COUNT_LOCAL_ERRORS, COUNT_UNKNOWN_ERRORS, 
+    FIRST_SEEN, LAST_SEEN, FIRST_ERROR_SEEN, LAST_ERROR_SEEN
+    from host_cache
+  </select>
+</mapper>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.PreparedStatementsInstancesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.PreparedStatementsInstances" >
+    <id column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="STATEMENT_ID" property="statementId" jdbcType="BIGINT" />
+    <result column="STATEMENT_NAME" property="statementName" jdbcType="VARCHAR" />
+    <result column="OWNER_THREAD_ID" property="ownerThreadId" jdbcType="BIGINT" />
+    <result column="OWNER_EVENT_ID" property="ownerEventId" jdbcType="BIGINT" />
+    <result column="OWNER_OBJECT_TYPE" property="ownerObjectType" jdbcType="CHAR" />
+    <result column="OWNER_OBJECT_SCHEMA" property="ownerObjectSchema" jdbcType="VARCHAR" />
+    <result column="OWNER_OBJECT_NAME" property="ownerObjectName" jdbcType="VARCHAR" />
+    <result column="TIMER_PREPARE" property="timerPrepare" jdbcType="BIGINT" />
+    <result column="COUNT_REPREPARE" property="countReprepare" jdbcType="BIGINT" />
+    <result column="COUNT_EXECUTE" property="countExecute" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_EXECUTE" property="sumTimerExecute" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_EXECUTE" property="minTimerExecute" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_EXECUTE" property="avgTimerExecute" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_EXECUTE" property="maxTimerExecute" jdbcType="BIGINT" />
+    <result column="SUM_LOCK_TIME" property="sumLockTime" jdbcType="BIGINT" />
+    <result column="SUM_ERRORS" property="sumErrors" jdbcType="BIGINT" />
+    <result column="SUM_WARNINGS" property="sumWarnings" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_AFFECTED" property="sumRowsAffected" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_SENT" property="sumRowsSent" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_EXAMINED" property="sumRowsExamined" jdbcType="BIGINT" />
+    <result column="SUM_CREATED_TMP_DISK_TABLES" property="sumCreatedTmpDiskTables" jdbcType="BIGINT" />
+    <result column="SUM_CREATED_TMP_TABLES" property="sumCreatedTmpTables" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_FULL_JOIN" property="sumSelectFullJoin" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_FULL_RANGE_JOIN" property="sumSelectFullRangeJoin" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_RANGE" property="sumSelectRange" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_RANGE_CHECK" property="sumSelectRangeCheck" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_SCAN" property="sumSelectScan" jdbcType="BIGINT" />
+    <result column="SUM_SORT_MERGE_PASSES" property="sumSortMergePasses" jdbcType="BIGINT" />
+    <result column="SUM_SORT_RANGE" property="sumSortRange" jdbcType="BIGINT" />
+    <result column="SUM_SORT_ROWS" property="sumSortRows" jdbcType="BIGINT" />
+    <result column="SUM_SORT_SCAN" property="sumSortScan" jdbcType="BIGINT" />
+    <result column="SUM_NO_INDEX_USED" property="sumNoIndexUsed" jdbcType="BIGINT" />
+    <result column="SUM_NO_GOOD_INDEX_USED" property="sumNoGoodIndexUsed" jdbcType="BIGINT" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from prepared_statements_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.PreparedStatementsInstances" >
+    insert into prepared_statements_instances (OBJECT_INSTANCE_BEGIN, STATEMENT_ID, STATEMENT_NAME, 
+      OWNER_THREAD_ID, OWNER_EVENT_ID, OWNER_OBJECT_TYPE, 
+      OWNER_OBJECT_SCHEMA, OWNER_OBJECT_NAME, TIMER_PREPARE, 
+      COUNT_REPREPARE, COUNT_EXECUTE, SUM_TIMER_EXECUTE, 
+      MIN_TIMER_EXECUTE, AVG_TIMER_EXECUTE, MAX_TIMER_EXECUTE, 
+      SUM_LOCK_TIME, SUM_ERRORS, SUM_WARNINGS, 
+      SUM_ROWS_AFFECTED, SUM_ROWS_SENT, SUM_ROWS_EXAMINED, 
+      SUM_CREATED_TMP_DISK_TABLES, SUM_CREATED_TMP_TABLES, 
+      SUM_SELECT_FULL_JOIN, SUM_SELECT_FULL_RANGE_JOIN, 
+      SUM_SELECT_RANGE, SUM_SELECT_RANGE_CHECK, SUM_SELECT_SCAN, 
+      SUM_SORT_MERGE_PASSES, SUM_SORT_RANGE, SUM_SORT_ROWS, 
+      SUM_SORT_SCAN, SUM_NO_INDEX_USED, SUM_NO_GOOD_INDEX_USED, 
+      SQL_TEXT)
+    values (#{objectInstanceBegin,jdbcType=BIGINT}, #{statementId,jdbcType=BIGINT}, #{statementName,jdbcType=VARCHAR}, 
+      #{ownerThreadId,jdbcType=BIGINT}, #{ownerEventId,jdbcType=BIGINT}, #{ownerObjectType,jdbcType=CHAR}, 
+      #{ownerObjectSchema,jdbcType=VARCHAR}, #{ownerObjectName,jdbcType=VARCHAR}, #{timerPrepare,jdbcType=BIGINT}, 
+      #{countReprepare,jdbcType=BIGINT}, #{countExecute,jdbcType=BIGINT}, #{sumTimerExecute,jdbcType=BIGINT}, 
+      #{minTimerExecute,jdbcType=BIGINT}, #{avgTimerExecute,jdbcType=BIGINT}, #{maxTimerExecute,jdbcType=BIGINT}, 
+      #{sumLockTime,jdbcType=BIGINT}, #{sumErrors,jdbcType=BIGINT}, #{sumWarnings,jdbcType=BIGINT}, 
+      #{sumRowsAffected,jdbcType=BIGINT}, #{sumRowsSent,jdbcType=BIGINT}, #{sumRowsExamined,jdbcType=BIGINT}, 
+      #{sumCreatedTmpDiskTables,jdbcType=BIGINT}, #{sumCreatedTmpTables,jdbcType=BIGINT}, 
+      #{sumSelectFullJoin,jdbcType=BIGINT}, #{sumSelectFullRangeJoin,jdbcType=BIGINT}, 
+      #{sumSelectRange,jdbcType=BIGINT}, #{sumSelectRangeCheck,jdbcType=BIGINT}, #{sumSelectScan,jdbcType=BIGINT}, 
+      #{sumSortMergePasses,jdbcType=BIGINT}, #{sumSortRange,jdbcType=BIGINT}, #{sumSortRows,jdbcType=BIGINT}, 
+      #{sumSortScan,jdbcType=BIGINT}, #{sumNoIndexUsed,jdbcType=BIGINT}, #{sumNoGoodIndexUsed,jdbcType=BIGINT}, 
+      #{sqlText,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.PreparedStatementsInstances" >
+    update prepared_statements_instances
+    set STATEMENT_ID = #{statementId,jdbcType=BIGINT},
+      STATEMENT_NAME = #{statementName,jdbcType=VARCHAR},
+      OWNER_THREAD_ID = #{ownerThreadId,jdbcType=BIGINT},
+      OWNER_EVENT_ID = #{ownerEventId,jdbcType=BIGINT},
+      OWNER_OBJECT_TYPE = #{ownerObjectType,jdbcType=CHAR},
+      OWNER_OBJECT_SCHEMA = #{ownerObjectSchema,jdbcType=VARCHAR},
+      OWNER_OBJECT_NAME = #{ownerObjectName,jdbcType=VARCHAR},
+      TIMER_PREPARE = #{timerPrepare,jdbcType=BIGINT},
+      COUNT_REPREPARE = #{countReprepare,jdbcType=BIGINT},
+      COUNT_EXECUTE = #{countExecute,jdbcType=BIGINT},
+      SUM_TIMER_EXECUTE = #{sumTimerExecute,jdbcType=BIGINT},
+      MIN_TIMER_EXECUTE = #{minTimerExecute,jdbcType=BIGINT},
+      AVG_TIMER_EXECUTE = #{avgTimerExecute,jdbcType=BIGINT},
+      MAX_TIMER_EXECUTE = #{maxTimerExecute,jdbcType=BIGINT},
+      SUM_LOCK_TIME = #{sumLockTime,jdbcType=BIGINT},
+      SUM_ERRORS = #{sumErrors,jdbcType=BIGINT},
+      SUM_WARNINGS = #{sumWarnings,jdbcType=BIGINT},
+      SUM_ROWS_AFFECTED = #{sumRowsAffected,jdbcType=BIGINT},
+      SUM_ROWS_SENT = #{sumRowsSent,jdbcType=BIGINT},
+      SUM_ROWS_EXAMINED = #{sumRowsExamined,jdbcType=BIGINT},
+      SUM_CREATED_TMP_DISK_TABLES = #{sumCreatedTmpDiskTables,jdbcType=BIGINT},
+      SUM_CREATED_TMP_TABLES = #{sumCreatedTmpTables,jdbcType=BIGINT},
+      SUM_SELECT_FULL_JOIN = #{sumSelectFullJoin,jdbcType=BIGINT},
+      SUM_SELECT_FULL_RANGE_JOIN = #{sumSelectFullRangeJoin,jdbcType=BIGINT},
+      SUM_SELECT_RANGE = #{sumSelectRange,jdbcType=BIGINT},
+      SUM_SELECT_RANGE_CHECK = #{sumSelectRangeCheck,jdbcType=BIGINT},
+      SUM_SELECT_SCAN = #{sumSelectScan,jdbcType=BIGINT},
+      SUM_SORT_MERGE_PASSES = #{sumSortMergePasses,jdbcType=BIGINT},
+      SUM_SORT_RANGE = #{sumSortRange,jdbcType=BIGINT},
+      SUM_SORT_ROWS = #{sumSortRows,jdbcType=BIGINT},
+      SUM_SORT_SCAN = #{sumSortScan,jdbcType=BIGINT},
+      SUM_NO_INDEX_USED = #{sumNoIndexUsed,jdbcType=BIGINT},
+      SUM_NO_GOOD_INDEX_USED = #{sumNoGoodIndexUsed,jdbcType=BIGINT},
+      SQL_TEXT = #{sqlText,jdbcType=LONGVARCHAR}
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select OBJECT_INSTANCE_BEGIN, STATEMENT_ID, STATEMENT_NAME, OWNER_THREAD_ID, OWNER_EVENT_ID, 
+    OWNER_OBJECT_TYPE, OWNER_OBJECT_SCHEMA, OWNER_OBJECT_NAME, TIMER_PREPARE, COUNT_REPREPARE, 
+    COUNT_EXECUTE, SUM_TIMER_EXECUTE, MIN_TIMER_EXECUTE, AVG_TIMER_EXECUTE, MAX_TIMER_EXECUTE, 
+    SUM_LOCK_TIME, SUM_ERRORS, SUM_WARNINGS, SUM_ROWS_AFFECTED, SUM_ROWS_SENT, SUM_ROWS_EXAMINED, 
+    SUM_CREATED_TMP_DISK_TABLES, SUM_CREATED_TMP_TABLES, SUM_SELECT_FULL_JOIN, SUM_SELECT_FULL_RANGE_JOIN, 
+    SUM_SELECT_RANGE, SUM_SELECT_RANGE_CHECK, SUM_SELECT_SCAN, SUM_SORT_MERGE_PASSES, 
+    SUM_SORT_RANGE, SUM_SORT_ROWS, SUM_SORT_SCAN, SUM_NO_INDEX_USED, SUM_NO_GOOD_INDEX_USED, 
+    SQL_TEXT
+    from prepared_statements_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_INSTANCE_BEGIN, STATEMENT_ID, STATEMENT_NAME, OWNER_THREAD_ID, OWNER_EVENT_ID, 
+    OWNER_OBJECT_TYPE, OWNER_OBJECT_SCHEMA, OWNER_OBJECT_NAME, TIMER_PREPARE, COUNT_REPREPARE, 
+    COUNT_EXECUTE, SUM_TIMER_EXECUTE, MIN_TIMER_EXECUTE, AVG_TIMER_EXECUTE, MAX_TIMER_EXECUTE, 
+    SUM_LOCK_TIME, SUM_ERRORS, SUM_WARNINGS, SUM_ROWS_AFFECTED, SUM_ROWS_SENT, SUM_ROWS_EXAMINED, 
+    SUM_CREATED_TMP_DISK_TABLES, SUM_CREATED_TMP_TABLES, SUM_SELECT_FULL_JOIN, SUM_SELECT_FULL_RANGE_JOIN, 
+    SUM_SELECT_RANGE, SUM_SELECT_RANGE_CHECK, SUM_SELECT_SCAN, SUM_SORT_MERGE_PASSES, 
+    SUM_SORT_RANGE, SUM_SORT_ROWS, SUM_SORT_SCAN, SUM_NO_INDEX_USED, SUM_NO_GOOD_INDEX_USED, 
+    SQL_TEXT
+    from prepared_statements_instances
+  </select>
+</mapper>

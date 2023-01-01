@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsWaitsSummaryByInstanceMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsWaitsSummaryByInstance" >
+    <id column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="COUNT_STAR" property="countStar" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WAIT" property="sumTimerWait" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WAIT" property="minTimerWait" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WAIT" property="avgTimerWait" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WAIT" property="maxTimerWait" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from events_waits_summary_by_instance
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsWaitsSummaryByInstance" >
+    insert into events_waits_summary_by_instance (OBJECT_INSTANCE_BEGIN, EVENT_NAME, COUNT_STAR, 
+      SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, 
+      MAX_TIMER_WAIT)
+    values (#{objectInstanceBegin,jdbcType=BIGINT}, #{eventName,jdbcType=VARCHAR}, #{countStar,jdbcType=BIGINT}, 
+      #{sumTimerWait,jdbcType=BIGINT}, #{minTimerWait,jdbcType=BIGINT}, #{avgTimerWait,jdbcType=BIGINT}, 
+      #{maxTimerWait,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.EventsWaitsSummaryByInstance" >
+    update events_waits_summary_by_instance
+    set EVENT_NAME = #{eventName,jdbcType=VARCHAR},
+      COUNT_STAR = #{countStar,jdbcType=BIGINT},
+      SUM_TIMER_WAIT = #{sumTimerWait,jdbcType=BIGINT},
+      MIN_TIMER_WAIT = #{minTimerWait,jdbcType=BIGINT},
+      AVG_TIMER_WAIT = #{avgTimerWait,jdbcType=BIGINT},
+      MAX_TIMER_WAIT = #{maxTimerWait,jdbcType=BIGINT}
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select OBJECT_INSTANCE_BEGIN, EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, 
+    AVG_TIMER_WAIT, MAX_TIMER_WAIT
+    from events_waits_summary_by_instance
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_INSTANCE_BEGIN, EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, 
+    AVG_TIMER_WAIT, MAX_TIMER_WAIT
+    from events_waits_summary_by_instance
+  </select>
+</mapper>

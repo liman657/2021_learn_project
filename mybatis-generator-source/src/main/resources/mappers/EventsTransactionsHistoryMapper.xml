@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsTransactionsHistoryMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsTransactionsHistory" >
+    <id column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <id column="EVENT_ID" property="eventId" jdbcType="BIGINT" />
+    <result column="END_EVENT_ID" property="endEventId" jdbcType="BIGINT" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="STATE" property="state" jdbcType="CHAR" />
+    <result column="TRX_ID" property="trxId" jdbcType="BIGINT" />
+    <result column="GTID" property="gtid" jdbcType="VARCHAR" />
+    <result column="XID_FORMAT_ID" property="xidFormatId" jdbcType="INTEGER" />
+    <result column="XID_GTRID" property="xidGtrid" jdbcType="VARCHAR" />
+    <result column="XID_BQUAL" property="xidBqual" jdbcType="VARCHAR" />
+    <result column="XA_STATE" property="xaState" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="TIMER_START" property="timerStart" jdbcType="BIGINT" />
+    <result column="TIMER_END" property="timerEnd" jdbcType="BIGINT" />
+    <result column="TIMER_WAIT" property="timerWait" jdbcType="BIGINT" />
+    <result column="ACCESS_MODE" property="accessMode" jdbcType="CHAR" />
+    <result column="ISOLATION_LEVEL" property="isolationLevel" jdbcType="VARCHAR" />
+    <result column="AUTOCOMMIT" property="autocommit" jdbcType="CHAR" />
+    <result column="NUMBER_OF_SAVEPOINTS" property="numberOfSavepoints" jdbcType="BIGINT" />
+    <result column="NUMBER_OF_ROLLBACK_TO_SAVEPOINT" property="numberOfRollbackToSavepoint" jdbcType="BIGINT" />
+    <result column="NUMBER_OF_RELEASE_SAVEPOINT" property="numberOfReleaseSavepoint" jdbcType="BIGINT" />
+    <result column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="NESTING_EVENT_ID" property="nestingEventId" jdbcType="BIGINT" />
+    <result column="NESTING_EVENT_TYPE" property="nestingEventType" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from events_transactions_history
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_ID = #{eventId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsTransactionsHistory" >
+    insert into events_transactions_history (THREAD_ID, EVENT_ID, END_EVENT_ID, 
+      EVENT_NAME, `STATE`, TRX_ID, 
+      GTID, XID_FORMAT_ID, XID_GTRID, 
+      XID_BQUAL, XA_STATE, `SOURCE`, 
+      TIMER_START, TIMER_END, TIMER_WAIT, 
+      ACCESS_MODE, ISOLATION_LEVEL, AUTOCOMMIT, 
+      NUMBER_OF_SAVEPOINTS, NUMBER_OF_ROLLBACK_TO_SAVEPOINT, 
+      NUMBER_OF_RELEASE_SAVEPOINT, OBJECT_INSTANCE_BEGIN, 
+      NESTING_EVENT_ID, NESTING_EVENT_TYPE)
+    values (#{threadId,jdbcType=BIGINT}, #{eventId,jdbcType=BIGINT}, #{endEventId,jdbcType=BIGINT}, 
+      #{eventName,jdbcType=VARCHAR}, #{state,jdbcType=CHAR}, #{trxId,jdbcType=BIGINT}, 
+      #{gtid,jdbcType=VARCHAR}, #{xidFormatId,jdbcType=INTEGER}, #{xidGtrid,jdbcType=VARCHAR}, 
+      #{xidBqual,jdbcType=VARCHAR}, #{xaState,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
+      #{timerStart,jdbcType=BIGINT}, #{timerEnd,jdbcType=BIGINT}, #{timerWait,jdbcType=BIGINT}, 
+      #{accessMode,jdbcType=CHAR}, #{isolationLevel,jdbcType=VARCHAR}, #{autocommit,jdbcType=CHAR}, 
+      #{numberOfSavepoints,jdbcType=BIGINT}, #{numberOfRollbackToSavepoint,jdbcType=BIGINT}, 
+      #{numberOfReleaseSavepoint,jdbcType=BIGINT}, #{objectInstanceBegin,jdbcType=BIGINT}, 
+      #{nestingEventId,jdbcType=BIGINT}, #{nestingEventType,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.EventsTransactionsHistory" >
+    update events_transactions_history
+    set END_EVENT_ID = #{endEventId,jdbcType=BIGINT},
+      EVENT_NAME = #{eventName,jdbcType=VARCHAR},
+      `STATE` = #{state,jdbcType=CHAR},
+      TRX_ID = #{trxId,jdbcType=BIGINT},
+      GTID = #{gtid,jdbcType=VARCHAR},
+      XID_FORMAT_ID = #{xidFormatId,jdbcType=INTEGER},
+      XID_GTRID = #{xidGtrid,jdbcType=VARCHAR},
+      XID_BQUAL = #{xidBqual,jdbcType=VARCHAR},
+      XA_STATE = #{xaState,jdbcType=VARCHAR},
+      `SOURCE` = #{source,jdbcType=VARCHAR},
+      TIMER_START = #{timerStart,jdbcType=BIGINT},
+      TIMER_END = #{timerEnd,jdbcType=BIGINT},
+      TIMER_WAIT = #{timerWait,jdbcType=BIGINT},
+      ACCESS_MODE = #{accessMode,jdbcType=CHAR},
+      ISOLATION_LEVEL = #{isolationLevel,jdbcType=VARCHAR},
+      AUTOCOMMIT = #{autocommit,jdbcType=CHAR},
+      NUMBER_OF_SAVEPOINTS = #{numberOfSavepoints,jdbcType=BIGINT},
+      NUMBER_OF_ROLLBACK_TO_SAVEPOINT = #{numberOfRollbackToSavepoint,jdbcType=BIGINT},
+      NUMBER_OF_RELEASE_SAVEPOINT = #{numberOfReleaseSavepoint,jdbcType=BIGINT},
+      OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT},
+      NESTING_EVENT_ID = #{nestingEventId,jdbcType=BIGINT},
+      NESTING_EVENT_TYPE = #{nestingEventType,jdbcType=CHAR}
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_ID = #{eventId,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select THREAD_ID, EVENT_ID, END_EVENT_ID, EVENT_NAME, `STATE`, TRX_ID, GTID, XID_FORMAT_ID, 
+    XID_GTRID, XID_BQUAL, XA_STATE, `SOURCE`, TIMER_START, TIMER_END, TIMER_WAIT, ACCESS_MODE, 
+    ISOLATION_LEVEL, AUTOCOMMIT, NUMBER_OF_SAVEPOINTS, NUMBER_OF_ROLLBACK_TO_SAVEPOINT, 
+    NUMBER_OF_RELEASE_SAVEPOINT, OBJECT_INSTANCE_BEGIN, NESTING_EVENT_ID, NESTING_EVENT_TYPE
+    from events_transactions_history
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_ID = #{eventId,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select THREAD_ID, EVENT_ID, END_EVENT_ID, EVENT_NAME, `STATE`, TRX_ID, GTID, XID_FORMAT_ID, 
+    XID_GTRID, XID_BQUAL, XA_STATE, `SOURCE`, TIMER_START, TIMER_END, TIMER_WAIT, ACCESS_MODE, 
+    ISOLATION_LEVEL, AUTOCOMMIT, NUMBER_OF_SAVEPOINTS, NUMBER_OF_ROLLBACK_TO_SAVEPOINT, 
+    NUMBER_OF_RELEASE_SAVEPOINT, OBJECT_INSTANCE_BEGIN, NESTING_EVENT_ID, NESTING_EVENT_TYPE
+    from events_transactions_history
+  </select>
+</mapper>

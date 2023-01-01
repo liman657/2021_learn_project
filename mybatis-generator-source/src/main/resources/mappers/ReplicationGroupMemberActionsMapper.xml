@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationGroupMemberActionsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationGroupMemberActions" >
+    <id column="name" property="name" jdbcType="CHAR" />
+    <id column="event" property="event" jdbcType="CHAR" />
+    <result column="enabled" property="enabled" jdbcType="BIT" />
+    <result column="type" property="type" jdbcType="CHAR" />
+    <result column="priority" property="priority" jdbcType="TINYINT" />
+    <result column="error_handling" property="errorHandling" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from replication_group_member_actions
+    where `name` = #{name,jdbcType=CHAR}
+      and event = #{event,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationGroupMemberActions" >
+    insert into replication_group_member_actions (`name`, event, enabled, `type`, 
+      priority, error_handling)
+    values (#{name,jdbcType=CHAR}, #{event,jdbcType=CHAR}, #{enabled,jdbcType=BIT}, #{type,jdbcType=CHAR}, 
+      #{priority,jdbcType=TINYINT}, #{errorHandling,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationGroupMemberActions" >
+    update replication_group_member_actions
+    set enabled = #{enabled,jdbcType=BIT},
+      `type` = #{type,jdbcType=CHAR},
+      priority = #{priority,jdbcType=TINYINT},
+      error_handling = #{errorHandling,jdbcType=CHAR}
+    where `name` = #{name,jdbcType=CHAR}
+      and event = #{event,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select `name`, event, enabled, `type`, priority, error_handling
+    from replication_group_member_actions
+    where `name` = #{name,jdbcType=CHAR}
+      and event = #{event,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `name`, event, enabled, `type`, priority, error_handling
+    from replication_group_member_actions
+  </select>
+</mapper>

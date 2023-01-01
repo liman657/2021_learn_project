@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XHostSummaryByFileIoMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XHostSummaryByFileIo" >
+    <result column="host" property="host" jdbcType="VARCHAR" />
+    <result column="ios" property="ios" jdbcType="DECIMAL" />
+    <result column="io_latency" property="ioLatency" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XHostSummaryByFileIo" >
+    insert into x$host_summary_by_file_io (`host`, ios, io_latency
+      )
+    values (#{host,jdbcType=VARCHAR}, #{ios,jdbcType=DECIMAL}, #{ioLatency,jdbcType=DECIMAL}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `host`, ios, io_latency
+    from x$host_summary_by_file_io
+  </select>
+</mapper>

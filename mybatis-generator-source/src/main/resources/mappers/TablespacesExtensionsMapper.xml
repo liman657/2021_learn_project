@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TablespacesExtensionsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TablespacesExtensions" >
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="ENGINE_ATTRIBUTE" property="engineAttribute" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TablespacesExtensions" >
+    insert into TABLESPACES_EXTENSIONS (TABLESPACE_NAME, ENGINE_ATTRIBUTE
+      )
+    values (#{tablespaceName,jdbcType=VARCHAR}, #{engineAttribute,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLESPACE_NAME, ENGINE_ATTRIBUTE
+    from TABLESPACES_EXTENSIONS
+  </select>
+</mapper>

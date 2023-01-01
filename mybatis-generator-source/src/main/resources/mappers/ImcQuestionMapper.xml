@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ImcQuestionMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ImcQuestion" >
+    <id column="quest_id" property="questId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="chapter_id" property="chapterId" jdbcType="INTEGER" />
+    <result column="sub_id" property="subId" jdbcType="INTEGER" />
+    <result column="replyid" property="replyid" jdbcType="INTEGER" />
+    <result column="quest_title" property="questTitle" jdbcType="VARCHAR" />
+    <result column="quest_type" property="questType" jdbcType="CHAR" />
+    <result column="view_cnt" property="viewCnt" jdbcType="INTEGER" />
+    <result column="add_time" property="addTime" jdbcType="TIMESTAMP" />
+    <result column="quest_content" property="questContent" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from imc_question
+    where quest_id = #{questId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ImcQuestion" >
+    insert into imc_question (quest_id, user_id, course_id, 
+      chapter_id, sub_id, replyid, 
+      quest_title, quest_type, view_cnt, 
+      add_time, quest_content)
+    values (#{questId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{courseId,jdbcType=INTEGER}, 
+      #{chapterId,jdbcType=INTEGER}, #{subId,jdbcType=INTEGER}, #{replyid,jdbcType=INTEGER}, 
+      #{questTitle,jdbcType=VARCHAR}, #{questType,jdbcType=CHAR}, #{viewCnt,jdbcType=INTEGER}, 
+      #{addTime,jdbcType=TIMESTAMP}, #{questContent,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ImcQuestion" >
+    update imc_question
+    set user_id = #{userId,jdbcType=INTEGER},
+      course_id = #{courseId,jdbcType=INTEGER},
+      chapter_id = #{chapterId,jdbcType=INTEGER},
+      sub_id = #{subId,jdbcType=INTEGER},
+      replyid = #{replyid,jdbcType=INTEGER},
+      quest_title = #{questTitle,jdbcType=VARCHAR},
+      quest_type = #{questType,jdbcType=CHAR},
+      view_cnt = #{viewCnt,jdbcType=INTEGER},
+      add_time = #{addTime,jdbcType=TIMESTAMP},
+      quest_content = #{questContent,jdbcType=LONGVARCHAR}
+    where quest_id = #{questId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select quest_id, user_id, course_id, chapter_id, sub_id, replyid, quest_title, quest_type, 
+    view_cnt, add_time, quest_content
+    from imc_question
+    where quest_id = #{questId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select quest_id, user_id, course_id, chapter_id, sub_id, replyid, quest_title, quest_type, 
+    view_cnt, add_time, quest_content
+    from imc_question
+  </select>
+</mapper>

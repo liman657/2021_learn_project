@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsStatementsHistogramGlobalMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsStatementsHistogramGlobal" >
+    <id column="BUCKET_NUMBER" property="bucketNumber" jdbcType="INTEGER" />
+    <result column="BUCKET_TIMER_LOW" property="bucketTimerLow" jdbcType="BIGINT" />
+    <result column="BUCKET_TIMER_HIGH" property="bucketTimerHigh" jdbcType="BIGINT" />
+    <result column="COUNT_BUCKET" property="countBucket" jdbcType="BIGINT" />
+    <result column="COUNT_BUCKET_AND_LOWER" property="countBucketAndLower" jdbcType="BIGINT" />
+    <result column="BUCKET_QUANTILE" property="bucketQuantile" jdbcType="DOUBLE" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from events_statements_histogram_global
+    where BUCKET_NUMBER = #{bucketNumber,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsStatementsHistogramGlobal" >
+    insert into events_statements_histogram_global (BUCKET_NUMBER, BUCKET_TIMER_LOW, BUCKET_TIMER_HIGH, 
+      COUNT_BUCKET, COUNT_BUCKET_AND_LOWER, BUCKET_QUANTILE
+      )
+    values (#{bucketNumber,jdbcType=INTEGER}, #{bucketTimerLow,jdbcType=BIGINT}, #{bucketTimerHigh,jdbcType=BIGINT}, 
+      #{countBucket,jdbcType=BIGINT}, #{countBucketAndLower,jdbcType=BIGINT}, #{bucketQuantile,jdbcType=DOUBLE}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.EventsStatementsHistogramGlobal" >
+    update events_statements_histogram_global
+    set BUCKET_TIMER_LOW = #{bucketTimerLow,jdbcType=BIGINT},
+      BUCKET_TIMER_HIGH = #{bucketTimerHigh,jdbcType=BIGINT},
+      COUNT_BUCKET = #{countBucket,jdbcType=BIGINT},
+      COUNT_BUCKET_AND_LOWER = #{countBucketAndLower,jdbcType=BIGINT},
+      BUCKET_QUANTILE = #{bucketQuantile,jdbcType=DOUBLE}
+    where BUCKET_NUMBER = #{bucketNumber,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select BUCKET_NUMBER, BUCKET_TIMER_LOW, BUCKET_TIMER_HIGH, COUNT_BUCKET, COUNT_BUCKET_AND_LOWER, 
+    BUCKET_QUANTILE
+    from events_statements_histogram_global
+    where BUCKET_NUMBER = #{bucketNumber,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select BUCKET_NUMBER, BUCKET_TIMER_LOW, BUCKET_TIMER_HIGH, COUNT_BUCKET, COUNT_BUCKET_AND_LOWER, 
+    BUCKET_QUANTILE
+    from events_statements_histogram_global
+  </select>
+</mapper>

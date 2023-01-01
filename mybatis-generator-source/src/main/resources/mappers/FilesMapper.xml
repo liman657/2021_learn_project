@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.FilesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Files" >
+    <result column="FILE_ID" property="fileId" jdbcType="BIGINT" />
+    <result column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="TABLE_CATALOG" property="tableCatalog" jdbcType="CHAR" />
+    <result column="LOGFILE_GROUP_NAME" property="logfileGroupName" jdbcType="VARCHAR" />
+    <result column="LOGFILE_GROUP_NUMBER" property="logfileGroupNumber" jdbcType="BIGINT" />
+    <result column="ENGINE" property="engine" jdbcType="VARCHAR" />
+    <result column="FREE_EXTENTS" property="freeExtents" jdbcType="BIGINT" />
+    <result column="TOTAL_EXTENTS" property="totalExtents" jdbcType="BIGINT" />
+    <result column="EXTENT_SIZE" property="extentSize" jdbcType="BIGINT" />
+    <result column="INITIAL_SIZE" property="initialSize" jdbcType="BIGINT" />
+    <result column="MAXIMUM_SIZE" property="maximumSize" jdbcType="BIGINT" />
+    <result column="AUTOEXTEND_SIZE" property="autoextendSize" jdbcType="BIGINT" />
+    <result column="VERSION" property="version" jdbcType="BIGINT" />
+    <result column="ROW_FORMAT" property="rowFormat" jdbcType="VARCHAR" />
+    <result column="DATA_FREE" property="dataFree" jdbcType="BIGINT" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="EXTRA" property="extra" jdbcType="VARCHAR" />
+    <result column="FILE_NAME" property="fileName" jdbcType="LONGVARCHAR" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="BINARY" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="BINARY" />
+    <result column="FULLTEXT_KEYS" property="fulltextKeys" jdbcType="BINARY" />
+    <result column="DELETED_ROWS" property="deletedRows" jdbcType="BINARY" />
+    <result column="UPDATE_COUNT" property="updateCount" jdbcType="BINARY" />
+    <result column="CREATION_TIME" property="creationTime" jdbcType="BINARY" />
+    <result column="LAST_UPDATE_TIME" property="lastUpdateTime" jdbcType="BINARY" />
+    <result column="LAST_ACCESS_TIME" property="lastAccessTime" jdbcType="BINARY" />
+    <result column="RECOVER_TIME" property="recoverTime" jdbcType="BINARY" />
+    <result column="TRANSACTION_COUNTER" property="transactionCounter" jdbcType="BINARY" />
+    <result column="TABLE_ROWS" property="tableRows" jdbcType="BINARY" />
+    <result column="AVG_ROW_LENGTH" property="avgRowLength" jdbcType="BINARY" />
+    <result column="DATA_LENGTH" property="dataLength" jdbcType="BINARY" />
+    <result column="MAX_DATA_LENGTH" property="maxDataLength" jdbcType="BINARY" />
+    <result column="INDEX_LENGTH" property="indexLength" jdbcType="BINARY" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="BINARY" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="BINARY" />
+    <result column="CHECK_TIME" property="checkTime" jdbcType="BINARY" />
+    <result column="CHECKSUM" property="checksum" jdbcType="BINARY" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Files" >
+    insert into FILES (FILE_ID, FILE_TYPE, TABLESPACE_NAME, 
+      TABLE_CATALOG, LOGFILE_GROUP_NAME, LOGFILE_GROUP_NUMBER, 
+      ENGINE, FREE_EXTENTS, TOTAL_EXTENTS, 
+      EXTENT_SIZE, INITIAL_SIZE, MAXIMUM_SIZE, 
+      AUTOEXTEND_SIZE, VERSION, ROW_FORMAT, 
+      DATA_FREE, `STATUS`, EXTRA, 
+      FILE_NAME, TABLE_SCHEMA, `TABLE_NAME`, 
+      FULLTEXT_KEYS, DELETED_ROWS, UPDATE_COUNT, 
+      CREATION_TIME, LAST_UPDATE_TIME, LAST_ACCESS_TIME, 
+      RECOVER_TIME, TRANSACTION_COUNTER, TABLE_ROWS, 
+      `AVG_ROW_LENGTH`, DATA_LENGTH, MAX_DATA_LENGTH, 
+      INDEX_LENGTH, CREATE_TIME, UPDATE_TIME, 
+      CHECK_TIME, `CHECKSUM`)
+    values (#{fileId,jdbcType=BIGINT}, #{fileType,jdbcType=VARCHAR}, #{tablespaceName,jdbcType=VARCHAR}, 
+      #{tableCatalog,jdbcType=CHAR}, #{logfileGroupName,jdbcType=VARCHAR}, #{logfileGroupNumber,jdbcType=BIGINT}, 
+      #{engine,jdbcType=VARCHAR}, #{freeExtents,jdbcType=BIGINT}, #{totalExtents,jdbcType=BIGINT}, 
+      #{extentSize,jdbcType=BIGINT}, #{initialSize,jdbcType=BIGINT}, #{maximumSize,jdbcType=BIGINT}, 
+      #{autoextendSize,jdbcType=BIGINT}, #{version,jdbcType=BIGINT}, #{rowFormat,jdbcType=VARCHAR}, 
+      #{dataFree,jdbcType=BIGINT}, #{status,jdbcType=VARCHAR}, #{extra,jdbcType=VARCHAR}, 
+      #{fileName,jdbcType=LONGVARCHAR}, #{tableSchema,jdbcType=BINARY}, #{tableName,jdbcType=BINARY}, 
+      #{fulltextKeys,jdbcType=BINARY}, #{deletedRows,jdbcType=BINARY}, #{updateCount,jdbcType=BINARY}, 
+      #{creationTime,jdbcType=BINARY}, #{lastUpdateTime,jdbcType=BINARY}, #{lastAccessTime,jdbcType=BINARY}, 
+      #{recoverTime,jdbcType=BINARY}, #{transactionCounter,jdbcType=BINARY}, #{tableRows,jdbcType=BINARY}, 
+      #{avgRowLength,jdbcType=BINARY}, #{dataLength,jdbcType=BINARY}, #{maxDataLength,jdbcType=BINARY}, 
+      #{indexLength,jdbcType=BINARY}, #{createTime,jdbcType=BINARY}, #{updateTime,jdbcType=BINARY}, 
+      #{checkTime,jdbcType=BINARY}, #{checksum,jdbcType=BINARY})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select FILE_ID, FILE_TYPE, TABLESPACE_NAME, TABLE_CATALOG, LOGFILE_GROUP_NAME, LOGFILE_GROUP_NUMBER, 
+    ENGINE, FREE_EXTENTS, TOTAL_EXTENTS, EXTENT_SIZE, INITIAL_SIZE, MAXIMUM_SIZE, AUTOEXTEND_SIZE, 
+    VERSION, ROW_FORMAT, DATA_FREE, `STATUS`, EXTRA, FILE_NAME, TABLE_SCHEMA, `TABLE_NAME`, 
+    FULLTEXT_KEYS, DELETED_ROWS, UPDATE_COUNT, CREATION_TIME, LAST_UPDATE_TIME, LAST_ACCESS_TIME, 
+    RECOVER_TIME, TRANSACTION_COUNTER, TABLE_ROWS, `AVG_ROW_LENGTH`, DATA_LENGTH, MAX_DATA_LENGTH, 
+    INDEX_LENGTH, CREATE_TIME, UPDATE_TIME, CHECK_TIME, `CHECKSUM`
+    from FILES
+  </select>
+</mapper>

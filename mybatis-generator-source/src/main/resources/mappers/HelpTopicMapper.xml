@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.HelpTopicMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.HelpTopic" >
+    <id column="help_topic_id" property="helpTopicId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="CHAR" />
+    <result column="help_category_id" property="helpCategoryId" jdbcType="SMALLINT" />
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
+    <result column="example" property="example" jdbcType="LONGVARCHAR" />
+    <result column="url" property="url" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from help_topic
+    where help_topic_id = #{helpTopicId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.HelpTopic" >
+    insert into help_topic (help_topic_id, `name`, help_category_id, 
+      description, example, url
+      )
+    values (#{helpTopicId,jdbcType=INTEGER}, #{name,jdbcType=CHAR}, #{helpCategoryId,jdbcType=SMALLINT}, 
+      #{description,jdbcType=LONGVARCHAR}, #{example,jdbcType=LONGVARCHAR}, #{url,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.HelpTopic" >
+    update help_topic
+    set `name` = #{name,jdbcType=CHAR},
+      help_category_id = #{helpCategoryId,jdbcType=SMALLINT},
+      description = #{description,jdbcType=LONGVARCHAR},
+      example = #{example,jdbcType=LONGVARCHAR},
+      url = #{url,jdbcType=LONGVARCHAR}
+    where help_topic_id = #{helpTopicId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select help_topic_id, `name`, help_category_id, description, example, url
+    from help_topic
+    where help_topic_id = #{helpTopicId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select help_topic_id, `name`, help_category_id, description, example, url
+    from help_topic
+  </select>
+</mapper>

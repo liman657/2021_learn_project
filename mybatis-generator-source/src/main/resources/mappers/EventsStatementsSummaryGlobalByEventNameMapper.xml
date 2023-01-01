@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsStatementsSummaryGlobalByEventNameMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsStatementsSummaryGlobalByEventName" >
+    <id column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="COUNT_STAR" property="countStar" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WAIT" property="sumTimerWait" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WAIT" property="minTimerWait" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WAIT" property="avgTimerWait" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WAIT" property="maxTimerWait" jdbcType="BIGINT" />
+    <result column="SUM_LOCK_TIME" property="sumLockTime" jdbcType="BIGINT" />
+    <result column="SUM_ERRORS" property="sumErrors" jdbcType="BIGINT" />
+    <result column="SUM_WARNINGS" property="sumWarnings" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_AFFECTED" property="sumRowsAffected" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_SENT" property="sumRowsSent" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_EXAMINED" property="sumRowsExamined" jdbcType="BIGINT" />
+    <result column="SUM_CREATED_TMP_DISK_TABLES" property="sumCreatedTmpDiskTables" jdbcType="BIGINT" />
+    <result column="SUM_CREATED_TMP_TABLES" property="sumCreatedTmpTables" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_FULL_JOIN" property="sumSelectFullJoin" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_FULL_RANGE_JOIN" property="sumSelectFullRangeJoin" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_RANGE" property="sumSelectRange" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_RANGE_CHECK" property="sumSelectRangeCheck" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_SCAN" property="sumSelectScan" jdbcType="BIGINT" />
+    <result column="SUM_SORT_MERGE_PASSES" property="sumSortMergePasses" jdbcType="BIGINT" />
+    <result column="SUM_SORT_RANGE" property="sumSortRange" jdbcType="BIGINT" />
+    <result column="SUM_SORT_ROWS" property="sumSortRows" jdbcType="BIGINT" />
+    <result column="SUM_SORT_SCAN" property="sumSortScan" jdbcType="BIGINT" />
+    <result column="SUM_NO_INDEX_USED" property="sumNoIndexUsed" jdbcType="BIGINT" />
+    <result column="SUM_NO_GOOD_INDEX_USED" property="sumNoGoodIndexUsed" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from events_statements_summary_global_by_event_name
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsStatementsSummaryGlobalByEventName" >
+    insert into events_statements_summary_global_by_event_name (EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, 
+      MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT, 
+      SUM_LOCK_TIME, SUM_ERRORS, SUM_WARNINGS, 
+      SUM_ROWS_AFFECTED, SUM_ROWS_SENT, SUM_ROWS_EXAMINED, 
+      SUM_CREATED_TMP_DISK_TABLES, SUM_CREATED_TMP_TABLES, 
+      SUM_SELECT_FULL_JOIN, SUM_SELECT_FULL_RANGE_JOIN, 
+      SUM_SELECT_RANGE, SUM_SELECT_RANGE_CHECK, SUM_SELECT_SCAN, 
+      SUM_SORT_MERGE_PASSES, SUM_SORT_RANGE, SUM_SORT_ROWS, 
+      SUM_SORT_SCAN, SUM_NO_INDEX_USED, SUM_NO_GOOD_INDEX_USED
+      )
+    values (#{eventName,jdbcType=VARCHAR}, #{countStar,jdbcType=BIGINT}, #{sumTimerWait,jdbcType=BIGINT}, 
+      #{minTimerWait,jdbcType=BIGINT}, #{avgTimerWait,jdbcType=BIGINT}, #{maxTimerWait,jdbcType=BIGINT}, 
+      #{sumLockTime,jdbcType=BIGINT}, #{sumErrors,jdbcType=BIGINT}, #{sumWarnings,jdbcType=BIGINT}, 
+      #{sumRowsAffected,jdbcType=BIGINT}, #{sumRowsSent,jdbcType=BIGINT}, #{sumRowsExamined,jdbcType=BIGINT}, 
+      #{sumCreatedTmpDiskTables,jdbcType=BIGINT}, #{sumCreatedTmpTables,jdbcType=BIGINT}, 
+      #{sumSelectFullJoin,jdbcType=BIGINT}, #{sumSelectFullRangeJoin,jdbcType=BIGINT}, 
+      #{sumSelectRange,jdbcType=BIGINT}, #{sumSelectRangeCheck,jdbcType=BIGINT}, #{sumSelectScan,jdbcType=BIGINT}, 
+      #{sumSortMergePasses,jdbcType=BIGINT}, #{sumSortRange,jdbcType=BIGINT}, #{sumSortRows,jdbcType=BIGINT}, 
+      #{sumSortScan,jdbcType=BIGINT}, #{sumNoIndexUsed,jdbcType=BIGINT}, #{sumNoGoodIndexUsed,jdbcType=BIGINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.EventsStatementsSummaryGlobalByEventName" >
+    update events_statements_summary_global_by_event_name
+    set COUNT_STAR = #{countStar,jdbcType=BIGINT},
+      SUM_TIMER_WAIT = #{sumTimerWait,jdbcType=BIGINT},
+      MIN_TIMER_WAIT = #{minTimerWait,jdbcType=BIGINT},
+      AVG_TIMER_WAIT = #{avgTimerWait,jdbcType=BIGINT},
+      MAX_TIMER_WAIT = #{maxTimerWait,jdbcType=BIGINT},
+      SUM_LOCK_TIME = #{sumLockTime,jdbcType=BIGINT},
+      SUM_ERRORS = #{sumErrors,jdbcType=BIGINT},
+      SUM_WARNINGS = #{sumWarnings,jdbcType=BIGINT},
+      SUM_ROWS_AFFECTED = #{sumRowsAffected,jdbcType=BIGINT},
+      SUM_ROWS_SENT = #{sumRowsSent,jdbcType=BIGINT},
+      SUM_ROWS_EXAMINED = #{sumRowsExamined,jdbcType=BIGINT},
+      SUM_CREATED_TMP_DISK_TABLES = #{sumCreatedTmpDiskTables,jdbcType=BIGINT},
+      SUM_CREATED_TMP_TABLES = #{sumCreatedTmpTables,jdbcType=BIGINT},
+      SUM_SELECT_FULL_JOIN = #{sumSelectFullJoin,jdbcType=BIGINT},
+      SUM_SELECT_FULL_RANGE_JOIN = #{sumSelectFullRangeJoin,jdbcType=BIGINT},
+      SUM_SELECT_RANGE = #{sumSelectRange,jdbcType=BIGINT},
+      SUM_SELECT_RANGE_CHECK = #{sumSelectRangeCheck,jdbcType=BIGINT},
+      SUM_SELECT_SCAN = #{sumSelectScan,jdbcType=BIGINT},
+      SUM_SORT_MERGE_PASSES = #{sumSortMergePasses,jdbcType=BIGINT},
+      SUM_SORT_RANGE = #{sumSortRange,jdbcType=BIGINT},
+      SUM_SORT_ROWS = #{sumSortRows,jdbcType=BIGINT},
+      SUM_SORT_SCAN = #{sumSortScan,jdbcType=BIGINT},
+      SUM_NO_INDEX_USED = #{sumNoIndexUsed,jdbcType=BIGINT},
+      SUM_NO_GOOD_INDEX_USED = #{sumNoGoodIndexUsed,jdbcType=BIGINT}
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT, 
+    SUM_LOCK_TIME, SUM_ERRORS, SUM_WARNINGS, SUM_ROWS_AFFECTED, SUM_ROWS_SENT, SUM_ROWS_EXAMINED, 
+    SUM_CREATED_TMP_DISK_TABLES, SUM_CREATED_TMP_TABLES, SUM_SELECT_FULL_JOIN, SUM_SELECT_FULL_RANGE_JOIN, 
+    SUM_SELECT_RANGE, SUM_SELECT_RANGE_CHECK, SUM_SELECT_SCAN, SUM_SORT_MERGE_PASSES, 
+    SUM_SORT_RANGE, SUM_SORT_ROWS, SUM_SORT_SCAN, SUM_NO_INDEX_USED, SUM_NO_GOOD_INDEX_USED
+    from events_statements_summary_global_by_event_name
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT, 
+    SUM_LOCK_TIME, SUM_ERRORS, SUM_WARNINGS, SUM_ROWS_AFFECTED, SUM_ROWS_SENT, SUM_ROWS_EXAMINED, 
+    SUM_CREATED_TMP_DISK_TABLES, SUM_CREATED_TMP_TABLES, SUM_SELECT_FULL_JOIN, SUM_SELECT_FULL_RANGE_JOIN, 
+    SUM_SELECT_RANGE, SUM_SELECT_RANGE_CHECK, SUM_SELECT_SCAN, SUM_SORT_MERGE_PASSES, 
+    SUM_SORT_RANGE, SUM_SORT_ROWS, SUM_SORT_SCAN, SUM_NO_INDEX_USED, SUM_NO_GOOD_INDEX_USED
+    from events_statements_summary_global_by_event_name
+  </select>
+</mapper>

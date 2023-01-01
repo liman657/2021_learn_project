@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationApplierStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationApplierStatus" >
+    <id column="CHANNEL_NAME" property="channelName" jdbcType="CHAR" />
+    <result column="SERVICE_STATE" property="serviceState" jdbcType="CHAR" />
+    <result column="REMAINING_DELAY" property="remainingDelay" jdbcType="INTEGER" />
+    <result column="COUNT_TRANSACTIONS_RETRIES" property="countTransactionsRetries" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from replication_applier_status
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationApplierStatus" >
+    insert into replication_applier_status (CHANNEL_NAME, SERVICE_STATE, REMAINING_DELAY, 
+      COUNT_TRANSACTIONS_RETRIES)
+    values (#{channelName,jdbcType=CHAR}, #{serviceState,jdbcType=CHAR}, #{remainingDelay,jdbcType=INTEGER}, 
+      #{countTransactionsRetries,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationApplierStatus" >
+    update replication_applier_status
+    set SERVICE_STATE = #{serviceState,jdbcType=CHAR},
+      REMAINING_DELAY = #{remainingDelay,jdbcType=INTEGER},
+      COUNT_TRANSACTIONS_RETRIES = #{countTransactionsRetries,jdbcType=BIGINT}
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select CHANNEL_NAME, SERVICE_STATE, REMAINING_DELAY, COUNT_TRANSACTIONS_RETRIES
+    from replication_applier_status
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CHANNEL_NAME, SERVICE_STATE, REMAINING_DELAY, COUNT_TRANSACTIONS_RETRIES
+    from replication_applier_status
+  </select>
+</mapper>

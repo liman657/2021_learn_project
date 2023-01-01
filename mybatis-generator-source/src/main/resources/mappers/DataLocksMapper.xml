@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.DataLocksMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.DataLocks" >
+    <id column="ENGINE_LOCK_ID" property="engineLockId" jdbcType="VARCHAR" />
+    <id column="ENGINE" property="engine" jdbcType="VARCHAR" />
+    <result column="ENGINE_TRANSACTION_ID" property="engineTransactionId" jdbcType="BIGINT" />
+    <result column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <result column="EVENT_ID" property="eventId" jdbcType="BIGINT" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_NAME" property="subpartitionName" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="LOCK_TYPE" property="lockType" jdbcType="VARCHAR" />
+    <result column="LOCK_MODE" property="lockMode" jdbcType="VARCHAR" />
+    <result column="LOCK_STATUS" property="lockStatus" jdbcType="VARCHAR" />
+    <result column="LOCK_DATA" property="lockData" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from data_locks
+    where ENGINE_LOCK_ID = #{engineLockId,jdbcType=VARCHAR}
+      and ENGINE = #{engine,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.DataLocks" >
+    insert into data_locks (ENGINE_LOCK_ID, ENGINE, ENGINE_TRANSACTION_ID, 
+      THREAD_ID, EVENT_ID, OBJECT_SCHEMA, 
+      OBJECT_NAME, PARTITION_NAME, SUBPARTITION_NAME, 
+      INDEX_NAME, OBJECT_INSTANCE_BEGIN, LOCK_TYPE, 
+      LOCK_MODE, LOCK_STATUS, LOCK_DATA
+      )
+    values (#{engineLockId,jdbcType=VARCHAR}, #{engine,jdbcType=VARCHAR}, #{engineTransactionId,jdbcType=BIGINT}, 
+      #{threadId,jdbcType=BIGINT}, #{eventId,jdbcType=BIGINT}, #{objectSchema,jdbcType=VARCHAR}, 
+      #{objectName,jdbcType=VARCHAR}, #{partitionName,jdbcType=VARCHAR}, #{subpartitionName,jdbcType=VARCHAR}, 
+      #{indexName,jdbcType=VARCHAR}, #{objectInstanceBegin,jdbcType=BIGINT}, #{lockType,jdbcType=VARCHAR}, 
+      #{lockMode,jdbcType=VARCHAR}, #{lockStatus,jdbcType=VARCHAR}, #{lockData,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.DataLocks" >
+    update data_locks
+    set ENGINE_TRANSACTION_ID = #{engineTransactionId,jdbcType=BIGINT},
+      THREAD_ID = #{threadId,jdbcType=BIGINT},
+      EVENT_ID = #{eventId,jdbcType=BIGINT},
+      OBJECT_SCHEMA = #{objectSchema,jdbcType=VARCHAR},
+      OBJECT_NAME = #{objectName,jdbcType=VARCHAR},
+      PARTITION_NAME = #{partitionName,jdbcType=VARCHAR},
+      SUBPARTITION_NAME = #{subpartitionName,jdbcType=VARCHAR},
+      INDEX_NAME = #{indexName,jdbcType=VARCHAR},
+      OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT},
+      LOCK_TYPE = #{lockType,jdbcType=VARCHAR},
+      LOCK_MODE = #{lockMode,jdbcType=VARCHAR},
+      LOCK_STATUS = #{lockStatus,jdbcType=VARCHAR},
+      LOCK_DATA = #{lockData,jdbcType=VARCHAR}
+    where ENGINE_LOCK_ID = #{engineLockId,jdbcType=VARCHAR}
+      and ENGINE = #{engine,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select ENGINE_LOCK_ID, ENGINE, ENGINE_TRANSACTION_ID, THREAD_ID, EVENT_ID, OBJECT_SCHEMA, 
+    OBJECT_NAME, PARTITION_NAME, SUBPARTITION_NAME, INDEX_NAME, OBJECT_INSTANCE_BEGIN, 
+    LOCK_TYPE, LOCK_MODE, LOCK_STATUS, LOCK_DATA
+    from data_locks
+    where ENGINE_LOCK_ID = #{engineLockId,jdbcType=VARCHAR}
+      and ENGINE = #{engine,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ENGINE_LOCK_ID, ENGINE, ENGINE_TRANSACTION_ID, THREAD_ID, EVENT_ID, OBJECT_SCHEMA, 
+    OBJECT_NAME, PARTITION_NAME, SUBPARTITION_NAME, INDEX_NAME, OBJECT_INSTANCE_BEGIN, 
+    LOCK_TYPE, LOCK_MODE, LOCK_STATUS, LOCK_DATA
+    from data_locks
+  </select>
+</mapper>

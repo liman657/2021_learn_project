@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XIoGlobalByFileByBytesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XIoGlobalByFileByBytes" >
+    <result column="file" property="file" jdbcType="VARCHAR" />
+    <result column="count_read" property="countRead" jdbcType="BIGINT" />
+    <result column="total_read" property="totalRead" jdbcType="BIGINT" />
+    <result column="avg_read" property="avgRead" jdbcType="DECIMAL" />
+    <result column="count_write" property="countWrite" jdbcType="BIGINT" />
+    <result column="total_written" property="totalWritten" jdbcType="BIGINT" />
+    <result column="avg_write" property="avgWrite" jdbcType="DECIMAL" />
+    <result column="total" property="total" jdbcType="BIGINT" />
+    <result column="write_pct" property="writePct" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XIoGlobalByFileByBytes" >
+    insert into x$io_global_by_file_by_bytes (`file`, count_read, total_read, 
+      avg_read, count_write, total_written, 
+      avg_write, total, write_pct
+      )
+    values (#{file,jdbcType=VARCHAR}, #{countRead,jdbcType=BIGINT}, #{totalRead,jdbcType=BIGINT}, 
+      #{avgRead,jdbcType=DECIMAL}, #{countWrite,jdbcType=BIGINT}, #{totalWritten,jdbcType=BIGINT}, 
+      #{avgWrite,jdbcType=DECIMAL}, #{total,jdbcType=BIGINT}, #{writePct,jdbcType=DECIMAL}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `file`, count_read, total_read, avg_read, count_write, total_written, avg_write, 
+    total, write_pct
+    from x$io_global_by_file_by_bytes
+  </select>
+</mapper>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Columns" >
+    <result column="TABLE_CATALOG" property="tableCatalog" jdbcType="VARCHAR" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="ORDINAL_POSITION" property="ordinalPosition" jdbcType="INTEGER" />
+    <result column="IS_NULLABLE" property="isNullable" jdbcType="VARCHAR" />
+    <result column="CHARACTER_MAXIMUM_LENGTH" property="characterMaximumLength" jdbcType="BIGINT" />
+    <result column="CHARACTER_OCTET_LENGTH" property="characterOctetLength" jdbcType="BIGINT" />
+    <result column="NUMERIC_PRECISION" property="numericPrecision" jdbcType="BIGINT" />
+    <result column="NUMERIC_SCALE" property="numericScale" jdbcType="BIGINT" />
+    <result column="DATETIME_PRECISION" property="datetimePrecision" jdbcType="INTEGER" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="COLLATION_NAME" property="collationName" jdbcType="VARCHAR" />
+    <result column="COLUMN_KEY" property="columnKey" jdbcType="CHAR" />
+    <result column="EXTRA" property="extra" jdbcType="VARCHAR" />
+    <result column="PRIVILEGES" property="privileges" jdbcType="VARCHAR" />
+    <result column="SRS_ID" property="srsId" jdbcType="INTEGER" />
+    <result column="COLUMN_DEFAULT" property="columnDefault" jdbcType="LONGVARCHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="LONGVARCHAR" />
+    <result column="COLUMN_TYPE" property="columnType" jdbcType="LONGVARCHAR" />
+    <result column="COLUMN_COMMENT" property="columnComment" jdbcType="LONGVARCHAR" />
+    <result column="GENERATION_EXPRESSION" property="generationExpression" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Columns" >
+    insert into COLUMNS (TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, 
+      `COLUMN_NAME`, ORDINAL_POSITION, IS_NULLABLE, 
+      CHARACTER_MAXIMUM_LENGTH, CHARACTER_OCTET_LENGTH, 
+      NUMERIC_PRECISION, NUMERIC_SCALE, DATETIME_PRECISION, 
+      `CHARACTER_SET_NAME`, `COLLATION_NAME`, COLUMN_KEY, 
+      EXTRA, `PRIVILEGES`, SRS_ID, 
+      COLUMN_DEFAULT, DATA_TYPE, COLUMN_TYPE, 
+      COLUMN_COMMENT, GENERATION_EXPRESSION
+      )
+    values (#{tableCatalog,jdbcType=VARCHAR}, #{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, 
+      #{columnName,jdbcType=VARCHAR}, #{ordinalPosition,jdbcType=INTEGER}, #{isNullable,jdbcType=VARCHAR}, 
+      #{characterMaximumLength,jdbcType=BIGINT}, #{characterOctetLength,jdbcType=BIGINT}, 
+      #{numericPrecision,jdbcType=BIGINT}, #{numericScale,jdbcType=BIGINT}, #{datetimePrecision,jdbcType=INTEGER}, 
+      #{characterSetName,jdbcType=VARCHAR}, #{collationName,jdbcType=VARCHAR}, #{columnKey,jdbcType=CHAR}, 
+      #{extra,jdbcType=VARCHAR}, #{privileges,jdbcType=VARCHAR}, #{srsId,jdbcType=INTEGER}, 
+      #{columnDefault,jdbcType=LONGVARCHAR}, #{dataType,jdbcType=LONGVARCHAR}, #{columnType,jdbcType=LONGVARCHAR}, 
+      #{columnComment,jdbcType=LONGVARCHAR}, #{generationExpression,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, `COLUMN_NAME`, ORDINAL_POSITION, 
+    IS_NULLABLE, CHARACTER_MAXIMUM_LENGTH, CHARACTER_OCTET_LENGTH, NUMERIC_PRECISION, 
+    NUMERIC_SCALE, DATETIME_PRECISION, `CHARACTER_SET_NAME`, `COLLATION_NAME`, COLUMN_KEY, 
+    EXTRA, `PRIVILEGES`, SRS_ID, COLUMN_DEFAULT, DATA_TYPE, COLUMN_TYPE, COLUMN_COMMENT, 
+    GENERATION_EXPRESSION
+    from COLUMNS
+  </select>
+</mapper>

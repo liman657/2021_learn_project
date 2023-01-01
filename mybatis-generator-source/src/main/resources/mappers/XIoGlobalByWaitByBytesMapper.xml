@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XIoGlobalByWaitByBytesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XIoGlobalByWaitByBytes" >
+    <result column="event_name" property="eventName" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="BIGINT" />
+    <result column="min_latency" property="minLatency" jdbcType="BIGINT" />
+    <result column="avg_latency" property="avgLatency" jdbcType="BIGINT" />
+    <result column="max_latency" property="maxLatency" jdbcType="BIGINT" />
+    <result column="count_read" property="countRead" jdbcType="BIGINT" />
+    <result column="total_read" property="totalRead" jdbcType="BIGINT" />
+    <result column="avg_read" property="avgRead" jdbcType="DECIMAL" />
+    <result column="count_write" property="countWrite" jdbcType="BIGINT" />
+    <result column="total_written" property="totalWritten" jdbcType="BIGINT" />
+    <result column="avg_written" property="avgWritten" jdbcType="DECIMAL" />
+    <result column="total_requested" property="totalRequested" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XIoGlobalByWaitByBytes" >
+    insert into x$io_global_by_wait_by_bytes (event_name, total, total_latency, 
+      min_latency, avg_latency, max_latency, 
+      count_read, total_read, avg_read, 
+      count_write, total_written, avg_written, 
+      total_requested)
+    values (#{eventName,jdbcType=VARCHAR}, #{total,jdbcType=BIGINT}, #{totalLatency,jdbcType=BIGINT}, 
+      #{minLatency,jdbcType=BIGINT}, #{avgLatency,jdbcType=BIGINT}, #{maxLatency,jdbcType=BIGINT}, 
+      #{countRead,jdbcType=BIGINT}, #{totalRead,jdbcType=BIGINT}, #{avgRead,jdbcType=DECIMAL}, 
+      #{countWrite,jdbcType=BIGINT}, #{totalWritten,jdbcType=BIGINT}, #{avgWritten,jdbcType=DECIMAL}, 
+      #{totalRequested,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select event_name, total, total_latency, min_latency, avg_latency, max_latency, count_read, 
+    total_read, avg_read, count_write, total_written, avg_written, total_requested
+    from x$io_global_by_wait_by_bytes
+  </select>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.CheckConstraintsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.CheckConstraints" >
+    <result column="CONSTRAINT_CATALOG" property="constraintCatalog" jdbcType="VARCHAR" />
+    <result column="CONSTRAINT_SCHEMA" property="constraintSchema" jdbcType="VARCHAR" />
+    <result column="CONSTRAINT_NAME" property="constraintName" jdbcType="VARCHAR" />
+    <result column="CHECK_CLAUSE" property="checkClause" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.CheckConstraints" >
+    insert into CHECK_CONSTRAINTS (`CONSTRAINT_CATALOG`, `CONSTRAINT_SCHEMA`, 
+      `CONSTRAINT_NAME`, CHECK_CLAUSE)
+    values (#{constraintCatalog,jdbcType=VARCHAR}, #{constraintSchema,jdbcType=VARCHAR}, 
+      #{constraintName,jdbcType=VARCHAR}, #{checkClause,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `CONSTRAINT_CATALOG`, `CONSTRAINT_SCHEMA`, `CONSTRAINT_NAME`, CHECK_CLAUSE
+    from CHECK_CONSTRAINTS
+  </select>
+</mapper>

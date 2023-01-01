@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbIndexStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbIndexStats" >
+    <id column="database_name" property="databaseName" jdbcType="VARCHAR" />
+    <id column="table_name" property="tableName" jdbcType="VARCHAR" />
+    <id column="index_name" property="indexName" jdbcType="VARCHAR" />
+    <id column="stat_name" property="statName" jdbcType="VARCHAR" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+    <result column="stat_value" property="statValue" jdbcType="BIGINT" />
+    <result column="sample_size" property="sampleSize" jdbcType="BIGINT" />
+    <result column="stat_description" property="statDescription" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from innodb_index_stats
+    where database_name = #{databaseName,jdbcType=VARCHAR}
+      and `table_name` = #{tableName,jdbcType=VARCHAR}
+      and index_name = #{indexName,jdbcType=VARCHAR}
+      and stat_name = #{statName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbIndexStats" >
+    insert into innodb_index_stats (database_name, `table_name`, index_name, 
+      stat_name, last_update, stat_value, 
+      sample_size, stat_description)
+    values (#{databaseName,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{indexName,jdbcType=VARCHAR}, 
+      #{statName,jdbcType=VARCHAR}, #{lastUpdate,jdbcType=TIMESTAMP}, #{statValue,jdbcType=BIGINT}, 
+      #{sampleSize,jdbcType=BIGINT}, #{statDescription,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.InnodbIndexStats" >
+    update innodb_index_stats
+    set last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      stat_value = #{statValue,jdbcType=BIGINT},
+      sample_size = #{sampleSize,jdbcType=BIGINT},
+      stat_description = #{statDescription,jdbcType=VARCHAR}
+    where database_name = #{databaseName,jdbcType=VARCHAR}
+      and `table_name` = #{tableName,jdbcType=VARCHAR}
+      and index_name = #{indexName,jdbcType=VARCHAR}
+      and stat_name = #{statName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select database_name, `table_name`, index_name, stat_name, last_update, stat_value, 
+    sample_size, stat_description
+    from innodb_index_stats
+    where database_name = #{databaseName,jdbcType=VARCHAR}
+      and `table_name` = #{tableName,jdbcType=VARCHAR}
+      and index_name = #{indexName,jdbcType=VARCHAR}
+      and stat_name = #{statName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select database_name, `table_name`, index_name, stat_name, last_update, stat_value, 
+    sample_size, stat_description
+    from innodb_index_stats
+  </select>
+</mapper>

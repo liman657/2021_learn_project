@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SlaveRelayLogInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SlaveRelayLogInfo" >
+    <id column="Channel_name" property="channelName" jdbcType="CHAR" />
+    <result column="Number_of_lines" property="numberOfLines" jdbcType="INTEGER" />
+    <result column="Relay_log_pos" property="relayLogPos" jdbcType="BIGINT" />
+    <result column="Master_log_pos" property="masterLogPos" jdbcType="BIGINT" />
+    <result column="Sql_delay" property="sqlDelay" jdbcType="INTEGER" />
+    <result column="Number_of_workers" property="numberOfWorkers" jdbcType="INTEGER" />
+    <result column="Id" property="id" jdbcType="INTEGER" />
+    <result column="Privilege_checks_username" property="privilegeChecksUsername" jdbcType="CHAR" />
+    <result column="Privilege_checks_hostname" property="privilegeChecksHostname" jdbcType="CHAR" />
+    <result column="Require_row_format" property="requireRowFormat" jdbcType="BIT" />
+    <result column="Require_table_primary_key_check" property="requireTablePrimaryKeyCheck" jdbcType="CHAR" />
+    <result column="Assign_gtids_to_anonymous_transactions_type" property="assignGtidsToAnonymousTransactionsType" jdbcType="CHAR" />
+    <result column="Relay_log_name" property="relayLogName" jdbcType="LONGVARCHAR" />
+    <result column="Master_log_name" property="masterLogName" jdbcType="LONGVARCHAR" />
+    <result column="Assign_gtids_to_anonymous_transactions_value" property="assignGtidsToAnonymousTransactionsValue" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from slave_relay_log_info
+    where Channel_name = #{channelName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SlaveRelayLogInfo" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into slave_relay_log_info (Channel_name, Number_of_lines, Relay_log_pos, 
+      Master_log_pos, Sql_delay, Number_of_workers, 
+      Privilege_checks_username, Privilege_checks_hostname, 
+      Require_row_format, Require_table_primary_key_check, 
+      Assign_gtids_to_anonymous_transactions_type, Relay_log_name, 
+      Master_log_name, Assign_gtids_to_anonymous_transactions_value
+      )
+    values (#{channelName,jdbcType=CHAR}, #{numberOfLines,jdbcType=INTEGER}, #{relayLogPos,jdbcType=BIGINT}, 
+      #{masterLogPos,jdbcType=BIGINT}, #{sqlDelay,jdbcType=INTEGER}, #{numberOfWorkers,jdbcType=INTEGER}, 
+      #{privilegeChecksUsername,jdbcType=CHAR}, #{privilegeChecksHostname,jdbcType=CHAR}, 
+      #{requireRowFormat,jdbcType=BIT}, #{requireTablePrimaryKeyCheck,jdbcType=CHAR}, 
+      #{assignGtidsToAnonymousTransactionsType,jdbcType=CHAR}, #{relayLogName,jdbcType=LONGVARCHAR}, 
+      #{masterLogName,jdbcType=LONGVARCHAR}, #{assignGtidsToAnonymousTransactionsValue,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SlaveRelayLogInfo" >
+    update slave_relay_log_info
+    set Number_of_lines = #{numberOfLines,jdbcType=INTEGER},
+      Relay_log_pos = #{relayLogPos,jdbcType=BIGINT},
+      Master_log_pos = #{masterLogPos,jdbcType=BIGINT},
+      Sql_delay = #{sqlDelay,jdbcType=INTEGER},
+      Number_of_workers = #{numberOfWorkers,jdbcType=INTEGER},
+      Id = #{id,jdbcType=INTEGER},
+      Privilege_checks_username = #{privilegeChecksUsername,jdbcType=CHAR},
+      Privilege_checks_hostname = #{privilegeChecksHostname,jdbcType=CHAR},
+      Require_row_format = #{requireRowFormat,jdbcType=BIT},
+      Require_table_primary_key_check = #{requireTablePrimaryKeyCheck,jdbcType=CHAR},
+      Assign_gtids_to_anonymous_transactions_type = #{assignGtidsToAnonymousTransactionsType,jdbcType=CHAR},
+      Relay_log_name = #{relayLogName,jdbcType=LONGVARCHAR},
+      Master_log_name = #{masterLogName,jdbcType=LONGVARCHAR},
+      Assign_gtids_to_anonymous_transactions_value = #{assignGtidsToAnonymousTransactionsValue,jdbcType=LONGVARCHAR}
+    where Channel_name = #{channelName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select Channel_name, Number_of_lines, Relay_log_pos, Master_log_pos, Sql_delay, Number_of_workers, 
+    Id, Privilege_checks_username, Privilege_checks_hostname, Require_row_format, Require_table_primary_key_check, 
+    Assign_gtids_to_anonymous_transactions_type, Relay_log_name, Master_log_name, Assign_gtids_to_anonymous_transactions_value
+    from slave_relay_log_info
+    where Channel_name = #{channelName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select Channel_name, Number_of_lines, Relay_log_pos, Master_log_pos, Sql_delay, Number_of_workers, 
+    Id, Privilege_checks_username, Privilege_checks_hostname, Require_row_format, Require_table_primary_key_check, 
+    Assign_gtids_to_anonymous_transactions_type, Relay_log_name, Master_log_name, Assign_gtids_to_anonymous_transactions_value
+    from slave_relay_log_info
+  </select>
+</mapper>

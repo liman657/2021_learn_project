@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.RoleRoutineGrantsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.RoleRoutineGrants" >
+    <result column="GRANTOR" property="grantor" jdbcType="VARCHAR" />
+    <result column="GRANTOR_HOST" property="grantorHost" jdbcType="VARCHAR" />
+    <result column="GRANTEE" property="grantee" jdbcType="CHAR" />
+    <result column="GRANTEE_HOST" property="granteeHost" jdbcType="CHAR" />
+    <result column="SPECIFIC_CATALOG" property="specificCatalog" jdbcType="VARCHAR" />
+    <result column="SPECIFIC_SCHEMA" property="specificSchema" jdbcType="CHAR" />
+    <result column="SPECIFIC_NAME" property="specificName" jdbcType="CHAR" />
+    <result column="ROUTINE_CATALOG" property="routineCatalog" jdbcType="VARCHAR" />
+    <result column="ROUTINE_SCHEMA" property="routineSchema" jdbcType="CHAR" />
+    <result column="ROUTINE_NAME" property="routineName" jdbcType="CHAR" />
+    <result column="PRIVILEGE_TYPE" property="privilegeType" jdbcType="CHAR" />
+    <result column="IS_GRANTABLE" property="isGrantable" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.RoleRoutineGrants" >
+    insert into ROLE_ROUTINE_GRANTS (GRANTOR, GRANTOR_HOST, GRANTEE, 
+      GRANTEE_HOST, SPECIFIC_CATALOG, SPECIFIC_SCHEMA, 
+      `SPECIFIC_NAME`, `ROUTINE_CATALOG`, `ROUTINE_SCHEMA`, 
+      `ROUTINE_NAME`, PRIVILEGE_TYPE, IS_GRANTABLE
+      )
+    values (#{grantor,jdbcType=VARCHAR}, #{grantorHost,jdbcType=VARCHAR}, #{grantee,jdbcType=CHAR}, 
+      #{granteeHost,jdbcType=CHAR}, #{specificCatalog,jdbcType=VARCHAR}, #{specificSchema,jdbcType=CHAR}, 
+      #{specificName,jdbcType=CHAR}, #{routineCatalog,jdbcType=VARCHAR}, #{routineSchema,jdbcType=CHAR}, 
+      #{routineName,jdbcType=CHAR}, #{privilegeType,jdbcType=CHAR}, #{isGrantable,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select GRANTOR, GRANTOR_HOST, GRANTEE, GRANTEE_HOST, SPECIFIC_CATALOG, SPECIFIC_SCHEMA, 
+    `SPECIFIC_NAME`, `ROUTINE_CATALOG`, `ROUTINE_SCHEMA`, `ROUTINE_NAME`, PRIVILEGE_TYPE, 
+    IS_GRANTABLE
+    from ROLE_ROUTINE_GRANTS
+  </select>
+</mapper>

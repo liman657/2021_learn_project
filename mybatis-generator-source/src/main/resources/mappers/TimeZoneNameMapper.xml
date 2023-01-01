@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TimeZoneNameMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TimeZoneName" >
+    <id column="Name" property="name" jdbcType="CHAR" />
+    <result column="Time_zone_id" property="timeZoneId" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from time_zone_name
+    where `Name` = #{name,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TimeZoneName" >
+    insert into time_zone_name (`Name`, Time_zone_id)
+    values (#{name,jdbcType=CHAR}, #{timeZoneId,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.TimeZoneName" >
+    update time_zone_name
+    set Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+    where `Name` = #{name,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select `Name`, Time_zone_id
+    from time_zone_name
+    where `Name` = #{name,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `Name`, Time_zone_id
+    from time_zone_name
+  </select>
+</mapper>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.foodie.mapper.CategoryMapper">
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Category">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="father_id" jdbcType="INTEGER" property="fatherId" />
+    <result column="logo" jdbcType="VARCHAR" property="logo" />
+    <result column="slogan" jdbcType="VARCHAR" property="slogan" />
+    <result column="cat_image" jdbcType="VARCHAR" property="catImage" />
+    <result column="bg_color" jdbcType="VARCHAR" property="bgColor" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Category">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into category (`name`, `type`, father_id, 
+      logo, slogan, cat_image, 
+      bg_color)
+    values (#{name,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{fatherId,jdbcType=INTEGER}, 
+      #{logo,jdbcType=VARCHAR}, #{slogan,jdbcType=VARCHAR}, #{catImage,jdbcType=VARCHAR}, 
+      #{bgColor,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, `name`, `type`, father_id, logo, slogan, cat_image, bg_color
+    from category
+  </select>
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Category">
+    <id column="category_id" jdbcType="TINYINT" property="categoryId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="last_update" jdbcType="TIMESTAMP" property="lastUpdate" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Byte">
+    delete from category
+    where category_id = #{categoryId,jdbcType=TINYINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Category">
+    insert into category (category_id, `name`, last_update
+      )
+    values (#{categoryId,jdbcType=TINYINT}, #{name,jdbcType=VARCHAR}, #{lastUpdate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Category">
+    update category
+    set `name` = #{name,jdbcType=VARCHAR},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP}
+    where category_id = #{categoryId,jdbcType=TINYINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Byte" resultMap="BaseResultMap">
+    select category_id, `name`, last_update
+    from category
+    where category_id = #{categoryId,jdbcType=TINYINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select category_id, `name`, last_update
+    from category
+  </select>
+</mapper>

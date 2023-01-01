@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TableHandlesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TableHandles" >
+    <id column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="OWNER_THREAD_ID" property="ownerThreadId" jdbcType="BIGINT" />
+    <result column="OWNER_EVENT_ID" property="ownerEventId" jdbcType="BIGINT" />
+    <result column="INTERNAL_LOCK" property="internalLock" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_LOCK" property="externalLock" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from table_handles
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TableHandles" >
+    insert into table_handles (OBJECT_INSTANCE_BEGIN, OBJECT_TYPE, OBJECT_SCHEMA, 
+      OBJECT_NAME, OWNER_THREAD_ID, OWNER_EVENT_ID, 
+      INTERNAL_LOCK, EXTERNAL_LOCK)
+    values (#{objectInstanceBegin,jdbcType=BIGINT}, #{objectType,jdbcType=VARCHAR}, #{objectSchema,jdbcType=VARCHAR}, 
+      #{objectName,jdbcType=VARCHAR}, #{ownerThreadId,jdbcType=BIGINT}, #{ownerEventId,jdbcType=BIGINT}, 
+      #{internalLock,jdbcType=VARCHAR}, #{externalLock,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.TableHandles" >
+    update table_handles
+    set OBJECT_TYPE = #{objectType,jdbcType=VARCHAR},
+      OBJECT_SCHEMA = #{objectSchema,jdbcType=VARCHAR},
+      OBJECT_NAME = #{objectName,jdbcType=VARCHAR},
+      OWNER_THREAD_ID = #{ownerThreadId,jdbcType=BIGINT},
+      OWNER_EVENT_ID = #{ownerEventId,jdbcType=BIGINT},
+      INTERNAL_LOCK = #{internalLock,jdbcType=VARCHAR},
+      EXTERNAL_LOCK = #{externalLock,jdbcType=VARCHAR}
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select OBJECT_INSTANCE_BEGIN, OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, OWNER_THREAD_ID, 
+    OWNER_EVENT_ID, INTERNAL_LOCK, EXTERNAL_LOCK
+    from table_handles
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_INSTANCE_BEGIN, OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, OWNER_THREAD_ID, 
+    OWNER_EVENT_ID, INTERNAL_LOCK, EXTERNAL_LOCK
+    from table_handles
+  </select>
+</mapper>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsStagesCurrentMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsStagesCurrent" >
+    <id column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <id column="EVENT_ID" property="eventId" jdbcType="BIGINT" />
+    <result column="END_EVENT_ID" property="endEventId" jdbcType="BIGINT" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="TIMER_START" property="timerStart" jdbcType="BIGINT" />
+    <result column="TIMER_END" property="timerEnd" jdbcType="BIGINT" />
+    <result column="TIMER_WAIT" property="timerWait" jdbcType="BIGINT" />
+    <result column="WORK_COMPLETED" property="workCompleted" jdbcType="BIGINT" />
+    <result column="WORK_ESTIMATED" property="workEstimated" jdbcType="BIGINT" />
+    <result column="NESTING_EVENT_ID" property="nestingEventId" jdbcType="BIGINT" />
+    <result column="NESTING_EVENT_TYPE" property="nestingEventType" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from events_stages_current
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_ID = #{eventId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsStagesCurrent" >
+    insert into events_stages_current (THREAD_ID, EVENT_ID, END_EVENT_ID, 
+      EVENT_NAME, `SOURCE`, TIMER_START, 
+      TIMER_END, TIMER_WAIT, WORK_COMPLETED, 
+      WORK_ESTIMATED, NESTING_EVENT_ID, NESTING_EVENT_TYPE
+      )
+    values (#{threadId,jdbcType=BIGINT}, #{eventId,jdbcType=BIGINT}, #{endEventId,jdbcType=BIGINT}, 
+      #{eventName,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{timerStart,jdbcType=BIGINT}, 
+      #{timerEnd,jdbcType=BIGINT}, #{timerWait,jdbcType=BIGINT}, #{workCompleted,jdbcType=BIGINT}, 
+      #{workEstimated,jdbcType=BIGINT}, #{nestingEventId,jdbcType=BIGINT}, #{nestingEventType,jdbcType=CHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.EventsStagesCurrent" >
+    update events_stages_current
+    set END_EVENT_ID = #{endEventId,jdbcType=BIGINT},
+      EVENT_NAME = #{eventName,jdbcType=VARCHAR},
+      `SOURCE` = #{source,jdbcType=VARCHAR},
+      TIMER_START = #{timerStart,jdbcType=BIGINT},
+      TIMER_END = #{timerEnd,jdbcType=BIGINT},
+      TIMER_WAIT = #{timerWait,jdbcType=BIGINT},
+      WORK_COMPLETED = #{workCompleted,jdbcType=BIGINT},
+      WORK_ESTIMATED = #{workEstimated,jdbcType=BIGINT},
+      NESTING_EVENT_ID = #{nestingEventId,jdbcType=BIGINT},
+      NESTING_EVENT_TYPE = #{nestingEventType,jdbcType=CHAR}
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_ID = #{eventId,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select THREAD_ID, EVENT_ID, END_EVENT_ID, EVENT_NAME, `SOURCE`, TIMER_START, TIMER_END, 
+    TIMER_WAIT, WORK_COMPLETED, WORK_ESTIMATED, NESTING_EVENT_ID, NESTING_EVENT_TYPE
+    from events_stages_current
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and EVENT_ID = #{eventId,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select THREAD_ID, EVENT_ID, END_EVENT_ID, EVENT_NAME, `SOURCE`, TIMER_START, TIMER_END, 
+    TIMER_WAIT, WORK_COMPLETED, WORK_ESTIMATED, NESTING_EVENT_ID, NESTING_EVENT_TYPE
+    from events_stages_current
+  </select>
+</mapper>

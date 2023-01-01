@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SetupActorsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SetupActors" >
+    <id column="HOST" property="host" jdbcType="CHAR" />
+    <id column="USER" property="user" jdbcType="CHAR" />
+    <id column="ROLE" property="role" jdbcType="CHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="CHAR" />
+    <result column="HISTORY" property="history" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from setup_actors
+    where `HOST` = #{host,jdbcType=CHAR}
+      and `USER` = #{user,jdbcType=CHAR}
+      and `ROLE` = #{role,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SetupActors" >
+    insert into setup_actors (`HOST`, `USER`, `ROLE`, ENABLED, 
+      HISTORY)
+    values (#{host,jdbcType=CHAR}, #{user,jdbcType=CHAR}, #{role,jdbcType=CHAR}, #{enabled,jdbcType=CHAR}, 
+      #{history,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SetupActors" >
+    update setup_actors
+    set ENABLED = #{enabled,jdbcType=CHAR},
+      HISTORY = #{history,jdbcType=CHAR}
+    where `HOST` = #{host,jdbcType=CHAR}
+      and `USER` = #{user,jdbcType=CHAR}
+      and `ROLE` = #{role,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select `HOST`, `USER`, `ROLE`, ENABLED, HISTORY
+    from setup_actors
+    where `HOST` = #{host,jdbcType=CHAR}
+      and `USER` = #{user,jdbcType=CHAR}
+      and `ROLE` = #{role,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `HOST`, `USER`, `ROLE`, ENABLED, HISTORY
+    from setup_actors
+  </select>
+</mapper>

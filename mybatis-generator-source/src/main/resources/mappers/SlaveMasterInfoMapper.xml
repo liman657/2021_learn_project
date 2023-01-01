@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SlaveMasterInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SlaveMasterInfo" >
+    <id column="Channel_name" property="channelName" jdbcType="CHAR" />
+    <result column="Number_of_lines" property="numberOfLines" jdbcType="INTEGER" />
+    <result column="Master_log_pos" property="masterLogPos" jdbcType="BIGINT" />
+    <result column="Host" property="host" jdbcType="CHAR" />
+    <result column="Port" property="port" jdbcType="INTEGER" />
+    <result column="Connect_retry" property="connectRetry" jdbcType="INTEGER" />
+    <result column="Enabled_ssl" property="enabledSsl" jdbcType="BIT" />
+    <result column="Ssl_verify_server_cert" property="sslVerifyServerCert" jdbcType="BIT" />
+    <result column="Heartbeat" property="heartbeat" jdbcType="REAL" />
+    <result column="Retry_count" property="retryCount" jdbcType="BIGINT" />
+    <result column="Enabled_auto_position" property="enabledAutoPosition" jdbcType="BIT" />
+    <result column="Get_public_key" property="getPublicKey" jdbcType="BIT" />
+    <result column="Master_compression_algorithm" property="masterCompressionAlgorithm" jdbcType="CHAR" />
+    <result column="Master_zstd_compression_level" property="masterZstdCompressionLevel" jdbcType="INTEGER" />
+    <result column="Source_connection_auto_failover" property="sourceConnectionAutoFailover" jdbcType="BIT" />
+    <result column="Gtid_only" property="gtidOnly" jdbcType="BIT" />
+    <result column="Master_log_name" property="masterLogName" jdbcType="LONGVARCHAR" />
+    <result column="User_name" property="userName" jdbcType="LONGVARCHAR" />
+    <result column="User_password" property="userPassword" jdbcType="LONGVARCHAR" />
+    <result column="Ssl_ca" property="sslCa" jdbcType="LONGVARCHAR" />
+    <result column="Ssl_capath" property="sslCapath" jdbcType="LONGVARCHAR" />
+    <result column="Ssl_cert" property="sslCert" jdbcType="LONGVARCHAR" />
+    <result column="Ssl_cipher" property="sslCipher" jdbcType="LONGVARCHAR" />
+    <result column="Ssl_key" property="sslKey" jdbcType="LONGVARCHAR" />
+    <result column="Bind" property="bind" jdbcType="LONGVARCHAR" />
+    <result column="Ignored_server_ids" property="ignoredServerIds" jdbcType="LONGVARCHAR" />
+    <result column="Uuid" property="uuid" jdbcType="LONGVARCHAR" />
+    <result column="Ssl_crl" property="sslCrl" jdbcType="LONGVARCHAR" />
+    <result column="Ssl_crlpath" property="sslCrlpath" jdbcType="LONGVARCHAR" />
+    <result column="Tls_version" property="tlsVersion" jdbcType="LONGVARCHAR" />
+    <result column="Public_key_path" property="publicKeyPath" jdbcType="LONGVARCHAR" />
+    <result column="Network_namespace" property="networkNamespace" jdbcType="LONGVARCHAR" />
+    <result column="Tls_ciphersuites" property="tlsCiphersuites" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from slave_master_info
+    where Channel_name = #{channelName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SlaveMasterInfo" >
+    insert into slave_master_info (Channel_name, Number_of_lines, Master_log_pos, 
+      `Host`, Port, Connect_retry, 
+      Enabled_ssl, Ssl_verify_server_cert, Heartbeat, 
+      Retry_count, Enabled_auto_position, Get_public_key, 
+      Master_compression_algorithm, Master_zstd_compression_level, 
+      Source_connection_auto_failover, Gtid_only, Master_log_name, 
+      User_name, User_password, Ssl_ca, 
+      Ssl_capath, Ssl_cert, Ssl_cipher, 
+      Ssl_key, Bind, Ignored_server_ids, 
+      Uuid, Ssl_crl, Ssl_crlpath, 
+      Tls_version, Public_key_path, Network_namespace, 
+      Tls_ciphersuites)
+    values (#{channelName,jdbcType=CHAR}, #{numberOfLines,jdbcType=INTEGER}, #{masterLogPos,jdbcType=BIGINT}, 
+      #{host,jdbcType=CHAR}, #{port,jdbcType=INTEGER}, #{connectRetry,jdbcType=INTEGER}, 
+      #{enabledSsl,jdbcType=BIT}, #{sslVerifyServerCert,jdbcType=BIT}, #{heartbeat,jdbcType=REAL}, 
+      #{retryCount,jdbcType=BIGINT}, #{enabledAutoPosition,jdbcType=BIT}, #{getPublicKey,jdbcType=BIT}, 
+      #{masterCompressionAlgorithm,jdbcType=CHAR}, #{masterZstdCompressionLevel,jdbcType=INTEGER}, 
+      #{sourceConnectionAutoFailover,jdbcType=BIT}, #{gtidOnly,jdbcType=BIT}, #{masterLogName,jdbcType=LONGVARCHAR}, 
+      #{userName,jdbcType=LONGVARCHAR}, #{userPassword,jdbcType=LONGVARCHAR}, #{sslCa,jdbcType=LONGVARCHAR}, 
+      #{sslCapath,jdbcType=LONGVARCHAR}, #{sslCert,jdbcType=LONGVARCHAR}, #{sslCipher,jdbcType=LONGVARCHAR}, 
+      #{sslKey,jdbcType=LONGVARCHAR}, #{bind,jdbcType=LONGVARCHAR}, #{ignoredServerIds,jdbcType=LONGVARCHAR}, 
+      #{uuid,jdbcType=LONGVARCHAR}, #{sslCrl,jdbcType=LONGVARCHAR}, #{sslCrlpath,jdbcType=LONGVARCHAR}, 
+      #{tlsVersion,jdbcType=LONGVARCHAR}, #{publicKeyPath,jdbcType=LONGVARCHAR}, #{networkNamespace,jdbcType=LONGVARCHAR}, 
+      #{tlsCiphersuites,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SlaveMasterInfo" >
+    update slave_master_info
+    set Number_of_lines = #{numberOfLines,jdbcType=INTEGER},
+      Master_log_pos = #{masterLogPos,jdbcType=BIGINT},
+      `Host` = #{host,jdbcType=CHAR},
+      Port = #{port,jdbcType=INTEGER},
+      Connect_retry = #{connectRetry,jdbcType=INTEGER},
+      Enabled_ssl = #{enabledSsl,jdbcType=BIT},
+      Ssl_verify_server_cert = #{sslVerifyServerCert,jdbcType=BIT},
+      Heartbeat = #{heartbeat,jdbcType=REAL},
+      Retry_count = #{retryCount,jdbcType=BIGINT},
+      Enabled_auto_position = #{enabledAutoPosition,jdbcType=BIT},
+      Get_public_key = #{getPublicKey,jdbcType=BIT},
+      Master_compression_algorithm = #{masterCompressionAlgorithm,jdbcType=CHAR},
+      Master_zstd_compression_level = #{masterZstdCompressionLevel,jdbcType=INTEGER},
+      Source_connection_auto_failover = #{sourceConnectionAutoFailover,jdbcType=BIT},
+      Gtid_only = #{gtidOnly,jdbcType=BIT},
+      Master_log_name = #{masterLogName,jdbcType=LONGVARCHAR},
+      User_name = #{userName,jdbcType=LONGVARCHAR},
+      User_password = #{userPassword,jdbcType=LONGVARCHAR},
+      Ssl_ca = #{sslCa,jdbcType=LONGVARCHAR},
+      Ssl_capath = #{sslCapath,jdbcType=LONGVARCHAR},
+      Ssl_cert = #{sslCert,jdbcType=LONGVARCHAR},
+      Ssl_cipher = #{sslCipher,jdbcType=LONGVARCHAR},
+      Ssl_key = #{sslKey,jdbcType=LONGVARCHAR},
+      Bind = #{bind,jdbcType=LONGVARCHAR},
+      Ignored_server_ids = #{ignoredServerIds,jdbcType=LONGVARCHAR},
+      Uuid = #{uuid,jdbcType=LONGVARCHAR},
+      Ssl_crl = #{sslCrl,jdbcType=LONGVARCHAR},
+      Ssl_crlpath = #{sslCrlpath,jdbcType=LONGVARCHAR},
+      Tls_version = #{tlsVersion,jdbcType=LONGVARCHAR},
+      Public_key_path = #{publicKeyPath,jdbcType=LONGVARCHAR},
+      Network_namespace = #{networkNamespace,jdbcType=LONGVARCHAR},
+      Tls_ciphersuites = #{tlsCiphersuites,jdbcType=LONGVARCHAR}
+    where Channel_name = #{channelName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select Channel_name, Number_of_lines, Master_log_pos, `Host`, Port, Connect_retry, 
+    Enabled_ssl, Ssl_verify_server_cert, Heartbeat, Retry_count, Enabled_auto_position, 
+    Get_public_key, Master_compression_algorithm, Master_zstd_compression_level, Source_connection_auto_failover, 
+    Gtid_only, Master_log_name, User_name, User_password, Ssl_ca, Ssl_capath, Ssl_cert, 
+    Ssl_cipher, Ssl_key, Bind, Ignored_server_ids, Uuid, Ssl_crl, Ssl_crlpath, Tls_version, 
+    Public_key_path, Network_namespace, Tls_ciphersuites
+    from slave_master_info
+    where Channel_name = #{channelName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select Channel_name, Number_of_lines, Master_log_pos, `Host`, Port, Connect_retry, 
+    Enabled_ssl, Ssl_verify_server_cert, Heartbeat, Retry_count, Enabled_auto_position, 
+    Get_public_key, Master_compression_algorithm, Master_zstd_compression_level, Source_connection_auto_failover, 
+    Gtid_only, Master_log_name, User_name, User_password, Ssl_ca, Ssl_capath, Ssl_cert, 
+    Ssl_cipher, Ssl_key, Bind, Ignored_server_ids, Uuid, Ssl_crl, Ssl_crlpath, Tls_version, 
+    Public_key_path, Network_namespace, Tls_ciphersuites
+    from slave_master_info
+  </select>
+</mapper>

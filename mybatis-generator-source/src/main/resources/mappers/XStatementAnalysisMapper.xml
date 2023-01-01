@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XStatementAnalysisMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XStatementAnalysis" >
+    <result column="db" property="db" jdbcType="VARCHAR" />
+    <result column="full_scan" property="fullScan" jdbcType="VARCHAR" />
+    <result column="exec_count" property="execCount" jdbcType="BIGINT" />
+    <result column="err_count" property="errCount" jdbcType="BIGINT" />
+    <result column="warn_count" property="warnCount" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="BIGINT" />
+    <result column="max_latency" property="maxLatency" jdbcType="BIGINT" />
+    <result column="avg_latency" property="avgLatency" jdbcType="BIGINT" />
+    <result column="lock_latency" property="lockLatency" jdbcType="BIGINT" />
+    <result column="rows_sent" property="rowsSent" jdbcType="BIGINT" />
+    <result column="rows_sent_avg" property="rowsSentAvg" jdbcType="DECIMAL" />
+    <result column="rows_examined" property="rowsExamined" jdbcType="BIGINT" />
+    <result column="rows_examined_avg" property="rowsExaminedAvg" jdbcType="DECIMAL" />
+    <result column="rows_affected" property="rowsAffected" jdbcType="BIGINT" />
+    <result column="rows_affected_avg" property="rowsAffectedAvg" jdbcType="DECIMAL" />
+    <result column="tmp_tables" property="tmpTables" jdbcType="BIGINT" />
+    <result column="tmp_disk_tables" property="tmpDiskTables" jdbcType="BIGINT" />
+    <result column="rows_sorted" property="rowsSorted" jdbcType="BIGINT" />
+    <result column="sort_merge_passes" property="sortMergePasses" jdbcType="BIGINT" />
+    <result column="digest" property="digest" jdbcType="VARCHAR" />
+    <result column="first_seen" property="firstSeen" jdbcType="TIMESTAMP" />
+    <result column="last_seen" property="lastSeen" jdbcType="TIMESTAMP" />
+    <result column="query" property="query" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XStatementAnalysis" >
+    insert into x$statement_analysis (db, full_scan, exec_count, 
+      err_count, warn_count, total_latency, 
+      max_latency, avg_latency, lock_latency, 
+      rows_sent, rows_sent_avg, rows_examined, 
+      rows_examined_avg, rows_affected, rows_affected_avg, 
+      tmp_tables, tmp_disk_tables, rows_sorted, 
+      sort_merge_passes, digest, first_seen, 
+      last_seen, query)
+    values (#{db,jdbcType=VARCHAR}, #{fullScan,jdbcType=VARCHAR}, #{execCount,jdbcType=BIGINT}, 
+      #{errCount,jdbcType=BIGINT}, #{warnCount,jdbcType=BIGINT}, #{totalLatency,jdbcType=BIGINT}, 
+      #{maxLatency,jdbcType=BIGINT}, #{avgLatency,jdbcType=BIGINT}, #{lockLatency,jdbcType=BIGINT}, 
+      #{rowsSent,jdbcType=BIGINT}, #{rowsSentAvg,jdbcType=DECIMAL}, #{rowsExamined,jdbcType=BIGINT}, 
+      #{rowsExaminedAvg,jdbcType=DECIMAL}, #{rowsAffected,jdbcType=BIGINT}, #{rowsAffectedAvg,jdbcType=DECIMAL}, 
+      #{tmpTables,jdbcType=BIGINT}, #{tmpDiskTables,jdbcType=BIGINT}, #{rowsSorted,jdbcType=BIGINT}, 
+      #{sortMergePasses,jdbcType=BIGINT}, #{digest,jdbcType=VARCHAR}, #{firstSeen,jdbcType=TIMESTAMP}, 
+      #{lastSeen,jdbcType=TIMESTAMP}, #{query,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select db, full_scan, exec_count, err_count, warn_count, total_latency, max_latency, 
+    avg_latency, lock_latency, rows_sent, rows_sent_avg, rows_examined, rows_examined_avg, 
+    rows_affected, rows_affected_avg, tmp_tables, tmp_disk_tables, rows_sorted, sort_merge_passes, 
+    digest, first_seen, last_seen, query
+    from x$statement_analysis
+  </select>
+</mapper>

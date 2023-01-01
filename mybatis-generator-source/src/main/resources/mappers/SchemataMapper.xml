@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SchemataMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Schemata" >
+    <result column="CATALOG_NAME" property="catalogName" jdbcType="VARCHAR" />
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="DEFAULT_CHARACTER_SET_NAME" property="defaultCharacterSetName" jdbcType="VARCHAR" />
+    <result column="DEFAULT_COLLATION_NAME" property="defaultCollationName" jdbcType="VARCHAR" />
+    <result column="DEFAULT_ENCRYPTION" property="defaultEncryption" jdbcType="CHAR" />
+    <result column="SQL_PATH" property="sqlPath" jdbcType="BINARY" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Schemata" >
+    insert into SCHEMATA (`CATALOG_NAME`, `SCHEMA_NAME`, DEFAULT_CHARACTER_SET_NAME, 
+      DEFAULT_COLLATION_NAME, DEFAULT_ENCRYPTION, SQL_PATH
+      )
+    values (#{catalogName,jdbcType=VARCHAR}, #{schemaName,jdbcType=VARCHAR}, #{defaultCharacterSetName,jdbcType=VARCHAR}, 
+      #{defaultCollationName,jdbcType=VARCHAR}, #{defaultEncryption,jdbcType=CHAR}, #{sqlPath,jdbcType=BINARY}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `CATALOG_NAME`, `SCHEMA_NAME`, DEFAULT_CHARACTER_SET_NAME, DEFAULT_COLLATION_NAME, 
+    DEFAULT_ENCRYPTION, SQL_PATH
+    from SCHEMATA
+  </select>
+</mapper>

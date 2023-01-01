@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsWaitsSummaryGlobalByEventNameMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsWaitsSummaryGlobalByEventName" >
+    <id column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="COUNT_STAR" property="countStar" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WAIT" property="sumTimerWait" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WAIT" property="minTimerWait" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WAIT" property="avgTimerWait" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WAIT" property="maxTimerWait" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from events_waits_summary_global_by_event_name
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsWaitsSummaryGlobalByEventName" >
+    insert into events_waits_summary_global_by_event_name (EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, 
+      MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT
+      )
+    values (#{eventName,jdbcType=VARCHAR}, #{countStar,jdbcType=BIGINT}, #{sumTimerWait,jdbcType=BIGINT}, 
+      #{minTimerWait,jdbcType=BIGINT}, #{avgTimerWait,jdbcType=BIGINT}, #{maxTimerWait,jdbcType=BIGINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.EventsWaitsSummaryGlobalByEventName" >
+    update events_waits_summary_global_by_event_name
+    set COUNT_STAR = #{countStar,jdbcType=BIGINT},
+      SUM_TIMER_WAIT = #{sumTimerWait,jdbcType=BIGINT},
+      MIN_TIMER_WAIT = #{minTimerWait,jdbcType=BIGINT},
+      AVG_TIMER_WAIT = #{avgTimerWait,jdbcType=BIGINT},
+      MAX_TIMER_WAIT = #{maxTimerWait,jdbcType=BIGINT}
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT
+    from events_waits_summary_global_by_event_name
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT
+    from events_waits_summary_global_by_event_name
+  </select>
+</mapper>

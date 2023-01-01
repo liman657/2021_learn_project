@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.FileSummaryByEventNameMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.FileSummaryByEventName" >
+    <id column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="COUNT_STAR" property="countStar" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WAIT" property="sumTimerWait" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WAIT" property="minTimerWait" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WAIT" property="avgTimerWait" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WAIT" property="maxTimerWait" jdbcType="BIGINT" />
+    <result column="COUNT_READ" property="countRead" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_READ" property="sumTimerRead" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_READ" property="minTimerRead" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_READ" property="avgTimerRead" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_READ" property="maxTimerRead" jdbcType="BIGINT" />
+    <result column="SUM_NUMBER_OF_BYTES_READ" property="sumNumberOfBytesRead" jdbcType="BIGINT" />
+    <result column="COUNT_WRITE" property="countWrite" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WRITE" property="sumTimerWrite" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WRITE" property="minTimerWrite" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WRITE" property="avgTimerWrite" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WRITE" property="maxTimerWrite" jdbcType="BIGINT" />
+    <result column="SUM_NUMBER_OF_BYTES_WRITE" property="sumNumberOfBytesWrite" jdbcType="BIGINT" />
+    <result column="COUNT_MISC" property="countMisc" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_MISC" property="sumTimerMisc" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_MISC" property="minTimerMisc" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_MISC" property="avgTimerMisc" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_MISC" property="maxTimerMisc" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from file_summary_by_event_name
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.FileSummaryByEventName" >
+    insert into file_summary_by_event_name (EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, 
+      MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT, 
+      COUNT_READ, SUM_TIMER_READ, MIN_TIMER_READ, 
+      AVG_TIMER_READ, MAX_TIMER_READ, SUM_NUMBER_OF_BYTES_READ, 
+      COUNT_WRITE, SUM_TIMER_WRITE, MIN_TIMER_WRITE, 
+      AVG_TIMER_WRITE, MAX_TIMER_WRITE, SUM_NUMBER_OF_BYTES_WRITE, 
+      COUNT_MISC, SUM_TIMER_MISC, MIN_TIMER_MISC, 
+      AVG_TIMER_MISC, MAX_TIMER_MISC)
+    values (#{eventName,jdbcType=VARCHAR}, #{countStar,jdbcType=BIGINT}, #{sumTimerWait,jdbcType=BIGINT}, 
+      #{minTimerWait,jdbcType=BIGINT}, #{avgTimerWait,jdbcType=BIGINT}, #{maxTimerWait,jdbcType=BIGINT}, 
+      #{countRead,jdbcType=BIGINT}, #{sumTimerRead,jdbcType=BIGINT}, #{minTimerRead,jdbcType=BIGINT}, 
+      #{avgTimerRead,jdbcType=BIGINT}, #{maxTimerRead,jdbcType=BIGINT}, #{sumNumberOfBytesRead,jdbcType=BIGINT}, 
+      #{countWrite,jdbcType=BIGINT}, #{sumTimerWrite,jdbcType=BIGINT}, #{minTimerWrite,jdbcType=BIGINT}, 
+      #{avgTimerWrite,jdbcType=BIGINT}, #{maxTimerWrite,jdbcType=BIGINT}, #{sumNumberOfBytesWrite,jdbcType=BIGINT}, 
+      #{countMisc,jdbcType=BIGINT}, #{sumTimerMisc,jdbcType=BIGINT}, #{minTimerMisc,jdbcType=BIGINT}, 
+      #{avgTimerMisc,jdbcType=BIGINT}, #{maxTimerMisc,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.FileSummaryByEventName" >
+    update file_summary_by_event_name
+    set COUNT_STAR = #{countStar,jdbcType=BIGINT},
+      SUM_TIMER_WAIT = #{sumTimerWait,jdbcType=BIGINT},
+      MIN_TIMER_WAIT = #{minTimerWait,jdbcType=BIGINT},
+      AVG_TIMER_WAIT = #{avgTimerWait,jdbcType=BIGINT},
+      MAX_TIMER_WAIT = #{maxTimerWait,jdbcType=BIGINT},
+      COUNT_READ = #{countRead,jdbcType=BIGINT},
+      SUM_TIMER_READ = #{sumTimerRead,jdbcType=BIGINT},
+      MIN_TIMER_READ = #{minTimerRead,jdbcType=BIGINT},
+      AVG_TIMER_READ = #{avgTimerRead,jdbcType=BIGINT},
+      MAX_TIMER_READ = #{maxTimerRead,jdbcType=BIGINT},
+      SUM_NUMBER_OF_BYTES_READ = #{sumNumberOfBytesRead,jdbcType=BIGINT},
+      COUNT_WRITE = #{countWrite,jdbcType=BIGINT},
+      SUM_TIMER_WRITE = #{sumTimerWrite,jdbcType=BIGINT},
+      MIN_TIMER_WRITE = #{minTimerWrite,jdbcType=BIGINT},
+      AVG_TIMER_WRITE = #{avgTimerWrite,jdbcType=BIGINT},
+      MAX_TIMER_WRITE = #{maxTimerWrite,jdbcType=BIGINT},
+      SUM_NUMBER_OF_BYTES_WRITE = #{sumNumberOfBytesWrite,jdbcType=BIGINT},
+      COUNT_MISC = #{countMisc,jdbcType=BIGINT},
+      SUM_TIMER_MISC = #{sumTimerMisc,jdbcType=BIGINT},
+      MIN_TIMER_MISC = #{minTimerMisc,jdbcType=BIGINT},
+      AVG_TIMER_MISC = #{avgTimerMisc,jdbcType=BIGINT},
+      MAX_TIMER_MISC = #{maxTimerMisc,jdbcType=BIGINT}
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT, 
+    COUNT_READ, SUM_TIMER_READ, MIN_TIMER_READ, AVG_TIMER_READ, MAX_TIMER_READ, SUM_NUMBER_OF_BYTES_READ, 
+    COUNT_WRITE, SUM_TIMER_WRITE, MIN_TIMER_WRITE, AVG_TIMER_WRITE, MAX_TIMER_WRITE, 
+    SUM_NUMBER_OF_BYTES_WRITE, COUNT_MISC, SUM_TIMER_MISC, MIN_TIMER_MISC, AVG_TIMER_MISC, 
+    MAX_TIMER_MISC
+    from file_summary_by_event_name
+    where EVENT_NAME = #{eventName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select EVENT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, MAX_TIMER_WAIT, 
+    COUNT_READ, SUM_TIMER_READ, MIN_TIMER_READ, AVG_TIMER_READ, MAX_TIMER_READ, SUM_NUMBER_OF_BYTES_READ, 
+    COUNT_WRITE, SUM_TIMER_WRITE, MIN_TIMER_WRITE, AVG_TIMER_WRITE, MAX_TIMER_WRITE, 
+    SUM_NUMBER_OF_BYTES_WRITE, COUNT_MISC, SUM_TIMER_MISC, MIN_TIMER_MISC, AVG_TIMER_MISC, 
+    MAX_TIMER_MISC
+    from file_summary_by_event_name
+  </select>
+</mapper>

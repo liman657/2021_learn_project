@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.AccountsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Accounts" >
+    <result column="USER" property="user" jdbcType="CHAR" />
+    <result column="HOST" property="host" jdbcType="CHAR" />
+    <result column="CURRENT_CONNECTIONS" property="currentConnections" jdbcType="BIGINT" />
+    <result column="TOTAL_CONNECTIONS" property="totalConnections" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Accounts" >
+    insert into accounts (`USER`, `HOST`, CURRENT_CONNECTIONS, 
+      TOTAL_CONNECTIONS)
+    values (#{user,jdbcType=CHAR}, #{host,jdbcType=CHAR}, #{currentConnections,jdbcType=BIGINT}, 
+      #{totalConnections,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `USER`, `HOST`, CURRENT_CONNECTIONS, TOTAL_CONNECTIONS
+    from accounts
+  </select>
+</mapper>

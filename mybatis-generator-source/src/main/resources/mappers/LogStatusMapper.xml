@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.LogStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.LogStatus" >
+    <result column="SERVER_UUID" property="serverUuid" jdbcType="CHAR" />
+    <result column="LOCAL" property="local" jdbcType="LONGVARCHAR" />
+    <result column="REPLICATION" property="replication" jdbcType="LONGVARCHAR" />
+    <result column="STORAGE_ENGINES" property="storageEngines" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.LogStatus" >
+    insert into log_status (SERVER_UUID, `LOCAL`, `REPLICATION`, 
+      STORAGE_ENGINES)
+    values (#{serverUuid,jdbcType=CHAR}, #{local,jdbcType=LONGVARCHAR}, #{replication,jdbcType=LONGVARCHAR}, 
+      #{storageEngines,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SERVER_UUID, `LOCAL`, `REPLICATION`, STORAGE_ENGINES
+    from log_status
+  </select>
+</mapper>

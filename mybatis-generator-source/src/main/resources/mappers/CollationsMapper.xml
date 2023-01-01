@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.CollationsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Collations" >
+    <result column="COLLATION_NAME" property="collationName" jdbcType="VARCHAR" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="ID" property="id" jdbcType="BIGINT" />
+    <result column="IS_DEFAULT" property="isDefault" jdbcType="VARCHAR" />
+    <result column="IS_COMPILED" property="isCompiled" jdbcType="VARCHAR" />
+    <result column="SORTLEN" property="sortlen" jdbcType="INTEGER" />
+    <result column="PAD_ATTRIBUTE" property="padAttribute" jdbcType="CHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Collations" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into COLLATIONS (`COLLATION_NAME`, `CHARACTER_SET_NAME`, 
+      IS_DEFAULT, IS_COMPILED, SORTLEN, 
+      PAD_ATTRIBUTE)
+    values (#{collationName,jdbcType=VARCHAR}, #{characterSetName,jdbcType=VARCHAR}, 
+      #{isDefault,jdbcType=VARCHAR}, #{isCompiled,jdbcType=VARCHAR}, #{sortlen,jdbcType=INTEGER}, 
+      #{padAttribute,jdbcType=CHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `COLLATION_NAME`, `CHARACTER_SET_NAME`, ID, IS_DEFAULT, IS_COMPILED, SORTLEN, 
+    PAD_ATTRIBUTE
+    from COLLATIONS
+  </select>
+</mapper>

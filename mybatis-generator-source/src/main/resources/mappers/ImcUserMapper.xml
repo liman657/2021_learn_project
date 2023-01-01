@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ImcUserMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ImcUser" >
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="user_nick" property="userNick" jdbcType="VARCHAR" />
+    <result column="user_pwd" property="userPwd" jdbcType="CHAR" />
+    <result column="sex" property="sex" jdbcType="CHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="Position" property="position" jdbcType="VARCHAR" />
+    <result column="mem" property="mem" jdbcType="VARCHAR" />
+    <result column="exp_cnt" property="expCnt" jdbcType="INTEGER" />
+    <result column="score" property="score" jdbcType="INTEGER" />
+    <result column="follow_cnt" property="followCnt" jdbcType="INTEGER" />
+    <result column="fans_cnt" property="fansCnt" jdbcType="INTEGER" />
+    <result column="is_teacher" property="isTeacher" jdbcType="TINYINT" />
+    <result column="reg_time" property="regTime" jdbcType="TIMESTAMP" />
+    <result column="user_status" property="userStatus" jdbcType="TINYINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from imc_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ImcUser" >
+    insert into imc_user (user_id, user_nick, user_pwd, 
+      sex, province, city, `Position`, 
+      mem, exp_cnt, score, 
+      follow_cnt, fans_cnt, is_teacher, 
+      reg_time, user_status)
+    values (#{userId,jdbcType=INTEGER}, #{userNick,jdbcType=VARCHAR}, #{userPwd,jdbcType=CHAR}, 
+      #{sex,jdbcType=CHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}, 
+      #{mem,jdbcType=VARCHAR}, #{expCnt,jdbcType=INTEGER}, #{score,jdbcType=INTEGER}, 
+      #{followCnt,jdbcType=INTEGER}, #{fansCnt,jdbcType=INTEGER}, #{isTeacher,jdbcType=TINYINT}, 
+      #{regTime,jdbcType=TIMESTAMP}, #{userStatus,jdbcType=TINYINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ImcUser" >
+    update imc_user
+    set user_nick = #{userNick,jdbcType=VARCHAR},
+      user_pwd = #{userPwd,jdbcType=CHAR},
+      sex = #{sex,jdbcType=CHAR},
+      province = #{province,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      `Position` = #{position,jdbcType=VARCHAR},
+      mem = #{mem,jdbcType=VARCHAR},
+      exp_cnt = #{expCnt,jdbcType=INTEGER},
+      score = #{score,jdbcType=INTEGER},
+      follow_cnt = #{followCnt,jdbcType=INTEGER},
+      fans_cnt = #{fansCnt,jdbcType=INTEGER},
+      is_teacher = #{isTeacher,jdbcType=TINYINT},
+      reg_time = #{regTime,jdbcType=TIMESTAMP},
+      user_status = #{userStatus,jdbcType=TINYINT}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select user_id, user_nick, user_pwd, sex, province, city, `Position`, mem, exp_cnt, 
+    score, follow_cnt, fans_cnt, is_teacher, reg_time, user_status
+    from imc_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select user_id, user_nick, user_pwd, sex, province, city, `Position`, mem, exp_cnt, 
+    score, follow_cnt, fans_cnt, is_teacher, reg_time, user_status
+    from imc_user
+  </select>
+</mapper>

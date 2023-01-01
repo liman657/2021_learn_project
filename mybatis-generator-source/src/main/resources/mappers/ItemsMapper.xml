@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ItemsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Items" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="item_name" property="itemName" jdbcType="VARCHAR" />
+    <result column="cat_id" property="catId" jdbcType="INTEGER" />
+    <result column="root_cat_id" property="rootCatId" jdbcType="INTEGER" />
+    <result column="sell_counts" property="sellCounts" jdbcType="INTEGER" />
+    <result column="on_off_status" property="onOffStatus" jdbcType="INTEGER" />
+    <result column="created_time" property="createdTime" jdbcType="TIMESTAMP" />
+    <result column="updated_time" property="updatedTime" jdbcType="TIMESTAMP" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from items
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Items" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into items (item_name, cat_id, root_cat_id, 
+      sell_counts, on_off_status, created_time, 
+      updated_time, content)
+    values (#{itemName,jdbcType=VARCHAR}, #{catId,jdbcType=INTEGER}, #{rootCatId,jdbcType=INTEGER}, 
+      #{sellCounts,jdbcType=INTEGER}, #{onOffStatus,jdbcType=INTEGER}, #{createdTime,jdbcType=TIMESTAMP}, 
+      #{updatedTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Items" >
+    update items
+    set item_name = #{itemName,jdbcType=VARCHAR},
+      cat_id = #{catId,jdbcType=INTEGER},
+      root_cat_id = #{rootCatId,jdbcType=INTEGER},
+      sell_counts = #{sellCounts,jdbcType=INTEGER},
+      on_off_status = #{onOffStatus,jdbcType=INTEGER},
+      created_time = #{createdTime,jdbcType=TIMESTAMP},
+      updated_time = #{updatedTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, item_name, cat_id, root_cat_id, sell_counts, on_off_status, created_time, 
+    updated_time, content
+    from items
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, item_name, cat_id, root_cat_id, sell_counts, on_off_status, created_time, 
+    updated_time, content
+    from items
+  </select>
+</mapper>

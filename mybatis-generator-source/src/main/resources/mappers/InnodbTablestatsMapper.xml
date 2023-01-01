@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.foodie.mapper.InnodbTableStatsMapper">
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbTableStats">
+    <id column="database_name" jdbcType="VARCHAR" property="databaseName" />
+    <id column="table_name" jdbcType="VARCHAR" property="tableName" />
+    <result column="last_update" jdbcType="TIMESTAMP" property="lastUpdate" />
+    <result column="n_rows" jdbcType="BIGINT" property="nRows" />
+    <result column="clustered_index_size" jdbcType="BIGINT" property="clusteredIndexSize" />
+    <result column="sum_of_other_index_sizes" jdbcType="BIGINT" property="sumOfOtherIndexSizes" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from innodb_table_stats
+    where database_name = #{databaseName,jdbcType=VARCHAR}
+      and `table_name` = #{tableName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbTableStats">
+    insert into innodb_table_stats (database_name, `table_name`, last_update, 
+      n_rows, clustered_index_size, sum_of_other_index_sizes
+      )
+    values (#{databaseName,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{lastUpdate,jdbcType=TIMESTAMP}, 
+      #{nRows,jdbcType=BIGINT}, #{clusteredIndexSize,jdbcType=BIGINT}, #{sumOfOtherIndexSizes,jdbcType=BIGINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.InnodbTableStats">
+    update innodb_table_stats
+    set last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      n_rows = #{nRows,jdbcType=BIGINT},
+      clustered_index_size = #{clusteredIndexSize,jdbcType=BIGINT},
+      sum_of_other_index_sizes = #{sumOfOtherIndexSizes,jdbcType=BIGINT}
+    where database_name = #{databaseName,jdbcType=VARCHAR}
+      and `table_name` = #{tableName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select database_name, `table_name`, last_update, n_rows, clustered_index_size, sum_of_other_index_sizes
+    from innodb_table_stats
+    where database_name = #{databaseName,jdbcType=VARCHAR}
+      and `table_name` = #{tableName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select database_name, `table_name`, last_update, n_rows, clustered_index_size, sum_of_other_index_sizes
+    from innodb_table_stats
+  </select>
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbTablestats">
+    <result column="TABLE_ID" jdbcType="BIGINT" property="tableId" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="STATS_INITIALIZED" jdbcType="VARCHAR" property="statsInitialized" />
+    <result column="NUM_ROWS" jdbcType="BIGINT" property="numRows" />
+    <result column="CLUST_INDEX_SIZE" jdbcType="BIGINT" property="clustIndexSize" />
+    <result column="OTHER_INDEX_SIZE" jdbcType="BIGINT" property="otherIndexSize" />
+    <result column="MODIFIED_COUNTER" jdbcType="BIGINT" property="modifiedCounter" />
+    <result column="AUTOINC" jdbcType="BIGINT" property="autoinc" />
+    <result column="REF_COUNT" jdbcType="INTEGER" property="refCount" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbTablestats">
+    insert into INNODB_TABLESTATS (TABLE_ID, `NAME`, STATS_INITIALIZED, 
+      NUM_ROWS, CLUST_INDEX_SIZE, OTHER_INDEX_SIZE, 
+      MODIFIED_COUNTER, AUTOINC, REF_COUNT
+      )
+    values (#{tableId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{statsInitialized,jdbcType=VARCHAR}, 
+      #{numRows,jdbcType=BIGINT}, #{clustIndexSize,jdbcType=BIGINT}, #{otherIndexSize,jdbcType=BIGINT}, 
+      #{modifiedCounter,jdbcType=BIGINT}, #{autoinc,jdbcType=BIGINT}, #{refCount,jdbcType=INTEGER}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select TABLE_ID, `NAME`, STATS_INITIALIZED, NUM_ROWS, CLUST_INDEX_SIZE, OTHER_INDEX_SIZE, 
+    MODIFIED_COUNTER, AUTOINC, REF_COUNT
+    from INNODB_TABLESTATS
+  </select>
+</mapper>

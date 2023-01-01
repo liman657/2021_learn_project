@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.FuncMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Func" >
+    <id column="name" property="name" jdbcType="CHAR" />
+    <result column="ret" property="ret" jdbcType="TINYINT" />
+    <result column="dl" property="dl" jdbcType="CHAR" />
+    <result column="type" property="type" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from func
+    where `name` = #{name,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Func" >
+    insert into func (`name`, ret, dl, `type`
+      )
+    values (#{name,jdbcType=CHAR}, #{ret,jdbcType=TINYINT}, #{dl,jdbcType=CHAR}, #{type,jdbcType=CHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Func" >
+    update func
+    set ret = #{ret,jdbcType=TINYINT},
+      dl = #{dl,jdbcType=CHAR},
+      `type` = #{type,jdbcType=CHAR}
+    where `name` = #{name,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select `name`, ret, dl, `type`
+    from func
+    where `name` = #{name,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `name`, ret, dl, `type`
+    from func
+  </select>
+</mapper>

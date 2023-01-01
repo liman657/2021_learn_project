@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TablespacesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Tablespaces" >
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="ENGINE" property="engine" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_TYPE" property="tablespaceType" jdbcType="VARCHAR" />
+    <result column="LOGFILE_GROUP_NAME" property="logfileGroupName" jdbcType="VARCHAR" />
+    <result column="EXTENT_SIZE" property="extentSize" jdbcType="BIGINT" />
+    <result column="AUTOEXTEND_SIZE" property="autoextendSize" jdbcType="BIGINT" />
+    <result column="MAXIMUM_SIZE" property="maximumSize" jdbcType="BIGINT" />
+    <result column="NODEGROUP_ID" property="nodegroupId" jdbcType="BIGINT" />
+    <result column="TABLESPACE_COMMENT" property="tablespaceComment" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Tablespaces" >
+    insert into TABLESPACES (TABLESPACE_NAME, ENGINE, TABLESPACE_TYPE, 
+      LOGFILE_GROUP_NAME, EXTENT_SIZE, AUTOEXTEND_SIZE, 
+      MAXIMUM_SIZE, NODEGROUP_ID, TABLESPACE_COMMENT
+      )
+    values (#{tablespaceName,jdbcType=VARCHAR}, #{engine,jdbcType=VARCHAR}, #{tablespaceType,jdbcType=VARCHAR}, 
+      #{logfileGroupName,jdbcType=VARCHAR}, #{extentSize,jdbcType=BIGINT}, #{autoextendSize,jdbcType=BIGINT}, 
+      #{maximumSize,jdbcType=BIGINT}, #{nodegroupId,jdbcType=BIGINT}, #{tablespaceComment,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLESPACE_NAME, ENGINE, TABLESPACE_TYPE, LOGFILE_GROUP_NAME, EXTENT_SIZE, 
+    AUTOEXTEND_SIZE, MAXIMUM_SIZE, NODEGROUP_ID, TABLESPACE_COMMENT
+    from TABLESPACES
+  </select>
+</mapper>

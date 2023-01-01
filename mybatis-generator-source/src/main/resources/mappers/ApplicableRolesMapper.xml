@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ApplicableRolesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ApplicableRoles" >
+    <result column="USER" property="user" jdbcType="VARCHAR" />
+    <result column="HOST" property="host" jdbcType="VARCHAR" />
+    <result column="GRANTEE" property="grantee" jdbcType="VARCHAR" />
+    <result column="GRANTEE_HOST" property="granteeHost" jdbcType="VARCHAR" />
+    <result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR" />
+    <result column="ROLE_HOST" property="roleHost" jdbcType="VARCHAR" />
+    <result column="IS_GRANTABLE" property="isGrantable" jdbcType="VARCHAR" />
+    <result column="IS_DEFAULT" property="isDefault" jdbcType="VARCHAR" />
+    <result column="IS_MANDATORY" property="isMandatory" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ApplicableRoles" >
+    insert into APPLICABLE_ROLES (`USER`, `HOST`, GRANTEE, 
+      GRANTEE_HOST, ROLE_NAME, ROLE_HOST, 
+      IS_GRANTABLE, IS_DEFAULT, IS_MANDATORY
+      )
+    values (#{user,jdbcType=VARCHAR}, #{host,jdbcType=VARCHAR}, #{grantee,jdbcType=VARCHAR}, 
+      #{granteeHost,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR}, #{roleHost,jdbcType=VARCHAR}, 
+      #{isGrantable,jdbcType=VARCHAR}, #{isDefault,jdbcType=VARCHAR}, #{isMandatory,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `USER`, `HOST`, GRANTEE, GRANTEE_HOST, ROLE_NAME, ROLE_HOST, IS_GRANTABLE, 
+    IS_DEFAULT, IS_MANDATORY
+    from APPLICABLE_ROLES
+  </select>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.VariablesByThreadMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.VariablesByThread" >
+    <id column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <id column="VARIABLE_NAME" property="variableName" jdbcType="VARCHAR" />
+    <result column="VARIABLE_VALUE" property="variableValue" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from variables_by_thread
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and VARIABLE_NAME = #{variableName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.VariablesByThread" >
+    insert into variables_by_thread (THREAD_ID, VARIABLE_NAME, VARIABLE_VALUE
+      )
+    values (#{threadId,jdbcType=BIGINT}, #{variableName,jdbcType=VARCHAR}, #{variableValue,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.VariablesByThread" >
+    update variables_by_thread
+    set VARIABLE_VALUE = #{variableValue,jdbcType=VARCHAR}
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and VARIABLE_NAME = #{variableName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select THREAD_ID, VARIABLE_NAME, VARIABLE_VALUE
+    from variables_by_thread
+    where THREAD_ID = #{threadId,jdbcType=BIGINT}
+      and VARIABLE_NAME = #{variableName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select THREAD_ID, VARIABLE_NAME, VARIABLE_VALUE
+    from variables_by_thread
+  </select>
+</mapper>

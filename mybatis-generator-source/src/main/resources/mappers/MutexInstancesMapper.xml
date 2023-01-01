@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.MutexInstancesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.MutexInstances" >
+    <id column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="LOCKED_BY_THREAD_ID" property="lockedByThreadId" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from mutex_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.MutexInstances" >
+    insert into mutex_instances (OBJECT_INSTANCE_BEGIN, `NAME`, LOCKED_BY_THREAD_ID
+      )
+    values (#{objectInstanceBegin,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{lockedByThreadId,jdbcType=BIGINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.MutexInstances" >
+    update mutex_instances
+    set `NAME` = #{name,jdbcType=VARCHAR},
+      LOCKED_BY_THREAD_ID = #{lockedByThreadId,jdbcType=BIGINT}
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select OBJECT_INSTANCE_BEGIN, `NAME`, LOCKED_BY_THREAD_ID
+    from mutex_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_INSTANCE_BEGIN, `NAME`, LOCKED_BY_THREAD_ID
+    from mutex_instances
+  </select>
+</mapper>

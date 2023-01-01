@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XMemoryGlobalTotalMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XMemoryGlobalTotal" >
+    <result column="total_allocated" property="totalAllocated" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XMemoryGlobalTotal" >
+    insert into x$memory_global_total (total_allocated)
+    values (#{totalAllocated,jdbcType=DECIMAL})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select total_allocated
+    from x$memory_global_total
+  </select>
+</mapper>

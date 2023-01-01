@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.SysUserMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.SysUser" >
+<mapper namespace="com.coderman.foodie.mapper.SysUserMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SysUser" >
     <id column="user_id" property="userId" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="username" property="username" jdbcType="VARCHAR" />
@@ -19,7 +19,7 @@
     delete from sys_user
     where user_id = #{userId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.SysUser" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SysUser" >
     insert into sys_user (user_id, `name`, username, 
       `password`, salt, email, 
       mobile, `type`, `status`, 
@@ -31,7 +31,7 @@
       #{deptId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{imgUrl,jdbcType=VARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.SysUser" >
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SysUser" >
     update sys_user
     set `name` = #{name,jdbcType=VARCHAR},
       username = #{username,jdbcType=VARCHAR},

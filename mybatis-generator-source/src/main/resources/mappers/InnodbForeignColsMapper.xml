@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbForeignColsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbForeignCols" >
+    <result column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="FOR_COL_NAME" property="forColName" jdbcType="VARCHAR" />
+    <result column="REF_COL_NAME" property="refColName" jdbcType="VARCHAR" />
+    <result column="POS" property="pos" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbForeignCols" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into INNODB_FOREIGN_COLS (FOR_COL_NAME, REF_COL_NAME, POS
+      )
+    values (#{forColName,jdbcType=VARCHAR}, #{refColName,jdbcType=VARCHAR}, #{pos,jdbcType=INTEGER}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ID, FOR_COL_NAME, REF_COL_NAME, POS
+    from INNODB_FOREIGN_COLS
+  </select>
+</mapper>

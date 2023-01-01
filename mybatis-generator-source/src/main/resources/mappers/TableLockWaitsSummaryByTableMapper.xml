@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TableLockWaitsSummaryByTableMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TableLockWaitsSummaryByTable" >
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="COUNT_STAR" property="countStar" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WAIT" property="sumTimerWait" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WAIT" property="minTimerWait" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WAIT" property="avgTimerWait" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WAIT" property="maxTimerWait" jdbcType="BIGINT" />
+    <result column="COUNT_READ" property="countRead" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_READ" property="sumTimerRead" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_READ" property="minTimerRead" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_READ" property="avgTimerRead" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_READ" property="maxTimerRead" jdbcType="BIGINT" />
+    <result column="COUNT_WRITE" property="countWrite" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WRITE" property="sumTimerWrite" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WRITE" property="minTimerWrite" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WRITE" property="avgTimerWrite" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WRITE" property="maxTimerWrite" jdbcType="BIGINT" />
+    <result column="COUNT_READ_NORMAL" property="countReadNormal" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_READ_NORMAL" property="sumTimerReadNormal" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_READ_NORMAL" property="minTimerReadNormal" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_READ_NORMAL" property="avgTimerReadNormal" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_READ_NORMAL" property="maxTimerReadNormal" jdbcType="BIGINT" />
+    <result column="COUNT_READ_WITH_SHARED_LOCKS" property="countReadWithSharedLocks" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_READ_WITH_SHARED_LOCKS" property="sumTimerReadWithSharedLocks" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_READ_WITH_SHARED_LOCKS" property="minTimerReadWithSharedLocks" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_READ_WITH_SHARED_LOCKS" property="avgTimerReadWithSharedLocks" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_READ_WITH_SHARED_LOCKS" property="maxTimerReadWithSharedLocks" jdbcType="BIGINT" />
+    <result column="COUNT_READ_HIGH_PRIORITY" property="countReadHighPriority" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_READ_HIGH_PRIORITY" property="sumTimerReadHighPriority" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_READ_HIGH_PRIORITY" property="minTimerReadHighPriority" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_READ_HIGH_PRIORITY" property="avgTimerReadHighPriority" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_READ_HIGH_PRIORITY" property="maxTimerReadHighPriority" jdbcType="BIGINT" />
+    <result column="COUNT_READ_NO_INSERT" property="countReadNoInsert" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_READ_NO_INSERT" property="sumTimerReadNoInsert" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_READ_NO_INSERT" property="minTimerReadNoInsert" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_READ_NO_INSERT" property="avgTimerReadNoInsert" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_READ_NO_INSERT" property="maxTimerReadNoInsert" jdbcType="BIGINT" />
+    <result column="COUNT_READ_EXTERNAL" property="countReadExternal" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_READ_EXTERNAL" property="sumTimerReadExternal" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_READ_EXTERNAL" property="minTimerReadExternal" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_READ_EXTERNAL" property="avgTimerReadExternal" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_READ_EXTERNAL" property="maxTimerReadExternal" jdbcType="BIGINT" />
+    <result column="COUNT_WRITE_ALLOW_WRITE" property="countWriteAllowWrite" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WRITE_ALLOW_WRITE" property="sumTimerWriteAllowWrite" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WRITE_ALLOW_WRITE" property="minTimerWriteAllowWrite" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WRITE_ALLOW_WRITE" property="avgTimerWriteAllowWrite" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WRITE_ALLOW_WRITE" property="maxTimerWriteAllowWrite" jdbcType="BIGINT" />
+    <result column="COUNT_WRITE_CONCURRENT_INSERT" property="countWriteConcurrentInsert" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WRITE_CONCURRENT_INSERT" property="sumTimerWriteConcurrentInsert" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WRITE_CONCURRENT_INSERT" property="minTimerWriteConcurrentInsert" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WRITE_CONCURRENT_INSERT" property="avgTimerWriteConcurrentInsert" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WRITE_CONCURRENT_INSERT" property="maxTimerWriteConcurrentInsert" jdbcType="BIGINT" />
+    <result column="COUNT_WRITE_LOW_PRIORITY" property="countWriteLowPriority" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WRITE_LOW_PRIORITY" property="sumTimerWriteLowPriority" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WRITE_LOW_PRIORITY" property="minTimerWriteLowPriority" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WRITE_LOW_PRIORITY" property="avgTimerWriteLowPriority" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WRITE_LOW_PRIORITY" property="maxTimerWriteLowPriority" jdbcType="BIGINT" />
+    <result column="COUNT_WRITE_NORMAL" property="countWriteNormal" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WRITE_NORMAL" property="sumTimerWriteNormal" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WRITE_NORMAL" property="minTimerWriteNormal" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WRITE_NORMAL" property="avgTimerWriteNormal" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WRITE_NORMAL" property="maxTimerWriteNormal" jdbcType="BIGINT" />
+    <result column="COUNT_WRITE_EXTERNAL" property="countWriteExternal" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WRITE_EXTERNAL" property="sumTimerWriteExternal" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WRITE_EXTERNAL" property="minTimerWriteExternal" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WRITE_EXTERNAL" property="avgTimerWriteExternal" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WRITE_EXTERNAL" property="maxTimerWriteExternal" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TableLockWaitsSummaryByTable" >
+    insert into table_lock_waits_summary_by_table (OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, 
+      COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, 
+      AVG_TIMER_WAIT, MAX_TIMER_WAIT, COUNT_READ, 
+      SUM_TIMER_READ, MIN_TIMER_READ, AVG_TIMER_READ, 
+      MAX_TIMER_READ, COUNT_WRITE, SUM_TIMER_WRITE, 
+      MIN_TIMER_WRITE, AVG_TIMER_WRITE, MAX_TIMER_WRITE, 
+      COUNT_READ_NORMAL, SUM_TIMER_READ_NORMAL, MIN_TIMER_READ_NORMAL, 
+      AVG_TIMER_READ_NORMAL, MAX_TIMER_READ_NORMAL, COUNT_READ_WITH_SHARED_LOCKS, 
+      SUM_TIMER_READ_WITH_SHARED_LOCKS, MIN_TIMER_READ_WITH_SHARED_LOCKS, 
+      AVG_TIMER_READ_WITH_SHARED_LOCKS, MAX_TIMER_READ_WITH_SHARED_LOCKS, 
+      COUNT_READ_HIGH_PRIORITY, SUM_TIMER_READ_HIGH_PRIORITY, 
+      MIN_TIMER_READ_HIGH_PRIORITY, AVG_TIMER_READ_HIGH_PRIORITY, 
+      MAX_TIMER_READ_HIGH_PRIORITY, COUNT_READ_NO_INSERT, 
+      SUM_TIMER_READ_NO_INSERT, MIN_TIMER_READ_NO_INSERT, 
+      AVG_TIMER_READ_NO_INSERT, MAX_TIMER_READ_NO_INSERT, 
+      COUNT_READ_EXTERNAL, SUM_TIMER_READ_EXTERNAL, 
+      MIN_TIMER_READ_EXTERNAL, AVG_TIMER_READ_EXTERNAL, 
+      MAX_TIMER_READ_EXTERNAL, COUNT_WRITE_ALLOW_WRITE, 
+      SUM_TIMER_WRITE_ALLOW_WRITE, MIN_TIMER_WRITE_ALLOW_WRITE, 
+      AVG_TIMER_WRITE_ALLOW_WRITE, MAX_TIMER_WRITE_ALLOW_WRITE, 
+      COUNT_WRITE_CONCURRENT_INSERT, SUM_TIMER_WRITE_CONCURRENT_INSERT, 
+      MIN_TIMER_WRITE_CONCURRENT_INSERT, AVG_TIMER_WRITE_CONCURRENT_INSERT, 
+      MAX_TIMER_WRITE_CONCURRENT_INSERT, COUNT_WRITE_LOW_PRIORITY, 
+      SUM_TIMER_WRITE_LOW_PRIORITY, MIN_TIMER_WRITE_LOW_PRIORITY, 
+      AVG_TIMER_WRITE_LOW_PRIORITY, MAX_TIMER_WRITE_LOW_PRIORITY, 
+      COUNT_WRITE_NORMAL, SUM_TIMER_WRITE_NORMAL, MIN_TIMER_WRITE_NORMAL, 
+      AVG_TIMER_WRITE_NORMAL, MAX_TIMER_WRITE_NORMAL, 
+      COUNT_WRITE_EXTERNAL, SUM_TIMER_WRITE_EXTERNAL, 
+      MIN_TIMER_WRITE_EXTERNAL, AVG_TIMER_WRITE_EXTERNAL, 
+      MAX_TIMER_WRITE_EXTERNAL)
+    values (#{objectType,jdbcType=VARCHAR}, #{objectSchema,jdbcType=VARCHAR}, #{objectName,jdbcType=VARCHAR}, 
+      #{countStar,jdbcType=BIGINT}, #{sumTimerWait,jdbcType=BIGINT}, #{minTimerWait,jdbcType=BIGINT}, 
+      #{avgTimerWait,jdbcType=BIGINT}, #{maxTimerWait,jdbcType=BIGINT}, #{countRead,jdbcType=BIGINT}, 
+      #{sumTimerRead,jdbcType=BIGINT}, #{minTimerRead,jdbcType=BIGINT}, #{avgTimerRead,jdbcType=BIGINT}, 
+      #{maxTimerRead,jdbcType=BIGINT}, #{countWrite,jdbcType=BIGINT}, #{sumTimerWrite,jdbcType=BIGINT}, 
+      #{minTimerWrite,jdbcType=BIGINT}, #{avgTimerWrite,jdbcType=BIGINT}, #{maxTimerWrite,jdbcType=BIGINT}, 
+      #{countReadNormal,jdbcType=BIGINT}, #{sumTimerReadNormal,jdbcType=BIGINT}, #{minTimerReadNormal,jdbcType=BIGINT}, 
+      #{avgTimerReadNormal,jdbcType=BIGINT}, #{maxTimerReadNormal,jdbcType=BIGINT}, #{countReadWithSharedLocks,jdbcType=BIGINT}, 
+      #{sumTimerReadWithSharedLocks,jdbcType=BIGINT}, #{minTimerReadWithSharedLocks,jdbcType=BIGINT}, 
+      #{avgTimerReadWithSharedLocks,jdbcType=BIGINT}, #{maxTimerReadWithSharedLocks,jdbcType=BIGINT}, 
+      #{countReadHighPriority,jdbcType=BIGINT}, #{sumTimerReadHighPriority,jdbcType=BIGINT}, 
+      #{minTimerReadHighPriority,jdbcType=BIGINT}, #{avgTimerReadHighPriority,jdbcType=BIGINT}, 
+      #{maxTimerReadHighPriority,jdbcType=BIGINT}, #{countReadNoInsert,jdbcType=BIGINT}, 
+      #{sumTimerReadNoInsert,jdbcType=BIGINT}, #{minTimerReadNoInsert,jdbcType=BIGINT}, 
+      #{avgTimerReadNoInsert,jdbcType=BIGINT}, #{maxTimerReadNoInsert,jdbcType=BIGINT}, 
+      #{countReadExternal,jdbcType=BIGINT}, #{sumTimerReadExternal,jdbcType=BIGINT}, 
+      #{minTimerReadExternal,jdbcType=BIGINT}, #{avgTimerReadExternal,jdbcType=BIGINT}, 
+      #{maxTimerReadExternal,jdbcType=BIGINT}, #{countWriteAllowWrite,jdbcType=BIGINT}, 
+      #{sumTimerWriteAllowWrite,jdbcType=BIGINT}, #{minTimerWriteAllowWrite,jdbcType=BIGINT}, 
+      #{avgTimerWriteAllowWrite,jdbcType=BIGINT}, #{maxTimerWriteAllowWrite,jdbcType=BIGINT}, 
+      #{countWriteConcurrentInsert,jdbcType=BIGINT}, #{sumTimerWriteConcurrentInsert,jdbcType=BIGINT}, 
+      #{minTimerWriteConcurrentInsert,jdbcType=BIGINT}, #{avgTimerWriteConcurrentInsert,jdbcType=BIGINT}, 
+      #{maxTimerWriteConcurrentInsert,jdbcType=BIGINT}, #{countWriteLowPriority,jdbcType=BIGINT}, 
+      #{sumTimerWriteLowPriority,jdbcType=BIGINT}, #{minTimerWriteLowPriority,jdbcType=BIGINT}, 
+      #{avgTimerWriteLowPriority,jdbcType=BIGINT}, #{maxTimerWriteLowPriority,jdbcType=BIGINT}, 
+      #{countWriteNormal,jdbcType=BIGINT}, #{sumTimerWriteNormal,jdbcType=BIGINT}, #{minTimerWriteNormal,jdbcType=BIGINT}, 
+      #{avgTimerWriteNormal,jdbcType=BIGINT}, #{maxTimerWriteNormal,jdbcType=BIGINT}, 
+      #{countWriteExternal,jdbcType=BIGINT}, #{sumTimerWriteExternal,jdbcType=BIGINT}, 
+      #{minTimerWriteExternal,jdbcType=BIGINT}, #{avgTimerWriteExternal,jdbcType=BIGINT}, 
+      #{maxTimerWriteExternal,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, 
+    AVG_TIMER_WAIT, MAX_TIMER_WAIT, COUNT_READ, SUM_TIMER_READ, MIN_TIMER_READ, AVG_TIMER_READ, 
+    MAX_TIMER_READ, COUNT_WRITE, SUM_TIMER_WRITE, MIN_TIMER_WRITE, AVG_TIMER_WRITE, MAX_TIMER_WRITE, 
+    COUNT_READ_NORMAL, SUM_TIMER_READ_NORMAL, MIN_TIMER_READ_NORMAL, AVG_TIMER_READ_NORMAL, 
+    MAX_TIMER_READ_NORMAL, COUNT_READ_WITH_SHARED_LOCKS, SUM_TIMER_READ_WITH_SHARED_LOCKS, 
+    MIN_TIMER_READ_WITH_SHARED_LOCKS, AVG_TIMER_READ_WITH_SHARED_LOCKS, MAX_TIMER_READ_WITH_SHARED_LOCKS, 
+    COUNT_READ_HIGH_PRIORITY, SUM_TIMER_READ_HIGH_PRIORITY, MIN_TIMER_READ_HIGH_PRIORITY, 
+    AVG_TIMER_READ_HIGH_PRIORITY, MAX_TIMER_READ_HIGH_PRIORITY, COUNT_READ_NO_INSERT, 
+    SUM_TIMER_READ_NO_INSERT, MIN_TIMER_READ_NO_INSERT, AVG_TIMER_READ_NO_INSERT, MAX_TIMER_READ_NO_INSERT, 
+    COUNT_READ_EXTERNAL, SUM_TIMER_READ_EXTERNAL, MIN_TIMER_READ_EXTERNAL, AVG_TIMER_READ_EXTERNAL, 
+    MAX_TIMER_READ_EXTERNAL, COUNT_WRITE_ALLOW_WRITE, SUM_TIMER_WRITE_ALLOW_WRITE, MIN_TIMER_WRITE_ALLOW_WRITE, 
+    AVG_TIMER_WRITE_ALLOW_WRITE, MAX_TIMER_WRITE_ALLOW_WRITE, COUNT_WRITE_CONCURRENT_INSERT, 
+    SUM_TIMER_WRITE_CONCURRENT_INSERT, MIN_TIMER_WRITE_CONCURRENT_INSERT, AVG_TIMER_WRITE_CONCURRENT_INSERT, 
+    MAX_TIMER_WRITE_CONCURRENT_INSERT, COUNT_WRITE_LOW_PRIORITY, SUM_TIMER_WRITE_LOW_PRIORITY, 
+    MIN_TIMER_WRITE_LOW_PRIORITY, AVG_TIMER_WRITE_LOW_PRIORITY, MAX_TIMER_WRITE_LOW_PRIORITY, 
+    COUNT_WRITE_NORMAL, SUM_TIMER_WRITE_NORMAL, MIN_TIMER_WRITE_NORMAL, AVG_TIMER_WRITE_NORMAL, 
+    MAX_TIMER_WRITE_NORMAL, COUNT_WRITE_EXTERNAL, SUM_TIMER_WRITE_EXTERNAL, MIN_TIMER_WRITE_EXTERNAL, 
+    AVG_TIMER_WRITE_EXTERNAL, MAX_TIMER_WRITE_EXTERNAL
+    from table_lock_waits_summary_by_table
+  </select>
+</mapper>

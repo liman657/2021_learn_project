@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.foodie.mapper.ReplicationAsynchronousConnectionFailoverMapper">
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailover">
+    <id column="Channel_name" jdbcType="CHAR" property="channelName" />
+    <id column="Host" jdbcType="CHAR" property="host" />
+    <id column="Port" jdbcType="INTEGER" property="port" />
+    <id column="Network_namespace" jdbcType="CHAR" property="networkNamespace" />
+    <id column="Managed_name" jdbcType="CHAR" property="managedName" />
+    <result column="Weight" jdbcType="TINYINT" property="weight" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from replication_asynchronous_connection_failover
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and `Host` = #{host,jdbcType=CHAR}
+      and Port = #{port,jdbcType=INTEGER}
+      and Network_namespace = #{networkNamespace,jdbcType=CHAR}
+      and Managed_name = #{managedName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailover">
+    insert into replication_asynchronous_connection_failover (Channel_name, `Host`, Port, 
+      Network_namespace, Managed_name, Weight
+      )
+    values (#{channelName,jdbcType=CHAR}, #{host,jdbcType=CHAR}, #{port,jdbcType=INTEGER}, 
+      #{networkNamespace,jdbcType=CHAR}, #{managedName,jdbcType=CHAR}, #{weight,jdbcType=TINYINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailover">
+    update replication_asynchronous_connection_failover
+    set Weight = #{weight,jdbcType=TINYINT}
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and `Host` = #{host,jdbcType=CHAR}
+      and Port = #{port,jdbcType=INTEGER}
+      and Network_namespace = #{networkNamespace,jdbcType=CHAR}
+      and Managed_name = #{managedName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select Channel_name, `Host`, Port, Network_namespace, Managed_name, Weight
+    from replication_asynchronous_connection_failover
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and `Host` = #{host,jdbcType=CHAR}
+      and Port = #{port,jdbcType=INTEGER}
+      and Network_namespace = #{networkNamespace,jdbcType=CHAR}
+      and Managed_name = #{managedName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select Channel_name, `Host`, Port, Network_namespace, Managed_name, Weight
+    from replication_asynchronous_connection_failover
+  </select>
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailover">
+    <result column="CHANNEL_NAME" jdbcType="CHAR" property="channelName" />
+    <result column="HOST" jdbcType="CHAR" property="host" />
+    <result column="PORT" jdbcType="INTEGER" property="port" />
+    <result column="NETWORK_NAMESPACE" jdbcType="CHAR" property="networkNamespace" />
+    <result column="WEIGHT" jdbcType="INTEGER" property="weight" />
+    <result column="MANAGED_NAME" jdbcType="CHAR" property="managedName" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationAsynchronousConnectionFailover">
+    insert into replication_asynchronous_connection_failover (CHANNEL_NAME, `HOST`, PORT, 
+      NETWORK_NAMESPACE, WEIGHT, MANAGED_NAME
+      )
+    values (#{channelName,jdbcType=CHAR}, #{host,jdbcType=CHAR}, #{port,jdbcType=INTEGER}, 
+      #{networkNamespace,jdbcType=CHAR}, #{weight,jdbcType=INTEGER}, #{managedName,jdbcType=CHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select CHANNEL_NAME, `HOST`, PORT, NETWORK_NAMESPACE, WEIGHT, MANAGED_NAME
+    from replication_asynchronous_connection_failover
+  </select>
+</mapper>

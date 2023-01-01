@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XStatementsWithSortingMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XStatementsWithSorting" >
+    <result column="db" property="db" jdbcType="VARCHAR" />
+    <result column="exec_count" property="execCount" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="BIGINT" />
+    <result column="sort_merge_passes" property="sortMergePasses" jdbcType="BIGINT" />
+    <result column="avg_sort_merges" property="avgSortMerges" jdbcType="DECIMAL" />
+    <result column="sorts_using_scans" property="sortsUsingScans" jdbcType="BIGINT" />
+    <result column="sort_using_range" property="sortUsingRange" jdbcType="BIGINT" />
+    <result column="rows_sorted" property="rowsSorted" jdbcType="BIGINT" />
+    <result column="avg_rows_sorted" property="avgRowsSorted" jdbcType="DECIMAL" />
+    <result column="first_seen" property="firstSeen" jdbcType="TIMESTAMP" />
+    <result column="last_seen" property="lastSeen" jdbcType="TIMESTAMP" />
+    <result column="digest" property="digest" jdbcType="VARCHAR" />
+    <result column="query" property="query" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XStatementsWithSorting" >
+    insert into x$statements_with_sorting (db, exec_count, total_latency, 
+      sort_merge_passes, avg_sort_merges, sorts_using_scans, 
+      sort_using_range, rows_sorted, avg_rows_sorted, 
+      first_seen, last_seen, digest, 
+      query)
+    values (#{db,jdbcType=VARCHAR}, #{execCount,jdbcType=BIGINT}, #{totalLatency,jdbcType=BIGINT}, 
+      #{sortMergePasses,jdbcType=BIGINT}, #{avgSortMerges,jdbcType=DECIMAL}, #{sortsUsingScans,jdbcType=BIGINT}, 
+      #{sortUsingRange,jdbcType=BIGINT}, #{rowsSorted,jdbcType=BIGINT}, #{avgRowsSorted,jdbcType=DECIMAL}, 
+      #{firstSeen,jdbcType=TIMESTAMP}, #{lastSeen,jdbcType=TIMESTAMP}, #{digest,jdbcType=VARCHAR}, 
+      #{query,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select db, exec_count, total_latency, sort_merge_passes, avg_sort_merges, sorts_using_scans, 
+    sort_using_range, rows_sorted, avg_rows_sorted, first_seen, last_seen, digest, query
+    from x$statements_with_sorting
+  </select>
+</mapper>

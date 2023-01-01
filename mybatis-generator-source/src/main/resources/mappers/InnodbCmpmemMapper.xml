@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbCmpmemMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbCmpmem" >
+    <result column="page_size" property="pageSize" jdbcType="INTEGER" />
+    <result column="buffer_pool_instance" property="bufferPoolInstance" jdbcType="INTEGER" />
+    <result column="pages_used" property="pagesUsed" jdbcType="INTEGER" />
+    <result column="pages_free" property="pagesFree" jdbcType="INTEGER" />
+    <result column="relocation_ops" property="relocationOps" jdbcType="BIGINT" />
+    <result column="relocation_time" property="relocationTime" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbCmpmem" >
+    insert into INNODB_CMPMEM (page_size, buffer_pool_instance, pages_used, 
+      pages_free, relocation_ops, relocation_time
+      )
+    values (#{pageSize,jdbcType=INTEGER}, #{bufferPoolInstance,jdbcType=INTEGER}, #{pagesUsed,jdbcType=INTEGER}, 
+      #{pagesFree,jdbcType=INTEGER}, #{relocationOps,jdbcType=BIGINT}, #{relocationTime,jdbcType=INTEGER}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select page_size, buffer_pool_instance, pages_used, pages_free, relocation_ops, relocation_time
+    from INNODB_CMPMEM
+  </select>
+</mapper>

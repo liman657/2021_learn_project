@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SchemaIndexStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SchemaIndexStatistics" >
+    <result column="table_schema" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="table_name" property="tableName" jdbcType="VARCHAR" />
+    <result column="index_name" property="indexName" jdbcType="VARCHAR" />
+    <result column="rows_selected" property="rowsSelected" jdbcType="BIGINT" />
+    <result column="select_latency" property="selectLatency" jdbcType="VARCHAR" />
+    <result column="rows_inserted" property="rowsInserted" jdbcType="BIGINT" />
+    <result column="insert_latency" property="insertLatency" jdbcType="VARCHAR" />
+    <result column="rows_updated" property="rowsUpdated" jdbcType="BIGINT" />
+    <result column="update_latency" property="updateLatency" jdbcType="VARCHAR" />
+    <result column="rows_deleted" property="rowsDeleted" jdbcType="BIGINT" />
+    <result column="delete_latency" property="deleteLatency" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SchemaIndexStatistics" >
+    insert into schema_index_statistics (table_schema, `table_name`, index_name, 
+      rows_selected, select_latency, rows_inserted, 
+      insert_latency, rows_updated, update_latency, 
+      rows_deleted, delete_latency)
+    values (#{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{indexName,jdbcType=VARCHAR}, 
+      #{rowsSelected,jdbcType=BIGINT}, #{selectLatency,jdbcType=VARCHAR}, #{rowsInserted,jdbcType=BIGINT}, 
+      #{insertLatency,jdbcType=VARCHAR}, #{rowsUpdated,jdbcType=BIGINT}, #{updateLatency,jdbcType=VARCHAR}, 
+      #{rowsDeleted,jdbcType=BIGINT}, #{deleteLatency,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select table_schema, `table_name`, index_name, rows_selected, select_latency, rows_inserted, 
+    insert_latency, rows_updated, update_latency, rows_deleted, delete_latency
+    from schema_index_statistics
+  </select>
+</mapper>

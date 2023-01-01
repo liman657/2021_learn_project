@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SalesByFilmCategoryMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SalesByFilmCategory" >
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="total_sales" property="totalSales" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SalesByFilmCategory" >
+    insert into sales_by_film_category (category, total_sales)
+    values (#{category,jdbcType=VARCHAR}, #{totalSales,jdbcType=DECIMAL})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select category, total_sales
+    from sales_by_film_category
+  </select>
+</mapper>

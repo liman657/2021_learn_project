@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SchemaObjectOverviewMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SchemaObjectOverview" >
+    <result column="db" property="db" jdbcType="VARCHAR" />
+    <result column="object_type" property="objectType" jdbcType="VARCHAR" />
+    <result column="count" property="count" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SchemaObjectOverview" >
+    insert into schema_object_overview (db, object_type, `count`
+      )
+    values (#{db,jdbcType=VARCHAR}, #{objectType,jdbcType=VARCHAR}, #{count,jdbcType=BIGINT}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select db, object_type, `count`
+    from schema_object_overview
+  </select>
+</mapper>

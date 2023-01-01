@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.RwlockInstancesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.RwlockInstances" >
+    <id column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="WRITE_LOCKED_BY_THREAD_ID" property="writeLockedByThreadId" jdbcType="BIGINT" />
+    <result column="READ_LOCKED_BY_COUNT" property="readLockedByCount" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from rwlock_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.RwlockInstances" >
+    insert into rwlock_instances (OBJECT_INSTANCE_BEGIN, `NAME`, WRITE_LOCKED_BY_THREAD_ID, 
+      READ_LOCKED_BY_COUNT)
+    values (#{objectInstanceBegin,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{writeLockedByThreadId,jdbcType=BIGINT}, 
+      #{readLockedByCount,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.RwlockInstances" >
+    update rwlock_instances
+    set `NAME` = #{name,jdbcType=VARCHAR},
+      WRITE_LOCKED_BY_THREAD_ID = #{writeLockedByThreadId,jdbcType=BIGINT},
+      READ_LOCKED_BY_COUNT = #{readLockedByCount,jdbcType=INTEGER}
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select OBJECT_INSTANCE_BEGIN, `NAME`, WRITE_LOCKED_BY_THREAD_ID, READ_LOCKED_BY_COUNT
+    from rwlock_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_INSTANCE_BEGIN, `NAME`, WRITE_LOCKED_BY_THREAD_ID, READ_LOCKED_BY_COUNT
+    from rwlock_instances
+  </select>
+</mapper>

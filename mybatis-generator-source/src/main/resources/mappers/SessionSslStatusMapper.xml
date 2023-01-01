@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SessionSslStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SessionSslStatus" >
+    <result column="thread_id" property="threadId" jdbcType="BIGINT" />
+    <result column="ssl_version" property="sslVersion" jdbcType="VARCHAR" />
+    <result column="ssl_cipher" property="sslCipher" jdbcType="VARCHAR" />
+    <result column="ssl_sessions_reused" property="sslSessionsReused" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SessionSslStatus" >
+    insert into session_ssl_status (thread_id, ssl_version, ssl_cipher, 
+      ssl_sessions_reused)
+    values (#{threadId,jdbcType=BIGINT}, #{sslVersion,jdbcType=VARCHAR}, #{sslCipher,jdbcType=VARCHAR}, 
+      #{sslSessionsReused,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select thread_id, ssl_version, ssl_cipher, ssl_sessions_reused
+    from session_ssl_status
+  </select>
+</mapper>

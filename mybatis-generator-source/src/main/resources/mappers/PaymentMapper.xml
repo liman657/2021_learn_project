@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.PaymentMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Payment" >
+    <id column="payment_id" property="paymentId" jdbcType="SMALLINT" />
+    <result column="customer_id" property="customerId" jdbcType="SMALLINT" />
+    <result column="staff_id" property="staffId" jdbcType="TINYINT" />
+    <result column="rental_id" property="rentalId" jdbcType="INTEGER" />
+    <result column="amount" property="amount" jdbcType="DECIMAL" />
+    <result column="payment_date" property="paymentDate" jdbcType="TIMESTAMP" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short" >
+    delete from payment
+    where payment_id = #{paymentId,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Payment" >
+    insert into payment (payment_id, customer_id, staff_id, 
+      rental_id, amount, payment_date, 
+      last_update)
+    values (#{paymentId,jdbcType=SMALLINT}, #{customerId,jdbcType=SMALLINT}, #{staffId,jdbcType=TINYINT}, 
+      #{rentalId,jdbcType=INTEGER}, #{amount,jdbcType=DECIMAL}, #{paymentDate,jdbcType=TIMESTAMP}, 
+      #{lastUpdate,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Payment" >
+    update payment
+    set customer_id = #{customerId,jdbcType=SMALLINT},
+      staff_id = #{staffId,jdbcType=TINYINT},
+      rental_id = #{rentalId,jdbcType=INTEGER},
+      amount = #{amount,jdbcType=DECIMAL},
+      payment_date = #{paymentDate,jdbcType=TIMESTAMP},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP}
+    where payment_id = #{paymentId,jdbcType=SMALLINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Short" >
+    select payment_id, customer_id, staff_id, rental_id, amount, payment_date, last_update
+    from payment
+    where payment_id = #{paymentId,jdbcType=SMALLINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select payment_id, customer_id, staff_id, rental_id, amount, payment_date, last_update
+    from payment
+  </select>
+</mapper>

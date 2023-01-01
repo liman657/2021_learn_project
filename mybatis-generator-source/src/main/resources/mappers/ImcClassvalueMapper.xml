@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ImcClassvalueMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ImcClassvalue" >
+    <id column="value_id" property="valueId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="content_score" property="contentScore" jdbcType="DECIMAL" />
+    <result column="level_score" property="levelScore" jdbcType="DECIMAL" />
+    <result column="logic_score" property="logicScore" jdbcType="DECIMAL" />
+    <result column="score" property="score" jdbcType="DECIMAL" />
+    <result column="add_time" property="addTime" jdbcType="TIMESTAMP" />
+    <result column="total_score" property="totalScore" jdbcType="DECIMAL" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from imc_classvalue
+    where value_id = #{valueId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ImcClassvalue" >
+    insert into imc_classvalue (value_id, user_id, course_id, 
+      content_score, level_score, logic_score, 
+      score, add_time, total_score
+      )
+    values (#{valueId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{courseId,jdbcType=INTEGER}, 
+      #{contentScore,jdbcType=DECIMAL}, #{levelScore,jdbcType=DECIMAL}, #{logicScore,jdbcType=DECIMAL}, 
+      #{score,jdbcType=DECIMAL}, #{addTime,jdbcType=TIMESTAMP}, #{totalScore,jdbcType=DECIMAL}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ImcClassvalue" >
+    update imc_classvalue
+    set user_id = #{userId,jdbcType=INTEGER},
+      course_id = #{courseId,jdbcType=INTEGER},
+      content_score = #{contentScore,jdbcType=DECIMAL},
+      level_score = #{levelScore,jdbcType=DECIMAL},
+      logic_score = #{logicScore,jdbcType=DECIMAL},
+      score = #{score,jdbcType=DECIMAL},
+      add_time = #{addTime,jdbcType=TIMESTAMP},
+      total_score = #{totalScore,jdbcType=DECIMAL}
+    where value_id = #{valueId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select value_id, user_id, course_id, content_score, level_score, logic_score, score, 
+    add_time, total_score
+    from imc_classvalue
+    where value_id = #{valueId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select value_id, user_id, course_id, content_score, level_score, logic_score, score, 
+    add_time, total_score
+    from imc_classvalue
+  </select>
+</mapper>

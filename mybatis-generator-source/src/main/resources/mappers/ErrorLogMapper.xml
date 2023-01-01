@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ErrorLogMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ErrorLog" >
+    <id column="LOGGED" property="logged" jdbcType="TIMESTAMP" />
+    <result column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <result column="PRIO" property="prio" jdbcType="CHAR" />
+    <result column="ERROR_CODE" property="errorCode" jdbcType="VARCHAR" />
+    <result column="SUBSYSTEM" property="subsystem" jdbcType="VARCHAR" />
+    <result column="DATA" property="data" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.util.Date" >
+    delete from error_log
+    where LOGGED = #{logged,jdbcType=TIMESTAMP}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ErrorLog" >
+    insert into error_log (LOGGED, THREAD_ID, PRIO, 
+      ERROR_CODE, SUBSYSTEM, `DATA`
+      )
+    values (#{logged,jdbcType=TIMESTAMP}, #{threadId,jdbcType=BIGINT}, #{prio,jdbcType=CHAR}, 
+      #{errorCode,jdbcType=VARCHAR}, #{subsystem,jdbcType=VARCHAR}, #{data,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ErrorLog" >
+    update error_log
+    set THREAD_ID = #{threadId,jdbcType=BIGINT},
+      PRIO = #{prio,jdbcType=CHAR},
+      ERROR_CODE = #{errorCode,jdbcType=VARCHAR},
+      SUBSYSTEM = #{subsystem,jdbcType=VARCHAR},
+      `DATA` = #{data,jdbcType=LONGVARCHAR}
+    where LOGGED = #{logged,jdbcType=TIMESTAMP}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.util.Date" >
+    select LOGGED, THREAD_ID, PRIO, ERROR_CODE, SUBSYSTEM, `DATA`
+    from error_log
+    where LOGGED = #{logged,jdbcType=TIMESTAMP}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select LOGGED, THREAD_ID, PRIO, ERROR_CODE, SUBSYSTEM, `DATA`
+    from error_log
+  </select>
+</mapper>

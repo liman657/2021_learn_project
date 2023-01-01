@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.AttendRecordMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.AttendRecord" >
+<mapper namespace="com.coderman.foodie.mapper.AttendRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.AttendRecord" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="BIGINT" />
     <result column="dept_id" property="deptId" jdbcType="BIGINT" />
@@ -16,7 +16,7 @@
     delete from attend_record
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.AttendRecord" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.AttendRecord" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -27,7 +27,7 @@
       #{endTime,jdbcType=TIMESTAMP}, #{total,jdbcType=DECIMAL}, #{status,jdbcType=TINYINT}, 
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.AttendRecord" >
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.AttendRecord" >
     update attend_record
     set user_id = #{userId,jdbcType=BIGINT},
       dept_id = #{deptId,jdbcType=BIGINT},

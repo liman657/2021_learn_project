@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XStatementsWithRuntimesIn95thPercentileMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XStatementsWithRuntimesIn95thPercentile" >
+    <result column="db" property="db" jdbcType="VARCHAR" />
+    <result column="full_scan" property="fullScan" jdbcType="VARCHAR" />
+    <result column="exec_count" property="execCount" jdbcType="BIGINT" />
+    <result column="err_count" property="errCount" jdbcType="BIGINT" />
+    <result column="warn_count" property="warnCount" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="BIGINT" />
+    <result column="max_latency" property="maxLatency" jdbcType="BIGINT" />
+    <result column="avg_latency" property="avgLatency" jdbcType="BIGINT" />
+    <result column="rows_sent" property="rowsSent" jdbcType="BIGINT" />
+    <result column="rows_sent_avg" property="rowsSentAvg" jdbcType="DECIMAL" />
+    <result column="rows_examined" property="rowsExamined" jdbcType="BIGINT" />
+    <result column="rows_examined_avg" property="rowsExaminedAvg" jdbcType="DECIMAL" />
+    <result column="first_seen" property="firstSeen" jdbcType="TIMESTAMP" />
+    <result column="last_seen" property="lastSeen" jdbcType="TIMESTAMP" />
+    <result column="digest" property="digest" jdbcType="VARCHAR" />
+    <result column="query" property="query" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XStatementsWithRuntimesIn95thPercentile" >
+    insert into x$statements_with_runtimes_in_95th_percentile (db, full_scan, exec_count, 
+      err_count, warn_count, total_latency, 
+      max_latency, avg_latency, rows_sent, 
+      rows_sent_avg, rows_examined, rows_examined_avg, 
+      first_seen, last_seen, digest, 
+      query)
+    values (#{db,jdbcType=VARCHAR}, #{fullScan,jdbcType=VARCHAR}, #{execCount,jdbcType=BIGINT}, 
+      #{errCount,jdbcType=BIGINT}, #{warnCount,jdbcType=BIGINT}, #{totalLatency,jdbcType=BIGINT}, 
+      #{maxLatency,jdbcType=BIGINT}, #{avgLatency,jdbcType=BIGINT}, #{rowsSent,jdbcType=BIGINT}, 
+      #{rowsSentAvg,jdbcType=DECIMAL}, #{rowsExamined,jdbcType=BIGINT}, #{rowsExaminedAvg,jdbcType=DECIMAL}, 
+      #{firstSeen,jdbcType=TIMESTAMP}, #{lastSeen,jdbcType=TIMESTAMP}, #{digest,jdbcType=VARCHAR}, 
+      #{query,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select db, full_scan, exec_count, err_count, warn_count, total_latency, max_latency, 
+    avg_latency, rows_sent, rows_sent_avg, rows_examined, rows_examined_avg, first_seen, 
+    last_seen, digest, query
+    from x$statements_with_runtimes_in_95th_percentile
+  </select>
+</mapper>

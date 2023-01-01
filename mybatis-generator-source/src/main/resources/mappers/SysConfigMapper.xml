@@ -1,19 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.SysConfigMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.SysConfig" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="param_key" property="paramKey" jdbcType="VARCHAR" />
-    <result column="param_value" property="paramValue" jdbcType="VARCHAR" />
-    <result column="status" property="status" jdbcType="TINYINT" />
-    <result column="remark" property="remark" jdbcType="VARCHAR" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.foodie.mapper.SysConfigMapper">
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SysConfig">
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="param_key" jdbcType="VARCHAR" property="paramKey" />
+    <result column="param_value" jdbcType="VARCHAR" property="paramValue" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from sys_config
-    where id = #{id,jdbcType=BIGINT}
-  </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.SysConfig" >
-    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SysConfig">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into sys_config (param_key, param_value, `status`, 
@@ -21,21 +17,40 @@
     values (#{paramKey,jdbcType=VARCHAR}, #{paramValue,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
       #{remark,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.SysConfig" >
-    update sys_config
-    set param_key = #{paramKey,jdbcType=VARCHAR},
-      param_value = #{paramValue,jdbcType=VARCHAR},
-      `status` = #{status,jdbcType=TINYINT},
-      remark = #{remark,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectAll" resultMap="BaseResultMap">
     select id, param_key, param_value, `status`, remark
     from sys_config
-    where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id, param_key, param_value, `status`, remark
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SysConfig">
+    <id column="variable" jdbcType="VARCHAR" property="variable" />
+    <result column="value" jdbcType="VARCHAR" property="value" />
+    <result column="set_time" jdbcType="TIMESTAMP" property="setTime" />
+    <result column="set_by" jdbcType="VARCHAR" property="setBy" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from sys_config
+    where `variable` = #{variable,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SysConfig">
+    insert into sys_config (`variable`, `value`, set_time, 
+      set_by)
+    values (#{variable,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, #{setTime,jdbcType=TIMESTAMP}, 
+      #{setBy,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SysConfig">
+    update sys_config
+    set `value` = #{value,jdbcType=VARCHAR},
+      set_time = #{setTime,jdbcType=TIMESTAMP},
+      set_by = #{setBy,jdbcType=VARCHAR}
+    where `variable` = #{variable,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select `variable`, `value`, set_time, set_by
+    from sys_config
+    where `variable` = #{variable,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select `variable`, `value`, set_time, set_by
     from sys_config
   </select>
 </mapper>

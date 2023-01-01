@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.BlogMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.Blog" >
+<mapper namespace="com.coderman.foodie.mapper.BlogMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Blog" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="content" property="content" jdbcType="VARCHAR" />
     <result column="user_id" property="userId" jdbcType="BIGINT" />
@@ -18,7 +18,7 @@
     delete from blog
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.Blog" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Blog" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -31,7 +31,7 @@
       #{isDelete,jdbcType=INTEGER}, #{deleteTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{memoA,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.Blog" >
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Blog" >
     update blog
     set content = #{content,jdbcType=VARCHAR},
       user_id = #{userId,jdbcType=BIGINT},

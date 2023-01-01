@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbSessionTempTablespacesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbSessionTempTablespaces" >
+    <result column="ID" property="id" jdbcType="INTEGER" />
+    <result column="SPACE" property="space" jdbcType="INTEGER" />
+    <result column="PATH" property="path" jdbcType="VARCHAR" />
+    <result column="SIZE" property="size" jdbcType="BIGINT" />
+    <result column="STATE" property="state" jdbcType="VARCHAR" />
+    <result column="PURPOSE" property="purpose" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbSessionTempTablespaces" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into INNODB_SESSION_TEMP_TABLESPACES (`SPACE`, `PATH`, `SIZE`, 
+      `STATE`, PURPOSE)
+    values (#{space,jdbcType=INTEGER}, #{path,jdbcType=VARCHAR}, #{size,jdbcType=BIGINT}, 
+      #{state,jdbcType=VARCHAR}, #{purpose,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ID, `SPACE`, `PATH`, `SIZE`, `STATE`, PURPOSE
+    from INNODB_SESSION_TEMP_TABLESPACES
+  </select>
+</mapper>

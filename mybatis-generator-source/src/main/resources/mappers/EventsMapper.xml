@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Events" >
+    <result column="EVENT_CATALOG" property="eventCatalog" jdbcType="VARCHAR" />
+    <result column="EVENT_SCHEMA" property="eventSchema" jdbcType="VARCHAR" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="DEFINER" property="definer" jdbcType="VARCHAR" />
+    <result column="TIME_ZONE" property="timeZone" jdbcType="VARCHAR" />
+    <result column="EVENT_BODY" property="eventBody" jdbcType="VARCHAR" />
+    <result column="EVENT_TYPE" property="eventType" jdbcType="VARCHAR" />
+    <result column="EXECUTE_AT" property="executeAt" jdbcType="TIMESTAMP" />
+    <result column="INTERVAL_VALUE" property="intervalValue" jdbcType="VARCHAR" />
+    <result column="INTERVAL_FIELD" property="intervalField" jdbcType="CHAR" />
+    <result column="SQL_MODE" property="sqlMode" jdbcType="CHAR" />
+    <result column="STARTS" property="starts" jdbcType="TIMESTAMP" />
+    <result column="ENDS" property="ends" jdbcType="TIMESTAMP" />
+    <result column="STATUS" property="status" jdbcType="CHAR" />
+    <result column="ON_COMPLETION" property="onCompletion" jdbcType="VARCHAR" />
+    <result column="CREATED" property="created" jdbcType="TIMESTAMP" />
+    <result column="LAST_ALTERED" property="lastAltered" jdbcType="TIMESTAMP" />
+    <result column="LAST_EXECUTED" property="lastExecuted" jdbcType="TIMESTAMP" />
+    <result column="EVENT_COMMENT" property="eventComment" jdbcType="VARCHAR" />
+    <result column="ORIGINATOR" property="originator" jdbcType="INTEGER" />
+    <result column="CHARACTER_SET_CLIENT" property="characterSetClient" jdbcType="VARCHAR" />
+    <result column="COLLATION_CONNECTION" property="collationConnection" jdbcType="VARCHAR" />
+    <result column="DATABASE_COLLATION" property="databaseCollation" jdbcType="VARCHAR" />
+    <result column="EVENT_DEFINITION" property="eventDefinition" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Events" >
+    insert into EVENTS (EVENT_CATALOG, EVENT_SCHEMA, EVENT_NAME, 
+      `DEFINER`, TIME_ZONE, EVENT_BODY, 
+      EVENT_TYPE, EXECUTE_AT, INTERVAL_VALUE, 
+      INTERVAL_FIELD, SQL_MODE, STARTS, 
+      ENDS, `STATUS`, ON_COMPLETION, 
+      CREATED, LAST_ALTERED, LAST_EXECUTED, 
+      EVENT_COMMENT, ORIGINATOR, CHARACTER_SET_CLIENT, 
+      COLLATION_CONNECTION, DATABASE_COLLATION, 
+      EVENT_DEFINITION)
+    values (#{eventCatalog,jdbcType=VARCHAR}, #{eventSchema,jdbcType=VARCHAR}, #{eventName,jdbcType=VARCHAR}, 
+      #{definer,jdbcType=VARCHAR}, #{timeZone,jdbcType=VARCHAR}, #{eventBody,jdbcType=VARCHAR}, 
+      #{eventType,jdbcType=VARCHAR}, #{executeAt,jdbcType=TIMESTAMP}, #{intervalValue,jdbcType=VARCHAR}, 
+      #{intervalField,jdbcType=CHAR}, #{sqlMode,jdbcType=CHAR}, #{starts,jdbcType=TIMESTAMP}, 
+      #{ends,jdbcType=TIMESTAMP}, #{status,jdbcType=CHAR}, #{onCompletion,jdbcType=VARCHAR}, 
+      #{created,jdbcType=TIMESTAMP}, #{lastAltered,jdbcType=TIMESTAMP}, #{lastExecuted,jdbcType=TIMESTAMP}, 
+      #{eventComment,jdbcType=VARCHAR}, #{originator,jdbcType=INTEGER}, #{characterSetClient,jdbcType=VARCHAR}, 
+      #{collationConnection,jdbcType=VARCHAR}, #{databaseCollation,jdbcType=VARCHAR}, 
+      #{eventDefinition,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select EVENT_CATALOG, EVENT_SCHEMA, EVENT_NAME, `DEFINER`, TIME_ZONE, EVENT_BODY, 
+    EVENT_TYPE, EXECUTE_AT, INTERVAL_VALUE, INTERVAL_FIELD, SQL_MODE, STARTS, ENDS, `STATUS`, 
+    ON_COMPLETION, CREATED, LAST_ALTERED, LAST_EXECUTED, EVENT_COMMENT, ORIGINATOR, CHARACTER_SET_CLIENT, 
+    COLLATION_CONNECTION, DATABASE_COLLATION, EVENT_DEFINITION
+    from EVENTS
+  </select>
+</mapper>

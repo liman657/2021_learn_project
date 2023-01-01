@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SalesByStoreMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SalesByStore" >
+    <result column="store" property="store" jdbcType="VARCHAR" />
+    <result column="manager" property="manager" jdbcType="VARCHAR" />
+    <result column="total_sales" property="totalSales" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SalesByStore" >
+    insert into sales_by_store (store, manager, total_sales
+      )
+    values (#{store,jdbcType=VARCHAR}, #{manager,jdbcType=VARCHAR}, #{totalSales,jdbcType=DECIMAL}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select store, manager, total_sales
+    from sales_by_store
+  </select>
+</mapper>

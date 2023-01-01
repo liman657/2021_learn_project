@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.RoutinesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Routines" >
+    <result column="SPECIFIC_NAME" property="specificName" jdbcType="VARCHAR" />
+    <result column="ROUTINE_CATALOG" property="routineCatalog" jdbcType="VARCHAR" />
+    <result column="ROUTINE_SCHEMA" property="routineSchema" jdbcType="VARCHAR" />
+    <result column="ROUTINE_NAME" property="routineName" jdbcType="VARCHAR" />
+    <result column="ROUTINE_TYPE" property="routineType" jdbcType="CHAR" />
+    <result column="CHARACTER_MAXIMUM_LENGTH" property="characterMaximumLength" jdbcType="BIGINT" />
+    <result column="CHARACTER_OCTET_LENGTH" property="characterOctetLength" jdbcType="BIGINT" />
+    <result column="NUMERIC_PRECISION" property="numericPrecision" jdbcType="INTEGER" />
+    <result column="NUMERIC_SCALE" property="numericScale" jdbcType="INTEGER" />
+    <result column="DATETIME_PRECISION" property="datetimePrecision" jdbcType="INTEGER" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="COLLATION_NAME" property="collationName" jdbcType="VARCHAR" />
+    <result column="ROUTINE_BODY" property="routineBody" jdbcType="VARCHAR" />
+    <result column="EXTERNAL_LANGUAGE" property="externalLanguage" jdbcType="VARCHAR" />
+    <result column="PARAMETER_STYLE" property="parameterStyle" jdbcType="VARCHAR" />
+    <result column="IS_DETERMINISTIC" property="isDeterministic" jdbcType="VARCHAR" />
+    <result column="SQL_DATA_ACCESS" property="sqlDataAccess" jdbcType="CHAR" />
+    <result column="SECURITY_TYPE" property="securityType" jdbcType="CHAR" />
+    <result column="CREATED" property="created" jdbcType="TIMESTAMP" />
+    <result column="LAST_ALTERED" property="lastAltered" jdbcType="TIMESTAMP" />
+    <result column="SQL_MODE" property="sqlMode" jdbcType="CHAR" />
+    <result column="DEFINER" property="definer" jdbcType="VARCHAR" />
+    <result column="CHARACTER_SET_CLIENT" property="characterSetClient" jdbcType="VARCHAR" />
+    <result column="COLLATION_CONNECTION" property="collationConnection" jdbcType="VARCHAR" />
+    <result column="DATABASE_COLLATION" property="databaseCollation" jdbcType="VARCHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="LONGVARCHAR" />
+    <result column="DTD_IDENTIFIER" property="dtdIdentifier" jdbcType="LONGVARCHAR" />
+    <result column="ROUTINE_DEFINITION" property="routineDefinition" jdbcType="LONGVARCHAR" />
+    <result column="EXTERNAL_NAME" property="externalName" jdbcType="BINARY" />
+    <result column="SQL_PATH" property="sqlPath" jdbcType="BINARY" />
+    <result column="ROUTINE_COMMENT" property="routineComment" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Routines" >
+    insert into ROUTINES (`SPECIFIC_NAME`, `ROUTINE_CATALOG`, `ROUTINE_SCHEMA`, 
+      `ROUTINE_NAME`, ROUTINE_TYPE, CHARACTER_MAXIMUM_LENGTH, 
+      CHARACTER_OCTET_LENGTH, NUMERIC_PRECISION, 
+      NUMERIC_SCALE, DATETIME_PRECISION, `CHARACTER_SET_NAME`, 
+      `COLLATION_NAME`, ROUTINE_BODY, EXTERNAL_LANGUAGE, 
+      PARAMETER_STYLE, IS_DETERMINISTIC, SQL_DATA_ACCESS, 
+      SECURITY_TYPE, CREATED, LAST_ALTERED, 
+      SQL_MODE, `DEFINER`, CHARACTER_SET_CLIENT, 
+      COLLATION_CONNECTION, DATABASE_COLLATION, 
+      DATA_TYPE, DTD_IDENTIFIER, ROUTINE_DEFINITION, 
+      EXTERNAL_NAME, SQL_PATH, ROUTINE_COMMENT
+      )
+    values (#{specificName,jdbcType=VARCHAR}, #{routineCatalog,jdbcType=VARCHAR}, #{routineSchema,jdbcType=VARCHAR}, 
+      #{routineName,jdbcType=VARCHAR}, #{routineType,jdbcType=CHAR}, #{characterMaximumLength,jdbcType=BIGINT}, 
+      #{characterOctetLength,jdbcType=BIGINT}, #{numericPrecision,jdbcType=INTEGER}, 
+      #{numericScale,jdbcType=INTEGER}, #{datetimePrecision,jdbcType=INTEGER}, #{characterSetName,jdbcType=VARCHAR}, 
+      #{collationName,jdbcType=VARCHAR}, #{routineBody,jdbcType=VARCHAR}, #{externalLanguage,jdbcType=VARCHAR}, 
+      #{parameterStyle,jdbcType=VARCHAR}, #{isDeterministic,jdbcType=VARCHAR}, #{sqlDataAccess,jdbcType=CHAR}, 
+      #{securityType,jdbcType=CHAR}, #{created,jdbcType=TIMESTAMP}, #{lastAltered,jdbcType=TIMESTAMP}, 
+      #{sqlMode,jdbcType=CHAR}, #{definer,jdbcType=VARCHAR}, #{characterSetClient,jdbcType=VARCHAR}, 
+      #{collationConnection,jdbcType=VARCHAR}, #{databaseCollation,jdbcType=VARCHAR}, 
+      #{dataType,jdbcType=LONGVARCHAR}, #{dtdIdentifier,jdbcType=LONGVARCHAR}, #{routineDefinition,jdbcType=LONGVARCHAR}, 
+      #{externalName,jdbcType=BINARY}, #{sqlPath,jdbcType=BINARY}, #{routineComment,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `SPECIFIC_NAME`, `ROUTINE_CATALOG`, `ROUTINE_SCHEMA`, `ROUTINE_NAME`, ROUTINE_TYPE, 
+    CHARACTER_MAXIMUM_LENGTH, CHARACTER_OCTET_LENGTH, NUMERIC_PRECISION, NUMERIC_SCALE, 
+    DATETIME_PRECISION, `CHARACTER_SET_NAME`, `COLLATION_NAME`, ROUTINE_BODY, EXTERNAL_LANGUAGE, 
+    PARAMETER_STYLE, IS_DETERMINISTIC, SQL_DATA_ACCESS, SECURITY_TYPE, CREATED, LAST_ALTERED, 
+    SQL_MODE, `DEFINER`, CHARACTER_SET_CLIENT, COLLATION_CONNECTION, DATABASE_COLLATION, 
+    DATA_TYPE, DTD_IDENTIFIER, ROUTINE_DEFINITION, EXTERNAL_NAME, SQL_PATH, ROUTINE_COMMENT
+    from ROUTINES
+  </select>
+</mapper>

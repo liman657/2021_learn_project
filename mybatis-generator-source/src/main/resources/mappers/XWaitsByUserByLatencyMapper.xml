@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XWaitsByUserByLatencyMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XWaitsByUserByLatency" >
+    <result column="user" property="user" jdbcType="VARCHAR" />
+    <result column="event" property="event" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="BIGINT" />
+    <result column="avg_latency" property="avgLatency" jdbcType="BIGINT" />
+    <result column="max_latency" property="maxLatency" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XWaitsByUserByLatency" >
+    insert into x$waits_by_user_by_latency (`user`, event, total, 
+      total_latency, avg_latency, max_latency
+      )
+    values (#{user,jdbcType=VARCHAR}, #{event,jdbcType=VARCHAR}, #{total,jdbcType=BIGINT}, 
+      #{totalLatency,jdbcType=BIGINT}, #{avgLatency,jdbcType=BIGINT}, #{maxLatency,jdbcType=BIGINT}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `user`, event, total, total_latency, avg_latency, max_latency
+    from x$waits_by_user_by_latency
+  </select>
+</mapper>

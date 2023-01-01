@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ParametersMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Parameters" >
+    <result column="SPECIFIC_CATALOG" property="specificCatalog" jdbcType="VARCHAR" />
+    <result column="SPECIFIC_SCHEMA" property="specificSchema" jdbcType="VARCHAR" />
+    <result column="SPECIFIC_NAME" property="specificName" jdbcType="VARCHAR" />
+    <result column="ORDINAL_POSITION" property="ordinalPosition" jdbcType="BIGINT" />
+    <result column="PARAMETER_MODE" property="parameterMode" jdbcType="VARCHAR" />
+    <result column="PARAMETER_NAME" property="parameterName" jdbcType="VARCHAR" />
+    <result column="CHARACTER_MAXIMUM_LENGTH" property="characterMaximumLength" jdbcType="BIGINT" />
+    <result column="CHARACTER_OCTET_LENGTH" property="characterOctetLength" jdbcType="BIGINT" />
+    <result column="NUMERIC_PRECISION" property="numericPrecision" jdbcType="INTEGER" />
+    <result column="NUMERIC_SCALE" property="numericScale" jdbcType="BIGINT" />
+    <result column="DATETIME_PRECISION" property="datetimePrecision" jdbcType="INTEGER" />
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="COLLATION_NAME" property="collationName" jdbcType="VARCHAR" />
+    <result column="ROUTINE_TYPE" property="routineType" jdbcType="CHAR" />
+    <result column="DATA_TYPE" property="dataType" jdbcType="LONGVARCHAR" />
+    <result column="DTD_IDENTIFIER" property="dtdIdentifier" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Parameters" >
+    insert into PARAMETERS (SPECIFIC_CATALOG, SPECIFIC_SCHEMA, 
+      `SPECIFIC_NAME`, ORDINAL_POSITION, `PARAMETER_MODE`, 
+      `PARAMETER_NAME`, CHARACTER_MAXIMUM_LENGTH, CHARACTER_OCTET_LENGTH, 
+      NUMERIC_PRECISION, NUMERIC_SCALE, DATETIME_PRECISION, 
+      `CHARACTER_SET_NAME`, `COLLATION_NAME`, ROUTINE_TYPE, 
+      DATA_TYPE, DTD_IDENTIFIER)
+    values (#{specificCatalog,jdbcType=VARCHAR}, #{specificSchema,jdbcType=VARCHAR}, 
+      #{specificName,jdbcType=VARCHAR}, #{ordinalPosition,jdbcType=BIGINT}, #{parameterMode,jdbcType=VARCHAR}, 
+      #{parameterName,jdbcType=VARCHAR}, #{characterMaximumLength,jdbcType=BIGINT}, #{characterOctetLength,jdbcType=BIGINT}, 
+      #{numericPrecision,jdbcType=INTEGER}, #{numericScale,jdbcType=BIGINT}, #{datetimePrecision,jdbcType=INTEGER}, 
+      #{characterSetName,jdbcType=VARCHAR}, #{collationName,jdbcType=VARCHAR}, #{routineType,jdbcType=CHAR}, 
+      #{dataType,jdbcType=LONGVARCHAR}, #{dtdIdentifier,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SPECIFIC_CATALOG, SPECIFIC_SCHEMA, `SPECIFIC_NAME`, ORDINAL_POSITION, `PARAMETER_MODE`, 
+    `PARAMETER_NAME`, CHARACTER_MAXIMUM_LENGTH, CHARACTER_OCTET_LENGTH, NUMERIC_PRECISION, 
+    NUMERIC_SCALE, DATETIME_PRECISION, `CHARACTER_SET_NAME`, `COLLATION_NAME`, ROUTINE_TYPE, 
+    DATA_TYPE, DTD_IDENTIFIER
+    from PARAMETERS
+  </select>
+</mapper>

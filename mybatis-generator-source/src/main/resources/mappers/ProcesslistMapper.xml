@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.foodie.mapper.ProcesslistMapper">
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Processlist">
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="USER" jdbcType="VARCHAR" property="user" />
+    <result column="HOST" jdbcType="VARCHAR" property="host" />
+    <result column="DB" jdbcType="VARCHAR" property="db" />
+    <result column="COMMAND" jdbcType="VARCHAR" property="command" />
+    <result column="TIME" jdbcType="BIGINT" property="time" />
+    <result column="STATE" jdbcType="VARCHAR" property="state" />
+    <result column="INFO" jdbcType="LONGVARCHAR" property="info" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from processlist
+    where ID = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Processlist">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into processlist (`USER`, `HOST`, DB, 
+      COMMAND, `TIME`, `STATE`, 
+      INFO)
+    values (#{user,jdbcType=VARCHAR}, #{host,jdbcType=VARCHAR}, #{db,jdbcType=VARCHAR}, 
+      #{command,jdbcType=VARCHAR}, #{time,jdbcType=BIGINT}, #{state,jdbcType=VARCHAR}, 
+      #{info,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Processlist">
+    update processlist
+    set `USER` = #{user,jdbcType=VARCHAR},
+      `HOST` = #{host,jdbcType=VARCHAR},
+      DB = #{db,jdbcType=VARCHAR},
+      COMMAND = #{command,jdbcType=VARCHAR},
+      `TIME` = #{time,jdbcType=BIGINT},
+      `STATE` = #{state,jdbcType=VARCHAR},
+      INFO = #{info,jdbcType=LONGVARCHAR}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, `USER`, `HOST`, DB, COMMAND, `TIME`, `STATE`, INFO
+    from processlist
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, `USER`, `HOST`, DB, COMMAND, `TIME`, `STATE`, INFO
+    from processlist
+  </select>
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Processlist">
+    <result column="thd_id" jdbcType="BIGINT" property="thdId" />
+    <result column="conn_id" jdbcType="BIGINT" property="connId" />
+    <result column="user" jdbcType="VARCHAR" property="user" />
+    <result column="db" jdbcType="VARCHAR" property="db" />
+    <result column="command" jdbcType="VARCHAR" property="command" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="time" jdbcType="BIGINT" property="time" />
+    <result column="statement_latency" jdbcType="VARCHAR" property="statementLatency" />
+    <result column="progress" jdbcType="DECIMAL" property="progress" />
+    <result column="lock_latency" jdbcType="VARCHAR" property="lockLatency" />
+    <result column="rows_examined" jdbcType="BIGINT" property="rowsExamined" />
+    <result column="rows_sent" jdbcType="BIGINT" property="rowsSent" />
+    <result column="rows_affected" jdbcType="BIGINT" property="rowsAffected" />
+    <result column="tmp_tables" jdbcType="BIGINT" property="tmpTables" />
+    <result column="tmp_disk_tables" jdbcType="BIGINT" property="tmpDiskTables" />
+    <result column="full_scan" jdbcType="VARCHAR" property="fullScan" />
+    <result column="last_statement_latency" jdbcType="VARCHAR" property="lastStatementLatency" />
+    <result column="current_memory" jdbcType="VARCHAR" property="currentMemory" />
+    <result column="last_wait" jdbcType="VARCHAR" property="lastWait" />
+    <result column="last_wait_latency" jdbcType="VARCHAR" property="lastWaitLatency" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="trx_latency" jdbcType="VARCHAR" property="trxLatency" />
+    <result column="trx_state" jdbcType="CHAR" property="trxState" />
+    <result column="trx_autocommit" jdbcType="CHAR" property="trxAutocommit" />
+    <result column="pid" jdbcType="VARCHAR" property="pid" />
+    <result column="program_name" jdbcType="VARCHAR" property="programName" />
+    <result column="current_statement" jdbcType="LONGVARCHAR" property="currentStatement" />
+    <result column="last_statement" jdbcType="LONGVARCHAR" property="lastStatement" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Processlist">
+    insert into processlist (thd_id, conn_id, `user`, 
+      db, command, `state`, 
+      `time`, statement_latency, progress, 
+      lock_latency, rows_examined, rows_sent, 
+      rows_affected, tmp_tables, tmp_disk_tables, 
+      full_scan, last_statement_latency, current_memory, 
+      last_wait, last_wait_latency, `source`, 
+      trx_latency, trx_state, trx_autocommit, 
+      pid, program_name, current_statement, 
+      last_statement)
+    values (#{thdId,jdbcType=BIGINT}, #{connId,jdbcType=BIGINT}, #{user,jdbcType=VARCHAR}, 
+      #{db,jdbcType=VARCHAR}, #{command,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
+      #{time,jdbcType=BIGINT}, #{statementLatency,jdbcType=VARCHAR}, #{progress,jdbcType=DECIMAL}, 
+      #{lockLatency,jdbcType=VARCHAR}, #{rowsExamined,jdbcType=BIGINT}, #{rowsSent,jdbcType=BIGINT}, 
+      #{rowsAffected,jdbcType=BIGINT}, #{tmpTables,jdbcType=BIGINT}, #{tmpDiskTables,jdbcType=BIGINT}, 
+      #{fullScan,jdbcType=VARCHAR}, #{lastStatementLatency,jdbcType=VARCHAR}, #{currentMemory,jdbcType=VARCHAR}, 
+      #{lastWait,jdbcType=VARCHAR}, #{lastWaitLatency,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
+      #{trxLatency,jdbcType=VARCHAR}, #{trxState,jdbcType=CHAR}, #{trxAutocommit,jdbcType=CHAR}, 
+      #{pid,jdbcType=VARCHAR}, #{programName,jdbcType=VARCHAR}, #{currentStatement,jdbcType=LONGVARCHAR}, 
+      #{lastStatement,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select thd_id, conn_id, `user`, db, command, `state`, `time`, statement_latency, 
+    progress, lock_latency, rows_examined, rows_sent, rows_affected, tmp_tables, tmp_disk_tables, 
+    full_scan, last_statement_latency, current_memory, last_wait, last_wait_latency, 
+    `source`, trx_latency, trx_state, trx_autocommit, pid, program_name, current_statement, 
+    last_statement
+    from processlist
+  </select>
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Processlist">
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="USER" jdbcType="VARCHAR" property="user" />
+    <result column="HOST" jdbcType="VARCHAR" property="host" />
+    <result column="DB" jdbcType="VARCHAR" property="db" />
+    <result column="COMMAND" jdbcType="VARCHAR" property="command" />
+    <result column="TIME" jdbcType="INTEGER" property="time" />
+    <result column="STATE" jdbcType="VARCHAR" property="state" />
+    <result column="INFO" jdbcType="VARCHAR" property="info" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from PROCESSLIST
+    where ID = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Processlist">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into PROCESSLIST (`USER`, `HOST`, DB, 
+      COMMAND, `TIME`, `STATE`, 
+      INFO)
+    values (#{user,jdbcType=VARCHAR}, #{host,jdbcType=VARCHAR}, #{db,jdbcType=VARCHAR}, 
+      #{command,jdbcType=VARCHAR}, #{time,jdbcType=INTEGER}, #{state,jdbcType=VARCHAR}, 
+      #{info,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Processlist">
+    update PROCESSLIST
+    set `USER` = #{user,jdbcType=VARCHAR},
+      `HOST` = #{host,jdbcType=VARCHAR},
+      DB = #{db,jdbcType=VARCHAR},
+      COMMAND = #{command,jdbcType=VARCHAR},
+      `TIME` = #{time,jdbcType=INTEGER},
+      `STATE` = #{state,jdbcType=VARCHAR},
+      INFO = #{info,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select ID, `USER`, `HOST`, DB, COMMAND, `TIME`, `STATE`, INFO
+    from PROCESSLIST
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, `USER`, `HOST`, DB, COMMAND, `TIME`, `STATE`, INFO
+    from PROCESSLIST
+  </select>
+</mapper>

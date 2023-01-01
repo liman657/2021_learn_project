@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.PartitionsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Partitions" >
+    <result column="TABLE_CATALOG" property="tableCatalog" jdbcType="VARCHAR" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="PARTITION_NAME" property="partitionName" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_NAME" property="subpartitionName" jdbcType="VARCHAR" />
+    <result column="PARTITION_ORDINAL_POSITION" property="partitionOrdinalPosition" jdbcType="INTEGER" />
+    <result column="SUBPARTITION_ORDINAL_POSITION" property="subpartitionOrdinalPosition" jdbcType="INTEGER" />
+    <result column="PARTITION_METHOD" property="partitionMethod" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_METHOD" property="subpartitionMethod" jdbcType="VARCHAR" />
+    <result column="PARTITION_EXPRESSION" property="partitionExpression" jdbcType="VARCHAR" />
+    <result column="SUBPARTITION_EXPRESSION" property="subpartitionExpression" jdbcType="VARCHAR" />
+    <result column="TABLE_ROWS" property="tableRows" jdbcType="BIGINT" />
+    <result column="AVG_ROW_LENGTH" property="avgRowLength" jdbcType="BIGINT" />
+    <result column="DATA_LENGTH" property="dataLength" jdbcType="BIGINT" />
+    <result column="MAX_DATA_LENGTH" property="maxDataLength" jdbcType="BIGINT" />
+    <result column="INDEX_LENGTH" property="indexLength" jdbcType="BIGINT" />
+    <result column="DATA_FREE" property="dataFree" jdbcType="BIGINT" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="CHECK_TIME" property="checkTime" jdbcType="TIMESTAMP" />
+    <result column="CHECKSUM" property="checksum" jdbcType="BIGINT" />
+    <result column="NODEGROUP" property="nodegroup" jdbcType="VARCHAR" />
+    <result column="TABLESPACE_NAME" property="tablespaceName" jdbcType="VARCHAR" />
+    <result column="PARTITION_DESCRIPTION" property="partitionDescription" jdbcType="LONGVARCHAR" />
+    <result column="PARTITION_COMMENT" property="partitionComment" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Partitions" >
+    insert into PARTITIONS (TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, 
+      PARTITION_NAME, SUBPARTITION_NAME, PARTITION_ORDINAL_POSITION, 
+      SUBPARTITION_ORDINAL_POSITION, PARTITION_METHOD, 
+      SUBPARTITION_METHOD, PARTITION_EXPRESSION, 
+      SUBPARTITION_EXPRESSION, TABLE_ROWS, `AVG_ROW_LENGTH`, 
+      DATA_LENGTH, MAX_DATA_LENGTH, INDEX_LENGTH, 
+      DATA_FREE, CREATE_TIME, UPDATE_TIME, 
+      CHECK_TIME, `CHECKSUM`, NODEGROUP, 
+      TABLESPACE_NAME, PARTITION_DESCRIPTION, 
+      PARTITION_COMMENT)
+    values (#{tableCatalog,jdbcType=VARCHAR}, #{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, 
+      #{partitionName,jdbcType=VARCHAR}, #{subpartitionName,jdbcType=VARCHAR}, #{partitionOrdinalPosition,jdbcType=INTEGER}, 
+      #{subpartitionOrdinalPosition,jdbcType=INTEGER}, #{partitionMethod,jdbcType=VARCHAR}, 
+      #{subpartitionMethod,jdbcType=VARCHAR}, #{partitionExpression,jdbcType=VARCHAR}, 
+      #{subpartitionExpression,jdbcType=VARCHAR}, #{tableRows,jdbcType=BIGINT}, #{avgRowLength,jdbcType=BIGINT}, 
+      #{dataLength,jdbcType=BIGINT}, #{maxDataLength,jdbcType=BIGINT}, #{indexLength,jdbcType=BIGINT}, 
+      #{dataFree,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{checkTime,jdbcType=TIMESTAMP}, #{checksum,jdbcType=BIGINT}, #{nodegroup,jdbcType=VARCHAR}, 
+      #{tablespaceName,jdbcType=VARCHAR}, #{partitionDescription,jdbcType=LONGVARCHAR}, 
+      #{partitionComment,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, PARTITION_NAME, SUBPARTITION_NAME, 
+    PARTITION_ORDINAL_POSITION, SUBPARTITION_ORDINAL_POSITION, PARTITION_METHOD, SUBPARTITION_METHOD, 
+    PARTITION_EXPRESSION, SUBPARTITION_EXPRESSION, TABLE_ROWS, `AVG_ROW_LENGTH`, DATA_LENGTH, 
+    MAX_DATA_LENGTH, INDEX_LENGTH, DATA_FREE, CREATE_TIME, UPDATE_TIME, CHECK_TIME, `CHECKSUM`, 
+    NODEGROUP, TABLESPACE_NAME, PARTITION_DESCRIPTION, PARTITION_COMMENT
+    from PARTITIONS
+  </select>
+</mapper>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.SysMenuMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.SysMenu" >
+<mapper namespace="com.coderman.foodie.mapper.SysMenuMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SysMenu" >
     <id column="menu_id" property="menuId" jdbcType="BIGINT" />
     <result column="parent_id" property="parentId" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
@@ -15,7 +15,7 @@
     delete from sys_menu
     where menu_id = #{menuId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.SysMenu" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SysMenu" >
     insert into sys_menu (menu_id, parent_id, `name`, 
       url, perms, `type`, icon, 
       order_num)
@@ -23,7 +23,7 @@
       #{url,jdbcType=VARCHAR}, #{perms,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{icon,jdbcType=VARCHAR}, 
       #{orderNum,jdbcType=INTEGER})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.SysMenu" >
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SysMenu" >
     update sys_menu
     set parent_id = #{parentId,jdbcType=BIGINT},
       `name` = #{name,jdbcType=VARCHAR},

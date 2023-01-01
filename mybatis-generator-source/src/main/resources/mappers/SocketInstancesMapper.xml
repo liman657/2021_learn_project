@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SocketInstancesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SocketInstances" >
+    <id column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <result column="SOCKET_ID" property="socketId" jdbcType="INTEGER" />
+    <result column="IP" property="ip" jdbcType="VARCHAR" />
+    <result column="PORT" property="port" jdbcType="INTEGER" />
+    <result column="STATE" property="state" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from socket_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SocketInstances" >
+    insert into socket_instances (OBJECT_INSTANCE_BEGIN, EVENT_NAME, THREAD_ID, 
+      SOCKET_ID, IP, PORT, 
+      `STATE`)
+    values (#{objectInstanceBegin,jdbcType=BIGINT}, #{eventName,jdbcType=VARCHAR}, #{threadId,jdbcType=BIGINT}, 
+      #{socketId,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, #{port,jdbcType=INTEGER}, 
+      #{state,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SocketInstances" >
+    update socket_instances
+    set EVENT_NAME = #{eventName,jdbcType=VARCHAR},
+      THREAD_ID = #{threadId,jdbcType=BIGINT},
+      SOCKET_ID = #{socketId,jdbcType=INTEGER},
+      IP = #{ip,jdbcType=VARCHAR},
+      PORT = #{port,jdbcType=INTEGER},
+      `STATE` = #{state,jdbcType=CHAR}
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select OBJECT_INSTANCE_BEGIN, EVENT_NAME, THREAD_ID, SOCKET_ID, IP, PORT, `STATE`
+    from socket_instances
+    where OBJECT_INSTANCE_BEGIN = #{objectInstanceBegin,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select OBJECT_INSTANCE_BEGIN, EVENT_NAME, THREAD_ID, SOCKET_ID, IP, PORT, `STATE`
+    from socket_instances
+  </select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SchemaUnusedIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SchemaUnusedIndexes" >
+    <result column="object_schema" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="object_name" property="objectName" jdbcType="VARCHAR" />
+    <result column="index_name" property="indexName" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SchemaUnusedIndexes" >
+    insert into schema_unused_indexes (object_schema, object_name, index_name
+      )
+    values (#{objectSchema,jdbcType=VARCHAR}, #{objectName,jdbcType=VARCHAR}, #{indexName,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select object_schema, object_name, index_name
+    from schema_unused_indexes
+  </select>
+</mapper>

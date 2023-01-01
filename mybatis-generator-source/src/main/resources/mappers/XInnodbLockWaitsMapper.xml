@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XInnodbLockWaitsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XInnodbLockWaits" >
+    <result column="wait_started" property="waitStarted" jdbcType="TIMESTAMP" />
+    <result column="wait_age" property="waitAge" jdbcType="TIME" />
+    <result column="wait_age_secs" property="waitAgeSecs" jdbcType="BIGINT" />
+    <result column="locked_table_schema" property="lockedTableSchema" jdbcType="VARCHAR" />
+    <result column="locked_table_name" property="lockedTableName" jdbcType="VARCHAR" />
+    <result column="locked_table_partition" property="lockedTablePartition" jdbcType="VARCHAR" />
+    <result column="locked_table_subpartition" property="lockedTableSubpartition" jdbcType="VARCHAR" />
+    <result column="locked_index" property="lockedIndex" jdbcType="VARCHAR" />
+    <result column="locked_type" property="lockedType" jdbcType="VARCHAR" />
+    <result column="waiting_trx_id" property="waitingTrxId" jdbcType="BIGINT" />
+    <result column="waiting_trx_started" property="waitingTrxStarted" jdbcType="TIMESTAMP" />
+    <result column="waiting_trx_age" property="waitingTrxAge" jdbcType="TIME" />
+    <result column="waiting_trx_rows_locked" property="waitingTrxRowsLocked" jdbcType="BIGINT" />
+    <result column="waiting_trx_rows_modified" property="waitingTrxRowsModified" jdbcType="BIGINT" />
+    <result column="waiting_pid" property="waitingPid" jdbcType="BIGINT" />
+    <result column="waiting_query" property="waitingQuery" jdbcType="VARCHAR" />
+    <result column="waiting_lock_id" property="waitingLockId" jdbcType="VARCHAR" />
+    <result column="waiting_lock_mode" property="waitingLockMode" jdbcType="VARCHAR" />
+    <result column="blocking_trx_id" property="blockingTrxId" jdbcType="BIGINT" />
+    <result column="blocking_pid" property="blockingPid" jdbcType="BIGINT" />
+    <result column="blocking_query" property="blockingQuery" jdbcType="VARCHAR" />
+    <result column="blocking_lock_id" property="blockingLockId" jdbcType="VARCHAR" />
+    <result column="blocking_lock_mode" property="blockingLockMode" jdbcType="VARCHAR" />
+    <result column="blocking_trx_started" property="blockingTrxStarted" jdbcType="TIMESTAMP" />
+    <result column="blocking_trx_age" property="blockingTrxAge" jdbcType="TIME" />
+    <result column="blocking_trx_rows_locked" property="blockingTrxRowsLocked" jdbcType="BIGINT" />
+    <result column="blocking_trx_rows_modified" property="blockingTrxRowsModified" jdbcType="BIGINT" />
+    <result column="sql_kill_blocking_query" property="sqlKillBlockingQuery" jdbcType="VARCHAR" />
+    <result column="sql_kill_blocking_connection" property="sqlKillBlockingConnection" jdbcType="VARCHAR" />
+    <result column="locked_table" property="lockedTable" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XInnodbLockWaits" >
+    insert into x$innodb_lock_waits (wait_started, wait_age, wait_age_secs, 
+      locked_table_schema, locked_table_name, locked_table_partition, 
+      locked_table_subpartition, locked_index, locked_type, 
+      waiting_trx_id, waiting_trx_started, waiting_trx_age, 
+      waiting_trx_rows_locked, waiting_trx_rows_modified, 
+      waiting_pid, waiting_query, waiting_lock_id, 
+      waiting_lock_mode, blocking_trx_id, blocking_pid, 
+      blocking_query, blocking_lock_id, blocking_lock_mode, 
+      blocking_trx_started, blocking_trx_age, blocking_trx_rows_locked, 
+      blocking_trx_rows_modified, sql_kill_blocking_query, 
+      sql_kill_blocking_connection, locked_table
+      )
+    values (#{waitStarted,jdbcType=TIMESTAMP}, #{waitAge,jdbcType=TIME}, #{waitAgeSecs,jdbcType=BIGINT}, 
+      #{lockedTableSchema,jdbcType=VARCHAR}, #{lockedTableName,jdbcType=VARCHAR}, #{lockedTablePartition,jdbcType=VARCHAR}, 
+      #{lockedTableSubpartition,jdbcType=VARCHAR}, #{lockedIndex,jdbcType=VARCHAR}, #{lockedType,jdbcType=VARCHAR}, 
+      #{waitingTrxId,jdbcType=BIGINT}, #{waitingTrxStarted,jdbcType=TIMESTAMP}, #{waitingTrxAge,jdbcType=TIME}, 
+      #{waitingTrxRowsLocked,jdbcType=BIGINT}, #{waitingTrxRowsModified,jdbcType=BIGINT}, 
+      #{waitingPid,jdbcType=BIGINT}, #{waitingQuery,jdbcType=VARCHAR}, #{waitingLockId,jdbcType=VARCHAR}, 
+      #{waitingLockMode,jdbcType=VARCHAR}, #{blockingTrxId,jdbcType=BIGINT}, #{blockingPid,jdbcType=BIGINT}, 
+      #{blockingQuery,jdbcType=VARCHAR}, #{blockingLockId,jdbcType=VARCHAR}, #{blockingLockMode,jdbcType=VARCHAR}, 
+      #{blockingTrxStarted,jdbcType=TIMESTAMP}, #{blockingTrxAge,jdbcType=TIME}, #{blockingTrxRowsLocked,jdbcType=BIGINT}, 
+      #{blockingTrxRowsModified,jdbcType=BIGINT}, #{sqlKillBlockingQuery,jdbcType=VARCHAR}, 
+      #{sqlKillBlockingConnection,jdbcType=VARCHAR}, #{lockedTable,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select wait_started, wait_age, wait_age_secs, locked_table_schema, locked_table_name, 
+    locked_table_partition, locked_table_subpartition, locked_index, locked_type, waiting_trx_id, 
+    waiting_trx_started, waiting_trx_age, waiting_trx_rows_locked, waiting_trx_rows_modified, 
+    waiting_pid, waiting_query, waiting_lock_id, waiting_lock_mode, blocking_trx_id, 
+    blocking_pid, blocking_query, blocking_lock_id, blocking_lock_mode, blocking_trx_started, 
+    blocking_trx_age, blocking_trx_rows_locked, blocking_trx_rows_modified, sql_kill_blocking_query, 
+    sql_kill_blocking_connection, locked_table
+    from x$innodb_lock_waits
+  </select>
+</mapper>

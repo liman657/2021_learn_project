@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SchemaRedundantIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SchemaRedundantIndexes" >
+    <result column="table_schema" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="table_name" property="tableName" jdbcType="VARCHAR" />
+    <result column="redundant_index_name" property="redundantIndexName" jdbcType="VARCHAR" />
+    <result column="redundant_index_non_unique" property="redundantIndexNonUnique" jdbcType="INTEGER" />
+    <result column="dominant_index_name" property="dominantIndexName" jdbcType="VARCHAR" />
+    <result column="dominant_index_non_unique" property="dominantIndexNonUnique" jdbcType="INTEGER" />
+    <result column="subpart_exists" property="subpartExists" jdbcType="INTEGER" />
+    <result column="sql_drop_index" property="sqlDropIndex" jdbcType="VARCHAR" />
+    <result column="redundant_index_columns" property="redundantIndexColumns" jdbcType="LONGVARCHAR" />
+    <result column="dominant_index_columns" property="dominantIndexColumns" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SchemaRedundantIndexes" >
+    insert into schema_redundant_indexes (table_schema, `table_name`, redundant_index_name, 
+      redundant_index_non_unique, dominant_index_name, 
+      dominant_index_non_unique, subpart_exists, 
+      sql_drop_index, redundant_index_columns, 
+      dominant_index_columns)
+    values (#{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{redundantIndexName,jdbcType=VARCHAR}, 
+      #{redundantIndexNonUnique,jdbcType=INTEGER}, #{dominantIndexName,jdbcType=VARCHAR}, 
+      #{dominantIndexNonUnique,jdbcType=INTEGER}, #{subpartExists,jdbcType=INTEGER}, 
+      #{sqlDropIndex,jdbcType=VARCHAR}, #{redundantIndexColumns,jdbcType=LONGVARCHAR}, 
+      #{dominantIndexColumns,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select table_schema, `table_name`, redundant_index_name, redundant_index_non_unique, 
+    dominant_index_name, dominant_index_non_unique, subpart_exists, sql_drop_index, redundant_index_columns, 
+    dominant_index_columns
+    from schema_redundant_indexes
+  </select>
+</mapper>

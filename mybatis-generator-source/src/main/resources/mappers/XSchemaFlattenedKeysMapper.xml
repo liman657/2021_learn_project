@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XSchemaFlattenedKeysMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XSchemaFlattenedKeys" >
+    <result column="table_schema" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="table_name" property="tableName" jdbcType="VARCHAR" />
+    <result column="index_name" property="indexName" jdbcType="VARCHAR" />
+    <result column="non_unique" property="nonUnique" jdbcType="INTEGER" />
+    <result column="subpart_exists" property="subpartExists" jdbcType="BIGINT" />
+    <result column="index_columns" property="indexColumns" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XSchemaFlattenedKeys" >
+    insert into x$schema_flattened_keys (table_schema, `table_name`, index_name, 
+      non_unique, subpart_exists, index_columns
+      )
+    values (#{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{indexName,jdbcType=VARCHAR}, 
+      #{nonUnique,jdbcType=INTEGER}, #{subpartExists,jdbcType=BIGINT}, #{indexColumns,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select table_schema, `table_name`, index_name, non_unique, subpart_exists, index_columns
+    from x$schema_flattened_keys
+  </select>
+</mapper>

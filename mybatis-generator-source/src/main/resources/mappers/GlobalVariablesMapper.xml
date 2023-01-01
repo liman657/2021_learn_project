@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.GlobalVariablesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.GlobalVariables" >
+    <id column="VARIABLE_NAME" property="variableName" jdbcType="VARCHAR" />
+    <result column="VARIABLE_VALUE" property="variableValue" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from global_variables
+    where VARIABLE_NAME = #{variableName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.GlobalVariables" >
+    insert into global_variables (VARIABLE_NAME, VARIABLE_VALUE)
+    values (#{variableName,jdbcType=VARCHAR}, #{variableValue,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.GlobalVariables" >
+    update global_variables
+    set VARIABLE_VALUE = #{variableValue,jdbcType=VARCHAR}
+    where VARIABLE_NAME = #{variableName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select VARIABLE_NAME, VARIABLE_VALUE
+    from global_variables
+    where VARIABLE_NAME = #{variableName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select VARIABLE_NAME, VARIABLE_VALUE
+    from global_variables
+  </select>
+</mapper>

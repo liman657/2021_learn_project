@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.UserDefinedFunctionsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.UserDefinedFunctions" >
+    <id column="UDF_NAME" property="udfName" jdbcType="VARCHAR" />
+    <result column="UDF_RETURN_TYPE" property="udfReturnType" jdbcType="VARCHAR" />
+    <result column="UDF_TYPE" property="udfType" jdbcType="VARCHAR" />
+    <result column="UDF_LIBRARY" property="udfLibrary" jdbcType="VARCHAR" />
+    <result column="UDF_USAGE_COUNT" property="udfUsageCount" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from user_defined_functions
+    where UDF_NAME = #{udfName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.UserDefinedFunctions" >
+    insert into user_defined_functions (UDF_NAME, UDF_RETURN_TYPE, UDF_TYPE, 
+      UDF_LIBRARY, UDF_USAGE_COUNT)
+    values (#{udfName,jdbcType=VARCHAR}, #{udfReturnType,jdbcType=VARCHAR}, #{udfType,jdbcType=VARCHAR}, 
+      #{udfLibrary,jdbcType=VARCHAR}, #{udfUsageCount,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.UserDefinedFunctions" >
+    update user_defined_functions
+    set UDF_RETURN_TYPE = #{udfReturnType,jdbcType=VARCHAR},
+      UDF_TYPE = #{udfType,jdbcType=VARCHAR},
+      UDF_LIBRARY = #{udfLibrary,jdbcType=VARCHAR},
+      UDF_USAGE_COUNT = #{udfUsageCount,jdbcType=BIGINT}
+    where UDF_NAME = #{udfName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select UDF_NAME, UDF_RETURN_TYPE, UDF_TYPE, UDF_LIBRARY, UDF_USAGE_COUNT
+    from user_defined_functions
+    where UDF_NAME = #{udfName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select UDF_NAME, UDF_RETURN_TYPE, UDF_TYPE, UDF_LIBRARY, UDF_USAGE_COUNT
+    from user_defined_functions
+  </select>
+</mapper>

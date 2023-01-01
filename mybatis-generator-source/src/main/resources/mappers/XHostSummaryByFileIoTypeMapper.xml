@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XHostSummaryByFileIoTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XHostSummaryByFileIoType" >
+    <result column="host" property="host" jdbcType="VARCHAR" />
+    <result column="event_name" property="eventName" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="BIGINT" />
+    <result column="max_latency" property="maxLatency" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XHostSummaryByFileIoType" >
+    insert into x$host_summary_by_file_io_type (`host`, event_name, total, 
+      total_latency, max_latency)
+    values (#{host,jdbcType=VARCHAR}, #{eventName,jdbcType=VARCHAR}, #{total,jdbcType=BIGINT}, 
+      #{totalLatency,jdbcType=BIGINT}, #{maxLatency,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `host`, event_name, total, total_latency, max_latency
+    from x$host_summary_by_file_io_type
+  </select>
+</mapper>

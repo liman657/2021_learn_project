@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ImcLevelMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ImcLevel" >
+    <id column="level_id" property="levelId" jdbcType="SMALLINT" />
+    <result column="level_name" property="levelName" jdbcType="VARCHAR" />
+    <result column="add_time" property="addTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short" >
+    delete from imc_level
+    where level_id = #{levelId,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ImcLevel" >
+    insert into imc_level (level_id, level_name, add_time
+      )
+    values (#{levelId,jdbcType=SMALLINT}, #{levelName,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ImcLevel" >
+    update imc_level
+    set level_name = #{levelName,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=TIMESTAMP}
+    where level_id = #{levelId,jdbcType=SMALLINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Short" >
+    select level_id, level_name, add_time
+    from imc_level
+    where level_id = #{levelId,jdbcType=SMALLINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select level_id, level_name, add_time
+    from imc_level
+  </select>
+</mapper>

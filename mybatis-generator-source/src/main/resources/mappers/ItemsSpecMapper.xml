@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ItemsSpecMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ItemsSpec" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="item_id" property="itemId" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="stock" property="stock" jdbcType="INTEGER" />
+    <result column="discounts" property="discounts" jdbcType="DECIMAL" />
+    <result column="price_discount" property="priceDiscount" jdbcType="INTEGER" />
+    <result column="price_normal" property="priceNormal" jdbcType="INTEGER" />
+    <result column="created_time" property="createdTime" jdbcType="TIMESTAMP" />
+    <result column="updated_time" property="updatedTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from items_spec
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ItemsSpec" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into items_spec (item_id, `name`, stock, 
+      discounts, price_discount, price_normal, 
+      created_time, updated_time)
+    values (#{itemId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{stock,jdbcType=INTEGER}, 
+      #{discounts,jdbcType=DECIMAL}, #{priceDiscount,jdbcType=INTEGER}, #{priceNormal,jdbcType=INTEGER}, 
+      #{createdTime,jdbcType=TIMESTAMP}, #{updatedTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ItemsSpec" >
+    update items_spec
+    set item_id = #{itemId,jdbcType=VARCHAR},
+      `name` = #{name,jdbcType=VARCHAR},
+      stock = #{stock,jdbcType=INTEGER},
+      discounts = #{discounts,jdbcType=DECIMAL},
+      price_discount = #{priceDiscount,jdbcType=INTEGER},
+      price_normal = #{priceNormal,jdbcType=INTEGER},
+      created_time = #{createdTime,jdbcType=TIMESTAMP},
+      updated_time = #{updatedTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, item_id, `name`, stock, discounts, price_discount, price_normal, created_time, 
+    updated_time
+    from items_spec
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, item_id, `name`, stock, discounts, price_discount, price_normal, created_time, 
+    updated_time
+    from items_spec
+  </select>
+</mapper>

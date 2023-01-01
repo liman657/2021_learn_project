@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.CharacterSetsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.CharacterSets" >
+    <result column="CHARACTER_SET_NAME" property="characterSetName" jdbcType="VARCHAR" />
+    <result column="DEFAULT_COLLATE_NAME" property="defaultCollateName" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="MAXLEN" property="maxlen" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.CharacterSets" >
+    insert into CHARACTER_SETS (`CHARACTER_SET_NAME`, DEFAULT_COLLATE_NAME, 
+      DESCRIPTION, MAXLEN)
+    values (#{characterSetName,jdbcType=VARCHAR}, #{defaultCollateName,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR}, #{maxlen,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `CHARACTER_SET_NAME`, DEFAULT_COLLATE_NAME, DESCRIPTION, MAXLEN
+    from CHARACTER_SETS
+  </select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbFieldsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbFields" >
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="POS" property="pos" jdbcType="BIGINT" />
+    <result column="INDEX_ID" property="indexId" jdbcType="VARBINARY" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbFields" >
+    insert into INNODB_FIELDS (`NAME`, POS, INDEX_ID
+      )
+    values (#{name,jdbcType=VARCHAR}, #{pos,jdbcType=BIGINT}, #{indexId,jdbcType=VARBINARY}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `NAME`, POS, INDEX_ID
+    from INNODB_FIELDS
+  </select>
+</mapper>

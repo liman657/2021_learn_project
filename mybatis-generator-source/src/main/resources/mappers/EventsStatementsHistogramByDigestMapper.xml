@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsStatementsHistogramByDigestMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsStatementsHistogramByDigest" >
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="DIGEST" property="digest" jdbcType="VARCHAR" />
+    <result column="BUCKET_NUMBER" property="bucketNumber" jdbcType="INTEGER" />
+    <result column="BUCKET_TIMER_LOW" property="bucketTimerLow" jdbcType="BIGINT" />
+    <result column="BUCKET_TIMER_HIGH" property="bucketTimerHigh" jdbcType="BIGINT" />
+    <result column="COUNT_BUCKET" property="countBucket" jdbcType="BIGINT" />
+    <result column="COUNT_BUCKET_AND_LOWER" property="countBucketAndLower" jdbcType="BIGINT" />
+    <result column="BUCKET_QUANTILE" property="bucketQuantile" jdbcType="DOUBLE" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsStatementsHistogramByDigest" >
+    insert into events_statements_histogram_by_digest (`SCHEMA_NAME`, DIGEST, BUCKET_NUMBER, 
+      BUCKET_TIMER_LOW, BUCKET_TIMER_HIGH, COUNT_BUCKET, 
+      COUNT_BUCKET_AND_LOWER, BUCKET_QUANTILE)
+    values (#{schemaName,jdbcType=VARCHAR}, #{digest,jdbcType=VARCHAR}, #{bucketNumber,jdbcType=INTEGER}, 
+      #{bucketTimerLow,jdbcType=BIGINT}, #{bucketTimerHigh,jdbcType=BIGINT}, #{countBucket,jdbcType=BIGINT}, 
+      #{countBucketAndLower,jdbcType=BIGINT}, #{bucketQuantile,jdbcType=DOUBLE})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `SCHEMA_NAME`, DIGEST, BUCKET_NUMBER, BUCKET_TIMER_LOW, BUCKET_TIMER_HIGH, 
+    COUNT_BUCKET, COUNT_BUCKET_AND_LOWER, BUCKET_QUANTILE
+    from events_statements_histogram_by_digest
+  </select>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbFtIndexCacheMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbFtIndexCache" >
+    <result column="WORD" property="word" jdbcType="VARCHAR" />
+    <result column="FIRST_DOC_ID" property="firstDocId" jdbcType="BIGINT" />
+    <result column="LAST_DOC_ID" property="lastDocId" jdbcType="BIGINT" />
+    <result column="DOC_COUNT" property="docCount" jdbcType="BIGINT" />
+    <result column="DOC_ID" property="docId" jdbcType="BIGINT" />
+    <result column="POSITION" property="position" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbFtIndexCache" >
+    insert into INNODB_FT_INDEX_CACHE (WORD, FIRST_DOC_ID, LAST_DOC_ID, 
+      DOC_COUNT, DOC_ID, `POSITION`
+      )
+    values (#{word,jdbcType=VARCHAR}, #{firstDocId,jdbcType=BIGINT}, #{lastDocId,jdbcType=BIGINT}, 
+      #{docCount,jdbcType=BIGINT}, #{docId,jdbcType=BIGINT}, #{position,jdbcType=BIGINT}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select WORD, FIRST_DOC_ID, LAST_DOC_ID, DOC_COUNT, DOC_ID, `POSITION`
+    from INNODB_FT_INDEX_CACHE
+  </select>
+</mapper>

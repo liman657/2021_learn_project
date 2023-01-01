@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationConnectionConfigurationMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationConnectionConfiguration" >
+    <id column="CHANNEL_NAME" property="channelName" jdbcType="CHAR" />
+    <result column="HOST" property="host" jdbcType="CHAR" />
+    <result column="PORT" property="port" jdbcType="INTEGER" />
+    <result column="USER" property="user" jdbcType="CHAR" />
+    <result column="NETWORK_INTERFACE" property="networkInterface" jdbcType="CHAR" />
+    <result column="AUTO_POSITION" property="autoPosition" jdbcType="CHAR" />
+    <result column="SSL_ALLOWED" property="sslAllowed" jdbcType="CHAR" />
+    <result column="SSL_CA_FILE" property="sslCaFile" jdbcType="VARCHAR" />
+    <result column="SSL_CA_PATH" property="sslCaPath" jdbcType="VARCHAR" />
+    <result column="SSL_CERTIFICATE" property="sslCertificate" jdbcType="VARCHAR" />
+    <result column="SSL_CIPHER" property="sslCipher" jdbcType="VARCHAR" />
+    <result column="SSL_KEY" property="sslKey" jdbcType="VARCHAR" />
+    <result column="SSL_VERIFY_SERVER_CERTIFICATE" property="sslVerifyServerCertificate" jdbcType="CHAR" />
+    <result column="SSL_CRL_FILE" property="sslCrlFile" jdbcType="VARCHAR" />
+    <result column="SSL_CRL_PATH" property="sslCrlPath" jdbcType="VARCHAR" />
+    <result column="CONNECTION_RETRY_INTERVAL" property="connectionRetryInterval" jdbcType="INTEGER" />
+    <result column="CONNECTION_RETRY_COUNT" property="connectionRetryCount" jdbcType="BIGINT" />
+    <result column="HEARTBEAT_INTERVAL" property="heartbeatInterval" jdbcType="DOUBLE" />
+    <result column="TLS_VERSION" property="tlsVersion" jdbcType="VARCHAR" />
+    <result column="PUBLIC_KEY_PATH" property="publicKeyPath" jdbcType="VARCHAR" />
+    <result column="GET_PUBLIC_KEY" property="getPublicKey" jdbcType="CHAR" />
+    <result column="NETWORK_NAMESPACE" property="networkNamespace" jdbcType="VARCHAR" />
+    <result column="COMPRESSION_ALGORITHM" property="compressionAlgorithm" jdbcType="CHAR" />
+    <result column="ZSTD_COMPRESSION_LEVEL" property="zstdCompressionLevel" jdbcType="INTEGER" />
+    <result column="SOURCE_CONNECTION_AUTO_FAILOVER" property="sourceConnectionAutoFailover" jdbcType="CHAR" />
+    <result column="GTID_ONLY" property="gtidOnly" jdbcType="CHAR" />
+    <result column="TLS_CIPHERSUITES" property="tlsCiphersuites" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from replication_connection_configuration
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationConnectionConfiguration" >
+    insert into replication_connection_configuration (CHANNEL_NAME, `HOST`, PORT, 
+      `USER`, NETWORK_INTERFACE, AUTO_POSITION, 
+      SSL_ALLOWED, SSL_CA_FILE, SSL_CA_PATH, 
+      SSL_CERTIFICATE, SSL_CIPHER, SSL_KEY, 
+      SSL_VERIFY_SERVER_CERTIFICATE, SSL_CRL_FILE, SSL_CRL_PATH, 
+      CONNECTION_RETRY_INTERVAL, CONNECTION_RETRY_COUNT, 
+      HEARTBEAT_INTERVAL, TLS_VERSION, PUBLIC_KEY_PATH, 
+      GET_PUBLIC_KEY, NETWORK_NAMESPACE, COMPRESSION_ALGORITHM, 
+      ZSTD_COMPRESSION_LEVEL, SOURCE_CONNECTION_AUTO_FAILOVER, 
+      GTID_ONLY, TLS_CIPHERSUITES)
+    values (#{channelName,jdbcType=CHAR}, #{host,jdbcType=CHAR}, #{port,jdbcType=INTEGER}, 
+      #{user,jdbcType=CHAR}, #{networkInterface,jdbcType=CHAR}, #{autoPosition,jdbcType=CHAR}, 
+      #{sslAllowed,jdbcType=CHAR}, #{sslCaFile,jdbcType=VARCHAR}, #{sslCaPath,jdbcType=VARCHAR}, 
+      #{sslCertificate,jdbcType=VARCHAR}, #{sslCipher,jdbcType=VARCHAR}, #{sslKey,jdbcType=VARCHAR}, 
+      #{sslVerifyServerCertificate,jdbcType=CHAR}, #{sslCrlFile,jdbcType=VARCHAR}, #{sslCrlPath,jdbcType=VARCHAR}, 
+      #{connectionRetryInterval,jdbcType=INTEGER}, #{connectionRetryCount,jdbcType=BIGINT}, 
+      #{heartbeatInterval,jdbcType=DOUBLE}, #{tlsVersion,jdbcType=VARCHAR}, #{publicKeyPath,jdbcType=VARCHAR}, 
+      #{getPublicKey,jdbcType=CHAR}, #{networkNamespace,jdbcType=VARCHAR}, #{compressionAlgorithm,jdbcType=CHAR}, 
+      #{zstdCompressionLevel,jdbcType=INTEGER}, #{sourceConnectionAutoFailover,jdbcType=CHAR}, 
+      #{gtidOnly,jdbcType=CHAR}, #{tlsCiphersuites,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationConnectionConfiguration" >
+    update replication_connection_configuration
+    set `HOST` = #{host,jdbcType=CHAR},
+      PORT = #{port,jdbcType=INTEGER},
+      `USER` = #{user,jdbcType=CHAR},
+      NETWORK_INTERFACE = #{networkInterface,jdbcType=CHAR},
+      AUTO_POSITION = #{autoPosition,jdbcType=CHAR},
+      SSL_ALLOWED = #{sslAllowed,jdbcType=CHAR},
+      SSL_CA_FILE = #{sslCaFile,jdbcType=VARCHAR},
+      SSL_CA_PATH = #{sslCaPath,jdbcType=VARCHAR},
+      SSL_CERTIFICATE = #{sslCertificate,jdbcType=VARCHAR},
+      SSL_CIPHER = #{sslCipher,jdbcType=VARCHAR},
+      SSL_KEY = #{sslKey,jdbcType=VARCHAR},
+      SSL_VERIFY_SERVER_CERTIFICATE = #{sslVerifyServerCertificate,jdbcType=CHAR},
+      SSL_CRL_FILE = #{sslCrlFile,jdbcType=VARCHAR},
+      SSL_CRL_PATH = #{sslCrlPath,jdbcType=VARCHAR},
+      CONNECTION_RETRY_INTERVAL = #{connectionRetryInterval,jdbcType=INTEGER},
+      CONNECTION_RETRY_COUNT = #{connectionRetryCount,jdbcType=BIGINT},
+      HEARTBEAT_INTERVAL = #{heartbeatInterval,jdbcType=DOUBLE},
+      TLS_VERSION = #{tlsVersion,jdbcType=VARCHAR},
+      PUBLIC_KEY_PATH = #{publicKeyPath,jdbcType=VARCHAR},
+      GET_PUBLIC_KEY = #{getPublicKey,jdbcType=CHAR},
+      NETWORK_NAMESPACE = #{networkNamespace,jdbcType=VARCHAR},
+      COMPRESSION_ALGORITHM = #{compressionAlgorithm,jdbcType=CHAR},
+      ZSTD_COMPRESSION_LEVEL = #{zstdCompressionLevel,jdbcType=INTEGER},
+      SOURCE_CONNECTION_AUTO_FAILOVER = #{sourceConnectionAutoFailover,jdbcType=CHAR},
+      GTID_ONLY = #{gtidOnly,jdbcType=CHAR},
+      TLS_CIPHERSUITES = #{tlsCiphersuites,jdbcType=LONGVARCHAR}
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select CHANNEL_NAME, `HOST`, PORT, `USER`, NETWORK_INTERFACE, AUTO_POSITION, SSL_ALLOWED, 
+    SSL_CA_FILE, SSL_CA_PATH, SSL_CERTIFICATE, SSL_CIPHER, SSL_KEY, SSL_VERIFY_SERVER_CERTIFICATE, 
+    SSL_CRL_FILE, SSL_CRL_PATH, CONNECTION_RETRY_INTERVAL, CONNECTION_RETRY_COUNT, HEARTBEAT_INTERVAL, 
+    TLS_VERSION, PUBLIC_KEY_PATH, GET_PUBLIC_KEY, NETWORK_NAMESPACE, COMPRESSION_ALGORITHM, 
+    ZSTD_COMPRESSION_LEVEL, SOURCE_CONNECTION_AUTO_FAILOVER, GTID_ONLY, TLS_CIPHERSUITES
+    from replication_connection_configuration
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CHANNEL_NAME, `HOST`, PORT, `USER`, NETWORK_INTERFACE, AUTO_POSITION, SSL_ALLOWED, 
+    SSL_CA_FILE, SSL_CA_PATH, SSL_CERTIFICATE, SSL_CIPHER, SSL_KEY, SSL_VERIFY_SERVER_CERTIFICATE, 
+    SSL_CRL_FILE, SSL_CRL_PATH, CONNECTION_RETRY_INTERVAL, CONNECTION_RETRY_COUNT, HEARTBEAT_INTERVAL, 
+    TLS_VERSION, PUBLIC_KEY_PATH, GET_PUBLIC_KEY, NETWORK_NAMESPACE, COMPRESSION_ALGORITHM, 
+    ZSTD_COMPRESSION_LEVEL, SOURCE_CONNECTION_AUTO_FAILOVER, GTID_ONLY, TLS_CIPHERSUITES
+    from replication_connection_configuration
+  </select>
+</mapper>

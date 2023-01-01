@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.HostSummaryByStatementTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.HostSummaryByStatementType" >
+    <result column="host" property="host" jdbcType="VARCHAR" />
+    <result column="statement" property="statement" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="VARCHAR" />
+    <result column="max_latency" property="maxLatency" jdbcType="VARCHAR" />
+    <result column="lock_latency" property="lockLatency" jdbcType="VARCHAR" />
+    <result column="rows_sent" property="rowsSent" jdbcType="BIGINT" />
+    <result column="rows_examined" property="rowsExamined" jdbcType="BIGINT" />
+    <result column="rows_affected" property="rowsAffected" jdbcType="BIGINT" />
+    <result column="full_scans" property="fullScans" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.HostSummaryByStatementType" >
+    insert into host_summary_by_statement_type (`host`, `statement`, total, 
+      total_latency, max_latency, lock_latency, 
+      rows_sent, rows_examined, rows_affected, 
+      full_scans)
+    values (#{host,jdbcType=VARCHAR}, #{statement,jdbcType=VARCHAR}, #{total,jdbcType=BIGINT}, 
+      #{totalLatency,jdbcType=VARCHAR}, #{maxLatency,jdbcType=VARCHAR}, #{lockLatency,jdbcType=VARCHAR}, 
+      #{rowsSent,jdbcType=BIGINT}, #{rowsExamined,jdbcType=BIGINT}, #{rowsAffected,jdbcType=BIGINT}, 
+      #{fullScans,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `host`, `statement`, total, total_latency, max_latency, lock_latency, rows_sent, 
+    rows_examined, rows_affected, full_scans
+    from host_summary_by_statement_type
+  </select>
+</mapper>

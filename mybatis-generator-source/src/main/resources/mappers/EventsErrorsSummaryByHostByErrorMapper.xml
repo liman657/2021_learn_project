@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsErrorsSummaryByHostByErrorMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsErrorsSummaryByHostByError" >
+    <result column="HOST" property="host" jdbcType="CHAR" />
+    <result column="ERROR_NUMBER" property="errorNumber" jdbcType="INTEGER" />
+    <result column="ERROR_NAME" property="errorName" jdbcType="VARCHAR" />
+    <result column="SQL_STATE" property="sqlState" jdbcType="VARCHAR" />
+    <result column="SUM_ERROR_RAISED" property="sumErrorRaised" jdbcType="BIGINT" />
+    <result column="SUM_ERROR_HANDLED" property="sumErrorHandled" jdbcType="BIGINT" />
+    <result column="FIRST_SEEN" property="firstSeen" jdbcType="TIMESTAMP" />
+    <result column="LAST_SEEN" property="lastSeen" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsErrorsSummaryByHostByError" >
+    insert into events_errors_summary_by_host_by_error (`HOST`, ERROR_NUMBER, ERROR_NAME, 
+      SQL_STATE, SUM_ERROR_RAISED, SUM_ERROR_HANDLED, 
+      FIRST_SEEN, LAST_SEEN)
+    values (#{host,jdbcType=CHAR}, #{errorNumber,jdbcType=INTEGER}, #{errorName,jdbcType=VARCHAR}, 
+      #{sqlState,jdbcType=VARCHAR}, #{sumErrorRaised,jdbcType=BIGINT}, #{sumErrorHandled,jdbcType=BIGINT}, 
+      #{firstSeen,jdbcType=TIMESTAMP}, #{lastSeen,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `HOST`, ERROR_NUMBER, ERROR_NAME, SQL_STATE, SUM_ERROR_RAISED, SUM_ERROR_HANDLED, 
+    FIRST_SEEN, LAST_SEEN
+    from events_errors_summary_by_host_by_error
+  </select>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XUserSummaryMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XUserSummary" >
+    <result column="user" property="user" jdbcType="VARCHAR" />
+    <result column="statements" property="statements" jdbcType="DECIMAL" />
+    <result column="statement_latency" property="statementLatency" jdbcType="DECIMAL" />
+    <result column="statement_avg_latency" property="statementAvgLatency" jdbcType="DECIMAL" />
+    <result column="table_scans" property="tableScans" jdbcType="DECIMAL" />
+    <result column="file_ios" property="fileIos" jdbcType="DECIMAL" />
+    <result column="file_io_latency" property="fileIoLatency" jdbcType="DECIMAL" />
+    <result column="current_connections" property="currentConnections" jdbcType="DECIMAL" />
+    <result column="total_connections" property="totalConnections" jdbcType="DECIMAL" />
+    <result column="unique_hosts" property="uniqueHosts" jdbcType="BIGINT" />
+    <result column="current_memory" property="currentMemory" jdbcType="DECIMAL" />
+    <result column="total_memory_allocated" property="totalMemoryAllocated" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XUserSummary" >
+    insert into x$user_summary (`user`, statements, statement_latency, 
+      statement_avg_latency, table_scans, file_ios, 
+      file_io_latency, current_connections, total_connections, 
+      unique_hosts, current_memory, total_memory_allocated
+      )
+    values (#{user,jdbcType=VARCHAR}, #{statements,jdbcType=DECIMAL}, #{statementLatency,jdbcType=DECIMAL}, 
+      #{statementAvgLatency,jdbcType=DECIMAL}, #{tableScans,jdbcType=DECIMAL}, #{fileIos,jdbcType=DECIMAL}, 
+      #{fileIoLatency,jdbcType=DECIMAL}, #{currentConnections,jdbcType=DECIMAL}, #{totalConnections,jdbcType=DECIMAL}, 
+      #{uniqueHosts,jdbcType=BIGINT}, #{currentMemory,jdbcType=DECIMAL}, #{totalMemoryAllocated,jdbcType=DECIMAL}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `user`, statements, statement_latency, statement_avg_latency, table_scans, 
+    file_ios, file_io_latency, current_connections, total_connections, unique_hosts, 
+    current_memory, total_memory_allocated
+    from x$user_summary
+  </select>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.StUnitsOfMeasureMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.StUnitsOfMeasure" >
+    <result column="UNIT_NAME" property="unitName" jdbcType="VARCHAR" />
+    <result column="UNIT_TYPE" property="unitType" jdbcType="VARCHAR" />
+    <result column="CONVERSION_FACTOR" property="conversionFactor" jdbcType="DOUBLE" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.StUnitsOfMeasure" >
+    insert into ST_UNITS_OF_MEASURE (UNIT_NAME, UNIT_TYPE, CONVERSION_FACTOR, 
+      DESCRIPTION)
+    values (#{unitName,jdbcType=VARCHAR}, #{unitType,jdbcType=VARCHAR}, #{conversionFactor,jdbcType=DOUBLE}, 
+      #{description,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select UNIT_NAME, UNIT_TYPE, CONVERSION_FACTOR, DESCRIPTION
+    from ST_UNITS_OF_MEASURE
+  </select>
+</mapper>

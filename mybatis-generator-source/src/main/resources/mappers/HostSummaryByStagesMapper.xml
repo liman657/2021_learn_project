@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.HostSummaryByStagesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.HostSummaryByStages" >
+    <result column="host" property="host" jdbcType="VARCHAR" />
+    <result column="event_name" property="eventName" jdbcType="VARCHAR" />
+    <result column="total" property="total" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="VARCHAR" />
+    <result column="avg_latency" property="avgLatency" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.HostSummaryByStages" >
+    insert into host_summary_by_stages (`host`, event_name, total, 
+      total_latency, avg_latency)
+    values (#{host,jdbcType=VARCHAR}, #{eventName,jdbcType=VARCHAR}, #{total,jdbcType=BIGINT}, 
+      #{totalLatency,jdbcType=VARCHAR}, #{avgLatency,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `host`, event_name, total, total_latency, avg_latency
+    from host_summary_by_stages
+  </select>
+</mapper>

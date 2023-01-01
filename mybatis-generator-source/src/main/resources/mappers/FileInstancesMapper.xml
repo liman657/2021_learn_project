@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.FileInstancesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.FileInstances" >
+    <id column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="OPEN_COUNT" property="openCount" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from file_instances
+    where FILE_NAME = #{fileName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.FileInstances" >
+    insert into file_instances (FILE_NAME, EVENT_NAME, OPEN_COUNT
+      )
+    values (#{fileName,jdbcType=VARCHAR}, #{eventName,jdbcType=VARCHAR}, #{openCount,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.FileInstances" >
+    update file_instances
+    set EVENT_NAME = #{eventName,jdbcType=VARCHAR},
+      OPEN_COUNT = #{openCount,jdbcType=INTEGER}
+    where FILE_NAME = #{fileName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select FILE_NAME, EVENT_NAME, OPEN_COUNT
+    from file_instances
+    where FILE_NAME = #{fileName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select FILE_NAME, EVENT_NAME, OPEN_COUNT
+    from file_instances
+  </select>
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationGroupMembersMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationGroupMembers" >
+    <result column="CHANNEL_NAME" property="channelName" jdbcType="CHAR" />
+    <result column="MEMBER_ID" property="memberId" jdbcType="CHAR" />
+    <result column="MEMBER_HOST" property="memberHost" jdbcType="CHAR" />
+    <result column="MEMBER_PORT" property="memberPort" jdbcType="INTEGER" />
+    <result column="MEMBER_STATE" property="memberState" jdbcType="CHAR" />
+    <result column="MEMBER_ROLE" property="memberRole" jdbcType="CHAR" />
+    <result column="MEMBER_VERSION" property="memberVersion" jdbcType="CHAR" />
+    <result column="MEMBER_COMMUNICATION_STACK" property="memberCommunicationStack" jdbcType="CHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationGroupMembers" >
+    insert into replication_group_members (CHANNEL_NAME, MEMBER_ID, MEMBER_HOST, 
+      MEMBER_PORT, MEMBER_STATE, MEMBER_ROLE, 
+      MEMBER_VERSION, MEMBER_COMMUNICATION_STACK)
+    values (#{channelName,jdbcType=CHAR}, #{memberId,jdbcType=CHAR}, #{memberHost,jdbcType=CHAR}, 
+      #{memberPort,jdbcType=INTEGER}, #{memberState,jdbcType=CHAR}, #{memberRole,jdbcType=CHAR}, 
+      #{memberVersion,jdbcType=CHAR}, #{memberCommunicationStack,jdbcType=CHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CHANNEL_NAME, MEMBER_ID, MEMBER_HOST, MEMBER_PORT, MEMBER_STATE, MEMBER_ROLE, 
+    MEMBER_VERSION, MEMBER_COMMUNICATION_STACK
+    from replication_group_members
+  </select>
+</mapper>

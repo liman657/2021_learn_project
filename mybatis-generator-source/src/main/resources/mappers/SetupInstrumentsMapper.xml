@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SetupInstrumentsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SetupInstruments" >
+    <id column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="ENABLED" property="enabled" jdbcType="CHAR" />
+    <result column="TIMED" property="timed" jdbcType="CHAR" />
+    <result column="PROPERTIES" property="properties" jdbcType="CHAR" />
+    <result column="VOLATILITY" property="volatility" jdbcType="INTEGER" />
+    <result column="DOCUMENTATION" property="documentation" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from setup_instruments
+    where `NAME` = #{name,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SetupInstruments" >
+    insert into setup_instruments (`NAME`, ENABLED, TIMED, 
+      PROPERTIES, VOLATILITY, DOCUMENTATION
+      )
+    values (#{name,jdbcType=VARCHAR}, #{enabled,jdbcType=CHAR}, #{timed,jdbcType=CHAR}, 
+      #{properties,jdbcType=CHAR}, #{volatility,jdbcType=INTEGER}, #{documentation,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SetupInstruments" >
+    update setup_instruments
+    set ENABLED = #{enabled,jdbcType=CHAR},
+      TIMED = #{timed,jdbcType=CHAR},
+      PROPERTIES = #{properties,jdbcType=CHAR},
+      VOLATILITY = #{volatility,jdbcType=INTEGER},
+      DOCUMENTATION = #{documentation,jdbcType=LONGVARCHAR}
+    where `NAME` = #{name,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select `NAME`, ENABLED, TIMED, PROPERTIES, VOLATILITY, DOCUMENTATION
+    from setup_instruments
+    where `NAME` = #{name,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `NAME`, ENABLED, TIMED, PROPERTIES, VOLATILITY, DOCUMENTATION
+    from setup_instruments
+  </select>
+</mapper>

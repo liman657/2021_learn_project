@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ItemsParamMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ItemsParam" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="item_id" property="itemId" jdbcType="VARCHAR" />
+    <result column="produc_place" property="producPlace" jdbcType="VARCHAR" />
+    <result column="foot_period" property="footPeriod" jdbcType="VARCHAR" />
+    <result column="brand" property="brand" jdbcType="VARCHAR" />
+    <result column="factory_name" property="factoryName" jdbcType="VARCHAR" />
+    <result column="factory_address" property="factoryAddress" jdbcType="VARCHAR" />
+    <result column="packaging_method" property="packagingMethod" jdbcType="VARCHAR" />
+    <result column="weight" property="weight" jdbcType="VARCHAR" />
+    <result column="storage_method" property="storageMethod" jdbcType="VARCHAR" />
+    <result column="eat_method" property="eatMethod" jdbcType="VARCHAR" />
+    <result column="created_time" property="createdTime" jdbcType="TIMESTAMP" />
+    <result column="updated_time" property="updatedTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from items_param
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ItemsParam" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into items_param (item_id, produc_place, foot_period, 
+      brand, factory_name, factory_address, 
+      packaging_method, weight, storage_method, 
+      eat_method, created_time, updated_time
+      )
+    values (#{itemId,jdbcType=VARCHAR}, #{producPlace,jdbcType=VARCHAR}, #{footPeriod,jdbcType=VARCHAR}, 
+      #{brand,jdbcType=VARCHAR}, #{factoryName,jdbcType=VARCHAR}, #{factoryAddress,jdbcType=VARCHAR}, 
+      #{packagingMethod,jdbcType=VARCHAR}, #{weight,jdbcType=VARCHAR}, #{storageMethod,jdbcType=VARCHAR}, 
+      #{eatMethod,jdbcType=VARCHAR}, #{createdTime,jdbcType=TIMESTAMP}, #{updatedTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ItemsParam" >
+    update items_param
+    set item_id = #{itemId,jdbcType=VARCHAR},
+      produc_place = #{producPlace,jdbcType=VARCHAR},
+      foot_period = #{footPeriod,jdbcType=VARCHAR},
+      brand = #{brand,jdbcType=VARCHAR},
+      factory_name = #{factoryName,jdbcType=VARCHAR},
+      factory_address = #{factoryAddress,jdbcType=VARCHAR},
+      packaging_method = #{packagingMethod,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=VARCHAR},
+      storage_method = #{storageMethod,jdbcType=VARCHAR},
+      eat_method = #{eatMethod,jdbcType=VARCHAR},
+      created_time = #{createdTime,jdbcType=TIMESTAMP},
+      updated_time = #{updatedTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, item_id, produc_place, foot_period, brand, factory_name, factory_address, 
+    packaging_method, weight, storage_method, eat_method, created_time, updated_time
+    from items_param
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, item_id, produc_place, foot_period, brand, factory_name, factory_address, 
+    packaging_method, weight, storage_method, eat_method, created_time, updated_time
+    from items_param
+  </select>
+</mapper>

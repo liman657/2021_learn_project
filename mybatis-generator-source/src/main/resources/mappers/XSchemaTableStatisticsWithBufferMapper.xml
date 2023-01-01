@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XSchemaTableStatisticsWithBufferMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XSchemaTableStatisticsWithBuffer" >
+    <result column="table_schema" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="table_name" property="tableName" jdbcType="VARCHAR" />
+    <result column="rows_fetched" property="rowsFetched" jdbcType="BIGINT" />
+    <result column="fetch_latency" property="fetchLatency" jdbcType="BIGINT" />
+    <result column="rows_inserted" property="rowsInserted" jdbcType="BIGINT" />
+    <result column="insert_latency" property="insertLatency" jdbcType="BIGINT" />
+    <result column="rows_updated" property="rowsUpdated" jdbcType="BIGINT" />
+    <result column="update_latency" property="updateLatency" jdbcType="BIGINT" />
+    <result column="rows_deleted" property="rowsDeleted" jdbcType="BIGINT" />
+    <result column="delete_latency" property="deleteLatency" jdbcType="BIGINT" />
+    <result column="io_read_requests" property="ioReadRequests" jdbcType="DECIMAL" />
+    <result column="io_read" property="ioRead" jdbcType="DECIMAL" />
+    <result column="io_read_latency" property="ioReadLatency" jdbcType="DECIMAL" />
+    <result column="io_write_requests" property="ioWriteRequests" jdbcType="DECIMAL" />
+    <result column="io_write" property="ioWrite" jdbcType="DECIMAL" />
+    <result column="io_write_latency" property="ioWriteLatency" jdbcType="DECIMAL" />
+    <result column="io_misc_requests" property="ioMiscRequests" jdbcType="DECIMAL" />
+    <result column="io_misc_latency" property="ioMiscLatency" jdbcType="DECIMAL" />
+    <result column="innodb_buffer_allocated" property="innodbBufferAllocated" jdbcType="DECIMAL" />
+    <result column="innodb_buffer_data" property="innodbBufferData" jdbcType="DECIMAL" />
+    <result column="innodb_buffer_free" property="innodbBufferFree" jdbcType="DECIMAL" />
+    <result column="innodb_buffer_pages" property="innodbBufferPages" jdbcType="BIGINT" />
+    <result column="innodb_buffer_pages_hashed" property="innodbBufferPagesHashed" jdbcType="BIGINT" />
+    <result column="innodb_buffer_pages_old" property="innodbBufferPagesOld" jdbcType="BIGINT" />
+    <result column="innodb_buffer_rows_cached" property="innodbBufferRowsCached" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XSchemaTableStatisticsWithBuffer" >
+    insert into x$schema_table_statistics_with_buffer (table_schema, `table_name`, rows_fetched, 
+      fetch_latency, rows_inserted, insert_latency, 
+      rows_updated, update_latency, rows_deleted, 
+      delete_latency, io_read_requests, io_read, 
+      io_read_latency, io_write_requests, io_write, 
+      io_write_latency, io_misc_requests, io_misc_latency, 
+      innodb_buffer_allocated, innodb_buffer_data, 
+      innodb_buffer_free, innodb_buffer_pages, innodb_buffer_pages_hashed, 
+      innodb_buffer_pages_old, innodb_buffer_rows_cached
+      )
+    values (#{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{rowsFetched,jdbcType=BIGINT}, 
+      #{fetchLatency,jdbcType=BIGINT}, #{rowsInserted,jdbcType=BIGINT}, #{insertLatency,jdbcType=BIGINT}, 
+      #{rowsUpdated,jdbcType=BIGINT}, #{updateLatency,jdbcType=BIGINT}, #{rowsDeleted,jdbcType=BIGINT}, 
+      #{deleteLatency,jdbcType=BIGINT}, #{ioReadRequests,jdbcType=DECIMAL}, #{ioRead,jdbcType=DECIMAL}, 
+      #{ioReadLatency,jdbcType=DECIMAL}, #{ioWriteRequests,jdbcType=DECIMAL}, #{ioWrite,jdbcType=DECIMAL}, 
+      #{ioWriteLatency,jdbcType=DECIMAL}, #{ioMiscRequests,jdbcType=DECIMAL}, #{ioMiscLatency,jdbcType=DECIMAL}, 
+      #{innodbBufferAllocated,jdbcType=DECIMAL}, #{innodbBufferData,jdbcType=DECIMAL}, 
+      #{innodbBufferFree,jdbcType=DECIMAL}, #{innodbBufferPages,jdbcType=BIGINT}, #{innodbBufferPagesHashed,jdbcType=BIGINT}, 
+      #{innodbBufferPagesOld,jdbcType=BIGINT}, #{innodbBufferRowsCached,jdbcType=DECIMAL}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select table_schema, `table_name`, rows_fetched, fetch_latency, rows_inserted, insert_latency, 
+    rows_updated, update_latency, rows_deleted, delete_latency, io_read_requests, io_read, 
+    io_read_latency, io_write_requests, io_write, io_write_latency, io_misc_requests, 
+    io_misc_latency, innodb_buffer_allocated, innodb_buffer_data, innodb_buffer_free, 
+    innodb_buffer_pages, innodb_buffer_pages_hashed, innodb_buffer_pages_old, innodb_buffer_rows_cached
+    from x$schema_table_statistics_with_buffer
+  </select>
+</mapper>

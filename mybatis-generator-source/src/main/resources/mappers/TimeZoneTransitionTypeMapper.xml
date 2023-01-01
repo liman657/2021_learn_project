@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TimeZoneTransitionTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TimeZoneTransitionType" >
+    <id column="Time_zone_id" property="timeZoneId" jdbcType="INTEGER" />
+    <id column="Transition_type_id" property="transitionTypeId" jdbcType="INTEGER" />
+    <result column="Offset" property="offset" jdbcType="INTEGER" />
+    <result column="Is_DST" property="isDst" jdbcType="TINYINT" />
+    <result column="Abbreviation" property="abbreviation" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from time_zone_transition_type
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+      and Transition_type_id = #{transitionTypeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TimeZoneTransitionType" >
+    insert into time_zone_transition_type (Time_zone_id, Transition_type_id, `Offset`, 
+      Is_DST, Abbreviation)
+    values (#{timeZoneId,jdbcType=INTEGER}, #{transitionTypeId,jdbcType=INTEGER}, #{offset,jdbcType=INTEGER}, 
+      #{isDst,jdbcType=TINYINT}, #{abbreviation,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.TimeZoneTransitionType" >
+    update time_zone_transition_type
+    set `Offset` = #{offset,jdbcType=INTEGER},
+      Is_DST = #{isDst,jdbcType=TINYINT},
+      Abbreviation = #{abbreviation,jdbcType=CHAR}
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+      and Transition_type_id = #{transitionTypeId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select Time_zone_id, Transition_type_id, `Offset`, Is_DST, Abbreviation
+    from time_zone_transition_type
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+      and Transition_type_id = #{transitionTypeId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select Time_zone_id, Transition_type_id, `Offset`, Is_DST, Abbreviation
+    from time_zone_transition_type
+  </select>
+</mapper>

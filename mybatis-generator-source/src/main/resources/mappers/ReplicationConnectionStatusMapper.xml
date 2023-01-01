@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationConnectionStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationConnectionStatus" >
+    <id column="CHANNEL_NAME" property="channelName" jdbcType="CHAR" />
+    <result column="GROUP_NAME" property="groupName" jdbcType="CHAR" />
+    <result column="SOURCE_UUID" property="sourceUuid" jdbcType="CHAR" />
+    <result column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <result column="SERVICE_STATE" property="serviceState" jdbcType="CHAR" />
+    <result column="COUNT_RECEIVED_HEARTBEATS" property="countReceivedHeartbeats" jdbcType="BIGINT" />
+    <result column="LAST_HEARTBEAT_TIMESTAMP" property="lastHeartbeatTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_ERROR_NUMBER" property="lastErrorNumber" jdbcType="INTEGER" />
+    <result column="LAST_ERROR_MESSAGE" property="lastErrorMessage" jdbcType="VARCHAR" />
+    <result column="LAST_ERROR_TIMESTAMP" property="lastErrorTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_QUEUED_TRANSACTION" property="lastQueuedTransaction" jdbcType="CHAR" />
+    <result column="LAST_QUEUED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP" property="lastQueuedTransactionOriginalCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_QUEUED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP" property="lastQueuedTransactionImmediateCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_QUEUED_TRANSACTION_START_QUEUE_TIMESTAMP" property="lastQueuedTransactionStartQueueTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_QUEUED_TRANSACTION_END_QUEUE_TIMESTAMP" property="lastQueuedTransactionEndQueueTimestamp" jdbcType="TIMESTAMP" />
+    <result column="QUEUEING_TRANSACTION" property="queueingTransaction" jdbcType="CHAR" />
+    <result column="QUEUEING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP" property="queueingTransactionOriginalCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="QUEUEING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP" property="queueingTransactionImmediateCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="QUEUEING_TRANSACTION_START_QUEUE_TIMESTAMP" property="queueingTransactionStartQueueTimestamp" jdbcType="TIMESTAMP" />
+    <result column="RECEIVED_TRANSACTION_SET" property="receivedTransactionSet" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from replication_connection_status
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationConnectionStatus" >
+    insert into replication_connection_status (CHANNEL_NAME, GROUP_NAME, SOURCE_UUID, 
+      THREAD_ID, SERVICE_STATE, COUNT_RECEIVED_HEARTBEATS, 
+      LAST_HEARTBEAT_TIMESTAMP, LAST_ERROR_NUMBER, 
+      LAST_ERROR_MESSAGE, LAST_ERROR_TIMESTAMP, 
+      LAST_QUEUED_TRANSACTION, LAST_QUEUED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+      LAST_QUEUED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, LAST_QUEUED_TRANSACTION_START_QUEUE_TIMESTAMP, 
+      LAST_QUEUED_TRANSACTION_END_QUEUE_TIMESTAMP, QUEUEING_TRANSACTION, 
+      QUEUEING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, QUEUEING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, 
+      QUEUEING_TRANSACTION_START_QUEUE_TIMESTAMP, RECEIVED_TRANSACTION_SET
+      )
+    values (#{channelName,jdbcType=CHAR}, #{groupName,jdbcType=CHAR}, #{sourceUuid,jdbcType=CHAR}, 
+      #{threadId,jdbcType=BIGINT}, #{serviceState,jdbcType=CHAR}, #{countReceivedHeartbeats,jdbcType=BIGINT}, 
+      #{lastHeartbeatTimestamp,jdbcType=TIMESTAMP}, #{lastErrorNumber,jdbcType=INTEGER}, 
+      #{lastErrorMessage,jdbcType=VARCHAR}, #{lastErrorTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastQueuedTransaction,jdbcType=CHAR}, #{lastQueuedTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastQueuedTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP}, #{lastQueuedTransactionStartQueueTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastQueuedTransactionEndQueueTimestamp,jdbcType=TIMESTAMP}, #{queueingTransaction,jdbcType=CHAR}, 
+      #{queueingTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP}, #{queueingTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP}, 
+      #{queueingTransactionStartQueueTimestamp,jdbcType=TIMESTAMP}, #{receivedTransactionSet,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationConnectionStatus" >
+    update replication_connection_status
+    set GROUP_NAME = #{groupName,jdbcType=CHAR},
+      SOURCE_UUID = #{sourceUuid,jdbcType=CHAR},
+      THREAD_ID = #{threadId,jdbcType=BIGINT},
+      SERVICE_STATE = #{serviceState,jdbcType=CHAR},
+      COUNT_RECEIVED_HEARTBEATS = #{countReceivedHeartbeats,jdbcType=BIGINT},
+      LAST_HEARTBEAT_TIMESTAMP = #{lastHeartbeatTimestamp,jdbcType=TIMESTAMP},
+      LAST_ERROR_NUMBER = #{lastErrorNumber,jdbcType=INTEGER},
+      LAST_ERROR_MESSAGE = #{lastErrorMessage,jdbcType=VARCHAR},
+      LAST_ERROR_TIMESTAMP = #{lastErrorTimestamp,jdbcType=TIMESTAMP},
+      LAST_QUEUED_TRANSACTION = #{lastQueuedTransaction,jdbcType=CHAR},
+      LAST_QUEUED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP = #{lastQueuedTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP},
+      LAST_QUEUED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP = #{lastQueuedTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP},
+      LAST_QUEUED_TRANSACTION_START_QUEUE_TIMESTAMP = #{lastQueuedTransactionStartQueueTimestamp,jdbcType=TIMESTAMP},
+      LAST_QUEUED_TRANSACTION_END_QUEUE_TIMESTAMP = #{lastQueuedTransactionEndQueueTimestamp,jdbcType=TIMESTAMP},
+      QUEUEING_TRANSACTION = #{queueingTransaction,jdbcType=CHAR},
+      QUEUEING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP = #{queueingTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP},
+      QUEUEING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP = #{queueingTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP},
+      QUEUEING_TRANSACTION_START_QUEUE_TIMESTAMP = #{queueingTransactionStartQueueTimestamp,jdbcType=TIMESTAMP},
+      RECEIVED_TRANSACTION_SET = #{receivedTransactionSet,jdbcType=LONGVARCHAR}
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select CHANNEL_NAME, GROUP_NAME, SOURCE_UUID, THREAD_ID, SERVICE_STATE, COUNT_RECEIVED_HEARTBEATS, 
+    LAST_HEARTBEAT_TIMESTAMP, LAST_ERROR_NUMBER, LAST_ERROR_MESSAGE, LAST_ERROR_TIMESTAMP, 
+    LAST_QUEUED_TRANSACTION, LAST_QUEUED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, LAST_QUEUED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, 
+    LAST_QUEUED_TRANSACTION_START_QUEUE_TIMESTAMP, LAST_QUEUED_TRANSACTION_END_QUEUE_TIMESTAMP, 
+    QUEUEING_TRANSACTION, QUEUEING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, QUEUEING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, 
+    QUEUEING_TRANSACTION_START_QUEUE_TIMESTAMP, RECEIVED_TRANSACTION_SET
+    from replication_connection_status
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CHANNEL_NAME, GROUP_NAME, SOURCE_UUID, THREAD_ID, SERVICE_STATE, COUNT_RECEIVED_HEARTBEATS, 
+    LAST_HEARTBEAT_TIMESTAMP, LAST_ERROR_NUMBER, LAST_ERROR_MESSAGE, LAST_ERROR_TIMESTAMP, 
+    LAST_QUEUED_TRANSACTION, LAST_QUEUED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, LAST_QUEUED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, 
+    LAST_QUEUED_TRANSACTION_START_QUEUE_TIMESTAMP, LAST_QUEUED_TRANSACTION_END_QUEUE_TIMESTAMP, 
+    QUEUEING_TRANSACTION, QUEUEING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, QUEUEING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, 
+    QUEUEING_TRANSACTION_START_QUEUE_TIMESTAMP, RECEIVED_TRANSACTION_SET
+    from replication_connection_status
+  </select>
+</mapper>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.SysRoleMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.SysRole" >
+<mapper namespace="com.coderman.foodie.mapper.SysRoleMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SysRole" >
     <id column="role_id" property="roleId" jdbcType="BIGINT" />
     <result column="role_name" property="roleName" jdbcType="VARCHAR" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
@@ -11,13 +11,13 @@
     delete from sys_role
     where role_id = #{roleId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.SysRole" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SysRole" >
     insert into sys_role (role_id, role_name, remark, 
       create_time)
     values (#{roleId,jdbcType=BIGINT}, #{roleName,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
       #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.SysRole" >
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SysRole" >
     update sys_role
     set role_name = #{roleName,jdbcType=VARCHAR},
       remark = #{remark,jdbcType=VARCHAR},

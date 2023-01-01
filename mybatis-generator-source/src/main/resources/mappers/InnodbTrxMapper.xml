@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbTrxMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbTrx" >
+    <result column="trx_id" property="trxId" jdbcType="BIGINT" />
+    <result column="trx_state" property="trxState" jdbcType="VARCHAR" />
+    <result column="trx_started" property="trxStarted" jdbcType="TIMESTAMP" />
+    <result column="trx_requested_lock_id" property="trxRequestedLockId" jdbcType="VARCHAR" />
+    <result column="trx_wait_started" property="trxWaitStarted" jdbcType="TIMESTAMP" />
+    <result column="trx_weight" property="trxWeight" jdbcType="BIGINT" />
+    <result column="trx_mysql_thread_id" property="trxMysqlThreadId" jdbcType="BIGINT" />
+    <result column="trx_query" property="trxQuery" jdbcType="VARCHAR" />
+    <result column="trx_operation_state" property="trxOperationState" jdbcType="VARCHAR" />
+    <result column="trx_tables_in_use" property="trxTablesInUse" jdbcType="BIGINT" />
+    <result column="trx_tables_locked" property="trxTablesLocked" jdbcType="BIGINT" />
+    <result column="trx_lock_structs" property="trxLockStructs" jdbcType="BIGINT" />
+    <result column="trx_lock_memory_bytes" property="trxLockMemoryBytes" jdbcType="BIGINT" />
+    <result column="trx_rows_locked" property="trxRowsLocked" jdbcType="BIGINT" />
+    <result column="trx_rows_modified" property="trxRowsModified" jdbcType="BIGINT" />
+    <result column="trx_concurrency_tickets" property="trxConcurrencyTickets" jdbcType="BIGINT" />
+    <result column="trx_isolation_level" property="trxIsolationLevel" jdbcType="VARCHAR" />
+    <result column="trx_unique_checks" property="trxUniqueChecks" jdbcType="INTEGER" />
+    <result column="trx_foreign_key_checks" property="trxForeignKeyChecks" jdbcType="INTEGER" />
+    <result column="trx_last_foreign_key_error" property="trxLastForeignKeyError" jdbcType="VARCHAR" />
+    <result column="trx_adaptive_hash_latched" property="trxAdaptiveHashLatched" jdbcType="INTEGER" />
+    <result column="trx_adaptive_hash_timeout" property="trxAdaptiveHashTimeout" jdbcType="BIGINT" />
+    <result column="trx_is_read_only" property="trxIsReadOnly" jdbcType="INTEGER" />
+    <result column="trx_autocommit_non_locking" property="trxAutocommitNonLocking" jdbcType="INTEGER" />
+    <result column="trx_schedule_weight" property="trxScheduleWeight" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbTrx" >
+    insert into INNODB_TRX (trx_id, trx_state, trx_started, 
+      trx_requested_lock_id, trx_wait_started, trx_weight, 
+      trx_mysql_thread_id, trx_query, trx_operation_state, 
+      trx_tables_in_use, trx_tables_locked, trx_lock_structs, 
+      trx_lock_memory_bytes, trx_rows_locked, trx_rows_modified, 
+      trx_concurrency_tickets, trx_isolation_level, 
+      trx_unique_checks, trx_foreign_key_checks, trx_last_foreign_key_error, 
+      trx_adaptive_hash_latched, trx_adaptive_hash_timeout, 
+      trx_is_read_only, trx_autocommit_non_locking, 
+      trx_schedule_weight)
+    values (#{trxId,jdbcType=BIGINT}, #{trxState,jdbcType=VARCHAR}, #{trxStarted,jdbcType=TIMESTAMP}, 
+      #{trxRequestedLockId,jdbcType=VARCHAR}, #{trxWaitStarted,jdbcType=TIMESTAMP}, #{trxWeight,jdbcType=BIGINT}, 
+      #{trxMysqlThreadId,jdbcType=BIGINT}, #{trxQuery,jdbcType=VARCHAR}, #{trxOperationState,jdbcType=VARCHAR}, 
+      #{trxTablesInUse,jdbcType=BIGINT}, #{trxTablesLocked,jdbcType=BIGINT}, #{trxLockStructs,jdbcType=BIGINT}, 
+      #{trxLockMemoryBytes,jdbcType=BIGINT}, #{trxRowsLocked,jdbcType=BIGINT}, #{trxRowsModified,jdbcType=BIGINT}, 
+      #{trxConcurrencyTickets,jdbcType=BIGINT}, #{trxIsolationLevel,jdbcType=VARCHAR}, 
+      #{trxUniqueChecks,jdbcType=INTEGER}, #{trxForeignKeyChecks,jdbcType=INTEGER}, #{trxLastForeignKeyError,jdbcType=VARCHAR}, 
+      #{trxAdaptiveHashLatched,jdbcType=INTEGER}, #{trxAdaptiveHashTimeout,jdbcType=BIGINT}, 
+      #{trxIsReadOnly,jdbcType=INTEGER}, #{trxAutocommitNonLocking,jdbcType=INTEGER}, 
+      #{trxScheduleWeight,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select trx_id, trx_state, trx_started, trx_requested_lock_id, trx_wait_started, trx_weight, 
+    trx_mysql_thread_id, trx_query, trx_operation_state, trx_tables_in_use, trx_tables_locked, 
+    trx_lock_structs, trx_lock_memory_bytes, trx_rows_locked, trx_rows_modified, trx_concurrency_tickets, 
+    trx_isolation_level, trx_unique_checks, trx_foreign_key_checks, trx_last_foreign_key_error, 
+    trx_adaptive_hash_latched, trx_adaptive_hash_timeout, trx_is_read_only, trx_autocommit_non_locking, 
+    trx_schedule_weight
+    from INNODB_TRX
+  </select>
+</mapper>

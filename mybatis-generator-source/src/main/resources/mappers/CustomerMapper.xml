@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.CustomerMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Customer" >
+    <id column="customer_id" property="customerId" jdbcType="SMALLINT" />
+    <result column="store_id" property="storeId" jdbcType="TINYINT" />
+    <result column="first_name" property="firstName" jdbcType="VARCHAR" />
+    <result column="last_name" property="lastName" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="address_id" property="addressId" jdbcType="SMALLINT" />
+    <result column="active" property="active" jdbcType="BIT" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short" >
+    delete from customer
+    where customer_id = #{customerId,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Customer" >
+    insert into customer (customer_id, store_id, first_name, 
+      last_name, email, address_id, 
+      active, create_date, last_update
+      )
+    values (#{customerId,jdbcType=SMALLINT}, #{storeId,jdbcType=TINYINT}, #{firstName,jdbcType=VARCHAR}, 
+      #{lastName,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{addressId,jdbcType=SMALLINT}, 
+      #{active,jdbcType=BIT}, #{createDate,jdbcType=TIMESTAMP}, #{lastUpdate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Customer" >
+    update customer
+    set store_id = #{storeId,jdbcType=TINYINT},
+      first_name = #{firstName,jdbcType=VARCHAR},
+      last_name = #{lastName,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      address_id = #{addressId,jdbcType=SMALLINT},
+      active = #{active,jdbcType=BIT},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP}
+    where customer_id = #{customerId,jdbcType=SMALLINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Short" >
+    select customer_id, store_id, first_name, last_name, email, address_id, active, create_date, 
+    last_update
+    from customer
+    where customer_id = #{customerId,jdbcType=SMALLINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select customer_id, store_id, first_name, last_name, email, address_id, active, create_date, 
+    last_update
+    from customer
+  </select>
+</mapper>

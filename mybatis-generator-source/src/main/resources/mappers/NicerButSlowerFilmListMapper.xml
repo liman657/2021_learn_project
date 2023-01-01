@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.NicerButSlowerFilmListMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.NicerButSlowerFilmList" >
+    <result column="FID" property="fid" jdbcType="SMALLINT" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="length" property="length" jdbcType="SMALLINT" />
+    <result column="rating" property="rating" jdbcType="CHAR" />
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
+    <result column="actors" property="actors" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.NicerButSlowerFilmList" >
+    insert into nicer_but_slower_film_list (FID, title, category, 
+      price, `length`, rating, 
+      description, actors)
+    values (#{fid,jdbcType=SMALLINT}, #{title,jdbcType=VARCHAR}, #{category,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DECIMAL}, #{length,jdbcType=SMALLINT}, #{rating,jdbcType=CHAR}, 
+      #{description,jdbcType=LONGVARCHAR}, #{actors,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select FID, title, category, price, `length`, rating, description, actors
+    from nicer_but_slower_film_list
+  </select>
+</mapper>

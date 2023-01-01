@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationGroupConfigurationVersionMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationGroupConfigurationVersion" >
+    <id column="name" property="name" jdbcType="CHAR" />
+    <result column="version" property="version" jdbcType="BIGINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from replication_group_configuration_version
+    where `name` = #{name,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationGroupConfigurationVersion" >
+    insert into replication_group_configuration_version (`name`, version)
+    values (#{name,jdbcType=CHAR}, #{version,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationGroupConfigurationVersion" >
+    update replication_group_configuration_version
+    set version = #{version,jdbcType=BIGINT}
+    where `name` = #{name,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select `name`, version
+    from replication_group_configuration_version
+    where `name` = #{name,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `name`, version
+    from replication_group_configuration_version
+  </select>
+</mapper>

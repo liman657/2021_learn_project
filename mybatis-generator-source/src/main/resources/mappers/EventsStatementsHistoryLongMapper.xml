@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsStatementsHistoryLongMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsStatementsHistoryLong" >
+    <result column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <result column="EVENT_ID" property="eventId" jdbcType="BIGINT" />
+    <result column="END_EVENT_ID" property="endEventId" jdbcType="BIGINT" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+    <result column="TIMER_START" property="timerStart" jdbcType="BIGINT" />
+    <result column="TIMER_END" property="timerEnd" jdbcType="BIGINT" />
+    <result column="TIMER_WAIT" property="timerWait" jdbcType="BIGINT" />
+    <result column="LOCK_TIME" property="lockTime" jdbcType="BIGINT" />
+    <result column="DIGEST" property="digest" jdbcType="VARCHAR" />
+    <result column="CURRENT_SCHEMA" property="currentSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_TYPE" property="objectType" jdbcType="VARCHAR" />
+    <result column="OBJECT_SCHEMA" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="OBJECT_NAME" property="objectName" jdbcType="VARCHAR" />
+    <result column="OBJECT_INSTANCE_BEGIN" property="objectInstanceBegin" jdbcType="BIGINT" />
+    <result column="MYSQL_ERRNO" property="mysqlErrno" jdbcType="INTEGER" />
+    <result column="RETURNED_SQLSTATE" property="returnedSqlstate" jdbcType="VARCHAR" />
+    <result column="MESSAGE_TEXT" property="messageText" jdbcType="VARCHAR" />
+    <result column="ERRORS" property="errors" jdbcType="BIGINT" />
+    <result column="WARNINGS" property="warnings" jdbcType="BIGINT" />
+    <result column="ROWS_AFFECTED" property="rowsAffected" jdbcType="BIGINT" />
+    <result column="ROWS_SENT" property="rowsSent" jdbcType="BIGINT" />
+    <result column="ROWS_EXAMINED" property="rowsExamined" jdbcType="BIGINT" />
+    <result column="CREATED_TMP_DISK_TABLES" property="createdTmpDiskTables" jdbcType="BIGINT" />
+    <result column="CREATED_TMP_TABLES" property="createdTmpTables" jdbcType="BIGINT" />
+    <result column="SELECT_FULL_JOIN" property="selectFullJoin" jdbcType="BIGINT" />
+    <result column="SELECT_FULL_RANGE_JOIN" property="selectFullRangeJoin" jdbcType="BIGINT" />
+    <result column="SELECT_RANGE" property="selectRange" jdbcType="BIGINT" />
+    <result column="SELECT_RANGE_CHECK" property="selectRangeCheck" jdbcType="BIGINT" />
+    <result column="SELECT_SCAN" property="selectScan" jdbcType="BIGINT" />
+    <result column="SORT_MERGE_PASSES" property="sortMergePasses" jdbcType="BIGINT" />
+    <result column="SORT_RANGE" property="sortRange" jdbcType="BIGINT" />
+    <result column="SORT_ROWS" property="sortRows" jdbcType="BIGINT" />
+    <result column="SORT_SCAN" property="sortScan" jdbcType="BIGINT" />
+    <result column="NO_INDEX_USED" property="noIndexUsed" jdbcType="BIGINT" />
+    <result column="NO_GOOD_INDEX_USED" property="noGoodIndexUsed" jdbcType="BIGINT" />
+    <result column="NESTING_EVENT_ID" property="nestingEventId" jdbcType="BIGINT" />
+    <result column="NESTING_EVENT_TYPE" property="nestingEventType" jdbcType="CHAR" />
+    <result column="NESTING_EVENT_LEVEL" property="nestingEventLevel" jdbcType="INTEGER" />
+    <result column="STATEMENT_ID" property="statementId" jdbcType="BIGINT" />
+    <result column="SQL_TEXT" property="sqlText" jdbcType="LONGVARCHAR" />
+    <result column="DIGEST_TEXT" property="digestText" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsStatementsHistoryLong" >
+    insert into events_statements_history_long (THREAD_ID, EVENT_ID, END_EVENT_ID, 
+      EVENT_NAME, `SOURCE`, TIMER_START, 
+      TIMER_END, TIMER_WAIT, LOCK_TIME, 
+      DIGEST, CURRENT_SCHEMA, OBJECT_TYPE, 
+      OBJECT_SCHEMA, OBJECT_NAME, OBJECT_INSTANCE_BEGIN, 
+      MYSQL_ERRNO, `RETURNED_SQLSTATE`, `MESSAGE_TEXT`, 
+      ERRORS, WARNINGS, ROWS_AFFECTED, 
+      ROWS_SENT, ROWS_EXAMINED, CREATED_TMP_DISK_TABLES, 
+      CREATED_TMP_TABLES, SELECT_FULL_JOIN, SELECT_FULL_RANGE_JOIN, 
+      SELECT_RANGE, SELECT_RANGE_CHECK, SELECT_SCAN, 
+      SORT_MERGE_PASSES, SORT_RANGE, SORT_ROWS, 
+      SORT_SCAN, NO_INDEX_USED, NO_GOOD_INDEX_USED, 
+      NESTING_EVENT_ID, NESTING_EVENT_TYPE, NESTING_EVENT_LEVEL, 
+      STATEMENT_ID, SQL_TEXT, DIGEST_TEXT
+      )
+    values (#{threadId,jdbcType=BIGINT}, #{eventId,jdbcType=BIGINT}, #{endEventId,jdbcType=BIGINT}, 
+      #{eventName,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, #{timerStart,jdbcType=BIGINT}, 
+      #{timerEnd,jdbcType=BIGINT}, #{timerWait,jdbcType=BIGINT}, #{lockTime,jdbcType=BIGINT}, 
+      #{digest,jdbcType=VARCHAR}, #{currentSchema,jdbcType=VARCHAR}, #{objectType,jdbcType=VARCHAR}, 
+      #{objectSchema,jdbcType=VARCHAR}, #{objectName,jdbcType=VARCHAR}, #{objectInstanceBegin,jdbcType=BIGINT}, 
+      #{mysqlErrno,jdbcType=INTEGER}, #{returnedSqlstate,jdbcType=VARCHAR}, #{messageText,jdbcType=VARCHAR}, 
+      #{errors,jdbcType=BIGINT}, #{warnings,jdbcType=BIGINT}, #{rowsAffected,jdbcType=BIGINT}, 
+      #{rowsSent,jdbcType=BIGINT}, #{rowsExamined,jdbcType=BIGINT}, #{createdTmpDiskTables,jdbcType=BIGINT}, 
+      #{createdTmpTables,jdbcType=BIGINT}, #{selectFullJoin,jdbcType=BIGINT}, #{selectFullRangeJoin,jdbcType=BIGINT}, 
+      #{selectRange,jdbcType=BIGINT}, #{selectRangeCheck,jdbcType=BIGINT}, #{selectScan,jdbcType=BIGINT}, 
+      #{sortMergePasses,jdbcType=BIGINT}, #{sortRange,jdbcType=BIGINT}, #{sortRows,jdbcType=BIGINT}, 
+      #{sortScan,jdbcType=BIGINT}, #{noIndexUsed,jdbcType=BIGINT}, #{noGoodIndexUsed,jdbcType=BIGINT}, 
+      #{nestingEventId,jdbcType=BIGINT}, #{nestingEventType,jdbcType=CHAR}, #{nestingEventLevel,jdbcType=INTEGER}, 
+      #{statementId,jdbcType=BIGINT}, #{sqlText,jdbcType=LONGVARCHAR}, #{digestText,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select THREAD_ID, EVENT_ID, END_EVENT_ID, EVENT_NAME, `SOURCE`, TIMER_START, TIMER_END, 
+    TIMER_WAIT, LOCK_TIME, DIGEST, CURRENT_SCHEMA, OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, 
+    OBJECT_INSTANCE_BEGIN, MYSQL_ERRNO, `RETURNED_SQLSTATE`, `MESSAGE_TEXT`, ERRORS, 
+    WARNINGS, ROWS_AFFECTED, ROWS_SENT, ROWS_EXAMINED, CREATED_TMP_DISK_TABLES, CREATED_TMP_TABLES, 
+    SELECT_FULL_JOIN, SELECT_FULL_RANGE_JOIN, SELECT_RANGE, SELECT_RANGE_CHECK, SELECT_SCAN, 
+    SORT_MERGE_PASSES, SORT_RANGE, SORT_ROWS, SORT_SCAN, NO_INDEX_USED, NO_GOOD_INDEX_USED, 
+    NESTING_EVENT_ID, NESTING_EVENT_TYPE, NESTING_EVENT_LEVEL, STATEMENT_ID, SQL_TEXT, 
+    DIGEST_TEXT
+    from events_statements_history_long
+  </select>
+</mapper>

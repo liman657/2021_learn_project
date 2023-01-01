@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.DataLockWaitsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.DataLockWaits" >
+    <result column="ENGINE" property="engine" jdbcType="VARCHAR" />
+    <result column="REQUESTING_ENGINE_LOCK_ID" property="requestingEngineLockId" jdbcType="VARCHAR" />
+    <result column="REQUESTING_ENGINE_TRANSACTION_ID" property="requestingEngineTransactionId" jdbcType="BIGINT" />
+    <result column="REQUESTING_THREAD_ID" property="requestingThreadId" jdbcType="BIGINT" />
+    <result column="REQUESTING_EVENT_ID" property="requestingEventId" jdbcType="BIGINT" />
+    <result column="REQUESTING_OBJECT_INSTANCE_BEGIN" property="requestingObjectInstanceBegin" jdbcType="BIGINT" />
+    <result column="BLOCKING_ENGINE_LOCK_ID" property="blockingEngineLockId" jdbcType="VARCHAR" />
+    <result column="BLOCKING_ENGINE_TRANSACTION_ID" property="blockingEngineTransactionId" jdbcType="BIGINT" />
+    <result column="BLOCKING_THREAD_ID" property="blockingThreadId" jdbcType="BIGINT" />
+    <result column="BLOCKING_EVENT_ID" property="blockingEventId" jdbcType="BIGINT" />
+    <result column="BLOCKING_OBJECT_INSTANCE_BEGIN" property="blockingObjectInstanceBegin" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.DataLockWaits" >
+    insert into data_lock_waits (ENGINE, REQUESTING_ENGINE_LOCK_ID, REQUESTING_ENGINE_TRANSACTION_ID, 
+      REQUESTING_THREAD_ID, REQUESTING_EVENT_ID, REQUESTING_OBJECT_INSTANCE_BEGIN, 
+      BLOCKING_ENGINE_LOCK_ID, BLOCKING_ENGINE_TRANSACTION_ID, 
+      BLOCKING_THREAD_ID, BLOCKING_EVENT_ID, BLOCKING_OBJECT_INSTANCE_BEGIN
+      )
+    values (#{engine,jdbcType=VARCHAR}, #{requestingEngineLockId,jdbcType=VARCHAR}, #{requestingEngineTransactionId,jdbcType=BIGINT}, 
+      #{requestingThreadId,jdbcType=BIGINT}, #{requestingEventId,jdbcType=BIGINT}, #{requestingObjectInstanceBegin,jdbcType=BIGINT}, 
+      #{blockingEngineLockId,jdbcType=VARCHAR}, #{blockingEngineTransactionId,jdbcType=BIGINT}, 
+      #{blockingThreadId,jdbcType=BIGINT}, #{blockingEventId,jdbcType=BIGINT}, #{blockingObjectInstanceBegin,jdbcType=BIGINT}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ENGINE, REQUESTING_ENGINE_LOCK_ID, REQUESTING_ENGINE_TRANSACTION_ID, REQUESTING_THREAD_ID, 
+    REQUESTING_EVENT_ID, REQUESTING_OBJECT_INSTANCE_BEGIN, BLOCKING_ENGINE_LOCK_ID, BLOCKING_ENGINE_TRANSACTION_ID, 
+    BLOCKING_THREAD_ID, BLOCKING_EVENT_ID, BLOCKING_OBJECT_INSTANCE_BEGIN
+    from data_lock_waits
+  </select>
+</mapper>

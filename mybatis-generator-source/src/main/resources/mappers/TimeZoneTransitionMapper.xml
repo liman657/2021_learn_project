@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TimeZoneTransitionMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TimeZoneTransition" >
+    <id column="Time_zone_id" property="timeZoneId" jdbcType="INTEGER" />
+    <id column="Transition_time" property="transitionTime" jdbcType="BIGINT" />
+    <result column="Transition_type_id" property="transitionTypeId" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from time_zone_transition
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+      and Transition_time = #{transitionTime,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TimeZoneTransition" >
+    insert into time_zone_transition (Time_zone_id, Transition_time, Transition_type_id
+      )
+    values (#{timeZoneId,jdbcType=INTEGER}, #{transitionTime,jdbcType=BIGINT}, #{transitionTypeId,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.TimeZoneTransition" >
+    update time_zone_transition
+    set Transition_type_id = #{transitionTypeId,jdbcType=INTEGER}
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+      and Transition_time = #{transitionTime,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select Time_zone_id, Transition_time, Transition_type_id
+    from time_zone_transition
+    where Time_zone_id = #{timeZoneId,jdbcType=INTEGER}
+      and Transition_time = #{transitionTime,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select Time_zone_id, Transition_time, Transition_type_id
+    from time_zone_transition
+  </select>
+</mapper>

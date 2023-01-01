@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.RoleEdgesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.RoleEdges" >
+    <id column="FROM_HOST" property="fromHost" jdbcType="CHAR" />
+    <id column="FROM_USER" property="fromUser" jdbcType="CHAR" />
+    <id column="TO_HOST" property="toHost" jdbcType="CHAR" />
+    <id column="TO_USER" property="toUser" jdbcType="CHAR" />
+    <result column="WITH_ADMIN_OPTION" property="withAdminOption" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from role_edges
+    where FROM_HOST = #{fromHost,jdbcType=CHAR}
+      and FROM_USER = #{fromUser,jdbcType=CHAR}
+      and TO_HOST = #{toHost,jdbcType=CHAR}
+      and TO_USER = #{toUser,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.RoleEdges" >
+    insert into role_edges (FROM_HOST, FROM_USER, TO_HOST, 
+      TO_USER, WITH_ADMIN_OPTION)
+    values (#{fromHost,jdbcType=CHAR}, #{fromUser,jdbcType=CHAR}, #{toHost,jdbcType=CHAR}, 
+      #{toUser,jdbcType=CHAR}, #{withAdminOption,jdbcType=CHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.RoleEdges" >
+    update role_edges
+    set WITH_ADMIN_OPTION = #{withAdminOption,jdbcType=CHAR}
+    where FROM_HOST = #{fromHost,jdbcType=CHAR}
+      and FROM_USER = #{fromUser,jdbcType=CHAR}
+      and TO_HOST = #{toHost,jdbcType=CHAR}
+      and TO_USER = #{toUser,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select FROM_HOST, FROM_USER, TO_HOST, TO_USER, WITH_ADMIN_OPTION
+    from role_edges
+    where FROM_HOST = #{fromHost,jdbcType=CHAR}
+      and FROM_USER = #{fromUser,jdbcType=CHAR}
+      and TO_HOST = #{toHost,jdbcType=CHAR}
+      and TO_USER = #{toUser,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select FROM_HOST, FROM_USER, TO_HOST, TO_USER, WITH_ADMIN_OPTION
+    from role_edges
+  </select>
+</mapper>

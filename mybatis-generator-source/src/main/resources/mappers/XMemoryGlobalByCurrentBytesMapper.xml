@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.XMemoryGlobalByCurrentBytesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.XMemoryGlobalByCurrentBytes" >
+    <result column="event_name" property="eventName" jdbcType="VARCHAR" />
+    <result column="current_count" property="currentCount" jdbcType="BIGINT" />
+    <result column="current_alloc" property="currentAlloc" jdbcType="BIGINT" />
+    <result column="current_avg_alloc" property="currentAvgAlloc" jdbcType="DECIMAL" />
+    <result column="high_count" property="highCount" jdbcType="BIGINT" />
+    <result column="high_alloc" property="highAlloc" jdbcType="BIGINT" />
+    <result column="high_avg_alloc" property="highAvgAlloc" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.XMemoryGlobalByCurrentBytes" >
+    insert into x$memory_global_by_current_bytes (event_name, current_count, current_alloc, 
+      current_avg_alloc, high_count, high_alloc, 
+      high_avg_alloc)
+    values (#{eventName,jdbcType=VARCHAR}, #{currentCount,jdbcType=BIGINT}, #{currentAlloc,jdbcType=BIGINT}, 
+      #{currentAvgAlloc,jdbcType=DECIMAL}, #{highCount,jdbcType=BIGINT}, #{highAlloc,jdbcType=BIGINT}, 
+      #{highAvgAlloc,jdbcType=DECIMAL})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select event_name, current_count, current_alloc, current_avg_alloc, high_count, high_alloc, 
+    high_avg_alloc
+    from x$memory_global_by_current_bytes
+  </select>
+</mapper>

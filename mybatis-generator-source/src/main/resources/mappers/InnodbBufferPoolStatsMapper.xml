@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbBufferPoolStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbBufferPoolStats" >
+    <result column="POOL_ID" property="poolId" jdbcType="BIGINT" />
+    <result column="POOL_SIZE" property="poolSize" jdbcType="BIGINT" />
+    <result column="FREE_BUFFERS" property="freeBuffers" jdbcType="BIGINT" />
+    <result column="DATABASE_PAGES" property="databasePages" jdbcType="BIGINT" />
+    <result column="OLD_DATABASE_PAGES" property="oldDatabasePages" jdbcType="BIGINT" />
+    <result column="MODIFIED_DATABASE_PAGES" property="modifiedDatabasePages" jdbcType="BIGINT" />
+    <result column="PENDING_DECOMPRESS" property="pendingDecompress" jdbcType="BIGINT" />
+    <result column="PENDING_READS" property="pendingReads" jdbcType="BIGINT" />
+    <result column="PENDING_FLUSH_LRU" property="pendingFlushLru" jdbcType="BIGINT" />
+    <result column="PENDING_FLUSH_LIST" property="pendingFlushList" jdbcType="BIGINT" />
+    <result column="PAGES_MADE_YOUNG" property="pagesMadeYoung" jdbcType="BIGINT" />
+    <result column="PAGES_NOT_MADE_YOUNG" property="pagesNotMadeYoung" jdbcType="BIGINT" />
+    <result column="PAGES_MADE_YOUNG_RATE" property="pagesMadeYoungRate" jdbcType="REAL" />
+    <result column="PAGES_MADE_NOT_YOUNG_RATE" property="pagesMadeNotYoungRate" jdbcType="REAL" />
+    <result column="NUMBER_PAGES_READ" property="numberPagesRead" jdbcType="BIGINT" />
+    <result column="NUMBER_PAGES_CREATED" property="numberPagesCreated" jdbcType="BIGINT" />
+    <result column="NUMBER_PAGES_WRITTEN" property="numberPagesWritten" jdbcType="BIGINT" />
+    <result column="PAGES_READ_RATE" property="pagesReadRate" jdbcType="REAL" />
+    <result column="PAGES_CREATE_RATE" property="pagesCreateRate" jdbcType="REAL" />
+    <result column="PAGES_WRITTEN_RATE" property="pagesWrittenRate" jdbcType="REAL" />
+    <result column="NUMBER_PAGES_GET" property="numberPagesGet" jdbcType="BIGINT" />
+    <result column="HIT_RATE" property="hitRate" jdbcType="BIGINT" />
+    <result column="YOUNG_MAKE_PER_THOUSAND_GETS" property="youngMakePerThousandGets" jdbcType="BIGINT" />
+    <result column="NOT_YOUNG_MAKE_PER_THOUSAND_GETS" property="notYoungMakePerThousandGets" jdbcType="BIGINT" />
+    <result column="NUMBER_PAGES_READ_AHEAD" property="numberPagesReadAhead" jdbcType="BIGINT" />
+    <result column="NUMBER_READ_AHEAD_EVICTED" property="numberReadAheadEvicted" jdbcType="BIGINT" />
+    <result column="READ_AHEAD_RATE" property="readAheadRate" jdbcType="REAL" />
+    <result column="READ_AHEAD_EVICTED_RATE" property="readAheadEvictedRate" jdbcType="REAL" />
+    <result column="LRU_IO_TOTAL" property="lruIoTotal" jdbcType="BIGINT" />
+    <result column="LRU_IO_CURRENT" property="lruIoCurrent" jdbcType="BIGINT" />
+    <result column="UNCOMPRESS_TOTAL" property="uncompressTotal" jdbcType="BIGINT" />
+    <result column="UNCOMPRESS_CURRENT" property="uncompressCurrent" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbBufferPoolStats" >
+    insert into INNODB_BUFFER_POOL_STATS (POOL_ID, POOL_SIZE, FREE_BUFFERS, 
+      DATABASE_PAGES, OLD_DATABASE_PAGES, MODIFIED_DATABASE_PAGES, 
+      PENDING_DECOMPRESS, PENDING_READS, PENDING_FLUSH_LRU, 
+      PENDING_FLUSH_LIST, PAGES_MADE_YOUNG, PAGES_NOT_MADE_YOUNG, 
+      PAGES_MADE_YOUNG_RATE, PAGES_MADE_NOT_YOUNG_RATE, NUMBER_PAGES_READ, 
+      NUMBER_PAGES_CREATED, NUMBER_PAGES_WRITTEN, PAGES_READ_RATE, 
+      PAGES_CREATE_RATE, PAGES_WRITTEN_RATE, NUMBER_PAGES_GET, 
+      HIT_RATE, YOUNG_MAKE_PER_THOUSAND_GETS, NOT_YOUNG_MAKE_PER_THOUSAND_GETS, 
+      NUMBER_PAGES_READ_AHEAD, NUMBER_READ_AHEAD_EVICTED, 
+      READ_AHEAD_RATE, READ_AHEAD_EVICTED_RATE, LRU_IO_TOTAL, 
+      LRU_IO_CURRENT, UNCOMPRESS_TOTAL, UNCOMPRESS_CURRENT
+      )
+    values (#{poolId,jdbcType=BIGINT}, #{poolSize,jdbcType=BIGINT}, #{freeBuffers,jdbcType=BIGINT}, 
+      #{databasePages,jdbcType=BIGINT}, #{oldDatabasePages,jdbcType=BIGINT}, #{modifiedDatabasePages,jdbcType=BIGINT}, 
+      #{pendingDecompress,jdbcType=BIGINT}, #{pendingReads,jdbcType=BIGINT}, #{pendingFlushLru,jdbcType=BIGINT}, 
+      #{pendingFlushList,jdbcType=BIGINT}, #{pagesMadeYoung,jdbcType=BIGINT}, #{pagesNotMadeYoung,jdbcType=BIGINT}, 
+      #{pagesMadeYoungRate,jdbcType=REAL}, #{pagesMadeNotYoungRate,jdbcType=REAL}, #{numberPagesRead,jdbcType=BIGINT}, 
+      #{numberPagesCreated,jdbcType=BIGINT}, #{numberPagesWritten,jdbcType=BIGINT}, #{pagesReadRate,jdbcType=REAL}, 
+      #{pagesCreateRate,jdbcType=REAL}, #{pagesWrittenRate,jdbcType=REAL}, #{numberPagesGet,jdbcType=BIGINT}, 
+      #{hitRate,jdbcType=BIGINT}, #{youngMakePerThousandGets,jdbcType=BIGINT}, #{notYoungMakePerThousandGets,jdbcType=BIGINT}, 
+      #{numberPagesReadAhead,jdbcType=BIGINT}, #{numberReadAheadEvicted,jdbcType=BIGINT}, 
+      #{readAheadRate,jdbcType=REAL}, #{readAheadEvictedRate,jdbcType=REAL}, #{lruIoTotal,jdbcType=BIGINT}, 
+      #{lruIoCurrent,jdbcType=BIGINT}, #{uncompressTotal,jdbcType=BIGINT}, #{uncompressCurrent,jdbcType=BIGINT}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select POOL_ID, POOL_SIZE, FREE_BUFFERS, DATABASE_PAGES, OLD_DATABASE_PAGES, MODIFIED_DATABASE_PAGES, 
+    PENDING_DECOMPRESS, PENDING_READS, PENDING_FLUSH_LRU, PENDING_FLUSH_LIST, PAGES_MADE_YOUNG, 
+    PAGES_NOT_MADE_YOUNG, PAGES_MADE_YOUNG_RATE, PAGES_MADE_NOT_YOUNG_RATE, NUMBER_PAGES_READ, 
+    NUMBER_PAGES_CREATED, NUMBER_PAGES_WRITTEN, PAGES_READ_RATE, PAGES_CREATE_RATE, PAGES_WRITTEN_RATE, 
+    NUMBER_PAGES_GET, HIT_RATE, YOUNG_MAKE_PER_THOUSAND_GETS, NOT_YOUNG_MAKE_PER_THOUSAND_GETS, 
+    NUMBER_PAGES_READ_AHEAD, NUMBER_READ_AHEAD_EVICTED, READ_AHEAD_RATE, READ_AHEAD_EVICTED_RATE, 
+    LRU_IO_TOTAL, LRU_IO_CURRENT, UNCOMPRESS_TOTAL, UNCOMPRESS_CURRENT
+    from INNODB_BUFFER_POOL_STATS
+  </select>
+</mapper>

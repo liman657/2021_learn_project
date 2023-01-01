@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.StatementsWithErrorsOrWarningsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.StatementsWithErrorsOrWarnings" >
+    <result column="db" property="db" jdbcType="VARCHAR" />
+    <result column="exec_count" property="execCount" jdbcType="BIGINT" />
+    <result column="errors" property="errors" jdbcType="BIGINT" />
+    <result column="error_pct" property="errorPct" jdbcType="DECIMAL" />
+    <result column="warnings" property="warnings" jdbcType="BIGINT" />
+    <result column="warning_pct" property="warningPct" jdbcType="DECIMAL" />
+    <result column="first_seen" property="firstSeen" jdbcType="TIMESTAMP" />
+    <result column="last_seen" property="lastSeen" jdbcType="TIMESTAMP" />
+    <result column="digest" property="digest" jdbcType="VARCHAR" />
+    <result column="query" property="query" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.StatementsWithErrorsOrWarnings" >
+    insert into statements_with_errors_or_warnings (db, exec_count, errors, 
+      error_pct, warnings, warning_pct, 
+      first_seen, last_seen, digest, 
+      query)
+    values (#{db,jdbcType=VARCHAR}, #{execCount,jdbcType=BIGINT}, #{errors,jdbcType=BIGINT}, 
+      #{errorPct,jdbcType=DECIMAL}, #{warnings,jdbcType=BIGINT}, #{warningPct,jdbcType=DECIMAL}, 
+      #{firstSeen,jdbcType=TIMESTAMP}, #{lastSeen,jdbcType=TIMESTAMP}, #{digest,jdbcType=VARCHAR}, 
+      #{query,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select db, exec_count, errors, error_pct, warnings, warning_pct, first_seen, last_seen, 
+    digest, query
+    from statements_with_errors_or_warnings
+  </select>
+</mapper>

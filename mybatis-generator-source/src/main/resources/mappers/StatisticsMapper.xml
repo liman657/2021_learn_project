@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.StatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Statistics" >
+    <result column="TABLE_CATALOG" property="tableCatalog" jdbcType="VARCHAR" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="NON_UNIQUE" property="nonUnique" jdbcType="INTEGER" />
+    <result column="INDEX_SCHEMA" property="indexSchema" jdbcType="VARCHAR" />
+    <result column="INDEX_NAME" property="indexName" jdbcType="VARCHAR" />
+    <result column="SEQ_IN_INDEX" property="seqInIndex" jdbcType="INTEGER" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="COLLATION" property="collation" jdbcType="VARCHAR" />
+    <result column="CARDINALITY" property="cardinality" jdbcType="BIGINT" />
+    <result column="SUB_PART" property="subPart" jdbcType="BIGINT" />
+    <result column="NULLABLE" property="nullable" jdbcType="VARCHAR" />
+    <result column="INDEX_TYPE" property="indexType" jdbcType="VARCHAR" />
+    <result column="COMMENT" property="comment" jdbcType="VARCHAR" />
+    <result column="INDEX_COMMENT" property="indexComment" jdbcType="VARCHAR" />
+    <result column="IS_VISIBLE" property="isVisible" jdbcType="VARCHAR" />
+    <result column="PACKED" property="packed" jdbcType="BINARY" />
+    <result column="EXPRESSION" property="expression" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Statistics" >
+    insert into STATISTICS (TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, 
+      NON_UNIQUE, INDEX_SCHEMA, INDEX_NAME, 
+      SEQ_IN_INDEX, `COLUMN_NAME`, `COLLATION`, 
+      `CARDINALITY`, SUB_PART, `NULLABLE`, 
+      INDEX_TYPE, `COMMENT`, INDEX_COMMENT, 
+      IS_VISIBLE, PACKED, EXPRESSION
+      )
+    values (#{tableCatalog,jdbcType=VARCHAR}, #{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, 
+      #{nonUnique,jdbcType=INTEGER}, #{indexSchema,jdbcType=VARCHAR}, #{indexName,jdbcType=VARCHAR}, 
+      #{seqInIndex,jdbcType=INTEGER}, #{columnName,jdbcType=VARCHAR}, #{collation,jdbcType=VARCHAR}, 
+      #{cardinality,jdbcType=BIGINT}, #{subPart,jdbcType=BIGINT}, #{nullable,jdbcType=VARCHAR}, 
+      #{indexType,jdbcType=VARCHAR}, #{comment,jdbcType=VARCHAR}, #{indexComment,jdbcType=VARCHAR}, 
+      #{isVisible,jdbcType=VARCHAR}, #{packed,jdbcType=BINARY}, #{expression,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, NON_UNIQUE, INDEX_SCHEMA, INDEX_NAME, 
+    SEQ_IN_INDEX, `COLUMN_NAME`, `COLLATION`, `CARDINALITY`, SUB_PART, `NULLABLE`, INDEX_TYPE, 
+    `COMMENT`, INDEX_COMMENT, IS_VISIBLE, PACKED, EXPRESSION
+    from STATISTICS
+  </select>
+</mapper>

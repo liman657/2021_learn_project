@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.KeyringComponentStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.KeyringComponentStatus" >
+    <result column="STATUS_KEY" property="statusKey" jdbcType="VARCHAR" />
+    <result column="STATUS_VALUE" property="statusValue" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.KeyringComponentStatus" >
+    insert into keyring_component_status (STATUS_KEY, STATUS_VALUE)
+    values (#{statusKey,jdbcType=VARCHAR}, #{statusValue,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select STATUS_KEY, STATUS_VALUE
+    from keyring_component_status
+  </select>
+</mapper>

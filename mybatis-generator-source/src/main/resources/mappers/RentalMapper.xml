@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.RentalMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Rental" >
+    <id column="rental_id" property="rentalId" jdbcType="INTEGER" />
+    <result column="rental_date" property="rentalDate" jdbcType="TIMESTAMP" />
+    <result column="inventory_id" property="inventoryId" jdbcType="INTEGER" />
+    <result column="customer_id" property="customerId" jdbcType="SMALLINT" />
+    <result column="return_date" property="returnDate" jdbcType="TIMESTAMP" />
+    <result column="staff_id" property="staffId" jdbcType="TINYINT" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from rental
+    where rental_id = #{rentalId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Rental" >
+    insert into rental (rental_id, rental_date, inventory_id, 
+      customer_id, return_date, staff_id, 
+      last_update)
+    values (#{rentalId,jdbcType=INTEGER}, #{rentalDate,jdbcType=TIMESTAMP}, #{inventoryId,jdbcType=INTEGER}, 
+      #{customerId,jdbcType=SMALLINT}, #{returnDate,jdbcType=TIMESTAMP}, #{staffId,jdbcType=TINYINT}, 
+      #{lastUpdate,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Rental" >
+    update rental
+    set rental_date = #{rentalDate,jdbcType=TIMESTAMP},
+      inventory_id = #{inventoryId,jdbcType=INTEGER},
+      customer_id = #{customerId,jdbcType=SMALLINT},
+      return_date = #{returnDate,jdbcType=TIMESTAMP},
+      staff_id = #{staffId,jdbcType=TINYINT},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP}
+    where rental_id = #{rentalId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, 
+    last_update
+    from rental
+    where rental_id = #{rentalId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, 
+    last_update
+    from rental
+  </select>
+</mapper>

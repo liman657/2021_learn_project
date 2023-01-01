@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.StaffListMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.StaffList" >
+    <result column="ID" property="id" jdbcType="TINYINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="zip code" property="zipCode" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="country" property="country" jdbcType="VARCHAR" />
+    <result column="SID" property="sid" jdbcType="TINYINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.StaffList" >
+    <selectKey resultType="java.lang.Byte" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into staff_list (`name`, address, `zip code`, 
+      phone, city, country, 
+      SID)
+    values (#{name,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{zipCode,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, 
+      #{sid,jdbcType=TINYINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ID, `name`, address, `zip code`, phone, city, country, SID
+    from staff_list
+  </select>
+</mapper>

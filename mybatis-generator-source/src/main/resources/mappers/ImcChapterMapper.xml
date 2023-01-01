@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ImcChapterMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ImcChapter" >
+    <id column="chapter_id" property="chapterId" jdbcType="INTEGER" />
+    <result column="course_id" property="courseId" jdbcType="INTEGER" />
+    <result column="chapter_name" property="chapterName" jdbcType="VARCHAR" />
+    <result column="chapter_info" property="chapterInfo" jdbcType="VARCHAR" />
+    <result column="chapter_no" property="chapterNo" jdbcType="TINYINT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from imc_chapter
+    where chapter_id = #{chapterId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ImcChapter" >
+    insert into imc_chapter (chapter_id, course_id, chapter_name, 
+      chapter_info, chapter_no)
+    values (#{chapterId,jdbcType=INTEGER}, #{courseId,jdbcType=INTEGER}, #{chapterName,jdbcType=VARCHAR}, 
+      #{chapterInfo,jdbcType=VARCHAR}, #{chapterNo,jdbcType=TINYINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ImcChapter" >
+    update imc_chapter
+    set course_id = #{courseId,jdbcType=INTEGER},
+      chapter_name = #{chapterName,jdbcType=VARCHAR},
+      chapter_info = #{chapterInfo,jdbcType=VARCHAR},
+      chapter_no = #{chapterNo,jdbcType=TINYINT}
+    where chapter_id = #{chapterId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select chapter_id, course_id, chapter_name, chapter_info, chapter_no
+    from imc_chapter
+    where chapter_id = #{chapterId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select chapter_id, course_id, chapter_name, chapter_info, chapter_no
+    from imc_chapter
+  </select>
+</mapper>

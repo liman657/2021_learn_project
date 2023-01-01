@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.DefaultRolesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.DefaultRoles" >
+    <id column="HOST" property="host" jdbcType="CHAR" />
+    <id column="USER" property="user" jdbcType="CHAR" />
+    <id column="DEFAULT_ROLE_HOST" property="defaultRoleHost" jdbcType="CHAR" />
+    <id column="DEFAULT_ROLE_USER" property="defaultRoleUser" jdbcType="CHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from default_roles
+    where `HOST` = #{host,jdbcType=CHAR}
+      and `USER` = #{user,jdbcType=CHAR}
+      and DEFAULT_ROLE_HOST = #{defaultRoleHost,jdbcType=CHAR}
+      and DEFAULT_ROLE_USER = #{defaultRoleUser,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.DefaultRoles" >
+    insert into default_roles (`HOST`, `USER`, DEFAULT_ROLE_HOST, 
+      DEFAULT_ROLE_USER)
+    values (#{host,jdbcType=CHAR}, #{user,jdbcType=CHAR}, #{defaultRoleHost,jdbcType=CHAR}, 
+      #{defaultRoleUser,jdbcType=CHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `HOST`, `USER`, DEFAULT_ROLE_HOST, DEFAULT_ROLE_USER
+    from default_roles
+  </select>
+</mapper>

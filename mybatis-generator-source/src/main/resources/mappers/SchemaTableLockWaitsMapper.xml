@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SchemaTableLockWaitsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SchemaTableLockWaits" >
+    <result column="object_schema" property="objectSchema" jdbcType="VARCHAR" />
+    <result column="object_name" property="objectName" jdbcType="VARCHAR" />
+    <result column="waiting_thread_id" property="waitingThreadId" jdbcType="BIGINT" />
+    <result column="waiting_pid" property="waitingPid" jdbcType="BIGINT" />
+    <result column="waiting_lock_type" property="waitingLockType" jdbcType="VARCHAR" />
+    <result column="waiting_lock_duration" property="waitingLockDuration" jdbcType="VARCHAR" />
+    <result column="waiting_query_secs" property="waitingQuerySecs" jdbcType="BIGINT" />
+    <result column="waiting_query_rows_affected" property="waitingQueryRowsAffected" jdbcType="BIGINT" />
+    <result column="waiting_query_rows_examined" property="waitingQueryRowsExamined" jdbcType="BIGINT" />
+    <result column="blocking_thread_id" property="blockingThreadId" jdbcType="BIGINT" />
+    <result column="blocking_pid" property="blockingPid" jdbcType="BIGINT" />
+    <result column="blocking_lock_type" property="blockingLockType" jdbcType="VARCHAR" />
+    <result column="blocking_lock_duration" property="blockingLockDuration" jdbcType="VARCHAR" />
+    <result column="sql_kill_blocking_query" property="sqlKillBlockingQuery" jdbcType="VARCHAR" />
+    <result column="sql_kill_blocking_connection" property="sqlKillBlockingConnection" jdbcType="VARCHAR" />
+    <result column="waiting_account" property="waitingAccount" jdbcType="LONGVARCHAR" />
+    <result column="waiting_query" property="waitingQuery" jdbcType="LONGVARCHAR" />
+    <result column="blocking_account" property="blockingAccount" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SchemaTableLockWaits" >
+    insert into schema_table_lock_waits (object_schema, object_name, waiting_thread_id, 
+      waiting_pid, waiting_lock_type, waiting_lock_duration, 
+      waiting_query_secs, waiting_query_rows_affected, 
+      waiting_query_rows_examined, blocking_thread_id, 
+      blocking_pid, blocking_lock_type, blocking_lock_duration, 
+      sql_kill_blocking_query, sql_kill_blocking_connection, 
+      waiting_account, waiting_query, blocking_account
+      )
+    values (#{objectSchema,jdbcType=VARCHAR}, #{objectName,jdbcType=VARCHAR}, #{waitingThreadId,jdbcType=BIGINT}, 
+      #{waitingPid,jdbcType=BIGINT}, #{waitingLockType,jdbcType=VARCHAR}, #{waitingLockDuration,jdbcType=VARCHAR}, 
+      #{waitingQuerySecs,jdbcType=BIGINT}, #{waitingQueryRowsAffected,jdbcType=BIGINT}, 
+      #{waitingQueryRowsExamined,jdbcType=BIGINT}, #{blockingThreadId,jdbcType=BIGINT}, 
+      #{blockingPid,jdbcType=BIGINT}, #{blockingLockType,jdbcType=VARCHAR}, #{blockingLockDuration,jdbcType=VARCHAR}, 
+      #{sqlKillBlockingQuery,jdbcType=VARCHAR}, #{sqlKillBlockingConnection,jdbcType=VARCHAR}, 
+      #{waitingAccount,jdbcType=LONGVARCHAR}, #{waitingQuery,jdbcType=LONGVARCHAR}, #{blockingAccount,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select object_schema, object_name, waiting_thread_id, waiting_pid, waiting_lock_type, 
+    waiting_lock_duration, waiting_query_secs, waiting_query_rows_affected, waiting_query_rows_examined, 
+    blocking_thread_id, blocking_pid, blocking_lock_type, blocking_lock_duration, sql_kill_blocking_query, 
+    sql_kill_blocking_connection, waiting_account, waiting_query, blocking_account
+    from schema_table_lock_waits
+  </select>
+</mapper>

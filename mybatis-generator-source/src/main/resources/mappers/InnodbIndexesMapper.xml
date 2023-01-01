@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbIndexesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbIndexes" >
+    <result column="INDEX_ID" property="indexId" jdbcType="BIGINT" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="TABLE_ID" property="tableId" jdbcType="BIGINT" />
+    <result column="TYPE" property="type" jdbcType="INTEGER" />
+    <result column="N_FIELDS" property="nFields" jdbcType="INTEGER" />
+    <result column="PAGE_NO" property="pageNo" jdbcType="INTEGER" />
+    <result column="SPACE" property="space" jdbcType="INTEGER" />
+    <result column="MERGE_THRESHOLD" property="mergeThreshold" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbIndexes" >
+    insert into INNODB_INDEXES (INDEX_ID, `NAME`, TABLE_ID, 
+      `TYPE`, N_FIELDS, PAGE_NO, 
+      `SPACE`, MERGE_THRESHOLD)
+    values (#{indexId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{tableId,jdbcType=BIGINT}, 
+      #{type,jdbcType=INTEGER}, #{nFields,jdbcType=INTEGER}, #{pageNo,jdbcType=INTEGER}, 
+      #{space,jdbcType=INTEGER}, #{mergeThreshold,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select INDEX_ID, `NAME`, TABLE_ID, `TYPE`, N_FIELDS, PAGE_NO, `SPACE`, MERGE_THRESHOLD
+    from INNODB_INDEXES
+  </select>
+</mapper>

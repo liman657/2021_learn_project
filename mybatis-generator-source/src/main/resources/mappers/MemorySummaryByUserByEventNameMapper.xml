@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.MemorySummaryByUserByEventNameMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.MemorySummaryByUserByEventName" >
+    <result column="USER" property="user" jdbcType="CHAR" />
+    <result column="EVENT_NAME" property="eventName" jdbcType="VARCHAR" />
+    <result column="COUNT_ALLOC" property="countAlloc" jdbcType="BIGINT" />
+    <result column="COUNT_FREE" property="countFree" jdbcType="BIGINT" />
+    <result column="SUM_NUMBER_OF_BYTES_ALLOC" property="sumNumberOfBytesAlloc" jdbcType="BIGINT" />
+    <result column="SUM_NUMBER_OF_BYTES_FREE" property="sumNumberOfBytesFree" jdbcType="BIGINT" />
+    <result column="LOW_COUNT_USED" property="lowCountUsed" jdbcType="BIGINT" />
+    <result column="CURRENT_COUNT_USED" property="currentCountUsed" jdbcType="BIGINT" />
+    <result column="HIGH_COUNT_USED" property="highCountUsed" jdbcType="BIGINT" />
+    <result column="LOW_NUMBER_OF_BYTES_USED" property="lowNumberOfBytesUsed" jdbcType="BIGINT" />
+    <result column="CURRENT_NUMBER_OF_BYTES_USED" property="currentNumberOfBytesUsed" jdbcType="BIGINT" />
+    <result column="HIGH_NUMBER_OF_BYTES_USED" property="highNumberOfBytesUsed" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.MemorySummaryByUserByEventName" >
+    insert into memory_summary_by_user_by_event_name (`USER`, EVENT_NAME, COUNT_ALLOC, 
+      COUNT_FREE, SUM_NUMBER_OF_BYTES_ALLOC, SUM_NUMBER_OF_BYTES_FREE, 
+      LOW_COUNT_USED, CURRENT_COUNT_USED, HIGH_COUNT_USED, 
+      LOW_NUMBER_OF_BYTES_USED, CURRENT_NUMBER_OF_BYTES_USED, 
+      HIGH_NUMBER_OF_BYTES_USED)
+    values (#{user,jdbcType=CHAR}, #{eventName,jdbcType=VARCHAR}, #{countAlloc,jdbcType=BIGINT}, 
+      #{countFree,jdbcType=BIGINT}, #{sumNumberOfBytesAlloc,jdbcType=BIGINT}, #{sumNumberOfBytesFree,jdbcType=BIGINT}, 
+      #{lowCountUsed,jdbcType=BIGINT}, #{currentCountUsed,jdbcType=BIGINT}, #{highCountUsed,jdbcType=BIGINT}, 
+      #{lowNumberOfBytesUsed,jdbcType=BIGINT}, #{currentNumberOfBytesUsed,jdbcType=BIGINT}, 
+      #{highNumberOfBytesUsed,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `USER`, EVENT_NAME, COUNT_ALLOC, COUNT_FREE, SUM_NUMBER_OF_BYTES_ALLOC, SUM_NUMBER_OF_BYTES_FREE, 
+    LOW_COUNT_USED, CURRENT_COUNT_USED, HIGH_COUNT_USED, LOW_NUMBER_OF_BYTES_USED, CURRENT_NUMBER_OF_BYTES_USED, 
+    HIGH_NUMBER_OF_BYTES_USED
+    from memory_summary_by_user_by_event_name
+  </select>
+</mapper>

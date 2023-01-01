@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.OrdersMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Orders" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="receiver_name" property="receiverName" jdbcType="VARCHAR" />
+    <result column="receiver_mobile" property="receiverMobile" jdbcType="VARCHAR" />
+    <result column="receiver_address" property="receiverAddress" jdbcType="VARCHAR" />
+    <result column="total_amount" property="totalAmount" jdbcType="INTEGER" />
+    <result column="real_pay_amount" property="realPayAmount" jdbcType="INTEGER" />
+    <result column="post_amount" property="postAmount" jdbcType="INTEGER" />
+    <result column="pay_method" property="payMethod" jdbcType="INTEGER" />
+    <result column="left_msg" property="leftMsg" jdbcType="VARCHAR" />
+    <result column="extand" property="extand" jdbcType="VARCHAR" />
+    <result column="is_comment" property="isComment" jdbcType="INTEGER" />
+    <result column="is_delete" property="isDelete" jdbcType="INTEGER" />
+    <result column="created_time" property="createdTime" jdbcType="TIMESTAMP" />
+    <result column="updated_time" property="updatedTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from orders
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Orders" >
+    <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into orders (user_id, receiver_name, receiver_mobile, 
+      receiver_address, total_amount, real_pay_amount, 
+      post_amount, pay_method, left_msg, 
+      extand, is_comment, is_delete, 
+      created_time, updated_time)
+    values (#{userId,jdbcType=VARCHAR}, #{receiverName,jdbcType=VARCHAR}, #{receiverMobile,jdbcType=VARCHAR}, 
+      #{receiverAddress,jdbcType=VARCHAR}, #{totalAmount,jdbcType=INTEGER}, #{realPayAmount,jdbcType=INTEGER}, 
+      #{postAmount,jdbcType=INTEGER}, #{payMethod,jdbcType=INTEGER}, #{leftMsg,jdbcType=VARCHAR}, 
+      #{extand,jdbcType=VARCHAR}, #{isComment,jdbcType=INTEGER}, #{isDelete,jdbcType=INTEGER}, 
+      #{createdTime,jdbcType=TIMESTAMP}, #{updatedTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Orders" >
+    update orders
+    set user_id = #{userId,jdbcType=VARCHAR},
+      receiver_name = #{receiverName,jdbcType=VARCHAR},
+      receiver_mobile = #{receiverMobile,jdbcType=VARCHAR},
+      receiver_address = #{receiverAddress,jdbcType=VARCHAR},
+      total_amount = #{totalAmount,jdbcType=INTEGER},
+      real_pay_amount = #{realPayAmount,jdbcType=INTEGER},
+      post_amount = #{postAmount,jdbcType=INTEGER},
+      pay_method = #{payMethod,jdbcType=INTEGER},
+      left_msg = #{leftMsg,jdbcType=VARCHAR},
+      extand = #{extand,jdbcType=VARCHAR},
+      is_comment = #{isComment,jdbcType=INTEGER},
+      is_delete = #{isDelete,jdbcType=INTEGER},
+      created_time = #{createdTime,jdbcType=TIMESTAMP},
+      updated_time = #{updatedTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select id, user_id, receiver_name, receiver_mobile, receiver_address, total_amount, 
+    real_pay_amount, post_amount, pay_method, left_msg, extand, is_comment, is_delete, 
+    created_time, updated_time
+    from orders
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, user_id, receiver_name, receiver_mobile, receiver_address, total_amount, 
+    real_pay_amount, post_amount, pay_method, left_msg, extand, is_comment, is_delete, 
+    created_time, updated_time
+    from orders
+  </select>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.TimeZoneLeapSecondMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.TimeZoneLeapSecond" >
+    <id column="Transition_time" property="transitionTime" jdbcType="BIGINT" />
+    <result column="Correction" property="correction" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from time_zone_leap_second
+    where Transition_time = #{transitionTime,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.TimeZoneLeapSecond" >
+    insert into time_zone_leap_second (Transition_time, Correction)
+    values (#{transitionTime,jdbcType=BIGINT}, #{correction,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.TimeZoneLeapSecond" >
+    update time_zone_leap_second
+    set Correction = #{correction,jdbcType=INTEGER}
+    where Transition_time = #{transitionTime,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select Transition_time, Correction
+    from time_zone_leap_second
+    where Transition_time = #{transitionTime,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select Transition_time, Correction
+    from time_zone_leap_second
+  </select>
+</mapper>

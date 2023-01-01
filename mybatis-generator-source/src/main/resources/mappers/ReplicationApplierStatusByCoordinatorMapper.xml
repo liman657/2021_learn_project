@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationApplierStatusByCoordinatorMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationApplierStatusByCoordinator" >
+    <id column="CHANNEL_NAME" property="channelName" jdbcType="CHAR" />
+    <result column="THREAD_ID" property="threadId" jdbcType="BIGINT" />
+    <result column="SERVICE_STATE" property="serviceState" jdbcType="CHAR" />
+    <result column="LAST_ERROR_NUMBER" property="lastErrorNumber" jdbcType="INTEGER" />
+    <result column="LAST_ERROR_MESSAGE" property="lastErrorMessage" jdbcType="VARCHAR" />
+    <result column="LAST_ERROR_TIMESTAMP" property="lastErrorTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_PROCESSED_TRANSACTION" property="lastProcessedTransaction" jdbcType="CHAR" />
+    <result column="LAST_PROCESSED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP" property="lastProcessedTransactionOriginalCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_PROCESSED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP" property="lastProcessedTransactionImmediateCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_PROCESSED_TRANSACTION_START_BUFFER_TIMESTAMP" property="lastProcessedTransactionStartBufferTimestamp" jdbcType="TIMESTAMP" />
+    <result column="LAST_PROCESSED_TRANSACTION_END_BUFFER_TIMESTAMP" property="lastProcessedTransactionEndBufferTimestamp" jdbcType="TIMESTAMP" />
+    <result column="PROCESSING_TRANSACTION" property="processingTransaction" jdbcType="CHAR" />
+    <result column="PROCESSING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP" property="processingTransactionOriginalCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="PROCESSING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP" property="processingTransactionImmediateCommitTimestamp" jdbcType="TIMESTAMP" />
+    <result column="PROCESSING_TRANSACTION_START_BUFFER_TIMESTAMP" property="processingTransactionStartBufferTimestamp" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from replication_applier_status_by_coordinator
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationApplierStatusByCoordinator" >
+    insert into replication_applier_status_by_coordinator (CHANNEL_NAME, THREAD_ID, SERVICE_STATE, 
+      LAST_ERROR_NUMBER, LAST_ERROR_MESSAGE, LAST_ERROR_TIMESTAMP, 
+      LAST_PROCESSED_TRANSACTION, LAST_PROCESSED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+      LAST_PROCESSED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, LAST_PROCESSED_TRANSACTION_START_BUFFER_TIMESTAMP, 
+      LAST_PROCESSED_TRANSACTION_END_BUFFER_TIMESTAMP, PROCESSING_TRANSACTION, 
+      PROCESSING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, PROCESSING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, 
+      PROCESSING_TRANSACTION_START_BUFFER_TIMESTAMP)
+    values (#{channelName,jdbcType=CHAR}, #{threadId,jdbcType=BIGINT}, #{serviceState,jdbcType=CHAR}, 
+      #{lastErrorNumber,jdbcType=INTEGER}, #{lastErrorMessage,jdbcType=VARCHAR}, #{lastErrorTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastProcessedTransaction,jdbcType=CHAR}, #{lastProcessedTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastProcessedTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP}, #{lastProcessedTransactionStartBufferTimestamp,jdbcType=TIMESTAMP}, 
+      #{lastProcessedTransactionEndBufferTimestamp,jdbcType=TIMESTAMP}, #{processingTransaction,jdbcType=CHAR}, 
+      #{processingTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP}, #{processingTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP}, 
+      #{processingTransactionStartBufferTimestamp,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ReplicationApplierStatusByCoordinator" >
+    update replication_applier_status_by_coordinator
+    set THREAD_ID = #{threadId,jdbcType=BIGINT},
+      SERVICE_STATE = #{serviceState,jdbcType=CHAR},
+      LAST_ERROR_NUMBER = #{lastErrorNumber,jdbcType=INTEGER},
+      LAST_ERROR_MESSAGE = #{lastErrorMessage,jdbcType=VARCHAR},
+      LAST_ERROR_TIMESTAMP = #{lastErrorTimestamp,jdbcType=TIMESTAMP},
+      LAST_PROCESSED_TRANSACTION = #{lastProcessedTransaction,jdbcType=CHAR},
+      LAST_PROCESSED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP = #{lastProcessedTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP},
+      LAST_PROCESSED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP = #{lastProcessedTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP},
+      LAST_PROCESSED_TRANSACTION_START_BUFFER_TIMESTAMP = #{lastProcessedTransactionStartBufferTimestamp,jdbcType=TIMESTAMP},
+      LAST_PROCESSED_TRANSACTION_END_BUFFER_TIMESTAMP = #{lastProcessedTransactionEndBufferTimestamp,jdbcType=TIMESTAMP},
+      PROCESSING_TRANSACTION = #{processingTransaction,jdbcType=CHAR},
+      PROCESSING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP = #{processingTransactionOriginalCommitTimestamp,jdbcType=TIMESTAMP},
+      PROCESSING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP = #{processingTransactionImmediateCommitTimestamp,jdbcType=TIMESTAMP},
+      PROCESSING_TRANSACTION_START_BUFFER_TIMESTAMP = #{processingTransactionStartBufferTimestamp,jdbcType=TIMESTAMP}
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select CHANNEL_NAME, THREAD_ID, SERVICE_STATE, LAST_ERROR_NUMBER, LAST_ERROR_MESSAGE, 
+    LAST_ERROR_TIMESTAMP, LAST_PROCESSED_TRANSACTION, LAST_PROCESSED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+    LAST_PROCESSED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, LAST_PROCESSED_TRANSACTION_START_BUFFER_TIMESTAMP, 
+    LAST_PROCESSED_TRANSACTION_END_BUFFER_TIMESTAMP, PROCESSING_TRANSACTION, PROCESSING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+    PROCESSING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, PROCESSING_TRANSACTION_START_BUFFER_TIMESTAMP
+    from replication_applier_status_by_coordinator
+    where CHANNEL_NAME = #{channelName,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CHANNEL_NAME, THREAD_ID, SERVICE_STATE, LAST_ERROR_NUMBER, LAST_ERROR_MESSAGE, 
+    LAST_ERROR_TIMESTAMP, LAST_PROCESSED_TRANSACTION, LAST_PROCESSED_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+    LAST_PROCESSED_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, LAST_PROCESSED_TRANSACTION_START_BUFFER_TIMESTAMP, 
+    LAST_PROCESSED_TRANSACTION_END_BUFFER_TIMESTAMP, PROCESSING_TRANSACTION, PROCESSING_TRANSACTION_ORIGINAL_COMMIT_TIMESTAMP, 
+    PROCESSING_TRANSACTION_IMMEDIATE_COMMIT_TIMESTAMP, PROCESSING_TRANSACTION_START_BUFFER_TIMESTAMP
+    from replication_applier_status_by_coordinator
+  </select>
+</mapper>

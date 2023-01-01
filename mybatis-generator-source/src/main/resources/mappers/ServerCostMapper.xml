@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ServerCostMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ServerCost" >
+    <id column="cost_name" property="costName" jdbcType="VARCHAR" />
+    <result column="cost_value" property="costValue" jdbcType="REAL" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
+    <result column="default_value" property="defaultValue" jdbcType="REAL" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from server_cost
+    where cost_name = #{costName,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ServerCost" >
+    insert into server_cost (cost_name, cost_value, last_update, 
+      `comment`, default_value)
+    values (#{costName,jdbcType=VARCHAR}, #{costValue,jdbcType=REAL}, #{lastUpdate,jdbcType=TIMESTAMP}, 
+      #{comment,jdbcType=VARCHAR}, #{defaultValue,jdbcType=REAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.ServerCost" >
+    update server_cost
+    set cost_value = #{costValue,jdbcType=REAL},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      `comment` = #{comment,jdbcType=VARCHAR},
+      default_value = #{defaultValue,jdbcType=REAL}
+    where cost_name = #{costName,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select cost_name, cost_value, last_update, `comment`, default_value
+    from server_cost
+    where cost_name = #{costName,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select cost_name, cost_value, last_update, `comment`, default_value
+    from server_cost
+  </select>
+</mapper>

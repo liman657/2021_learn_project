@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.EventsStatementsSummaryByDigestMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.EventsStatementsSummaryByDigest" >
+    <result column="SCHEMA_NAME" property="schemaName" jdbcType="VARCHAR" />
+    <result column="DIGEST" property="digest" jdbcType="VARCHAR" />
+    <result column="COUNT_STAR" property="countStar" jdbcType="BIGINT" />
+    <result column="SUM_TIMER_WAIT" property="sumTimerWait" jdbcType="BIGINT" />
+    <result column="MIN_TIMER_WAIT" property="minTimerWait" jdbcType="BIGINT" />
+    <result column="AVG_TIMER_WAIT" property="avgTimerWait" jdbcType="BIGINT" />
+    <result column="MAX_TIMER_WAIT" property="maxTimerWait" jdbcType="BIGINT" />
+    <result column="SUM_LOCK_TIME" property="sumLockTime" jdbcType="BIGINT" />
+    <result column="SUM_ERRORS" property="sumErrors" jdbcType="BIGINT" />
+    <result column="SUM_WARNINGS" property="sumWarnings" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_AFFECTED" property="sumRowsAffected" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_SENT" property="sumRowsSent" jdbcType="BIGINT" />
+    <result column="SUM_ROWS_EXAMINED" property="sumRowsExamined" jdbcType="BIGINT" />
+    <result column="SUM_CREATED_TMP_DISK_TABLES" property="sumCreatedTmpDiskTables" jdbcType="BIGINT" />
+    <result column="SUM_CREATED_TMP_TABLES" property="sumCreatedTmpTables" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_FULL_JOIN" property="sumSelectFullJoin" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_FULL_RANGE_JOIN" property="sumSelectFullRangeJoin" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_RANGE" property="sumSelectRange" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_RANGE_CHECK" property="sumSelectRangeCheck" jdbcType="BIGINT" />
+    <result column="SUM_SELECT_SCAN" property="sumSelectScan" jdbcType="BIGINT" />
+    <result column="SUM_SORT_MERGE_PASSES" property="sumSortMergePasses" jdbcType="BIGINT" />
+    <result column="SUM_SORT_RANGE" property="sumSortRange" jdbcType="BIGINT" />
+    <result column="SUM_SORT_ROWS" property="sumSortRows" jdbcType="BIGINT" />
+    <result column="SUM_SORT_SCAN" property="sumSortScan" jdbcType="BIGINT" />
+    <result column="SUM_NO_INDEX_USED" property="sumNoIndexUsed" jdbcType="BIGINT" />
+    <result column="SUM_NO_GOOD_INDEX_USED" property="sumNoGoodIndexUsed" jdbcType="BIGINT" />
+    <result column="FIRST_SEEN" property="firstSeen" jdbcType="TIMESTAMP" />
+    <result column="LAST_SEEN" property="lastSeen" jdbcType="TIMESTAMP" />
+    <result column="QUANTILE_95" property="quantile95" jdbcType="BIGINT" />
+    <result column="QUANTILE_99" property="quantile99" jdbcType="BIGINT" />
+    <result column="QUANTILE_999" property="quantile999" jdbcType="BIGINT" />
+    <result column="QUERY_SAMPLE_SEEN" property="querySampleSeen" jdbcType="TIMESTAMP" />
+    <result column="QUERY_SAMPLE_TIMER_WAIT" property="querySampleTimerWait" jdbcType="BIGINT" />
+    <result column="DIGEST_TEXT" property="digestText" jdbcType="LONGVARCHAR" />
+    <result column="QUERY_SAMPLE_TEXT" property="querySampleText" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.EventsStatementsSummaryByDigest" >
+    insert into events_statements_summary_by_digest (`SCHEMA_NAME`, DIGEST, COUNT_STAR, 
+      SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, 
+      MAX_TIMER_WAIT, SUM_LOCK_TIME, SUM_ERRORS, 
+      SUM_WARNINGS, SUM_ROWS_AFFECTED, SUM_ROWS_SENT, 
+      SUM_ROWS_EXAMINED, SUM_CREATED_TMP_DISK_TABLES, 
+      SUM_CREATED_TMP_TABLES, SUM_SELECT_FULL_JOIN, SUM_SELECT_FULL_RANGE_JOIN, 
+      SUM_SELECT_RANGE, SUM_SELECT_RANGE_CHECK, SUM_SELECT_SCAN, 
+      SUM_SORT_MERGE_PASSES, SUM_SORT_RANGE, SUM_SORT_ROWS, 
+      SUM_SORT_SCAN, SUM_NO_INDEX_USED, SUM_NO_GOOD_INDEX_USED, 
+      FIRST_SEEN, LAST_SEEN, QUANTILE_95, 
+      QUANTILE_99, QUANTILE_999, QUERY_SAMPLE_SEEN, 
+      QUERY_SAMPLE_TIMER_WAIT, DIGEST_TEXT, QUERY_SAMPLE_TEXT
+      )
+    values (#{schemaName,jdbcType=VARCHAR}, #{digest,jdbcType=VARCHAR}, #{countStar,jdbcType=BIGINT}, 
+      #{sumTimerWait,jdbcType=BIGINT}, #{minTimerWait,jdbcType=BIGINT}, #{avgTimerWait,jdbcType=BIGINT}, 
+      #{maxTimerWait,jdbcType=BIGINT}, #{sumLockTime,jdbcType=BIGINT}, #{sumErrors,jdbcType=BIGINT}, 
+      #{sumWarnings,jdbcType=BIGINT}, #{sumRowsAffected,jdbcType=BIGINT}, #{sumRowsSent,jdbcType=BIGINT}, 
+      #{sumRowsExamined,jdbcType=BIGINT}, #{sumCreatedTmpDiskTables,jdbcType=BIGINT}, 
+      #{sumCreatedTmpTables,jdbcType=BIGINT}, #{sumSelectFullJoin,jdbcType=BIGINT}, #{sumSelectFullRangeJoin,jdbcType=BIGINT}, 
+      #{sumSelectRange,jdbcType=BIGINT}, #{sumSelectRangeCheck,jdbcType=BIGINT}, #{sumSelectScan,jdbcType=BIGINT}, 
+      #{sumSortMergePasses,jdbcType=BIGINT}, #{sumSortRange,jdbcType=BIGINT}, #{sumSortRows,jdbcType=BIGINT}, 
+      #{sumSortScan,jdbcType=BIGINT}, #{sumNoIndexUsed,jdbcType=BIGINT}, #{sumNoGoodIndexUsed,jdbcType=BIGINT}, 
+      #{firstSeen,jdbcType=TIMESTAMP}, #{lastSeen,jdbcType=TIMESTAMP}, #{quantile95,jdbcType=BIGINT}, 
+      #{quantile99,jdbcType=BIGINT}, #{quantile999,jdbcType=BIGINT}, #{querySampleSeen,jdbcType=TIMESTAMP}, 
+      #{querySampleTimerWait,jdbcType=BIGINT}, #{digestText,jdbcType=LONGVARCHAR}, #{querySampleText,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `SCHEMA_NAME`, DIGEST, COUNT_STAR, SUM_TIMER_WAIT, MIN_TIMER_WAIT, AVG_TIMER_WAIT, 
+    MAX_TIMER_WAIT, SUM_LOCK_TIME, SUM_ERRORS, SUM_WARNINGS, SUM_ROWS_AFFECTED, SUM_ROWS_SENT, 
+    SUM_ROWS_EXAMINED, SUM_CREATED_TMP_DISK_TABLES, SUM_CREATED_TMP_TABLES, SUM_SELECT_FULL_JOIN, 
+    SUM_SELECT_FULL_RANGE_JOIN, SUM_SELECT_RANGE, SUM_SELECT_RANGE_CHECK, SUM_SELECT_SCAN, 
+    SUM_SORT_MERGE_PASSES, SUM_SORT_RANGE, SUM_SORT_ROWS, SUM_SORT_SCAN, SUM_NO_INDEX_USED, 
+    SUM_NO_GOOD_INDEX_USED, FIRST_SEEN, LAST_SEEN, QUANTILE_95, QUANTILE_99, QUANTILE_999, 
+    QUERY_SAMPLE_SEEN, QUERY_SAMPLE_TIMER_WAIT, DIGEST_TEXT, QUERY_SAMPLE_TEXT
+    from events_statements_summary_by_digest
+  </select>
+</mapper>

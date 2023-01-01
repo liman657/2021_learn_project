@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.PluginMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Plugin" >
+    <id column="name" property="name" jdbcType="VARCHAR" />
+    <result column="dl" property="dl" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from plugin
+    where `name` = #{name,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Plugin" >
+    insert into plugin (`name`, dl)
+    values (#{name,jdbcType=VARCHAR}, #{dl,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Plugin" >
+    update plugin
+    set dl = #{dl,jdbcType=VARCHAR}
+    where `name` = #{name,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select `name`, dl
+    from plugin
+    where `name` = #{name,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select `name`, dl
+    from plugin
+  </select>
+</mapper>

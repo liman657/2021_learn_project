@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.StatementsWithTempTablesMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.StatementsWithTempTables" >
+    <result column="db" property="db" jdbcType="VARCHAR" />
+    <result column="exec_count" property="execCount" jdbcType="BIGINT" />
+    <result column="total_latency" property="totalLatency" jdbcType="VARCHAR" />
+    <result column="memory_tmp_tables" property="memoryTmpTables" jdbcType="BIGINT" />
+    <result column="disk_tmp_tables" property="diskTmpTables" jdbcType="BIGINT" />
+    <result column="avg_tmp_tables_per_query" property="avgTmpTablesPerQuery" jdbcType="DECIMAL" />
+    <result column="tmp_tables_to_disk_pct" property="tmpTablesToDiskPct" jdbcType="DECIMAL" />
+    <result column="first_seen" property="firstSeen" jdbcType="TIMESTAMP" />
+    <result column="last_seen" property="lastSeen" jdbcType="TIMESTAMP" />
+    <result column="digest" property="digest" jdbcType="VARCHAR" />
+    <result column="query" property="query" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.StatementsWithTempTables" >
+    insert into statements_with_temp_tables (db, exec_count, total_latency, 
+      memory_tmp_tables, disk_tmp_tables, avg_tmp_tables_per_query, 
+      tmp_tables_to_disk_pct, first_seen, last_seen, 
+      digest, query)
+    values (#{db,jdbcType=VARCHAR}, #{execCount,jdbcType=BIGINT}, #{totalLatency,jdbcType=VARCHAR}, 
+      #{memoryTmpTables,jdbcType=BIGINT}, #{diskTmpTables,jdbcType=BIGINT}, #{avgTmpTablesPerQuery,jdbcType=DECIMAL}, 
+      #{tmpTablesToDiskPct,jdbcType=DECIMAL}, #{firstSeen,jdbcType=TIMESTAMP}, #{lastSeen,jdbcType=TIMESTAMP}, 
+      #{digest,jdbcType=VARCHAR}, #{query,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select db, exec_count, total_latency, memory_tmp_tables, disk_tmp_tables, avg_tmp_tables_per_query, 
+    tmp_tables_to_disk_pct, first_seen, last_seen, digest, query
+    from statements_with_temp_tables
+  </select>
+</mapper>

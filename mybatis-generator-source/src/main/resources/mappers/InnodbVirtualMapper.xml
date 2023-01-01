@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbVirtualMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbVirtual" >
+    <result column="TABLE_ID" property="tableId" jdbcType="BIGINT" />
+    <result column="POS" property="pos" jdbcType="INTEGER" />
+    <result column="BASE_POS" property="basePos" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbVirtual" >
+    insert into INNODB_VIRTUAL (TABLE_ID, POS, BASE_POS
+      )
+    values (#{tableId,jdbcType=BIGINT}, #{pos,jdbcType=INTEGER}, #{basePos,jdbcType=INTEGER}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLE_ID, POS, BASE_POS
+    from INNODB_VIRTUAL
+  </select>
+</mapper>

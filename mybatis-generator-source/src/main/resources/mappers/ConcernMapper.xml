@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.learn.simpleblog.module.mapper.ConcernMapper" >
-  <resultMap id="BaseResultMap" type="com.learn.simpleblog.module.domain.Concern" >
+<mapper namespace="com.coderman.foodie.mapper.ConcernMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.Concern" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="concern_id" property="concernId" jdbcType="INTEGER" />
     <result column="concern_be_id" property="concernBeId" jdbcType="INTEGER" />
@@ -14,7 +14,7 @@
     delete from concern
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.learn.simpleblog.module.domain.Concern" >
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.Concern" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -25,7 +25,7 @@
       #{isActive,jdbcType=TINYINT}, #{updateTime,jdbcType=TIMESTAMP}, #{memo,jdbcType=VARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.learn.simpleblog.module.domain.Concern" >
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.Concern" >
     update concern
     set concern_id = #{concernId,jdbcType=INTEGER},
       concern_be_id = #{concernBeId,jdbcType=INTEGER},

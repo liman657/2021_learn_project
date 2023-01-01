@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.ReplicationGroupMemberStatsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.ReplicationGroupMemberStats" >
+    <result column="CHANNEL_NAME" property="channelName" jdbcType="CHAR" />
+    <result column="VIEW_ID" property="viewId" jdbcType="CHAR" />
+    <result column="MEMBER_ID" property="memberId" jdbcType="CHAR" />
+    <result column="COUNT_TRANSACTIONS_IN_QUEUE" property="countTransactionsInQueue" jdbcType="BIGINT" />
+    <result column="COUNT_TRANSACTIONS_CHECKED" property="countTransactionsChecked" jdbcType="BIGINT" />
+    <result column="COUNT_CONFLICTS_DETECTED" property="countConflictsDetected" jdbcType="BIGINT" />
+    <result column="COUNT_TRANSACTIONS_ROWS_VALIDATING" property="countTransactionsRowsValidating" jdbcType="BIGINT" />
+    <result column="COUNT_TRANSACTIONS_REMOTE_IN_APPLIER_QUEUE" property="countTransactionsRemoteInApplierQueue" jdbcType="BIGINT" />
+    <result column="COUNT_TRANSACTIONS_REMOTE_APPLIED" property="countTransactionsRemoteApplied" jdbcType="BIGINT" />
+    <result column="COUNT_TRANSACTIONS_LOCAL_PROPOSED" property="countTransactionsLocalProposed" jdbcType="BIGINT" />
+    <result column="COUNT_TRANSACTIONS_LOCAL_ROLLBACK" property="countTransactionsLocalRollback" jdbcType="BIGINT" />
+    <result column="TRANSACTIONS_COMMITTED_ALL_MEMBERS" property="transactionsCommittedAllMembers" jdbcType="LONGVARCHAR" />
+    <result column="LAST_CONFLICT_FREE_TRANSACTION" property="lastConflictFreeTransaction" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.ReplicationGroupMemberStats" >
+    insert into replication_group_member_stats (CHANNEL_NAME, VIEW_ID, MEMBER_ID, 
+      COUNT_TRANSACTIONS_IN_QUEUE, COUNT_TRANSACTIONS_CHECKED, 
+      COUNT_CONFLICTS_DETECTED, COUNT_TRANSACTIONS_ROWS_VALIDATING, 
+      COUNT_TRANSACTIONS_REMOTE_IN_APPLIER_QUEUE, COUNT_TRANSACTIONS_REMOTE_APPLIED, 
+      COUNT_TRANSACTIONS_LOCAL_PROPOSED, COUNT_TRANSACTIONS_LOCAL_ROLLBACK, 
+      TRANSACTIONS_COMMITTED_ALL_MEMBERS, LAST_CONFLICT_FREE_TRANSACTION
+      )
+    values (#{channelName,jdbcType=CHAR}, #{viewId,jdbcType=CHAR}, #{memberId,jdbcType=CHAR}, 
+      #{countTransactionsInQueue,jdbcType=BIGINT}, #{countTransactionsChecked,jdbcType=BIGINT}, 
+      #{countConflictsDetected,jdbcType=BIGINT}, #{countTransactionsRowsValidating,jdbcType=BIGINT}, 
+      #{countTransactionsRemoteInApplierQueue,jdbcType=BIGINT}, #{countTransactionsRemoteApplied,jdbcType=BIGINT}, 
+      #{countTransactionsLocalProposed,jdbcType=BIGINT}, #{countTransactionsLocalRollback,jdbcType=BIGINT}, 
+      #{transactionsCommittedAllMembers,jdbcType=LONGVARCHAR}, #{lastConflictFreeTransaction,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select CHANNEL_NAME, VIEW_ID, MEMBER_ID, COUNT_TRANSACTIONS_IN_QUEUE, COUNT_TRANSACTIONS_CHECKED, 
+    COUNT_CONFLICTS_DETECTED, COUNT_TRANSACTIONS_ROWS_VALIDATING, COUNT_TRANSACTIONS_REMOTE_IN_APPLIER_QUEUE, 
+    COUNT_TRANSACTIONS_REMOTE_APPLIED, COUNT_TRANSACTIONS_LOCAL_PROPOSED, COUNT_TRANSACTIONS_LOCAL_ROLLBACK, 
+    TRANSACTIONS_COMMITTED_ALL_MEMBERS, LAST_CONFLICT_FREE_TRANSACTION
+    from replication_group_member_stats
+  </select>
+</mapper>

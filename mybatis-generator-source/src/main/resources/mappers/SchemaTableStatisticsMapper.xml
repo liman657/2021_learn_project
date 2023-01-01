@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SchemaTableStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SchemaTableStatistics" >
+    <result column="table_schema" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="table_name" property="tableName" jdbcType="VARCHAR" />
+    <result column="total_latency" property="totalLatency" jdbcType="VARCHAR" />
+    <result column="rows_fetched" property="rowsFetched" jdbcType="BIGINT" />
+    <result column="fetch_latency" property="fetchLatency" jdbcType="VARCHAR" />
+    <result column="rows_inserted" property="rowsInserted" jdbcType="BIGINT" />
+    <result column="insert_latency" property="insertLatency" jdbcType="VARCHAR" />
+    <result column="rows_updated" property="rowsUpdated" jdbcType="BIGINT" />
+    <result column="update_latency" property="updateLatency" jdbcType="VARCHAR" />
+    <result column="rows_deleted" property="rowsDeleted" jdbcType="BIGINT" />
+    <result column="delete_latency" property="deleteLatency" jdbcType="VARCHAR" />
+    <result column="io_read_requests" property="ioReadRequests" jdbcType="DECIMAL" />
+    <result column="io_read" property="ioRead" jdbcType="VARCHAR" />
+    <result column="io_read_latency" property="ioReadLatency" jdbcType="VARCHAR" />
+    <result column="io_write_requests" property="ioWriteRequests" jdbcType="DECIMAL" />
+    <result column="io_write" property="ioWrite" jdbcType="VARCHAR" />
+    <result column="io_write_latency" property="ioWriteLatency" jdbcType="VARCHAR" />
+    <result column="io_misc_requests" property="ioMiscRequests" jdbcType="DECIMAL" />
+    <result column="io_misc_latency" property="ioMiscLatency" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SchemaTableStatistics" >
+    insert into schema_table_statistics (table_schema, `table_name`, total_latency, 
+      rows_fetched, fetch_latency, rows_inserted, 
+      insert_latency, rows_updated, update_latency, 
+      rows_deleted, delete_latency, io_read_requests, 
+      io_read, io_read_latency, io_write_requests, 
+      io_write, io_write_latency, io_misc_requests, 
+      io_misc_latency)
+    values (#{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{totalLatency,jdbcType=VARCHAR}, 
+      #{rowsFetched,jdbcType=BIGINT}, #{fetchLatency,jdbcType=VARCHAR}, #{rowsInserted,jdbcType=BIGINT}, 
+      #{insertLatency,jdbcType=VARCHAR}, #{rowsUpdated,jdbcType=BIGINT}, #{updateLatency,jdbcType=VARCHAR}, 
+      #{rowsDeleted,jdbcType=BIGINT}, #{deleteLatency,jdbcType=VARCHAR}, #{ioReadRequests,jdbcType=DECIMAL}, 
+      #{ioRead,jdbcType=VARCHAR}, #{ioReadLatency,jdbcType=VARCHAR}, #{ioWriteRequests,jdbcType=DECIMAL}, 
+      #{ioWrite,jdbcType=VARCHAR}, #{ioWriteLatency,jdbcType=VARCHAR}, #{ioMiscRequests,jdbcType=DECIMAL}, 
+      #{ioMiscLatency,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select table_schema, `table_name`, total_latency, rows_fetched, fetch_latency, rows_inserted, 
+    insert_latency, rows_updated, update_latency, rows_deleted, delete_latency, io_read_requests, 
+    io_read, io_read_latency, io_write_requests, io_write, io_write_latency, io_misc_requests, 
+    io_misc_latency
+    from schema_table_statistics
+  </select>
+</mapper>

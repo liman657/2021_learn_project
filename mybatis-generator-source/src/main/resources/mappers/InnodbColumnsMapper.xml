@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.InnodbColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.InnodbColumns" >
+    <result column="TABLE_ID" property="tableId" jdbcType="BIGINT" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="POS" property="pos" jdbcType="BIGINT" />
+    <result column="MTYPE" property="mtype" jdbcType="INTEGER" />
+    <result column="PRTYPE" property="prtype" jdbcType="INTEGER" />
+    <result column="LEN" property="len" jdbcType="INTEGER" />
+    <result column="HAS_DEFAULT" property="hasDefault" jdbcType="INTEGER" />
+    <result column="DEFAULT_VALUE" property="defaultValue" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.InnodbColumns" >
+    insert into INNODB_COLUMNS (TABLE_ID, `NAME`, POS, 
+      MTYPE, PRTYPE, LEN, 
+      HAS_DEFAULT, DEFAULT_VALUE)
+    values (#{tableId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{pos,jdbcType=BIGINT}, 
+      #{mtype,jdbcType=INTEGER}, #{prtype,jdbcType=INTEGER}, #{len,jdbcType=INTEGER}, 
+      #{hasDefault,jdbcType=INTEGER}, #{defaultValue,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLE_ID, `NAME`, POS, MTYPE, PRTYPE, LEN, HAS_DEFAULT, DEFAULT_VALUE
+    from INNODB_COLUMNS
+  </select>
+</mapper>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.SlaveWorkerInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.SlaveWorkerInfo" >
+    <id column="Channel_name" property="channelName" jdbcType="CHAR" />
+    <id column="Id" property="id" jdbcType="INTEGER" />
+    <result column="Relay_log_pos" property="relayLogPos" jdbcType="BIGINT" />
+    <result column="Master_log_pos" property="masterLogPos" jdbcType="BIGINT" />
+    <result column="Checkpoint_relay_log_pos" property="checkpointRelayLogPos" jdbcType="BIGINT" />
+    <result column="Checkpoint_master_log_pos" property="checkpointMasterLogPos" jdbcType="BIGINT" />
+    <result column="Checkpoint_seqno" property="checkpointSeqno" jdbcType="INTEGER" />
+    <result column="Checkpoint_group_size" property="checkpointGroupSize" jdbcType="INTEGER" />
+    <result column="Relay_log_name" property="relayLogName" jdbcType="LONGVARCHAR" />
+    <result column="Master_log_name" property="masterLogName" jdbcType="LONGVARCHAR" />
+    <result column="Checkpoint_relay_log_name" property="checkpointRelayLogName" jdbcType="LONGVARCHAR" />
+    <result column="Checkpoint_master_log_name" property="checkpointMasterLogName" jdbcType="LONGVARCHAR" />
+    <result column="Checkpoint_group_bitmap" property="checkpointGroupBitmap" jdbcType="LONGVARBINARY" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from slave_worker_info
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.SlaveWorkerInfo" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into slave_worker_info (Channel_name, Relay_log_pos, Master_log_pos, 
+      Checkpoint_relay_log_pos, Checkpoint_master_log_pos, 
+      Checkpoint_seqno, Checkpoint_group_size, Relay_log_name, 
+      Master_log_name, Checkpoint_relay_log_name, 
+      Checkpoint_master_log_name, Checkpoint_group_bitmap
+      )
+    values (#{channelName,jdbcType=CHAR}, #{relayLogPos,jdbcType=BIGINT}, #{masterLogPos,jdbcType=BIGINT}, 
+      #{checkpointRelayLogPos,jdbcType=BIGINT}, #{checkpointMasterLogPos,jdbcType=BIGINT}, 
+      #{checkpointSeqno,jdbcType=INTEGER}, #{checkpointGroupSize,jdbcType=INTEGER}, #{relayLogName,jdbcType=LONGVARCHAR}, 
+      #{masterLogName,jdbcType=LONGVARCHAR}, #{checkpointRelayLogName,jdbcType=LONGVARCHAR}, 
+      #{checkpointMasterLogName,jdbcType=LONGVARCHAR}, #{checkpointGroupBitmap,jdbcType=LONGVARBINARY}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.coderman.foodie.pojo.SlaveWorkerInfo" >
+    update slave_worker_info
+    set Relay_log_pos = #{relayLogPos,jdbcType=BIGINT},
+      Master_log_pos = #{masterLogPos,jdbcType=BIGINT},
+      Checkpoint_relay_log_pos = #{checkpointRelayLogPos,jdbcType=BIGINT},
+      Checkpoint_master_log_pos = #{checkpointMasterLogPos,jdbcType=BIGINT},
+      Checkpoint_seqno = #{checkpointSeqno,jdbcType=INTEGER},
+      Checkpoint_group_size = #{checkpointGroupSize,jdbcType=INTEGER},
+      Relay_log_name = #{relayLogName,jdbcType=LONGVARCHAR},
+      Master_log_name = #{masterLogName,jdbcType=LONGVARCHAR},
+      Checkpoint_relay_log_name = #{checkpointRelayLogName,jdbcType=LONGVARCHAR},
+      Checkpoint_master_log_name = #{checkpointMasterLogName,jdbcType=LONGVARCHAR},
+      Checkpoint_group_bitmap = #{checkpointGroupBitmap,jdbcType=LONGVARBINARY}
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and Id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select Channel_name, Id, Relay_log_pos, Master_log_pos, Checkpoint_relay_log_pos, 
+    Checkpoint_master_log_pos, Checkpoint_seqno, Checkpoint_group_size, Relay_log_name, 
+    Master_log_name, Checkpoint_relay_log_name, Checkpoint_master_log_name, Checkpoint_group_bitmap
+    from slave_worker_info
+    where Channel_name = #{channelName,jdbcType=CHAR}
+      and Id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select Channel_name, Id, Relay_log_pos, Master_log_pos, Checkpoint_relay_log_pos, 
+    Checkpoint_master_log_pos, Checkpoint_seqno, Checkpoint_group_size, Relay_log_name, 
+    Master_log_name, Checkpoint_relay_log_name, Checkpoint_master_log_name, Checkpoint_group_bitmap
+    from slave_worker_info
+  </select>
+</mapper>

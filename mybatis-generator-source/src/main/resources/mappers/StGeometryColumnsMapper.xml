@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coderman.foodie.mapper.StGeometryColumnsMapper" >
+  <resultMap id="BaseResultMap" type="com.coderman.foodie.pojo.StGeometryColumns" >
+    <result column="TABLE_CATALOG" property="tableCatalog" jdbcType="VARCHAR" />
+    <result column="TABLE_SCHEMA" property="tableSchema" jdbcType="VARCHAR" />
+    <result column="TABLE_NAME" property="tableName" jdbcType="VARCHAR" />
+    <result column="COLUMN_NAME" property="columnName" jdbcType="VARCHAR" />
+    <result column="SRS_NAME" property="srsName" jdbcType="VARCHAR" />
+    <result column="SRS_ID" property="srsId" jdbcType="INTEGER" />
+    <result column="GEOMETRY_TYPE_NAME" property="geometryTypeName" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.coderman.foodie.pojo.StGeometryColumns" >
+    insert into ST_GEOMETRY_COLUMNS (TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, 
+      `COLUMN_NAME`, SRS_NAME, SRS_ID, 
+      GEOMETRY_TYPE_NAME)
+    values (#{tableCatalog,jdbcType=VARCHAR}, #{tableSchema,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, 
+      #{columnName,jdbcType=VARCHAR}, #{srsName,jdbcType=VARCHAR}, #{srsId,jdbcType=INTEGER}, 
+      #{geometryTypeName,jdbcType=LONGVARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select TABLE_CATALOG, TABLE_SCHEMA, `TABLE_NAME`, `COLUMN_NAME`, SRS_NAME, SRS_ID, 
+    GEOMETRY_TYPE_NAME
+    from ST_GEOMETRY_COLUMNS
+  </select>
+</mapper>
