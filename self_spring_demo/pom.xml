@@ -43,6 +43,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -66,14 +67,27 @@
                         <target>8</target>
                     </configuration>
                 </plugin>
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.tomcat.maven</groupId>-->
+<!--                    <artifactId>tomcat8-maven-plugin</artifactId>-->
+<!--                    <version>3.0-r1655215</version>-->
+<!--                    <configuration>-->
+<!--                        <port>8080</port>-->
+<!--                        <path>/simpleframework</path>-->
+<!--                        &lt;!&ndash;<systemProperties>&ndash;&gt;-->
+<!--                            &lt;!&ndash;<java.util.logging.SimpleFormatter.format>%1$tT %3$s %5$s %n</java.util.logging.SimpleFormatter.format>&ndash;&gt;-->
+<!--                        &lt;!&ndash;</systemProperties>&ndash;&gt;-->
+<!--                    </configuration>-->
+<!--                </plugin>-->
                 <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
                     <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
                     <configuration>
-                        <path>/${project.artifactId}</path>
+                        <port>8080</port>
+                        <path>/simpleframework</path>
                         <!--<systemProperties>-->
-                            <!--<java.util.logging.SimpleFormatter.format>%1$tT %3$s %5$s %n</java.util.logging.SimpleFormatter.format>-->
+                        <!--<java.util.logging.SimpleFormatter.format>%1$tT %3$s %5$s %n</java.util.logging.SimpleFormatter.format>-->
                         <!--</systemProperties>-->
                     </configuration>
                 </plugin>
@@ -81,4 +95,19 @@
         </pluginManagement>
     </build>
 
+    <!--配置Tomcat8仓库-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>alfresco-public</id>
+            <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>alfresco-public-snapshots</id>
+            <url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
